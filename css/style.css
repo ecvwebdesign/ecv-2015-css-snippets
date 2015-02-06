@@ -1,0 +1,49 @@
+/*
+Feuille de style générale.
+Elle est générale et les tutoriels récupereront la base de leur style dans cette feuille, additionnée à foundation.css
+
+Directeur de la publication: Ian Smallwood
+
+Contributeurs: Alexis Doyen, Elodie Dassance, Dan Gu, Aurélien Grimaud,
+Justine Pinaud, Anne Astima, Yann Beduchaud,
+Yingyin Zhang, Jiazhi Gao, Thibaud Sabathier
+
+Framework: Foundation par Zurb
+*/
+
+/*
+RESET
+_______________
+*/
+
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset, figure {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	font-size: 62.5%;
+}
+
+img, fieldset {
+	border: 0;
+}
+
+/* élements html5 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+	display: block;
+}
+
+/* configuration des images */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* configuration ie8 */
+@media \0screen {
+	img { width: auto;}
+}

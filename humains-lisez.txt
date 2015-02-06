@@ -1,0 +1,10 @@
+> Voici la racine de CSS Snippets
+> Il est composé de CSS (=framework + style général)
+> Il est composé de JS (=frameword + plugins additionnels)
+> Il est composé d'images (à nous)
+> Il est composé d'un modèle de tutoriel
+> Il est composé de trucs.txt et de machins.txt à lire (surtout ce doc)
+
+> Enjoy
+
+> Aurélien / inVibes
