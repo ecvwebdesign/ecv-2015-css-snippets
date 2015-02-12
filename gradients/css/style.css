@@ -1,0 +1,63 @@
+.Degrade1 {
+background-image:linear-gradient(blue, red);
+padding: 100px;
+margin: 300px;
+
+}
+
+.Degrade2 {
+background-image:linear-gradient(to right,blue, red);
+padding: 100px;
+margin: 300px;
+
+}
+
+.Degrade3 {
+background-image:linear-gradient(30deg,blue, red);
+padding: 100px;
+margin: 300px;
+
+}
+
+.Degrade4 {
+background-image:radial-gradient(blue, red);
+padding: 100px;
+margin: 300px;
+
+}
+
+.bouton {
+width:300px;
+height:300px;
+background-image:linear-gradient(blue, red);
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+}
+.bouton:hover {
+background: -moz-linear-gradient(top, 
+  #ccc6c3 0%, 
+  #828c95 24%, 
+  #000000 41%, 
+  #7f7f7f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, 
+  color-stop(0%,#ccc6c3), 
+  color-stop(24%,#828c95), 
+  color-stop(41%,#000000), 
+  color-stop(100%,#7f7f7f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, 
+  #ccc6c3 0%,
+  #828c95 24%,
+  #000000 41%,
+  #7f7f7f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, 
+  #ccc6c3 0%,
+  #828c95 24%,
+  #000000 41%,
+  #7f7f7f 100%); /* Opera 11.10+ */
+background: linear-gradient( 
+  #ccc6c3 0%,
+  #828c95 24%,
+  #000000 41%,
+  #7f7f7f 100%); /* W3C */
+}
