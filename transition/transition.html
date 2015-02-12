@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>CSS SNIPPET</title>
+		<meta name="description" content="transition css demo/tutorial" />
+		<meta name="keywords" content="transition" />
+		<meta name="author" content="Jiazhi Gao" />
+		<link rel="icon" href="img/" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+	</head>
+	
+	<body>
+		
+		<section id="presentation" class="container">
+		 <h1 class='title'>Transition</h1>
+		 <p class='discription'><strong>What Are CSS3 Transitions?</strong><br><br>CSS3 transitions are effects that let an element gradually change from one style to another.<br>To do this, you must specify two things:<br>• The CSS property you want to add an effect to.<br>• The duration of the effect.</p>
+
+		 <p class='example'>With CSS3, we can add an effect when changing from one style to another, without using Flash or JavaScript.Mouse over the element below:</p>
+		 <div class='animation_div'>Hello World!</div>
+		 <br>
+
+		 <a target='_blank' href="" class='buton'>DEMO</a>
+		 <a target='_blank' href="" class='buton'>TUTORIAL</a>
+	   </section>
+
+<hr>
+        
+	   <section id="example" class="container">
+		<h2 class='title2'>Example1</h2>
+		<p class="example_text">Add a transition effect on the width property, with a duration of 2 seconds:</p>
+		<div class="example1_code1">60%</div>
+		<div class="example1_code2">100%</div>
+		<p class="note">* Note: This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+		<p class="code_title">Code:</p>
+        <div class="code" autocomplete="off"><span class="code_div">.div</span>{<br><span class="code_theme">text-align</span>:<span class="code_valeur"> center</span>;<br><span class="code_theme">padding</span>: <span class="code_valeur">10px</span>;<br><span class="code_theme">color</span>:<span class="code_valeur"> #ffffff</span>;<br><span class="code_theme">width</span>: <span class="code_valeur">100px</span>;<br><span class="code_theme">height</span>: <span class="code_valeur">30px</span>;<br><span class="code_theme">background</span>: <span class="code_valeur">#9cb9b4</span>;<br><span class="code_theme">-webkit-transition</span>: <span class="code_valeur">width 2s</span>;  <span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br><span class="code_theme">-o-transition</span>: <span class="code_valeur">width 2s</span>; <span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br><span class="code_theme">-moz-transition</span>: <span class="code_valeur">width 2s</span>;  <span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br><span class="code_theme">transition</span>: <span class="code_valeur">width 2s</span>;<br>}<br><br><span class="code_div">.div:hover</span>{<br><span class="code_theme">width</span>: <span class="code_valeur">300px</span>;<br><span class="code_theme">background-color</span>: <span class="code_valeur">#88ab83</span>;<br>}
+		</div>
+
+       </section>
+
+<hr>
+       <section id="example" class="container">
+		<h3 class='title2'>Example2</h3>
+		<p class="example_text">Change color of the text:</p>
+		<div class="example2_code">Hello World!</div>
+
+		<p class="code_title">Code:</p>
+		<div class="code" autocomplete="off"><span class="code_div">.div</span>{<br>
+        <span class="code_theme">background-color</span>: <span class="code_valeur">#9cb9b4</span>;<br>
+        <span class="code_theme">width</span>: <span class="code_valeur">100px</span>;<br>
+        <span class="code_theme">height</span>: <span class="code_valeur">40px</span>;<br>
+        <span class="code_theme">padding</span>: <span class="code_valeur">10px</span>;<br>
+        <span class="code_theme">font-size</span>: <span class="code_valeur">20px</span>;<br>
+        <span class="code_theme">font-weight</span>: <span class="code_valeur">bold</span>;<br>
+        <span class="code_theme">color</span>: <span class="code_valeur">#ffffff</span>;<br>
+        <span class="code_theme">text-decoration</span>: <span class="code_valeur">none</span>;<br>
+        <span class="code_theme">border-radius</span>: <span class="code_valeur">10px</span>;<br>
+        <span class="code_theme">text-align</span>: <span class="code_valeur">center</span>;<br>
+        <span class="code_theme">-webkit-transition-property</span>: <span class="code_valeur">color</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br>
+        <span class="code_theme">-webkit-transition-duration</span>: <span class="code_valeur">2s</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br>
+        <span class="code_theme">-o-transition-property</span>: <span class="code_valeur">color</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br>
+        <span class="code_theme">-o-transition-duration</span>: <span class="code_valeur">2s</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br>
+        <span class="code_theme">-moz-transition-property</span>: <span class="code_valeur">color</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br>
+        <span class="code_theme">-moz-transition-duration</span>: <span class="code_valeur">2s</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br>
+        <span class="code_theme">transition-property</span>: <span class="code_valeur">color</span>;<br>
+        <span class="code_theme">transition-duration</span>: <span class="code_valeur">1s</span>;<br>
+        }<br><br>
+        <span class="code_div">.div:hover</span>{<br>
+        <span class="code_theme">background-color: <span class="code_valeur">#ffffff</span>;<br>
+        <span class="code_theme">border: 2px solid <span class="code_valeur">#88ab83</span>;<br>
+        <span class="code_theme">color: <span class="code_valeur">#88ab83</span>;<br>
+        }</div>
+
+	  </section>
+
+<hr>
+
+      <section id="example" class="container">
+		<h4 class='title2'>Example3</h4>
+		<p class="example_text">Change position of the text:</p>
+		<div class="example3_code">Hello World!</div>
+
+		<p class="code_title">Code:</p>
+		<div class="code" autocomplete="off"><span class="code_div">.div</span>{<br>
+       <span class="code_theme">font-size</span>:  <span class="code_valeur">40px</span>;<br>
+       <span class="code_theme">font-family</span>:  <span class="code_valeur">Open Sans 700</span>;<br>
+       <span class="code_theme">color</span>:  <span class="code_valeur">#88ab83</span>;<br>
+       <span class="code_theme">-webkit-transition-property</span>:  <span class="code_valeur">padding-left</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br>
+       <span class="code_theme">-webkit-transition-duration</span>:  <span class="code_valeur">1s</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br>
+       <span class="code_theme">-webkit-transition-timing-function</span>:  <span class="code_valeur">ease-in</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br>
+       <span class="code_theme">-o-transition-property</span>:  <span class="code_valeur">padding-left</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br>
+       <span class="code_theme">-o-transition-duration</span>:  <span class="code_valeur">1s</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br>
+       <span class="code_theme">-o-transition-timing-function</span>:  <span class="code_valeur">ease-in</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br>
+       <span class="code_theme">-moz-transition-property</span>:  <span class="code_valeur">padding-left</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br>
+       <span class="code_theme">-moz-transition-duration</span>:  <span class="code_valeur">1s</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br>
+       <span class="code_theme">-moz-transition-timing-function</span>:  <span class="code_valeur">ease-in</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br>
+       <span class="code_theme">transition-property</span>:  <span class="code_valeur">padding-left</span>;<br>
+       <span class="code_theme">transition-duration</span>:  <span class="code_valeur">1s</span>;<br>
+       <span class="code_theme">transition-timing-function</span>:  <span class="code_valeur">ease-in</span>;<br>
+       }<br><br>
+
+       <span class="code_div">.div</span>{<br>
+       <span class="code_theme">color</span>:  <span class="code_valeur">#4d6357</span>;<br>
+       <span class="code_theme">padding-left</span>:  <span class="code_valeur">350px</span>;<br>
+       } 
+       </div>
+      </section>
+     
+<hr>
+
+
+      <section id="example" class="container">
+      <h5 class='title2'>Example4</h5>
+      <p>Bigger the photo:</p>
+      <div class="example4_code"><img src="img/_MG_9263.jpg"></div>
+      <div class="example4_code"><img src="img/_MG_9263.jpg"></div>
+      
+
+     <p class="code_title">Code:</p>
+     <div class="code" autocomplete="off"><span class="code_div">.div img</span>{<br>
+     <span class="code_theme">width</span>: <span class="code_valeur">30%</span>;<br>
+     <span class="code_theme">height</span>: <span class="code_valeur">30%</span>;<br>
+     <span class="code_theme">margin-top</span>: <span class="code_valeur">50px</span>;<br>
+     <span class="code_theme">margin-left</span>: <span class="code_valeur">10px</span>;<br>
+     <span class="code_theme">margin-bottom</span>: <span class="code_valeur">50px</span>;<br>
+     <span class="code_theme">display</span>: <span class="code_valeur">block</span>;<br>
+     <span class="code_theme">position</span>: <span class="code_valeur">relative</span>;<br>
+     <span class="code_theme">max-width</span>: <span class="code_valeur">100%</span>;<br>
+     <span class="code_theme">height</span>: <span class="code_valeur">auto</span>;<br>}<br><br>
+
+     <span class="code_div">.div img</span>{<br>
+     <span class="code_theme">-webkit-transition</span>: <span class="code_valeur">all .4s ease-out</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br>
+     <span class="code_theme">-o-transition</span>: <span class="code_valeur">all .4s ease-out</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br>
+     <span class="code_theme">-moz-transition</span>: <span class="code_valeur">all .4s ease-out</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br>
+     <span class="code_theme">transition</span>: <span class="code_valeur">all .4s ease-out</span>;<br>}<br><br>
+
+     <span class="code_div">.div img</span>{<br>
+     <span class="code_theme">width</span>: <span class="code_valeur">30%</span>;<br>
+     <span class="code_theme">height</span>: <span class="code_valeur">30%</span>;<br>
+     <span class="code_theme">-webkit-transform</span>: <span class="code_valeur">scale(1.2)</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br>
+     <span class="code_theme">-o-transform</span>: <span class="code_valeur">scale(1.2)</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br>
+     <span class="code_theme">-moz-transform</span>: <span class="code_valeur">scale(1.2)</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br>
+     <span class="code_theme">transform</span>: <span class="code_valeur">scale(1.2)</span>;<br>}</div>
+
+
+     </section>
+
+<hr>
+
+     <section id="example" class="container">
+     <h6 class='title2'>Example5</h6>
+     <p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p><br>
+     <div class="example5_code"></div>
+
+     <p class="code_title">Code:</p>
+     <div class="code" autocomplete="off"><span class="code_div">.div</span>{<br>
+    <span class="code_theme">border-style</span>: <span class="code_valeur">solid #88ab83</span>;<br>
+    <span class="code_theme">border-width</span>: <span class="code_valeur">2px</span>;<br>
+    <span class="code_theme">display</span>: <span class="code_valeur">block</span>;<br>
+    <span class="code_theme">width</span>: <span class="code_valeur">100px</span>;<br>
+    <span class="code_theme">height</span>: <span class="code_valeur">100px</span>;<br>
+    <span class="code_theme">background-color</span>: <span class="code_valeur">#4d6357</span>;<br>
+    <span class="code_theme">border-radius</span>: <span class="code_valeur">10px</span>;<br>
+    <span class="code_theme">-webkit-transition</span>: <span class="code_valeur">width 2s, height 2s, background-color 2s, -webkit-transform 2s</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */</span><br>
+     <span class="code_theme">-o-transition</span>: <span class="code_valeur">width 2s, height 2s, background-color 2s, -webkit-transform 2s</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */</span><br>
+      <span class="code_theme">-moz-transition</span>: <span class="code_valeur">width 2s, height 2s, background-color 2s, -webkit-transform 2s</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */</span><br>
+    <span class="code_theme">transition</span>:<span class="code_valeur">width 2s, height 2s, background-color 2s, transform 2s</span>;<br>
+    }<br><br>
+    <span class="code_div">.div:hover</span> {<br>
+    <span class="code_theme">background-color</span>: <span class="code_valeur">#9cb9b4</span>;<br>
+    <span class="code_theme">width</span>:<span class="code_valeur">200px</span>;<br>
+    <span class="code_theme">height</span>:<span class="code_valeur">200px</span>;<br>
+    <span class="code_theme">-webkit-transform</span>:<span class="code_valeur">rotate(180deg)</span>;<span class="code_explication">/* For Safari 3.1 to 6.0 */<br>
+     <span class="code_theme">-o-transform</span>:<span class="code_valeur">rotate(180deg)</span>;<span class="code_explication">/* For Opera 10.5 to 12.1 */<br>
+      <span class="code_theme">-moz-transform</span>:<span class="code_valeur">rotate(180deg)</span>;<span class="code_explication">/* For Firefox 4.0 to 16.0 */<br>
+    <span class="code_theme">transform</span>:<span class="code_valeur">rotate(180deg)</span>;<br>
+}<br>
+
+	</body>
+
+
+</html>

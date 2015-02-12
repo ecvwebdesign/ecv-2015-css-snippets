@@ -1,8 +1,0 @@
-> Voici un template pour les tutoriels.
-> Chaque template aura son réğertoire, avec sa feuille de style additionnelle, ses images...
-
-> Enjoy !
-
-> Auréìien / inVibes
-
-test
