@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <div class="container2">
+        <div class="title"><h1>Transform in CSS3</h1></div>
+
+
+
+            <div id="rotation" style="padding-bottom=50px"><div class="titlebox">Hello</div></div>
+                <div class="description"><h3>ROTATION AUTO<br><br>Gradually rotate the DIV element 180 degrees, and back:<br>The transform property is <em>animatable</em> in CSS.<br><strong>Note:</strong> CSS Animations do not work in Internet Explorer 9 and earlier versions.</h3>
+                </div>  
+                
+
+                <div id="rotate2"><div class="titlebox2">ALLO</div></div>
+                <script>
+                function myFunction() {
+                // Code for Chrome, Safari, Opera
+                document.getElementById("rotate2").style.WebkitTransform = "rotate(20deg)"; 
+                // Code for IE9
+                document.getElementById("rotate2").style.msTransform = "rotate(20deg)"; 
+                document.getElementById("rotate2").style.transform = "rotate(20deg)"; 
+                }
+                </script>
+                <div class="description"><h3>ROTATE</h3>
+                <div style="width"></div>
+                <button class="button" onclick="myFunction()" align="center">Try it !</button>
+                <h3>Rotate your div with different angles.<br>Note Internet Explorer 8 and earlier versions do not support the transform property.<br><b>Note:</b> Internet Explorer 9 supports an alternative, the msTransform property. Newer versions of IE support the transform property (do not need the ms prefix)<b>Note:</b> Chrome, Safari and Opera supports an alternative, the WebkitTransform property.</h3>
+                </div>
+
+                <div id="myDIV">BYE</div>
+                <div class="description"><h3>SKEW<br><br>(x-angle,y-angle)<br>Defines a 2D skew transformation along the X- and the Y-axis</h3>
+                </div>
+
+                <div id="DIV">OLA</div>
+                <div class="description"><h3>MATRIX<br><br>(n,n,n,n,n,n)<br>Defines a 2D transformation, using a matrix of six values</h3>
+                </div>
+
+                <code> 
+                <script type="text/javascript"> 
+                //Affichage de 10 lignes numerotees 
+                var i; 
+                for (i=1; i<=10; i++) 
+                { 
+                document.write("Ligne : " + i + "<br/>"); 
+                } 
+                </script> 
+                </code>
+
+    </div>
+</div>
+
+</body>
+</html>
