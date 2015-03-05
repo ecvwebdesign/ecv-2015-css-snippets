@@ -1,41 +1,188 @@
-<!--
-Le tutoriel à récupérer et à éditer
--->
+<!DOCTYPE html>
+<html lang="en">
 
-<!doctype html>
-<html class="no-js" lang="en">
+<head>
 
-	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="author" content="*l'auteur*" />
-		<meta name="description" content="*description du tutoriel*" />
+    <title>SVG Snippet</title>
 
-		<title>Nom du tutoriel</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 
-		<!--STYLE GENERAL-->
-		<link rel="stylesheet" href="../css/foundation.css" />
-		<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <div class="content">
+        <h1> Basic shapes </h1>
+        <div class="bordure"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <svg width="220" height="200">
+                    <rect x="50" y="50" width="100" height="100" style="fill:grey;stroke:black;stroke-width:3;fill-opacity:0.1;stroke-opacity:0.9">  
+                    <!-- svg width = largeur du canevas SVG
+                        svg height = hauteur du canevas SVG
+                            rect x = position du rectangle x
+                            rect y = position du rectangle y
+                        rect width = largeur du rectangle
+                       rect height = hauteur du rectangle
+                             style = pour controler le style dans le html
+                     --> 
+                </svg>
+            </div>
 
-		<!--STYLE ADDITIONNEL-->
-		<link rel="stylesheet" href="style.css" />
+            <div class="col-md-4">
+                <svg height="220" width="220">
+                    <ellipse class="ellipse" cx="110" cy="100" rx="50" ry="50" />
+                    <!-- cx = position du cercle en x
+                         cy = position du cercle en y
+                         rx = rayon du cercle en x
+                         ry = rayon du cercle en y
+                         class ellipse = pour controler le style dans le css.
+                     --> 
+                </svg>
+            </div>
+            <div class="col-md-4">
+                <svg height="220" width="220">
+                    <path d="M90 50 L30 150 L150 150 Z"
+                    style="fill:white;stroke:grey;stroke-width:3" />
+                    <!--  M90 = position point du haut en x
+                           50 = position point du haut en y
+                          L35 = position point à gauche en x
+                          150 = position point à gauche en y
+                         L150 = position point à droite en x
+                          150 = position point à droite en y
+                     -->
+                </svg>
+            </div>
+        </div>
 
-		<!--SCRIPT-->
-		<script src="../js/vendor/modernizr.js"></script>
 
-	</head>
+        <h1> Import SVG </h1>
+        <div class="bordure"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                <polygon fill="#9D9D9C" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="100.146,17.235 120.69,80.462 
+                187.171,80.462 133.387,119.537 153.931,182.765 100.146,143.689 46.363,182.765 66.906,119.537 13.123,80.462 79.603,80.462 "/>
+            </svg>
+                    <!--  sur illustrator, fichier/ enregistrer sous, selectionner SVG /
+                    cliquer sur code SVG... / copier coller ici le code affiché.
+                     -->
+            </div>
+            <div class="col-md-4">
+                <img src="img/ecureuil.svg" alt="ecureuil">
+                    <!--  sur illustrator, fichier/ enregistrer sous, selectionner SVG /
+                    OK / enregistrer dans le dossier img de votre page / insérer img src sur le html.
+                     -->
+            </div>
+            <div class="col-md-4">
+              <svg width="250px" height="200px" viewBox="0 0 220 220" enable-background="new 0 0 200 200" xml:space="preserve">
+              <g id="Calque_1">
+                <g>
+                  <path d="M59.926,43.846c29.798,0,54.04,24.242,54.04,54.04s-24.242,54.039-54.04,54.039s-54.04-24.241-54.04-54.039
+                    S30.128,43.846,59.926,43.846 M59.926,38.959C27.382,38.959,1,65.341,1,97.886c0,32.544,26.382,58.926,58.926,58.926
+                    c32.543,0,58.926-26.382,58.926-58.926C118.853,65.341,92.47,38.959,59.926,38.959L59.926,38.959z"/>
+                </g>
+              </g>
+              <g id="Calque_2">
+                <g>
+                  <path d="M141.073,43.846c29.798,0,54.04,24.242,54.04,54.04s-24.242,54.039-54.04,54.039c-29.797,0-54.039-24.241-54.039-54.039
+                    S111.276,43.846,141.073,43.846 M141.073,38.959c-32.542,0-58.925,26.382-58.925,58.926c0,32.544,26.383,58.926,58.925,58.926
+                    c32.546,0,58.927-26.382,58.927-58.926C200,65.341,173.619,38.959,141.073,38.959L141.073,38.959z"/>
+                </g>
+              </g>
+                    <!--  Lorsque vous séparez vos calques sur illustrator et que vous copiez collez le code svg du document, des balises <g id="Calque"> sont crées.
+                    Ils est ainsi plus simple de modifier le css pour chacun des calques.
 
-	<body>
-		
-		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
-		<script src="../js/vendor/jquery.js"></script>
-		<script src="../js/foundation.min.js"></script>
-		<script>
-			$(document).foundation();
-		</script>
+                     -->
+            </svg>
 
-	</body>
+          </div>
+        </div>
 
-</html>
+
+
+        <h1> STROKE </h1>
+        <div class="bordure"></div>
+        <div class="row">
+          
+
+
+          <div class="col-md-4">
+            <svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+              <g id="rectangle3">
+                <g>
+                  <rect x="21.649" y="144.279" fill="#C6C6C6" width="156.701" height="38.414"/>
+                </g>
+              </g>
+              <g id="rectangle2">
+                <g>
+                  <rect x="21.649" y="80.793" fill="#C6C6C6" width="156.701" height="38.414"/>
+                </g>
+              </g>
+              <g id="rectangle1">
+                <g>
+                  <rect x="21.649" y="18.307" fill="#C6C6C6" width="156.701" height="38.414"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <div class="col-md-4">
+            <svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+            <g id="rectangle4">
+              <g>
+                <rect x="20" y="20" fill="#C6C6C6" width="150" height="160" style="fill:white;stroke:grey;stroke-width:4"/>
+              </g>
+            </g>
+            </svg>
+          </div>
+        
+
+          <div class="col-md-4"> 
+                <img src="img/losange.svg" alt="losange">
+          </div>
+          
+      </div>
+
+        <h1> ANIMATE </h1>
+        <div class="bordure"></div>
+        <div class="row">
+          <div class="col-md-4">
+
+            <svg height="200" width="200" viewBox="0 0 200 200">
+              <circle cx="75" cy="75" r="20" style="fill:white;stroke:black;stroke-width:10">
+              <animate attributeName="r" from="0" to="60" dur="0.4s" repeatCount="indefinite"></animate>
+
+          </div>
+
+          <div class="col-md-4">
+            <svg height="200" width="200">
+              <circle cx="100" cy="80" r="20">
+                <animate id="grand" begin="0s;petit.end" attributeName="r" from="50" to="75" dur="1s"></animate>
+                <animate id="petit" begin="grand.end" attributeName="r" from="75" to="50" dur="1s"></animate>
+                <animate begin="5s" attributeName="fill" fill="freeze" to="grey" dur="1s"></animate>
+                <animate begin="10s" attributeName="fill" fill="freeze" to="black" dur="1s"></animate>
+                <animate begin="15s" attributeName="fill" fill="freeze" to="grey" dur="1s"></animate>
+                <animate begin="20s" attributeName="fill" fill="freeze" to="black" dur="1s"></animate>
+
+              </circle>
+            </svg>
+          </div>
+
+          <div class="col-md-4">
+
+            <svg width="150" height="150" viewBox="0 0 150 150">
+              <circle cx="0" cy="0" r="15">
+                <animateMotion path="M12 75 L75 12 L137 75 L75 137 Z" dur="2s" repeatCount="indefinite"></animateMotion>
+              </circle>
+            </svg>
+          </div>
+        </div>
+  </div>
+</body>

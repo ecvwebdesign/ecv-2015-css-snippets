@@ -1,0 +1,12 @@
+
+/* mobile */
+@media (max-width: 727px)
+{}
+
+@media (min-width: 728px) and (max-width: 1049px)
+{}
+
+
+/* desktop */
+@media screen and (min-width: 1050px)
+{}

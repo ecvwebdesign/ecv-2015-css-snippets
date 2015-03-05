@@ -1,0 +1,80 @@
+.content{
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+}
+
+h1{
+  font-family:  'Pt Sans', sans-serif;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14pt;
+  color: black;
+  margin-bottom: 20px;
+  line-height: 50%;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+.bordure{
+  border-bottom: 4px solid black;
+  margin-right: 960px;
+  margin-bottom: 25px;
+  }
+
+
+  /*basic shape // ellipse*/
+.ellipse{
+  fill:black;
+  stroke:grey;
+  stroke-width:3;
+}
+
+
+  /*import SVG // deux cercles*/
+#Calque_1{
+  fill:grey;
+  stroke-width:5;
+  stroke:grey;
+}
+
+
+  /*stroke // 3 premiers rectangles*/
+#rectangle1{
+  stroke:black;
+  stroke-dasharray: 1;
+    stroke-width:2;
+
+
+}
+
+#rectangle2{
+  stroke:black;
+  stroke-dasharray: 5;
+  stroke-width:2;
+
+}
+
+#rectangle3{
+  stroke:black;
+    stroke-dasharray: 30;
+    stroke-width:3;
+}
+/*ne pas oublier de mettre stroke, 
+il doit y avoir un contour pour pouvoir  ajouter un effet*/
+
+
+  /*stroke // offset stroke*/
+
+
+#rectangle4{
+  stroke-dasharray: 100;
+  -webkit-animation: dash 5s linear infinite;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}

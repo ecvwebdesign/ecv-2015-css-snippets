@@ -1,0 +1,33 @@
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="193.854px" height="166.76px" viewBox="0 0 193.854 166.76" enable-background="new 0 0 193.854 166.76"
+	 xml:space="preserve">
+
+	 <defs>
+	 	<style>
+	 		#losange{
+	 		stroke-dasharray: 800;
+	 		stroke-dashoffset: 0;
+	 		-webkit-animation: dash 5s linear infinite;
+	 		-o-animation: dash 5s linear infinite;
+	 		-moz-animation: dash 5s linear infinite;
+	 		animation: dash 5s linear infinite;
+	 		}
+
+	 		@-webkit-keyframes dash {
+	 		from {
+    		stroke-dashoffset: 800;
+  			}
+  			to {
+    		stroke-dashoffset: 0;
+  			}
+			
+	 	</style>
+
+	 </defs>
+
+
+
+<polygon id="losange" fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="51.85,161.644 6.813,83.639 51.85,5.632 
+	141.923,5.632 186.959,83.639 141.923,161.644 "/>
+</svg>
