@@ -1,10 +1,20 @@
+@font-face {
+    font-family: 'Font Awesome';
+    src: url('../fonts/fontawesome/fontawesome-webfont.eot');
+    src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff'),
+         url('../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'),
+         url('../fonts/fontawesome/fontawesome-webfont.svg#fontawesome-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html{
     background-color: #edf7eb;
 }
 
-body{margin-left:100px;
-    margin-right:100px;
+body{margin-left:2%;
+    margin-right:2%;
     background-color: #ffffff;
 }
 
@@ -132,7 +142,7 @@ font-size: 30px;
 }
 
 .buton{
-
+width: 30%;
 font-family: Open Sans, 300;
 display: inline-block;
 color: #88ab83;
@@ -140,9 +150,9 @@ background-color: #ffffff;
 font-weight: bold;
 font-size: 18px;
 text-align: center;
-padding: 10px 40px 10px 40px;
+padding: 10px 20px 10px 20px;
 text-decoration: none;
-margin-left: 20%;
+margin-left: 10%;
 margin-top: 100px;
 margin-bottom: 30px;
 border: 2px solid #88ab83;
@@ -322,3 +332,55 @@ white-space: nowrap;
       -moz-transform:rotate(180deg);/* For Firefox 4.0 to 16.0 */
     transform:rotate(180deg);
 }
+
+.col-2{
+    width:45%;
+    float:left;
+display: inline;
+}
+
+.auteur{
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #88ab83;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 14px;
+    font-family: Open Sans, 300;
+    
+
+}
+
+.fa::before {
+    font: 24px 'Font Awesome';
+    color: black;
+}
+.fa-facebook-official::before {
+    content:'\f230';
+}
+
+
+
+.profil{
+
+    width: 70%;
+    margin-left: 0px;
+    margin-top: 30px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    }
+
+.name_auteur{
+    margin-top: 30px;
+   font-size: 24px;
+   color: black;
+   text-align: left;
+}
+.text_auteur{
+    width:100%;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
