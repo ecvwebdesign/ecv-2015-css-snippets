@@ -32,7 +32,7 @@ body, html {
 
 section, figure {
 	width: 100%; height: auto;
-	background: transparent;
+	background: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,7 +60,7 @@ figure h3, figure h4 {
 }
 
 blockquote {
-	margin: 25px 0; padding: 0 0 0 15px;
+	margin: 35px 0; padding: 0 0 0 15px;
 	font-size: 2.4rem;
 	font-weight: 500;
 	color: #a9a9a9;
@@ -68,6 +68,16 @@ blockquote {
 }
 blockquote:hover {
 	border-left: 6px solid tomato;
+}
+
+code {
+	padding: 3px;
+	border: none;
+	background: #e7e7e7;
+	color: #696969;
+}
+code:hover {
+	color: tomato;
 }
 
 /* samples of colors */
@@ -279,59 +289,59 @@ p.smallF {
 }
 
 *.sCol {
-	flex: 0 0 50px;
-		-webkit-flex: 0 0 50px;
-			-moz-box-flex: 0 0 50px;
-				-ms-flex: 0 0 50px;
+	flex: 0 1 50px;
+		-webkit-flex: 0 1 50px;
+			-moz-box-flex: 0 1 50px;
+				-ms-flex: 0 1 50px;
 }
 
 *.sysCol1 {
-	flex: 0 0 8.33%;
-		-webkit-flex: 0 0 8.33%;
-			-moz-box-flex: 0 0 8.33%;
-				-ms-flex: 0 0 8.33%;
+	flex: 0 1 8.33%;
+		-webkit-flex: 0 1 8.33%;
+			-moz-box-flex: 0 1 8.33%;
+				-ms-flex: 0 1 8.33%;
 }
 *.sysCol2 {
-	flex: 0 0 16.66%;
-		-webkit-flex: 0 0 16.66%;
-			-moz-box-flex: 0 0 16.66%;
-				-ms-flex: 0 0 16.66%;
+	flex: 0 1 16.66%;
+		-webkit-flex: 0 1 16.66%;
+			-moz-box-flex: 0 1 16.66%;
+				-ms-flex: 0 1 16.66%;
 }
 *.sysCol3 {
-	flex: 0 0 25%;
-		-webkit-flex: 0 0 25%;
-			-moz-box-flex: 0 0 25%;
-				-ms-flex: 0 0 25%;
+	flex: 0 1 25%;
+		-webkit-flex: 0 1 25%;
+			-moz-box-flex: 0 1 25%;
+				-ms-flex: 0 1 25%;
 }
 *.sysCol4 {
-	flex: 0 0 33.33%;
-		-webkit-flex: 0 0 33.33%;
-			-moz-box-flex: 0 0 33.33%;
-				-ms-flex: 0 0 33.33%;
+	flex: 0 1 33.33%;
+		-webkit-flex: 0 1 33.33%;
+			-moz-box-flex: 0 1 33.33%;
+				-ms-flex: 0 1 33.33%;
 }
 *.sysCol6 {
-	flex: 0 0 50%;
-		-webkit-flex: 0 0 50%;
-			-moz-box-flex: 0 0 50%;
-				-ms-flex: 0 0 50%;
+	flex: 0 1 50%;
+		-webkit-flex: 0 1 50%;
+			-moz-box-flex: 0 1 50%;
+				-ms-flex: 0 1 50%;
 }
 *.sysCol8 {
-	flex: 0 0 66.66%;
-		-webkit-flex: 0 0 66.66%;
-			-moz-box-flex: 0 0 66.66%;
-				-ms-flex: 0 0 66.66%;
+	flex: 0 1 66.66%;
+		-webkit-flex: 0 1 66.66%;
+			-moz-box-flex: 0 1 66.66%;
+				-ms-flex: 0 1 66.66%;
 }
 *.sysCol10 {
-	flex: 0 0 83.33%;
-		-webkit-flex: 0 0 83.33%;
-			-moz-box-flex: 0 0 83.33%;
-				-ms-flex: 0 0 83.33%;
+	flex: 0 1 83.33%;
+		-webkit-flex: 0 1 83.33%;
+			-moz-box-flex: 0 1 83.33%;
+				-ms-flex: 0 1 83.33%;
 }
 *.sysCol12 {
 	flex: 0 0 100%;
-		-webkit-flex: 0 0 100%;
-			-moz-box-flex: 0 0 100%;
-				-ms-flex: 0 0 100%;
+		-webkit-flex: 0 1 100%;
+			-moz-box-flex: 0 1 100%;
+				-ms-flex: 0 1 100%;
 }
 
 /* order */
@@ -355,7 +365,7 @@ p.smallF {
 /* classic */
 ul.flexDemo {
 	width: 100%; height: auto;
-	background: gold;
+	background: #97FFB1;
 	padding: 10px;
 	list-style-image: none; list-style: none;
 }
@@ -374,7 +384,7 @@ ul.enlarge {
 /* list */
 ul.listDemo, ul.navDemo {
 	width: 100%; height: auto;
-	background: gold;
+	background: #97FFB1;
 	list-style-image: none; list-style: none;
 }
 
@@ -456,17 +466,50 @@ ul.gridDemo li .wrapper span p {
 
 ul.gridDemo li .wrapper span button {
 	border: none; outline: none;
-	background: gold;
+	background: #97FFB1;
 	width: 100%;
 	height: 40px;
 	font-size: 1.4rem; font-weight: 700;
 	text-transform: uppercase;
-	color: #fff;
+	color: #696969;
 }
 ul.gridDemo li .wrapper span button:hover {
 	background: tomato;
+	color: #fff;
 }
 
+/* ultra grid */
+ul.ultraGridDemo {
+	list-style-image: none; list-style: none;
+	padding: 0;
+}
+
+ul.ultraGridDemo li .itemWrapper {
+	padding: 25px; margin: 15px;
+	background: #fff;
+	font-size: 1.8rem;
+}
+
+ul.ultraGridDemo li .itemWrapper h3 {
+	color: tomato;
+	margin: 0 0 15px;
+	font-weight: 700;
+	text-align: left;
+}
+
+@media screen and (max-width: 38.75em) {
+
+	ul.ultraGridDemo li.sysCol8,
+	ul.ultraGridDemo li.sysCol4,
+	ul.ultraGridDemo li.sysCol3,
+	ul.ultraGridDemo li.sysCol6 {
+		flex: 0 1 100%;
+			-webkit-flex: 0 1 100%;
+				-moz-box-flex: 0 1 100%;
+					-ms-flex: 0 1 100%;
+	}
+
+}
 
 /* buttons */
 ul.buttons{
@@ -534,11 +577,29 @@ ul.buttons li:hover p {
 }
 
 /*
+- Intro Demo -
+*/
+*#introDemo {
+	background: #97FFB1;
+}
+
+*#introDemo p {
+	font-size: 1.8rem; font-weight: 400;
+	line-height: 1.8;
+}
+*#introDemo p:first-letter {
+	font-size: 3.2rem; font-weight: 700;
+	margin: 0 1px 0 0;
+	color: tomato;
+	line-height: 1;
+}
+
+/*
 - Footer -
 */
 footer {
 	width: 100%; height: auto;
-	background: gold;
+	background: #97FFB1;
 }
 footer .signature {
 	width: 100%; height: auto;
