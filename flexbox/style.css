@@ -28,6 +28,7 @@ ___________
 body, html {
 	font: 400 62.5% 'Roboto', helvetica, arial, sans-serif;
 	color: #696969;
+	height: 1000000px;
 }
 
 section, figure {
