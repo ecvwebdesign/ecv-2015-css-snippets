@@ -74,9 +74,6 @@ code {
 	padding: 3px;
 	border: none;
 	background: #e7e7e7;
-	color: #696969;
-}
-code:hover {
 	color: tomato;
 }
 
@@ -449,7 +446,7 @@ ul.gridDemo li .wrapper img {
 ul.gridDemo li .wrapper span {
 	display: block;
 	width: 100%;
-	background: #A52A2A;
+	background: #696969;
 	position: absolute;
 	bottom: -138px; right: 0;
 	padding: 30px 10px;
@@ -497,7 +494,33 @@ ul.ultraGridDemo li .itemWrapper h3 {
 	text-align: left;
 }
 
-@media screen and (max-width: 38.75em) {
+figure.relative {
+	position: relative;
+}
+
+span.resizeMe {
+	position: absolute;
+	z-index: 2;
+	right: -80px; top: 50%;
+	font-size: 1.6rem; font-weight: 500;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #97FFB1;
+	transform: rotate(-90deg) translateY(-50%);
+		-webkit-transform: rotate(-90deg) translateY(-50%);
+			-moz-transform: rotate(-90deg) translateY(-50%);
+}
+span.resizeMe::after {
+	content: "\f07d";
+	font: 2.4rem 'Font Awesome';
+	color: #97FFB1;
+	margin: 0 0 0 15px;
+	transform: translateY(5px);
+		-webkit-transform: translateY(5px);
+			-moz-transform: translateY(5px);
+}
+
+@media screen and (max-width: 45em) {
 
 	ul.ultraGridDemo li.sysCol8,
 	ul.ultraGridDemo li.sysCol4,
@@ -507,6 +530,10 @@ ul.ultraGridDemo li .itemWrapper h3 {
 			-webkit-flex: 0 1 100%;
 				-moz-box-flex: 0 1 100%;
 					-ms-flex: 0 1 100%;
+	}
+
+	span.resizeMe {
+		display: none;
 	}
 
 }

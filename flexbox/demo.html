@@ -9,7 +9,7 @@
 		<meta name="author" content="*l'auteur*" />
 		<meta name="description" content="*description de la démo*" />
 
-		<title>Flexbox est à la page | CSS Snippets</title>
+		<title>L'atelier Flexbox | CSS Snippets</title>
 
 		<!--STYLE GENERAL-->
 		<link rel="stylesheet" href="../css/foundation.css" />
@@ -45,7 +45,7 @@
 				
 				<div class="row">
 					<div class="large-12 columns">
-						<p>Flexbox n'est pas nouveau, mais n'est pas encore un standard. Le fruit est meilleur quand il est cueillit à maturité, et pour les standards, c'est pareil. Je vous invite à suivre ces petits ateliers pour ceux qui veulent expérimenter ou bien changer leur mainère de construire une page Web. Le niveau est croissant pour chaque étape de construction, mais pas d'inquiétude, c'est accessible même aux newbies. Bon jeu.
+						<p>Flexbox n'est pas nouveau, mais n'est pas encore un standard. Le fruit est meilleur quand il est cueillit à maturité, et pour les standards, c'est pareil. Je vous invite à suivre ces petits ateliers pour ceux qui veulent expérimenter ou bien changer leur mainère de construire une page Web. Juré, c'est accessible aux newbies. Bon jeu.
 					</div>
 				</div>
 
@@ -72,8 +72,8 @@
 				<article class="contentTxt airSU">
 					<div class="row">
 						<ul class="flex flexColumnWrap buttons">
-							<li class="equalCol"><p class="animation">Ajouter des boîtes</p></li>
-							<li class="equalCol"><p class="animation">Retirer des boîtes</p></li>
+							<li id="addBox" class="equalCol"><p class="animation">Ajouter des boîtes</p></li>
+							<li id="removeBox" class="equalCol"><p class="animation">Retirer des boîtes</p></li>
 						</ul>
 						<div class="level">
 							<strong>Difficulté</strong>
@@ -128,14 +128,6 @@
 						<p>Pour contruire la barre de l'exemple, il faut placer les flex items à droite du flex container.</p>
 						<blockquote class="animation">justify-content: flex-end</blockquote>
 						<p>La longueur et la hauteur des flex items est géré par le padding attribué au contenu de ces items. La barre de navigation est contruite, et en qulques propriétés également. Rien de bien méchant, mais ça va se corser à la prochaine étape.</p>
-						<!--<blockquote class="animation">flex: flex-grow | flex-shrink | flex-basis</blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<blockquote class="animation">flex: 1 1 100%</blockquote>-->
 					</div>
 				</article>
 
@@ -229,7 +221,7 @@
 						<blockquote class="animation">.flexContainer { height: (votre hauteur en px ou em) }</blockquote>
 						<p>Il y a un soucis... Les flex items débordent du flex container. Dans ce cas là, on procède alors à ce que fait Masonry: des largeurs différentes, pour former une mosaïque. Nous pouvons appliquer n'importe quelle taille, mais dans cette exemple, il y en a seulement 2. La proprité <code class="animation">width</code> s'applique aux flex items.</p>
 						<blockquote class="animation">width: 66.66% pour la première colonne d'image</br>width: 33.33% pour la plus petite</blockquote>
-						<p>Cette manière de construire des grilles n'a pas vocation à remplacer Masonry, ce plugin gère mieux la mosaïque, pour un rendu propre. Flexbox en donne un avant-goût et permet de construire des grilles modulables rien qu'avec du CSS et un peu d'huile de coude, une bonne solution pour les néophytes.</br>La dernière étape vous attend en bas, c'ets un peu le c-c-c-c-combo des capacités de Flexbox.</p>
+						<p>Cette manière de construire des grilles n'a pas vocation à remplacer Masonry, ce plugin gère mieux la mosaïque, pour un rendu propre. Flexbox en donne un avant-goût et permet de construire des grilles modulables rien qu'avec du CSS et un peu d'huile de coude, une bonne solution pour les néophytes.</br>La dernière étape vous attend en bas, c'est un peu le c-c-c-c-combo des capacités de Flexbox.</p>
 					</div>
 				</article>
 
@@ -238,7 +230,8 @@
 			<!--MAKE A RESPONSIVE GRID-->
 			<section id="listDemo" class="airLD">
 
-				<figure class="tomatoBg airS">
+				<figure class="tomatoBg airS relative">
+					<span class="resizeMe">rétrécissez-moi</span>
 					<div class="row">
 						<h3>Flexbox et le responsive.</h3>
 						<ul class="flex flexColumnWrap ultraGridDemo">
@@ -302,6 +295,13 @@
 								<div class="tomatoBg"></div>
 							</span>
 						</div>
+						<p>Le plus dur arrive, mais en réalité ce n'est pas si compliqué. Il s'agit dans une premier temps de déclarer au flex container de contruire une liste en colonne, où les éléments peuvent revenir à la ligne.</p>
+						<blockquote class="animation">flex-flow: row wrap</blockquote>
+						<p>Ensuite, pour faire varier la taille des boîtes, il suffit de constituer un système de grille avec différentes valeurs de flex basis.</p>
+						<blockquote class="animation">flex: flex-grow | flex-shrink | flex-basis</br>flex: 0 1 25%</br>flex: 0 1 33.33%</br>flex: 0 1 50%</br>flex: 0 1 66.66%</blockquote>
+						<p>En appliquant ces différents tailles aux flex items, ceux-ci auront une taille différentes, afin de créer un rythme. Pour le responsive, il faudrait dire au CSS via <code>@media screen</code> qu'au point de rupture, flex basis prendra une valeur de 100%, par rapport au flex container.</p>
+						<blockquote class="animation">@media screen and (max-width: 50em) { .flexItems { flex: 0 1 25% } }</blockquote>
+						<p>En redimensionnant, vous apercevrez que les boîtes vont se redimensionner et s'étirer, tout en conservant une harmonie dans le flex container.</p>
 					</div>
 				</article>
 
@@ -327,389 +327,33 @@
 
 			</footer>
 
-
-			<!--WRAPDEMO-->
-			<!--<section id="wrapDemo" class="airLD">
-
-				<figure class="tomatoBg airS">
-					<div class="row">
-						<h3>Flexbox is a strong wrap</h3>
-						<ul class="flex flexColumnWrap flexDemo">
-							<li class="smartCol"><p>Item 1</p></li>
-							<li class="smartCol"><p>Item 2</p></li>
-							<li class="smartCol"><p>Item 3</p></li>
-							<li class="smartCol"><p>Item 4</p></li>
-							<li class="smartCol"><p>Item 5</p></li>
-							<li class="smartCol"><p>Item 6</p></li>
-							<li class="smartCol"><p>Item 7</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<ul class="flex flexColumnWrap buttons">
-							<li class="equalCol"><p class="animation">add items</p></li>
-							<li class="equalCol"><p class="animation">remove items</p></li>
-						</ul>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<blockquote class="animation">display: flex</blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<blockquote class="animation">flex-direction: column</blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<blockquote class="animation">flex-wrap: wrap</blockquote>
-					</div>
-				</article>
-
-			</section>-->
-
-			<!--RWRAPDEMO-->
-			<!--<section id="rwrapDemo" class="airLD">
-
-				<figure class="tomatoBg airS">
-					<div class="row">
-						<h3>Flexbox can inverse things</h3>
-						<ul class="flex flexColumnRWrap flexDemo">
-							<li class="smartCol"><p>Item 1</p></li>
-							<li class="smartCol"><p>Item 2</p></li>
-							<li class="smartCol"><p>Item 3</p></li>
-							<li class="smartCol"><p>Item 4</p></li>
-							<li class="smartCol"><p>Item 5</p></li>
-							<li class="smartCol"><p>Item 6</p></li>
-							<li class="smartCol"><p>Item 7</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<ul class="flex flexColumnWrap buttons">
-							<li class="equalCol"><p class="animation">add items</p></li>
-							<li class="equalCol"><p class="animation">remove items</p></li>
-						</ul>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<blockquote class="animation">flex-wrap: wrap-reverse</blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<blockquote class="animation">flex-flow: row wrap-reverse</blockquote>
-					</div>
-				</article>
-
-			</section>-->
-
-			<!--ORDERDEMO-->
-			<!--<section id="orderDemo" class="airLD">
-
-				<figure class="tomatoBg airS">
-					<div class="row">
-						<h3>Flexbox orders its children</h3>
-						<ul class="flex flexColumnWrap flexDemo">
-							<li class="last smartCol"><p>Item 1</p></li>
-							<li class="smartCol"><p>Item 2</p></li>
-							<li class="middle smartCol"><p>Item 3</p></li>
-							<li class="first smartCol"><p>Item 4</p></li>
-							<li class="smartCol smartCol"><p>Item 5</p></li>
-							<li class="first smartCol"><p>Item 6</p></li>
-							<li class="middle smartCol"><p>Item 7</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<blockquote class="animation">order: z (z is an integer)</blockquote>
-					</div>
-				</article>
-
-			</section>-->
-
-			<!--JUSTIFYDEMO-->
-			<!--<section id="justifyDemo" class="airLD airArt">-->
-
-				<!--flex start-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h3>Flexbox puts our items where you want</h3>
-						<ul class="flex flexColumnWrap flexDemo justifyLeft">
-							<li class="sCol"><p>1</p></li>
-							<li class="sCol"><p>2</p></li>
-							<li class="sCol"><p>3</p></li>
-							<li class="sCol"><p>4</p></li>
-							<li class="sCol"><p>5</p></li>
-							<li class="sCol"><p>6</p></li>
-							<li class="sCol"><p>7</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">justify-content: flex-start</blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-				</article>-->
-
-				<!--flex end-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>On the right !</h4>
-						<ul class="flex flexColumnWrap flexDemo justifyRight">
-							<li class="sCol"><p>1</p></li>
-							<li class="sCol"><p>2</p></li>
-							<li class="sCol"><p>3</p></li>
-							<li class="sCol"><p>4</p></li>
-							<li class="sCol"><p>5</p></li>
-							<li class="sCol"><p>6</p></li>
-							<li class="sCol"><p>7</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">justify-content: flex-end</blockquote>
-					</div>
-				</article>-->
-
-				<!--center-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>(Malcolm) In the middle !</h4>
-						<ul class="flex flexColumnWrap flexDemo justifyCenter">
-							<li class="sCol"><p>1</p></li>
-							<li class="sCol"><p>2</p></li>
-							<li class="sCol"><p>3</p></li>
-							<li class="sCol"><p>4</p></li>
-							<li class="sCol"><p>5</p></li>
-							<li class="sCol"><p>6</p></li>
-							<li class="sCol"><p>7</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">justify-content: center</blockquote>
-					</div>
-				</article>-->
-
-				<!--space between-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>Justified !</h4>
-						<ul class="flex flexColumnWrap flexDemo justifySB">
-							<li class="sCol"><p>1</p></li>
-							<li class="sCol"><p>2</p></li>
-							<li class="sCol"><p>3</p></li>
-							<li class="sCol"><p>4</p></li>
-							<li class="sCol"><p>5</p></li>
-							<li class="sCol"><p>6</p></li>
-							<li class="sCol"><p>7</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">justify-content: space-between</blockquote>
-					</div>
-				</article>-->
-
-				<!--space around-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>If the others solutions aren't adequate</h4>
-						<ul class="flex flexColumnWrap flexDemo justifySA">
-							<li class="sCol"><p>1</p></li>
-							<li class="sCol"><p>2</p></li>
-							<li class="sCol"><p>3</p></li>
-							<li class="sCol"><p>4</p></li>
-							<li class="sCol"><p>5</p></li>
-							<li class="sCol"><p>6</p></li>
-							<li class="sCol"><p>7</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">justify-content: space-around</blockquote>
-					</div>
-				</article>
-
-			</section>-->
-
-			<!--ALIGNDEMO-->
-			<!--<section id="alignDemo" class="airLD airArt">-->
-				
-				<!--flex start-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h3>Flexbox is a great space for our items</h3>
-						<ul class="flex flexColumnWrap flexDemo justifyLeft alignUp enlarge">
-							<li class="equalCol"><p>item 1</p></li>
-							<li class="equalCol"><p>item 2</p></li>
-							<li class="equalCol"><p>item 3 is bigger. Damn it.</p></li>
-							<li class="equalCol"><p>item 4</p></li>
-							<li class="equalCol"><p>item 5</p></li>
-							<li class="equalCol"><p>item 6</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">align-items: flex-start</blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-				</article>-->
-
-				<!--flex end-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>At the bottom !</h4>
-						<ul class="flex flexColumnWrap flexDemo justifyLeft alignDown enlarge">
-							<li class="equalCol"><p>item 1</p></li>
-							<li class="equalCol"><p>item 2</p></li>
-							<li class="equalCol"><p>item 3 is bigger. Damn it.</p></li>
-							<li class="equalCol"><p>item 4</p></li>
-							<li class="equalCol"><p>item 5</p></li>
-							<li class="equalCol"><p>item 6</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">align-items: flex-end</blockquote>
-					</div>
-				</article>-->
-
-				<!--center-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>(Malcolm again) in the middle</h4>
-						<ul class="flex flexColumnWrap flexDemo justifyLeft alignCenter enlarge">
-							<li class="equalCol"><p>item 1</p></li>
-							<li class="equalCol"><p>item 2</p></li>
-							<li class="equalCol"><p>item 3 is bigger. Damn it.</p></li>
-							<li class="equalCol"><p>item 4</p></li>
-							<li class="equalCol"><p>item 5</p></li>
-							<li class="equalCol"><p>item 6</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">align-items: center</blockquote>
-					</div>
-				</article>-->
-
-				<!--baseline-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>A little bit special</h4>
-						<ul class="flex flexColumnWrap flexDemo justifyLeft alignBase enlarge">
-							<li class="equalCol"><p class="smallF">item 1</p></li>
-							<li class="equalCol"><p class="mediumF">item 2</p></li>
-							<li class="equalCol"><p>item 3 is bigger. Damn it.</p></li>
-							<li class="equalCol"><p class="smallF">item 4</p></li>
-							<li class="equalCol"><p class="largeF">item 5</p></li>
-							<li class="equalCol"><p class="mediumF">item 6</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">align-items: baseline</blockquote>
-					</div>
-				</article>-->
-
-				<!--stretch-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>To resolve all our problems</h4>
-						<ul class="flex flexColumnWrap flexDemo justifyLeft alignStretch enlarge">
-							<li class="equalCol"><p>item 1</p></li>
-							<li class="equalCol"><p>item 2</p></li>
-							<li class="equalCol"><p>item 3 is bigger. Damn it.</p></li>
-							<li class="equalCol"><p>item 4</p></li>
-							<li class="equalCol"><p>item 5</p></li>
-							<li class="equalCol"><p>item 6</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">align-items: stretch</blockquote>
-					</div>
-				</article>-->
-
-				<!--align self-->
-				<!--<figure class="tomatoBg airS">
-					<div class="row">
-						<h4>And give some freedom</h4>
-						<ul class="flex flexColumnWrap flexDemo justifyLeft alignCenter enlarge">
-							<li class="equalCol"><p>item 1</p></li>
-							<li class="equalCol alignSelfUp"><p>I am free</p></li>
-							<li class="equalCol"><p>item 3</p></li>
-							<li class="equalCol"><p>item 4</p></li>
-							<li class="equalCol alignSelfDown"><p>Me too</p></li>
-							<li class="equalCol"><p>item 6</p></li>
-						</ul>
-					</div>
-				</figure>
-				<article class="contentTxt airSU">
-					<div class="row">
-						<blockquote class="animation">align-self: (flex-start | flex-end | center | baseline | stretch)</blockquote>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					</div>
-				</article>
-
-			</section>-->
-
 		</div>
 		
 		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
 		<script src="../js/vendor/jquery.js"></script>
 		<script src="../js/foundation.min.js"></script>
 		<script>
-			$(document).foundation();
+			$(document).foundation().ready(imready);
+
+			function imready() {
+				addBox();
+				removeBox();
+			};
+
+			function addBox() {
+				var i = 1;
+				$('#addBox').click(function() {
+					$('<li class="sysCol12 animation"><p>Item de course '+ i +'</p></li>').insertAfter($('ul.listDemo li:last-child'));
+					i++;
+				})
+			};
+
+			function removeBox() {
+				$('#removeBox').click(function() {
+					$('ul.listDemo li:last-child').remove();
+				})
+			};
+
 		</script>
 
 	</body>
