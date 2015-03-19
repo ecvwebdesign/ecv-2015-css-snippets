@@ -1,56 +1,138 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>css-animation</title>
-    <link rel="Shortcut Icon" href="image/ico.png">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+<!--
+La démo à éditer
+-->
 
-</head>
+<!doctype html>
+<html class="no-js" lang="en">
 
-<body>
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="author" content="*l'auteur*" />
+		<meta name="description" content="*description de la démo*" />
+
+		<title>Animation Demo</title>
+
+		<!--STYLE GENERAL-->
+		<link rel="stylesheet" href="../css/foundation.css" />
+		<!--<link rel="stylesheet" href="../css/style.css" />-->
+
+		<!--STYLE ADDITIONNEL-->
+		<link rel="stylesheet" href="style.css" />
+		
+		<!--SCRIPT-->
+		<script src="../js/vendor/modernizr.js"></script>
+
+	</head>
+
+	<body>
+		
+		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
+		<script src="../js/vendor/jquery.js"></script>
+		<script src="../js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+
+
 
 <div class="container">
-  
-  <div class="titre">Animation CSS</div>
-  <div class="explique">CSS Animations is a proposed module for Cascading Style Sheets that allows the animation of HTML document elements using CSS. 
-  <strong>CSS3 @keyframes Rule</strong>
-is where the animation is created.
-Specify a CSS style inside the @keyframes rule and the animation will gradually change from the current style to the new style.</div>
+
+   <ul class="anim">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+   </ul>
+  <div class="titre">CSS Animations</div>
+  <div class="explique"><strong>Les animations CSS rendent possible la création de transitions animées depuis une décoration CSS à une autre.</strong>
+  Une animation permet de changer progressivement un élément d'un style à l'autre. Vous pouvez changer autant de propriétés CSS que vous voulez, autant de fois que vous voulez. Pour utiliser l'animation CSS3, vous devez d'abord spécifier des images clés pour l'animation. Images clés maintenir ce que les styles l'élément aura à certains moments.
+  <p>{ Passez le souris au dessus le carré pour voir l'animation. }</p>
+  </div>
         <div class="etape">  
-        <strong>Basic Level</strong></div>
+        Niveau Simple</div>
+        <div class="classique1"></div>
 	<div class="simple">
-    <div class="rect rect1">
-    </div>
-    <div class="rect rect2">
-    </div>
-    <div class="rect rect3">
-    </div>
-    </div>
+    <div class="rect rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect rect3"></div>
+  </div>
+  <div class="tt">
+    <p>◆ Carré 1: Couleur change.</p>
+    <p>◆ Carré 2: Position+couleur change.</p>
+    <p>◆ Carré 3: Position change.</p></div>
 
         <div class="etape">  
-        <strong>Medium Level</strong></div>
+       Niveau Moyen</div>
+       <div class="classique2"></div>
     <div class="moyen">
 <div class="rect rect4"></div>
 <div class="rect rect5"></div>
 <div class="rect rect6"></div>
 <div class="rect rect7"></div>
     </div>
+  <div class="tt">
+    <p>◆ Carré 4: Animation puff-in.</p>
+    <p>◆ Carré 5: Perspective down.</p>
+    <p>◆ Carré 6: Hole out.</p>
+    <p>◆ Carré 7: Animation flip.</p></div>
 
         <div class="etape">  
-        <strong>Difficult Level</strong></div>
+        Niveau Difficile</div>
+        <div class="classique3"></div>
     <div class="difficile">
-<div class="rect8">
+ <div class="rect8">
    <div class="rect9"></div>
-</div>    
+  </div> 
+ <div class="progress-bar"></div>   
+
+<div class="doodle">
+ <input type="checkbox" id="play" name="play"/>
+  <label for="play">
+    <img src="http://www.google.com/logos/2012/muybridge12-hp-p.jpg" alt="Play" />
+  </label>
+        <div class="animate">
+    
+    <div class="g"></div>
+    <div class="g"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="l"></div>
+    <div></div>
+    
+    <div class="g"></div>
+    <div class="g"></div>
+    <div class="o"></div>
+    <div class="o play"></div>
+    <div class="g"></div>
+    <div class="l"></div>
+    <div class="e"></div>
+    
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="g"></div>
+    <div></div>
+    <div></div>
+        </div>
+</div>
     </div>
+    <div class="tt">
+      <p>◆ Carré 8: Movement de barre.</p>
+      <p>◆ Carré 9: Chargement barre.</p>
+      <p>◆ Carré 10: Animation balade à cheval.</p></div>
+
 
     <div class="etape">
-        <strong>The Experimental</strong></div>
+        Expérimental</div>
+        <div class="classique4"></div>
 <div class="experimental">
     <div class="rect10">
+
  <div class='assembly'>
   <div class='square'></div>
   <div class='square'></div>
@@ -366,10 +448,17 @@ Specify a CSS style inside the @keyframes rule and the animation will gradually 
   <div class='square'></div>
   <div class='square'></div>
  </div>
+
+  </div>
 </div>
+
+
+
 </div>
 
 
 
-</body>
 
+	</body>
+
+</html>
