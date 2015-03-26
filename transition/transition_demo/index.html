@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Transition CSS Demo</title>
+
+    <!-- Bootstrap -->
+    
+    <link href="style.css" rel="stylesheet">
+    <link href="media.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  <section class="container1">
+     <h1 class='title'>Transition DEMO</h1>
+     <p class='discription'><strong>Que-ce que c'est la transition dans CSS?</strong><br><br>
+     <div class="row">
+     <div class="col-md-6">Avec CSS3, on peut ajouter les effets de changement de forme et animer les pages web uniquement à l'aide de styles CSS, sans apport de JavaScript. </div>
+     <div class="col-md-6">Grâce aux dernières évolutions du langage et au module CSS3 Transitions, il est désormais possible de réaliser des transitions basiques à l'aide de CSS dans les navigateurs récents. </div></div>
+  </section>
+
+  <section class="container6">
+     <p class='discription'><strong>Forme présentation:</strong></p> 
+     <div class="forme_css_transition"><strong>div {<br>background-color: #31464e<br>transition-property: background-color;
+     transition-duration: .5s;<br>transition-timing-function: linear;<br>transition-delay: 1s;<br>}</strong></div></strong><p> Ou on peut écrire comme ça:  <div class="forme_css_transition"><strong>div {<br>background-color: #31464e;<br>-webkit-transition: background-color .5s linear, 1s; /* Safari */<br>}</strong></div>
+      <p>Pour crée un effet de transition, on dois spécifier deux points:<br>
+      • le propriété de CSS qu’on veut ajouter les effets;<br>
+      • la duration des effets.  </p>
+      <p>L'effet de transition commencera lorsque la propriété CSS spécifié (couleur) change de valeur.<br>Maintenant , précisons une nouvelle valeur pour la propriété width lorsqu'un utilisateur passe la souris sur l'élément:</p>
+      <div class="forme_css_transition"><strong>div:hover {<br>background-color:#a88963;<br>} </strong></div>
+      <p>Voici est l'effet qu'on a fait:(Passez votre souris sur les éléments en base)</p>
+      <div id='animateTest' class="couleur1">Hello World!</div>
+   </section>
+
+
+   <section class="container2">
+      <p class='discription'><strong>La propriété transition - timing-function peut avoir les valeurs suivantes:</strong></p>
+      <p><strong>ease</strong> - spécifie un effet de transition avec un démarrage lent, puis rapide, puis se arrête lentement ( ce est par défaut).<br>
+      <strong>linear </strong> - spécifie un effet de transition à la même vitesse du début à la fin.<br>
+      <strong>ease-in</strong> - spécifie un effet de transition avec un démarrage lent.<br>
+      <strong>ease-out</strong> - spécifie un effet de transition avec une extrémité lente. <br>
+      <strong>ease-in-out</strong> - spécifie un effet de transition avec un démarrage lent et à la fin.<br>
+      <strong>cubic-bezier(n,n,n,n)</strong> - nous permet de définir nos propres valeurs dans une fonction cubique - Bézier.
+      <div class="row">
+      <div class="col-md-4"><img class="time_function" src="img/css transition-ease.svg"></img><p>ease</p><div class="time_fontion_example1"></div></div>
+      <div class="col-md-4"><img class="time_function" src="img/css transition-linear.svg"></img><p>linear</p><div class="time_fontion_example2"></div></div>
+      <div class="col-md-4"><img class="time_function" src="img/css transition-ease-in.svg"></img><p>ease-in</p><div class="time_fontion_example3"></div></div>
+      <div class="col-md-4"><img class="time_function" src="img/css transition-ease-out.svg"></img><p>ease-out</p><div class="time_fontion_example4"></div></div>
+      <div class="col-md-4"><img class="time_function" src="img/css transition-in-out.svg"></img><p>ease-in-out</p><div class="time_fontion_example5"></div></div>
+      <div class="col-md-4"><img class="time_function" src="img/css transition-bezier.svg"></img><p>cubic-bezier</p><a target='_blank' href="http://cubic-bezier.com/#.17,.67,.83,.67" class='buton'>voir plus les infos</a></div>
+      </div>
+
+</p>
+   </section>
+
+
+   <section class="container3">
+      <p class='discription'><strong>Passez votre souris sur les éléments en base:</strong></p>
+      <div class="row">
+      <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="couleur">couleur</div></a><div class="code">
+      </div></div>
+      <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="deplacer">déplace</div></a></div>
+      <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="alonger">alonger</div></a></div>
+      </div>
+   </section>
+
+
+   <section class="container4">
+     <p class='discription'><strong>On peut utiliser css transition avec <a href="" class='buton2'>transform </a> pour avoir plus d'effet:</strong></p>
+     <div class="row">
+     <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="rotation">rotation</div></a></div>
+     <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="grandir">grandir</div></a></div>
+     <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="skew">skew</div></a></div></div>
+   </section>
+
+    <section class="container5">
+     <p class='discription'><strong>On peut utiliser css <a href="" class='buton2'>animation</a> avec  pour avoir plus d'effet:</strong></p>
+     <div class="row">
+     <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="bounceIn">bounce</div></a></div>
+     <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="swing">swing</div></a></div>
+     <div class="col-md-4"><a target='_blank' href="" class='buton'><div id='animateTest' class="shake">shake</div></a></div></div> 
+    </section>
+
+
+</body>
+</html>
