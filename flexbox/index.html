@@ -22,18 +22,344 @@ Le tutoriel à récupérer et à éditer
 		<!--STYLE ADDITIONNEL-->
 		<link rel="stylesheet" href="style.css" />
 
+
+		<!--FONTS-->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+		
 		<!--SCRIPT-->
 		<script src="../js/vendor/modernizr.js"></script>
 
 	</head>
 
 	<body>
+	
+		<!--PAGEWRAP-->
+		<div class="pagewrap">
+			
+			<!--TITLE-->
+			<section id="titleDemo" class="airL">
+				
+				<div class="row">
+					<div class="large-12 columns">
+						<h2>L'Atelier Flexbox</h3>
+						<h3>Goûtez au pouvoir des boîtes flexibles.</h3>
+					</div>
+				</div>
+
+			</section>
+			<section id="introDemo" class="airL">
+				
+				<div class="row">
+					<div class="large-12 columns">
+						<p>Flexbox n'est pas nouveau, mais n'est pas encore un standard. Le fruit est meilleur quand il est cueillit à maturité, et pour les standards, c'est pareil. Je vous invite à suivre ces petits ateliers pour ceux qui veulent expérimenter ou bien changer leur mainère de construire une page Web. Juré, c'est accessible aux newbies. Bon jeu.
+					</div>
+				</div>
+
+			</section>
+
+			<!--MAKE A SIMPLE LIST-->
+			<section id="listDemo" class="airLD">
+
+				<figure class="tomatoBg airS">
+					<div class="row">
+						<h3>Flexbox construit des listes.</h3>
+						<ul class="flex flexListWrap listDemo">
+							<li class="sysCol12"><p class="hotBg whiteColor">Patates</p></li>
+							<li class="sysCol12"><p class="hotBg whiteColor">Papier toilettes</p></li>
+							<li class="sysCol12"><p class="hotBg whiteColor">2 éponges</p></li>
+							<li class="sysCol12"><p>Ravioli</p></li>
+							<li class="sysCol12"><p>Canard WC</p></li>
+							<li class="sysCol12"><p>Slip de bain</p></li>
+							<li class="sysCol12"><p class="doneBg whiteColor">Tartines</p></li>
+							<li class="sysCol12"><p class="doneBg whiteColor">Sopalin</p></li>
+						</ul>
+					</div>
+				</figure>
+				<article class="contentTxt airSU">
+					<div class="row">
+						<ul class="flex flexColumnWrap buttons">
+							<li id="addBox" class="equalCol"><p class="animation">Ajouter des boîtes</p></li>
+							<li id="removeBox" class="equalCol"><p class="animation">Retirer des boîtes</p></li>
+						</ul>
+						<div class="level">
+							<strong>Difficulté</strong>
+							<span class="flex flexColumnWrap">
+								<div class="tomatoBg"></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</span>
+						</div>
+						<p>Flexbox contruit des systèmes de lignes et de colonnes. Prenons l'exemple de cette liste de course très banale, gérable en quelques lignes de CSS. Dans un premier temps, il faut donner un comportement flexible au conteneur: le flex container.</p>
+						<blockquote class="animation">display: flex</blockquote>
+						<p>Le conteneur est fixé. Maintenant c'est autour des boîtes de se comporter comme élément flexible: les flex items. Nous voulons une liste sur une colonne, et pour cela, il faut que l'axe principal parte du haut vers le bas.</p>
+						<blockquote class="animation">flex-direction: column</blockquote>
+						<p>Les flex items prendront la largeur du flex container, la hauteur des éléments dépend du contenu de ces flex items ou des propriétés CSS <code class="animation">height</code> ou <code class="animation">min-height</code>.</p>
+					</div>
+				</article>
+
+			</section>
+
+			<!--MAKE A NAV BAR-->
+			<section id="listDemo" class="airLD">
+
+				<figure class="tomatoBg airS">
+					<div class="row">
+						<h3>Flexbox achève votre barre de navigation.</h3>
+						<ul class="flex flexColumnWrap navDemo justifyRight">
+							<li class="animation"><p class="animation">Accueil</p></li>
+							<li class="animation"><p class="animation">Mes travaux</p></li>
+							<li class="animation"><p class="animation">À propos</p></li>
+							<li class="animation"><p class="animation">Contact</p></li>
+						</ul>
+					</div>
+				</figure>
+				<article class="contentTxt airSU">
+					<div class="row">
+						<div class="level">
+							<strong>Difficulté</strong>
+							<span class="flex flexColumnWrap">
+								<div class="tomatoBg"></div>
+								<div class="tomatoBg"></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</span>
+						</div>
+						<p>Nouveau cas de figure, les colonnes. Un peu plus compliqué car de nouvelles propriétés s'appliquent. Ce système permet de construire des grilles pour ses pages web adaptées à son contenu.</br>Dans un premier temps, il faut inverser l'axe principale pour aligner les flex items. La proprité <code class="animation">flex-direction</code> s'applique au flex container.</p>
+						<blockquote class="animation">flex-direction: row</blockquote>
+						<p>Une fois alignés, il faut placer le groupe des flex items dans l'espace du flex container. La propriété <code class="animation">justify-content</code> s'applique au flex container.</p>
+						<blockquote class="animation">justify-content: (flex-start | flex-end | center | space-between | space-around)</blockquote>
+						<p>Pour contruire la barre de l'exemple, il faut placer les flex items à droite du flex container.</p>
+						<blockquote class="animation">justify-content: flex-end</blockquote>
+						<p>La longueur et la hauteur des flex items est géré par le padding attribué au contenu de ces items. La barre de navigation est contruite, et en qulques propriétés également. Rien de bien méchant, mais ça va se corser à la prochaine étape.</p>
+					</div>
+				</article>
+
+			</section>
+
+			<!--MAKE A MASONRY GRID-->
+			<section id="listDemo" class="airLD">
+
+				<figure class="tomatoBg airS">
+					<div class="row">
+						<h3>Flexbox et Masonry font bon ménage.</h3>
+						<ul class="flex flexListWrap gridDemo">
+							<li class="mediumC">
+								<div class="wrapper">
+									<img src="img/test1.jpg" alt="test" />
+									<span class="animation"><p>Blob</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="mediumC">
+								<div class="wrapper">
+									<img src="img/test2.jpg" alt="test" />
+									<span class="animation"><p>Transhumanism</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="mediumC">
+								<div class="wrapper">
+									<img src="img/test3.jpg" alt="test" />
+									<span class="animation"><p>Money</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="mediumC">
+								<div class="wrapper">
+									<img src="img/test4.jpg" alt="test" />
+									<span class="animation"><p>Bottle</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="smallC">
+								<div class="wrapper">
+									<img src="img/test5.jpg" alt="test" />
+									<span class="animation"><p>Geometric</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="smallC">
+								<div class="wrapper">
+									<img src="img/test6.jpg" alt="test" />
+									<span class="animation"><p>Raven</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="smallC">
+								<div class="wrapper">
+									<img src="img/test7.jpg" alt="test" />
+									<span class="animation"><p>Humanism</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="smallC">
+								<div class="wrapper">
+									<img src="img/test8.jpg" alt="test" />
+									<span class="animation"><p>London</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="smallC">
+								<div class="wrapper">
+									<img src="img/test9.jpg" alt="test" />
+									<span class="animation"><p>Tatoo</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+							<li class="smallC">
+								<div class="wrapper">
+									<img src="img/test10.jpg" alt="test" />
+									<span class="animation"><p>Words</p><button class="animation" alt="link simulator">jetez un œil</button></span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</figure>
+				<article class="contentTxt airSU">
+					<div class="row">
+						<div class="level">
+							<strong>Difficulté</strong>
+							<span class="flex flexColumnWrap">
+								<div class="tomatoBg"></div>
+								<div class="tomatoBg"></div>
+								<div class="tomatoBg"></div>
+								<div></div>
+								<div></div>
+							</span>
+						</div>
+						<p>Le niveau monte. Quand un jour nous avons le besoin de créer une mise en page de grille dynamique, nous faisons appel généralement au principal plugin qui gère ça: Masonry. Le hic: Masonry est un plugin utilisant la librairie JQuery. Ce qui veut dire qu'il y a du Javascript. Le but c'est de montrer que cette grille peut se faire sans une seule once de JS.</br> Pour cela, commençons par donner un comportement au flex container, de manière à ce que les flex items forment une liste.</p>
+						<blockquote class="animation">flex-direction: column</blockquote>
+						<p>A ce stade, les flex items prennent 100% de la taille du flex container. L'objectif est de faire remonter en haut quelques flex items. Il est alors essentiel de donner une valeur absolue à la propriété <code class="animation">height</code>, donnée au flex container.</p>
+						<blockquote class="animation">.flexContainer { height: (votre hauteur en px ou em) }</blockquote>
+						<p>Il y a un soucis... Les flex items débordent du flex container. Dans ce cas là, on procède alors à ce que fait Masonry: des largeurs différentes, pour former une mosaïque. Nous pouvons appliquer n'importe quelle taille, mais dans cette exemple, il y en a seulement 2. La proprité <code class="animation">width</code> s'applique aux flex items.</p>
+						<blockquote class="animation">width: 66.66% pour la première colonne d'image</br>width: 33.33% pour la plus petite</blockquote>
+						<p>Cette manière de construire des grilles n'a pas vocation à remplacer Masonry, ce plugin gère mieux la mosaïque, pour un rendu propre. Flexbox en donne un avant-goût et permet de construire des grilles modulables rien qu'avec du CSS et un peu d'huile de coude, une bonne solution pour les néophytes.</br>La dernière étape vous attend en bas, c'est un peu le c-c-c-c-combo des capacités de Flexbox.</p>
+					</div>
+				</article>
+
+			</section>
+
+			<!--MAKE A RESPONSIVE GRID-->
+			<section id="listDemo" class="airLD">
+
+				<figure class="tomatoBg airS relative">
+					<span class="resizeMe">rétrécissez-moi</span>
+					<div class="row">
+						<h3>Flexbox et le responsive.</h3>
+						<ul class="flex flexColumnWrap ultraGridDemo">
+							<li class="sysCol8">
+								<div class="itemWrapper animation">
+									<h3>Je suis le 1e billet.</h3>
+									<p>Avec pas mal de contenu au premier abord, car je suis pas mal large. Ce qui laisse pas mal d'écriture.</p>
+								</div>
+							</li>
+							<li class="sysCol4">
+								<div class="itemWrapper animation">
+									<h3>Le 2e !</h3>
+									<p>Moins de place ce coup-ci. Alors, moins de texte.</p>
+								</div>
+							</li>
+							<li class="sysCol3">
+								<div class="itemWrapper animation">
+									<h3>Serré.</h3>
+								</div>
+							</li>
+							<li class="sysCol3">
+								<div class="itemWrapper animation">
+									<h3>Serré.</h3>
+								</div>
+							</li>
+							<li class="sysCol6">
+								<div class="itemWrapper animation">
+									<h3>Moins serré.</h3>
+								</div>
+							</li>
+							<li class="sysCol12">
+								<div class="itemWrapper animation">
+									<h3>Très aéré ce 6e billet.</h3>
+									<p>Ce qui laisse libre court à mon imagination et à la votre, en y insérant n'importe quel contenu comme de la photo, de la vidéo, du texte, un canvas, un mars...</p>
+								</div>
+							</li>
+							<li class="sysCol6">
+								<div class="itemWrapper animation">
+									<h3>Plus étroit ce 8e billet.</h3>
+									<p>Moins de choses.</p>
+								</div>
+							</li>
+							<li class="sysCol6">
+								<div class="itemWrapper animation">
+									<h3>Pareil ce 9e billet.</h3>
+									<p>Pareil chez le voisin.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</figure>
+				<article class="contentTxt airSU">
+					<div class="row">
+						<div class="level">
+							<strong>Difficulté</strong>
+							<span class="flex flexColumnWrap">
+								<div class="tomatoBg"></div>
+								<div class="tomatoBg"></div>
+								<div class="tomatoBg"></div>
+								<div class="tomatoBg"></div>
+								<div class="tomatoBg"></div>
+							</span>
+						</div>
+						<p>Le plus dur arrive, mais en réalité ce n'est pas si compliqué. Il s'agit dans une premier temps de déclarer au flex container de contruire une liste en colonne, où les éléments peuvent revenir à la ligne.</p>
+						<blockquote class="animation">flex-flow: row wrap</blockquote>
+						<p>Ensuite, pour faire varier la taille des boîtes, il suffit de constituer un système de grille avec différentes valeurs de flex basis.</p>
+						<blockquote class="animation">flex: flex-grow | flex-shrink | flex-basis</br>flex: 0 1 25%</br>flex: 0 1 33.33%</br>flex: 0 1 50%</br>flex: 0 1 66.66%</blockquote>
+						<p>En appliquant ces différents tailles aux flex items, ceux-ci auront une taille différentes, afin de créer un rythme. Pour le responsive, il faudrait dire au CSS via <code>@media screen</code> qu'au point de rupture, flex basis prendra une valeur de 100%, par rapport au flex container.</p>
+						<blockquote class="animation">@media screen and (max-width: 50em) { .flexItems { flex: 0 1 25% } }</blockquote>
+						<p>En redimensionnant, vous apercevrez que les boîtes vont se redimensionner et s'étirer, tout en conservant une harmonie dans le flex container.</p>
+					</div>
+				</article>
+
+			</section>
+
+			<!--LINKS AND SOURCES-->
+			<footer>
+
+				<div class="row">
+					<ul class="flex flexListWrap airS">
+						<li><h3>Sources</h3></li>
+						<li><p>CSS3 Flexbox Layout module - <a href="http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html" alt="Link to alsacréation">http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html</a></p></li>
+						<li><p>Jack in the flexbox - <a href="http://jackintheflexbox.tumblr.com" alt="Link to Jack in the flexbox">http://jackintheflexbox.tumblr.com</a></p></li>
+						<li><p>Flexbox adventures - <a href="http://chriswrightdesign.com/experiments/flexbox-adventures/" alt="Link to Flexbox adventures">http://chriswrightdesign.com/experiments/flexbox-adventures/</a></p></li>
+						<li><p>A Complete Guide to Flexbox - <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" alt="Link to Flexbox adventures">http://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p></li>
+					</ul>
+				</div>
+				<div class="signature">
+					<div class="row">
+						<p>Made with <i></i> by Aurélien Grimaud</p>
+					</div>
+				</div>
+
+			</footer>
+
+		</div>
 		
 		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
 		<script src="../js/vendor/jquery.js"></script>
 		<script src="../js/foundation.min.js"></script>
 		<script>
-			$(document).foundation();
+			$(document).foundation().ready(imready);
+
+			function imready() {
+				addBox();
+				removeBox();
+			};
+
+			function addBox() {
+				var i = 1;
+				$('#addBox').click(function() {
+					$('<li class="sysCol12 animation"><p>Item de course '+ i +'</p></li>').insertAfter($('ul.listDemo li:last-child'));
+					i++;
+				})
+			};
+
+			function removeBox() {
+				$('#removeBox').click(function() {
+					$('ul.listDemo li:last-child').remove();
+				})
+			};
+
 		</script>
 
 	</body>

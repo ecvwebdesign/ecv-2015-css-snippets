@@ -1,17 +1,12 @@
-<!--
-Voici l'index (un modèle pour l'instant) de notre page d'accueil, à modifier et éditer
-Ne pas hésiter à forker > cloner le repo et l'éditer en local, pour après l'envoyer en tant que "pull request".
--->
-
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="fr">
 
 	<head>
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="author" content="*les auteurs*" />
+		<meta name="author" content="Aurélien Grimaud" />
 		<meta name="description" content="*description de notre page, de notre projet*" />
 
 		<title>CSS Snippets, la base du CSS3 pédagogique</title>
@@ -20,6 +15,9 @@ Ne pas hésiter à forker > cloner le repo et l'éditer en local, pour après l'
 		<link rel="stylesheet" href="css/foundation.css" />
 		<link rel="stylesheet" href="css/style.css" />
 
+		<!--FONTE-->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+
 		<!--SCRIPT-->
 		<script src="js/vendor/modernizr.js"></script>
 
@@ -27,172 +25,413 @@ Ne pas hésiter à forker > cloner le repo et l'éditer en local, pour après l'
 
 	<body>
 		
-		<div class="row">
-			<div class="large-12 columns">
-				<h1>Welcome to CSS Snippets project</h1>
+		<header class="blkBG">
+			<div class="row headerContent">
+				<div class="large-3 medium-3 small-3 columns">
+					<img src="img/logotype.svg" alt="logotype snippets" />
+				</div>
+				<nav class="large-6 medium-6 small-6 columns">
+					<a href="#">thèmes</a>
+					<a href="#">l'équipe</a>
+					<a href="#">contact</a>
+				</nav>
 			</div>
-		</div>
-		
-		<div class="row">
-			<div class="large-12 columns">
-				<div class="panel">
-					<h3>Voici une liste des projets </h3>
-					<ul>
-						<li><a href="./css-animation">Animations</a></li>
-						<li><a href="./box-shadow">Box Shadow</a></li>
-						<li><a href="./flexbox">Flexbox</a></li>												
-						<li><a href="./float-position">Floats and positions</a></li>
-						<li><a href="./gradients">Gradients</a></li>
-						<li><a href="./grid-layouts">Grid Layouts</a></li>
-						<li><a href="./rwd">Responsive web design</a></li>												
-						<li><a href="./svg">Scalable vector graphics</a></li>
-						<li><a href="./transformation">Tranforms</a></li>
-						<li><a href="./transition">Transitions</a></li>						
-						<li><a href="/"></a></li>
-					</ul>
-					<p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-					<p>Once you've exhausted the fun in this document, you should check out:</p>
-					<div class="row">
-						<div class="large-4 medium-4 columns">
-					<p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-				</div>
-						<div class="large-4 medium-4 columns">
-							<p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-						</div>
-						<div class="large-4 medium-4 columns">
-							<p><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-						</div>				
-					</div>
-				</div>
-			</div>
-		</div>
+		</header>
 
-		<div class="row">
-			<div class="large-8 medium-8 columns">
-				<h5>Here&rsquo;s your basic grid:</h5>
-				<!-- Grid Example -->
+		<!--ENVELOPPE-->
+		<div id="sectionWrap">
 
-				<div class="row">
-					<div class="large-12 columns">
-						<div class="callout panel">
-							<p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-6 medium-6 columns">
-						<div class="callout panel">
-							<p>Six columns</p>
-						</div>
-					</div>
-					<div class="large-6 medium-6 columns">
-						<div class="callout panel">
-							<p>Six columns</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-				</div>
+			<!--TITRE DU SITE-->
+			<section id="siteTitle" class="blBG adaptableCover flex">
+
+				<article class="smallRow centerBlock">
+					<h1 class="blkColor">css snippet collection</h1>
+					<h4 class="blkColor">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+				</article>
+
+			</section>
+			
+			<!--THEMES-->
+			<section id="topics" class="whBG airU">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">thème</h1>
+				</article>
+				<ul class="flexMosaic topicsWrapper flex flexColumn">
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">r.w.d</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./rwd" alt='lien vers le tutoriel de responsive web design' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">flexbox</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./flexbox" alt='lien vers le tutoriel de flexbox' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">svg styling</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./svg" alt='lien vers le tutoriel de svg' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">transforms</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./transformation" alt='lien vers le tutoriel de transfrmation' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">animation</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./css-animation" alt='lien vers le tutoriel animation' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">float and positionning</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./float-position" alt='lien vers le tutoriel de positionnement' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">gradients</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./gradients" alt='lien vers le tutoriel de dégradé' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">box shadows</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./box-shadows" alt='lien vers le tutoriel ombre portée' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">grid layout</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./grid-layouts" alt='lien vers le tutoriel de grille modulaire' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+					<li class="blBG">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">transitions</h2>
+								<p class="whColor animation centerOrigin">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+								<a href="./transition" alt='lien vers le tutoriel de transition' class="button medium more centerOrigin animation"><span class="animation">en savoir +</span></a>
+							</div>
+						</span>
+					</li>
+				</ul>
 				
-				<hr />
-								
-				<h5>We bet you&rsquo;ll need a form somewhere:</h5>
-				<form>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-12.columns" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-4 medium-4 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-4.columns" />
-						</div>
-						<div class="large-4 medium-4 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-4.columns" />
-						</div>
-						<div class="large-4 medium-4 columns">
-							<div class="row collapse">
-								<label>Input Label</label>
-								<div class="small-9 columns">
-									<input type="text" placeholder="small-9.columns" />
-								</div>
-								<div class="small-3 columns">
-									<span class="postfix">.com</span>
+			</section>
+
+			<!--THEMES-->
+			<section id="team" class="whBG airU">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">l'équipe</h1>
+				</article>
+				<ul class="flexMosaic teamWrapper flex flexColumn">
+					<li class="elodie teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">élodie</h2>
+								<p class="whColor animation centerOrigin">Spécialiste certifiée en pop-idols japonaises et docteur ès fabrication de cookies maison, mon but est de diffuser une idée fun, fraîche et multilingue du webdesign… avec le sourire ( • ̀ω•́  )✧</p>
+								<div class="iconWrapper centerOrigin flex smartRep">
+									<a href="http://www.elodiedassance.com/" alt="lien vers le portfolio">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-8.8,35.1c-8.6,0-15.7,7.1-15.7,15.7c0,8.6,7.1,15.7,15.7,15.7S6.8,59.4,6.8,50.8C6.8,42.1-0.2,35.1-8.8,35.1L-8.8,35.1z M0.5,52.6H-7v7.4h-3.7v-7.4h-7.4v-3.7h7.4v-7.4H-7v7.4h7.4V52.6z"/>
+										</svg>
+									</a>
+									<a href="http://fr.linkedin.com/in/elodiedassance/" alt="lien vers linkedin">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-16.7,63.4V44.2h-6.4v19.2L-16.7,63.4L-16.7,63.4z M-19.9,41.6c2.2,0,3.6-1.5,3.6-3.3c0-1.9-1.4-3.3-3.6-3.3c-2.2,0-3.6,1.4-3.6,3.3C-23.4,40.1-22.1,41.6-19.9,41.6L-19.9,41.6L-19.9,41.6z M-13.1,63.4h6.4V52.7c0-0.6,0-1.1,0.2-1.6
+											C-6,50-5,48.8-3.2,48.8c2.3,0,3.2,1.8,3.2,4.3v10.3h6.4v-11c0-5.9-3.2-8.6-7.4-8.6c-3.5,0-5,1.9-5.8,3.2h0v-2.8h-6.4C-13,46-13.1,63.4-13.1,63.4L-13.1,63.4z"/>
+										</svg>
+									</a>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Select Box</label>
-							<select>
-								<option value="husker">Husker</option>
-								<option value="starbuck">Starbuck</option>
-								<option value="hotdog">Hot Dog</option>
-								<option value="apollo">Apollo</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-6 medium-6 columns">
-							<label>Choose Your Favorite</label>
-							<input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-							<input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-						</div>
-						<div class="large-6 medium-6 columns">
-							<label>Check these out</label>
-							<input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-							<input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Textarea Label</label>
-							<textarea placeholder="small-12.columns"></textarea>
-						</div>
-					</div>
-				</form>
-			</div>		 
+						</span>
+					</li>
+					<li class="blBG teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">aurélien</h2>
+								<p class="whColor animation centerOrigin">Le labeur et le bon beurre à ce qu’il paraît. Je me positionne comme designer « junior » d’expérience utilisateur, obnubiler par le développement front-end et la chasse à la méduse.</p>
+								<div class="iconWrapper centerOrigin flex smartRep">
+									<a href="http://ineedvitamins.fr" class="" alt="lien vers le portfolio">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-8.8,35.1c-8.6,0-15.7,7.1-15.7,15.7c0,8.6,7.1,15.7,15.7,15.7S6.8,59.4,6.8,50.8C6.8,42.1-0.2,35.1-8.8,35.1L-8.8,35.1z M0.5,52.6H-7v7.4h-3.7v-7.4h-7.4v-3.7h7.4v-7.4H-7v7.4h7.4V52.6z"/>
+										</svg>
+									</a>
+									<a href="http://fr.linkedin.com/in/augrimaud" class="" alt="lien vers linkedin">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-16.7,63.4V44.2h-6.4v19.2L-16.7,63.4L-16.7,63.4z M-19.9,41.6c2.2,0,3.6-1.5,3.6-3.3c0-1.9-1.4-3.3-3.6-3.3c-2.2,0-3.6,1.4-3.6,3.3C-23.4,40.1-22.1,41.6-19.9,41.6L-19.9,41.6L-19.9,41.6z M-13.1,63.4h6.4V52.7c0-0.6,0-1.1,0.2-1.6
+											C-6,50-5,48.8-3.2,48.8c2.3,0,3.2,1.8,3.2,4.3v10.3h6.4v-11c0-5.9-3.2-8.6-7.4-8.6c-3.5,0-5,1.9-5.8,3.2h0v-2.8h-6.4C-13,46-13.1,63.4-13.1,63.4L-13.1,63.4z"/>
+										</svg>
+									</a>
+									<a href="https://twitter.com/ineedVitamins" class="" alt="lien vers twitter">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#FFFFFF" d="M-9.6,46.2c1.2-3.6,2.6-5.9,4.2-7.6c1.2-1.3,1.8-1.7,1.1-0.3c0.3-0.3,0.8-0.6,1.1-0.8c2-0.9,1.8-0.1,0.5,0.7c3.7-1.3,3.6,0.4-0.3,1.2c3.2,0.1,6.6,2.1,7.6,6.4c0.1,0.6,0,0.5,0.6,0.6c1.3,0.2,2.6,0.2,3.8-0.2c-0.1,0.9-1.3,1.5-3.2,1.9c-0.7,0.1-0.8,0.1,0,0.3c1,0.2,2.1,0.3,3.3,0.2c-0.9,1.1-2.4,1.6-4.3,1.6c-1.1,4.2-3.8,7.2-7.1,9.1c-7.8,4.4-19.1,3.8-24.8-4.2c3.7,2.9,9.3,3.6,13.4-0.5c-2.7,0-3.4-2-1.3-3.1c-2,0-3.3-0.7-4.1-1.8c-0.3-0.4-0.3-0.5,0.2-0.8c0.5-0.4,1.2-0.5,1.9-0.6c-2.1-0.6-3.4-1.7-3.8-3.1c-0.1-0.5-0.2-0.5,0.3-0.6c0.5-0.1,1.1-0.2,1.7-0.2c-1.6-1-2.6-2.2-2.9-3.6c-0.2-1.3,0-0.9,1-0.6C-16.3,41.9-12.1,43.6-9.6,46.2z"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</span>
+					</li>
+					<li class="justine teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">justine</h2>
+								<p class="whColor animation centerOrigin">Passionée de dessin, l'aprentissage du web-design m'a permi d'élargir mes capacités créativité. Mais je ne me sépare pas pour autant d'un bon vieux stylo et d'une feuille de papier.</p>
+								<div class="iconWrapper centerOrigin flex smartRep">
+									<a href="http://www.justinepinaud.com/" alt="lien vers le portfolio">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-8.8,35.1c-8.6,0-15.7,7.1-15.7,15.7c0,8.6,7.1,15.7,15.7,15.7S6.8,59.4,6.8,50.8C6.8,42.1-0.2,35.1-8.8,35.1L-8.8,35.1z M0.5,52.6H-7v7.4h-3.7v-7.4h-7.4v-3.7h7.4v-7.4H-7v7.4h7.4V52.6z"/>
+										</svg>
+									</a>
+									<a href="http://fr.linkedin.com/in/pinaudjustine/fr" alt="lien vers linkedin">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-16.7,63.4V44.2h-6.4v19.2L-16.7,63.4L-16.7,63.4z M-19.9,41.6c2.2,0,3.6-1.5,3.6-3.3c0-1.9-1.4-3.3-3.6-3.3c-2.2,0-3.6,1.4-3.6,3.3C-23.4,40.1-22.1,41.6-19.9,41.6L-19.9,41.6L-19.9,41.6z M-13.1,63.4h6.4V52.7c0-0.6,0-1.1,0.2-1.6
+											C-6,50-5,48.8-3.2,48.8c2.3,0,3.2,1.8,3.2,4.3v10.3h6.4v-11c0-5.9-3.2-8.6-7.4-8.6c-3.5,0-5,1.9-5.8,3.2h0v-2.8h-6.4C-13,46-13.1,63.4-13.1,63.4L-13.1,63.4z"/>
+										</svg>
+									</a>
+									<a href="http://www.viadeo.com/profile/0021vr4axm0dpjqa" alt="lien vers viadeo">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M0.1,51.1C0.1,51,0,51,0,50.9c-0.3,0.2-0.6,0.3-0.9,0.5c-0.3,0.1-0.6,0.3-0.9,0.4c-0.3,0.1-0.6,0.2-0.9,0.3c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0.4,1.1,0.6,2.3,0.6,3.4c0,1-0.1,1.9-0.4,2.9c-0.4,1.4-1.1,2.7-2.2,3.8c-1.5,1.6-3.4,2.4-5.5,2.6c-0.2,0-0.4,0-0.6,0c0,0,0-0.1,0-0.1c0.1-0.1,0.2-0.2,0.3-0.3c2.3-1.7,4-3.8,5.3-6.3c1-2.1,1.6-4.3,1.6-6.7c0-1.1-0.1-2.3-0.3-3.4c-0.2-1.3-0.6-2.5-1-3.8c0,0-0.1-0.1-0.1-0.2c0-0.2,0-0.3,0-0.3c0,0,0-0.1,0-0.1c-0.1-1.1-0.3-2.1-0.6-3.1c-0.4-1.4-1-2.7-1.7-3.9c-0.5-0.8-1.2-1.6-1.9-2.3c-0.1-0.1-0.1-0.1-0.2-0.2c0,0,0,0.1,0,0.1c0.1,0.1,0.1,0.2,0.2,0.3c1.3,2.3,2.5,4.6,3.5,7.1c0.3,0.7,0.5,1.3,0.8,2l0.1,0.1c0,0,0,0.1,0,0.3c0,0.4,0,0.7,0,1c0,1.9,0,3.7-0.2,5.5c-0.1,0.9-0.2,1.7-0.3,2.5c-0.2,1.1-0.4,2.1-0.7,3.1C-6.5,57.7-7,59-7.6,60.1c-0.6,1-1.2,2-2.1,2.8c-0.8,0.8-1.7,1.3-2.7,1.8c-0.1,0-0.2,0.1-0.3,0c-1.4-0.3-2.6-0.8-3.7-1.7c-0.9-0.7-1.7-1.7-2.3-2.7c-0.6-1.1-1-2.3-1.1-3.6c-0.1-0.8-0.1-1.5,0-2.2c0.1-0.9,0.3-1.8,0.7-2.6c0.6-1.3,1.4-2.3,2.4-3.2c0.8-0.7,1.7-1.3,2.7-1.6c0.6-0.2,1.3-0.4,2-0.5c0.6-0.1,1.2-0.1,1.8,0c0.8,0.1,1.5,0.2,2.2,0.5c0.1,0,0.1,0,0.2,0.1c0.1-0.5,0.2-1,0.3-1.4c0.1-0.5,0.3-0.9,0.6-1.3c-0.1-0.1-0.2-0.1-0.4-0.1c-1-0.3-2-0.5-3-0.5c-1.1-0.1-2.2,0-3.3,0.2c-1.3,0.3-2.5,0.7-3.6,1.4c-1.1,0.7-2,1.5-2.8,2.4c-1.8,2.1-2.8,4.5-2.9,7.3c0,0.8,0,1.6,0.1,2.4c0.1,1.1,0.4,2.2,0.9,3.2c0.7,1.7,1.8,3.1,3.1,4.3c1,0.9,2.1,1.6,3.4,2.1c1.2,0.4,2.4,0.7,3.6,0.7c1.2,0.1,2.3,0,3.4-0.2c1.5-0.3,2.9-0.9,4.2-1.9c1-0.7,1.8-1.6,2.6-2.6c1.5-1.9,2.2-4.1,2.4-6.5c0.1-1,0-2-0.1-2.9C0.6,52.7,0.4,51.9,0.1,51.1L0.1,51.1zM5.7,38c-0.3-0.9-0.6-1.8-1.1-2.7c-0.1-0.1-0.1-0.2-0.2-0.4c-0.1,0.1-0.1,0.2-0.2,0.3C3.9,35.9,3.5,36.5,3,37c-0.8,0.8-1.7,1.3-2.8,1.6c-0.1,0-0.2,0-0.3,0.1c-0.8,0.2-1.6,0.5-2.3,0.9c-0.5,0.3-0.9,0.6-1.3,1.1c-0.6,0.8-1,1.8-0.9,2.8c0,0.9,0.3,1.7,0.7,2.4c0,0,0,0.1,0.1,0.1c3.4-0.8,5.9-2.8,7.7-5.8c0,0.1,0,0.2,0,0.2c-0.1,0.3-0.2,0.5-0.3,0.8c-0.3,0.5-0.6,1-1,1.5c-0.7,0.8-1.5,1.4-2.3,2.1c-1,0.8-2,1.4-3.1,2.1c-0.1,0-0.2,0.1-0.2,0.2c0.1,0.1,0.3,0.3,0.4,0.4c0.6,0.5,1.2,0.8,1.9,1.1c0.6,0.2,1.3,0.3,2,0.2c0.8-0.1,1.5-0.5,2.2-1c0.6-0.5,1.1-1.2,1.5-1.8c0.2-0.4,0.5-0.8,0.6-1.2c0.3-0.9,0.5-1.9,0.6-2.8C6.2,40.4,6.1,39.2,5.7,38L5.7,38z"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</span>
+					</li>
+					<li class="thibaud teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">thibaud</h2>
+								<p class="whColor animation centerOrigin flex smartRep">Thibaud Sabathier est un étudiant en design graphique à l’ECV. Son travail s’axe sur le digital, l’identité et le print. Influencé par le style international son travail met en avant l’information de manière rigoureuse et esthétique. De temps à autre au détour d’un voyage il joue avec la photographie comme en témoigne ses blogs.</p>
+								<div class="iconWrapper centerOrigin flex smartRep">
+									<a href="http://thibaud-sabathier.com/" alt="lien vers le portfolio">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-8.8,35.1c-8.6,0-15.7,7.1-15.7,15.7c0,8.6,7.1,15.7,15.7,15.7S6.8,59.4,6.8,50.8C6.8,42.1-0.2,35.1-8.8,35.1L-8.8,35.1z M0.5,52.6H-7v7.4h-3.7v-7.4h-7.4v-3.7h7.4v-7.4H-7v7.4h7.4V52.6z"/>
+										</svg>
+									</a>
+									<a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile" alt="lien vers linkedin">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-16.7,63.4V44.2h-6.4v19.2L-16.7,63.4L-16.7,63.4z M-19.9,41.6c2.2,0,3.6-1.5,3.6-3.3c0-1.9-1.4-3.3-3.6-3.3c-2.2,0-3.6,1.4-3.6,3.3C-23.4,40.1-22.1,41.6-19.9,41.6L-19.9,41.6L-19.9,41.6z M-13.1,63.4h6.4V52.7c0-0.6,0-1.1,0.2-1.6
+											C-6,50-5,48.8-3.2,48.8c2.3,0,3.2,1.8,3.2,4.3v10.3h6.4v-11c0-5.9-3.2-8.6-7.4-8.6c-3.5,0-5,1.9-5.8,3.2h0v-2.8h-6.4C-13,46-13.1,63.4-13.1,63.4L-13.1,63.4z"/>
+										</svg>
+									</a>
+									<a href="https://twitter.com/SabathierT" alt="lien vers twitter">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#FFFFFF" d="M-9.6,46.2c1.2-3.6,2.6-5.9,4.2-7.6c1.2-1.3,1.8-1.7,1.1-0.3c0.3-0.3,0.8-0.6,1.1-0.8c2-0.9,1.8-0.1,0.5,0.7c3.7-1.3,3.6,0.4-0.3,1.2c3.2,0.1,6.6,2.1,7.6,6.4c0.1,0.6,0,0.5,0.6,0.6c1.3,0.2,2.6,0.2,3.8-0.2c-0.1,0.9-1.3,1.5-3.2,1.9c-0.7,0.1-0.8,0.1,0,0.3c1,0.2,2.1,0.3,3.3,0.2c-0.9,1.1-2.4,1.6-4.3,1.6c-1.1,4.2-3.8,7.2-7.1,9.1c-7.8,4.4-19.1,3.8-24.8-4.2c3.7,2.9,9.3,3.6,13.4-0.5c-2.7,0-3.4-2-1.3-3.1c-2,0-3.3-0.7-4.1-1.8c-0.3-0.4-0.3-0.5,0.2-0.8c0.5-0.4,1.2-0.5,1.9-0.6c-2.1-0.6-3.4-1.7-3.8-3.1c-0.1-0.5-0.2-0.5,0.3-0.6c0.5-0.1,1.1-0.2,1.7-0.2c-1.6-1-2.6-2.2-2.9-3.6c-0.2-1.3,0-0.9,1-0.6C-16.3,41.9-12.1,43.6-9.6,46.2z"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</span>
+					</li>
+					<li class="yingyin teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">yingyin</h2>
+								<p class="whColor animation centerOrigin">Je suis Yingyin, une étudiant en design graphique dans domaine design digital. Je m’intéresse au design interactif et aussi je me passionne pour l’illustration. J’aime voyager et faire connaissance avec les gens ainsi que je suis amoureuse de chien.</p>
+								<div class="iconWrapper centerOrigin flex smartRep">
+									<a href="http://wingyancheung.com/" alt="lien vers le portfolio">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-8.8,35.1c-8.6,0-15.7,7.1-15.7,15.7c0,8.6,7.1,15.7,15.7,15.7S6.8,59.4,6.8,50.8C6.8,42.1-0.2,35.1-8.8,35.1L-8.8,35.1z M0.5,52.6H-7v7.4h-3.7v-7.4h-7.4v-3.7h7.4v-7.4H-7v7.4h7.4V52.6z"/>
+										</svg>
+									</a>
+									<a href="http:// fr.linkedin.com/pub/vivianne-yingyin-zhang/81/a87/bba/" alt="lien vers linkedin">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-16.7,63.4V44.2h-6.4v19.2L-16.7,63.4L-16.7,63.4z M-19.9,41.6c2.2,0,3.6-1.5,3.6-3.3c0-1.9-1.4-3.3-3.6-3.3c-2.2,0-3.6,1.4-3.6,3.3C-23.4,40.1-22.1,41.6-19.9,41.6L-19.9,41.6L-19.9,41.6z M-13.1,63.4h6.4V52.7c0-0.6,0-1.1,0.2-1.6
+											C-6,50-5,48.8-3.2,48.8c2.3,0,3.2,1.8,3.2,4.3v10.3h6.4v-11c0-5.9-3.2-8.6-7.4-8.6c-3.5,0-5,1.9-5.8,3.2h0v-2.8h-6.4C-13,46-13.1,63.4-13.1,63.4L-13.1,63.4z"/>
+										</svg>
+									</a>
+									<a href="https://twitter.com/viviannecheung" alt="lien vers twitter">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#FFFFFF" d="M-9.6,46.2c1.2-3.6,2.6-5.9,4.2-7.6c1.2-1.3,1.8-1.7,1.1-0.3c0.3-0.3,0.8-0.6,1.1-0.8c2-0.9,1.8-0.1,0.5,0.7c3.7-1.3,3.6,0.4-0.3,1.2c3.2,0.1,6.6,2.1,7.6,6.4c0.1,0.6,0,0.5,0.6,0.6c1.3,0.2,2.6,0.2,3.8-0.2c-0.1,0.9-1.3,1.5-3.2,1.9c-0.7,0.1-0.8,0.1,0,0.3c1,0.2,2.1,0.3,3.3,0.2c-0.9,1.1-2.4,1.6-4.3,1.6c-1.1,4.2-3.8,7.2-7.1,9.1c-7.8,4.4-19.1,3.8-24.8-4.2c3.7,2.9,9.3,3.6,13.4-0.5c-2.7,0-3.4-2-1.3-3.1c-2,0-3.3-0.7-4.1-1.8c-0.3-0.4-0.3-0.5,0.2-0.8c0.5-0.4,1.2-0.5,1.9-0.6c-2.1-0.6-3.4-1.7-3.8-3.1c-0.1-0.5-0.2-0.5,0.3-0.6c0.5-0.1,1.1-0.2,1.7-0.2c-1.6-1-2.6-2.2-2.9-3.6c-0.2-1.3,0-0.9,1-0.6C-16.3,41.9-12.1,43.6-9.6,46.2z"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</span>
+					</li>
+					<li class="dan teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">dan</h2>
+								<p class="whColor animation centerOrigin">Salut, je suis un digital designer, actuellement étudiante à ECV Aquitaine. Je me suis intéressé par le UI / UX design et le design interactive. J’aime rencontrer des gens, de travailler avec et de partager notre expérience.</p>
+								<div class="iconWrapper centerOrigin flex smartRep">
+									<a href="http://www.superdan.fr/" alt="lien vers le portfolio">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-8.8,35.1c-8.6,0-15.7,7.1-15.7,15.7c0,8.6,7.1,15.7,15.7,15.7S6.8,59.4,6.8,50.8C6.8,42.1-0.2,35.1-8.8,35.1L-8.8,35.1z M0.5,52.6H-7v7.4h-3.7v-7.4h-7.4v-3.7h7.4v-7.4H-7v7.4h7.4V52.6z"/>
+										</svg>
+									</a>
+									<a href="https://www.linkedin.com/profile/view?id=290148923" alt="lien vers linkedin">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-16.7,63.4V44.2h-6.4v19.2L-16.7,63.4L-16.7,63.4z M-19.9,41.6c2.2,0,3.6-1.5,3.6-3.3c0-1.9-1.4-3.3-3.6-3.3c-2.2,0-3.6,1.4-3.6,3.3C-23.4,40.1-22.1,41.6-19.9,41.6L-19.9,41.6L-19.9,41.6z M-13.1,63.4h6.4V52.7c0-0.6,0-1.1,0.2-1.6
+											C-6,50-5,48.8-3.2,48.8c2.3,0,3.2,1.8,3.2,4.3v10.3h6.4v-11c0-5.9-3.2-8.6-7.4-8.6c-3.5,0-5,1.9-5.8,3.2h0v-2.8h-6.4C-13,46-13.1,63.4-13.1,63.4L-13.1,63.4z"/>
+										</svg>
+									</a>
+									<a href="https://twitter.com/heyladan" alt="lien vers twitter">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#FFFFFF" d="M-9.6,46.2c1.2-3.6,2.6-5.9,4.2-7.6c1.2-1.3,1.8-1.7,1.1-0.3c0.3-0.3,0.8-0.6,1.1-0.8c2-0.9,1.8-0.1,0.5,0.7c3.7-1.3,3.6,0.4-0.3,1.2c3.2,0.1,6.6,2.1,7.6,6.4c0.1,0.6,0,0.5,0.6,0.6c1.3,0.2,2.6,0.2,3.8-0.2c-0.1,0.9-1.3,1.5-3.2,1.9c-0.7,0.1-0.8,0.1,0,0.3c1,0.2,2.1,0.3,3.3,0.2c-0.9,1.1-2.4,1.6-4.3,1.6c-1.1,4.2-3.8,7.2-7.1,9.1c-7.8,4.4-19.1,3.8-24.8-4.2c3.7,2.9,9.3,3.6,13.4-0.5c-2.7,0-3.4-2-1.3-3.1c-2,0-3.3-0.7-4.1-1.8c-0.3-0.4-0.3-0.5,0.2-0.8c0.5-0.4,1.2-0.5,1.9-0.6c-2.1-0.6-3.4-1.7-3.8-3.1c-0.1-0.5-0.2-0.5,0.3-0.6c0.5-0.1,1.1-0.2,1.7-0.2c-1.6-1-2.6-2.2-2.9-3.6c-0.2-1.3,0-0.9,1-0.6C-16.3,41.9-12.1,43.6-9.6,46.2z"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</span>
+					</li>
+					<li class="yann teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">yann</h2>
+								<p class="whColor animation centerOrigin">J'ai oublié ma description, alors je vous prierais d'aller vous fairvoir chez les rastaquouères.</p>
+							</div>
+						</span>
+					</li>
+					<li class="anne teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">anne</h2>
+								<p class="whColor animation centerOrigin">Etudiante en M2 Digital à l'ECV Bordeaux, j'ai découvert le code depuis un an. J'ai donc pu dévelloper mon site internet, c'est à vous maintenant, tout est possible! ;)</p>
+							</div>
+						</span>
+					</li>
+					<li class="alexis">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">alexis</h2>
+								<p class="whColor animation centerOrigin">Je suis le chef de projet et c'est moi qui décide de tout, y compris si je dois mettre de mon propre chef une description.</p>
+							</div>
+						</span>
+					</li>
+					<li class="jiazhi teamPics">
+						<span class="animation flex thumb">
+							<div class="thumbContainer centerBlock">
+								<h2 class="whColor animation">jiazhi</h2>
+								<p class="whColor animation centerOrigin">Bonjour! Je suis une graphiste designer dans le domaine de design interactif et web design. J’aime les nouvelles techniques mais je ne suis pas geek. Je suis passionnée sur l’illustration, motion graphique et data visualisation.</p>
+								<div class="iconWrapper centerOrigin flex smartRep">
+									<a href="http://jiazhigao.com//" alt="lien vers le portfolio">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-8.8,35.1c-8.6,0-15.7,7.1-15.7,15.7c0,8.6,7.1,15.7,15.7,15.7S6.8,59.4,6.8,50.8C6.8,42.1-0.2,35.1-8.8,35.1L-8.8,35.1z M0.5,52.6H-7v7.4h-3.7v-7.4h-7.4v-3.7h7.4v-7.4H-7v7.4h7.4V52.6z"/>
+										</svg>
+									</a>
+									<a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile" alt="lien vers linkedin">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#ffffff" d="M-16.7,63.4V44.2h-6.4v19.2L-16.7,63.4L-16.7,63.4z M-19.9,41.6c2.2,0,3.6-1.5,3.6-3.3c0-1.9-1.4-3.3-3.6-3.3c-2.2,0-3.6,1.4-3.6,3.3C-23.4,40.1-22.1,41.6-19.9,41.6L-19.9,41.6L-19.9,41.6z M-13.1,63.4h6.4V52.7c0-0.6,0-1.1,0.2-1.6
+											C-6,50-5,48.8-3.2,48.8c2.3,0,3.2,1.8,3.2,4.3v10.3h6.4v-11c0-5.9-3.2-8.6-7.4-8.6c-3.5,0-5,1.9-5.8,3.2h0v-2.8h-6.4C-13,46-13.1,63.4-13.1,63.4L-13.1,63.4z"/>
+										</svg>
+									</a>
+									<a href="https://twitter.com/SophiaKOjazzy" alt="lien vers twitter">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+											<path class="animation" fill="#FFFFFF" d="M-9.6,46.2c1.2-3.6,2.6-5.9,4.2-7.6c1.2-1.3,1.8-1.7,1.1-0.3c0.3-0.3,0.8-0.6,1.1-0.8c2-0.9,1.8-0.1,0.5,0.7c3.7-1.3,3.6,0.4-0.3,1.2c3.2,0.1,6.6,2.1,7.6,6.4c0.1,0.6,0,0.5,0.6,0.6c1.3,0.2,2.6,0.2,3.8-0.2c-0.1,0.9-1.3,1.5-3.2,1.9c-0.7,0.1-0.8,0.1,0,0.3c1,0.2,2.1,0.3,3.3,0.2c-0.9,1.1-2.4,1.6-4.3,1.6c-1.1,4.2-3.8,7.2-7.1,9.1c-7.8,4.4-19.1,3.8-24.8-4.2c3.7,2.9,9.3,3.6,13.4-0.5c-2.7,0-3.4-2-1.3-3.1c-2,0-3.3-0.7-4.1-1.8c-0.3-0.4-0.3-0.5,0.2-0.8c0.5-0.4,1.2-0.5,1.9-0.6c-2.1-0.6-3.4-1.7-3.8-3.1c-0.1-0.5-0.2-0.5,0.3-0.6c0.5-0.1,1.1-0.2,1.7-0.2c-1.6-1-2.6-2.2-2.9-3.6c-0.2-1.3,0-0.9,1-0.6C-16.3,41.9-12.1,43.6-9.6,46.2z"/>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</span>
+					</li>
+				</ul>
+				
+			</section>
 
-			<div class="large-4 medium-4 columns">
-				<h5>Try one of these buttons:</h5>
-				<p><a href="#" class="small button">Simple Button</a><br/>
-				<a href="#" class="small radius button">Radius Button</a><br/>
-				<a href="#" class="small round button">Round Button</a><br/>						
-				<a href="#" class="medium success button">Success Btn</a><br/>
-				<a href="#" class="medium alert button">Alert Btn</a><br/>
-				<a href="#" class="medium secondary button">Secondary Btn</a></p>					 
-				<div class="panel">
-					<h5>So many components, girl!</h5>
-					<p>A whole kitchen sink of goodies comes with Foundation. Checkout the docs to see them all, along with details on making them your own.</p>
-					<a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>					
-				</div>
-			</div>
 		</div>
 		
 		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
 		<script src="js/vendor/jquery.js"></script>
 		<script src="js/foundation.min.js"></script>
 		<script>
-			$(document).foundation();
+			// ensemble des scripts
+			imready = function() {
+				cover();
+				itemsRatio();
+				centerTitle();
+			}
+
+			// couverture adaptable
+			cover = function() {
+				$('.adaptableCover').css('height', window.innerHeight+'px');
+				$(window).on('resize', function() {
+					$('.adaptableCover').css('height', window.innerHeight+'px');
+				})
+			}
+
+			itemsRatio = function() {
+				var widthRef = $(".flexMosaic li").width();
+				$('.flexMosaic li').css('height', widthRef +'px');
+
+				$(window).on('resize', function() {
+					var widthRef = $(".flexMosaic li").width();
+					$('.flexMosaic li').css('height', widthRef +'px');
+				})
+			}
+
+			centerTitle = function() {
+				var heightRef = ($(".flexMosaic li").height())/4;
+
+				$('.topicsWrapper li span h2').css({
+												'transform': 'translateY('+heightRef +'px)',
+												'-webkit-transform': 'translateY('+heightRef +'px)',
+												'-moz-transform': 'translateY('+heightRef +'px)'
+											});
+
+				$('.topicsWrapper li span').on({
+					mouseenter: function(event){
+						var parent = $(event.target).parent();
+						var title = parent.find("h2");
+						title.css({
+									'transform': 'translateY(0)',
+									'-webkit-transform': 'translateY(0)',
+									'-moz-transform': 'translateY(0)'
+								})
+					},
+					mouseleave: function(event){
+						var parent = $(event.target).parent();
+						var title = parent.find("h2");
+						title.css({
+									'transform': 'translateY('+heightRef +'px)',
+									'-webkit-transform': 'translateY('+heightRef +'px)',
+									'-moz-transform': 'translateY('+heightRef +'px)'
+								})
+					}
+				});
+			}
+
+			$(document).foundation().ready(imready);
 		</script>
 
 	</body>
