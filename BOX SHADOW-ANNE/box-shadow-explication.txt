@@ -1,0 +1,37 @@
+La propriété de feuille de style css box-shadow permet d'ajouter un effet d'ombre à un élément HTML.
+Les ombres portées prennent aujourd’hui une place importante dans le web design et permettent la mise en avant d’éléments importants, ou l’ajout d’une touche de profondeur dans vos graphismes. Il est évident, comme tout effet graphique, que l’utilisation des ombres doit être faite avec parcimonie et ne pas gêner l'utilisateur.
+
+Deux types d’ombres existent en CSS, les box-shadow (les ombres ajoutées aux éléments de type bloc) et les text-shadow (les ombres ajoutées au contenu textuel).
+Nous allons nous occuper ici plus spécifiquement des box-shadow, qui fonctionnent avec plusieurs navigateurs comme Chrome 10, Safari 3.2, Firefox 3.6, SeaMonkey, MSIE 9+, Opera 10.6.
+
+La feuille de style css box-shadow accepte comme valeur (dans l'ordre) :
+- inset : valeur optionnelle (mot clé), si elle est spécifier l'ombre est à l'intérieur sinon l'ombre est à l'extérieur de l'élément HTML.
+- offset-x : valeur numérique obligatoire qui spécifie la distance horizontale de l'ombre, si elle est négative l'ombre est placée à gauche.
+- offset-y : valeur numérique obligatoire qui spécifie la distance verticale de l'ombre, si elle est négative l'ombre est placée au dessus.
+- blur-radius : valeur optionnelle numérique positive suivie de px ou % ou pt ou em, correspond à la largeur de l'estompage de l'ombre (flou). Pour la valeur 0 l'ombre est nette.
+- spread-radius : valeur optionnelle numérique positive suivie de px ou % ou pt ou em, correspond à la longueur du rayon d'étendue(voir image).
+- color : valeur optionnelle de type format de couleurs. La couleur sélectionné dépendra du navigateur.
+L'ombre prend l'arrondi de la propriété de feuille de style css border-radius si elle est spécifiée.
+
+
+Vous pouvez également spécifiez une ombre pour chaque coté.
+Il vous suffit de répéter 4 fois les valeurs de box-shadow séparer par une virgule.
+Vous pouvez aussi changer les autres valeurs.
+<div style="margin-left:20px;width:350px;height:80px;box-shadow:0 10px 5px 0 #000,10px 0 5px 0 blue, 0 -10px 5px 0 red ,-10px 0 5px 0 gold;">box-shadow:0 10px 5px 0 #000, 10px 0 5px 0 blue, 0 -10px 5px 0 red , -10px 0 5px 0 gold;</div>
+
+
+
+Le style CSS3 :
+#tuto_box-shadow {
+    width : 300px ;
+    height : 200px ;
+    background : #6666CC ;
+    box-shadow : 15px 10px 12px  #000000 ;
+}
+
+Explication :
+Dans la propriété de notre box-shadow, nous avons trois valeurs différentes exprimées en px (pixel) ainsi qu'une couleur hexadécimale.
+ - La première valeur 15px indique le décalage horizontal vers la droite.
+ - La seconde valeur 10px correspond au décalage vertical vers le bas.
+ - La troisième valeur 12px correspond à l'étendue du flou appliqué.
+ - #000000 (noir en hexadécimal) indique la couleur de l'ombre (on peut aussi la remplacer par une couleur rgba(0,0,0,1). Nous parlerons de rgba dans un autre tuto.
