@@ -1,0 +1,105 @@
+/*
+Feuille de style additionnelle.
+Utile pour styliser quelques éléments du tutoriel, pour le rendre fun et cooooool.
+
+Auteur: Elodie Dassance
+
+Coordonnées de l'auteur:
+www.elodiedassance.com
+elodie.dassance@gmail.com
+*/
+
+/* STYLES GENERAUX */
+
+body{
+	height: 100%;
+}
+h1{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.wrapper{
+	width: 90%;
+	margin: auto;
+}
+.header{
+	padding: 15px 0px 15px 0px;
+	background: #f9f9f9;
+	text-align: center;
+}
+.image{
+	padding: 1%;
+	border: 1px #ccc solid;
+	background: #fff;
+	margin-bottom: 20px;
+}
+p{
+	margin-bottom: 20px;
+}
+
+#desktop, #tablette, #mobile{
+	display: none;
+}
+
+
+/* MEDIA QUERIES POUR PLUS DE 1001PX DE LARGE */
+@media screen and (min-width: 1001px){
+
+	#desktop{
+		display: inline;
+		width: 90%;
+		margin: auto;
+	}
+
+	.image{
+		width: 30%;
+		float: left;
+	}
+
+	.article{
+		width: 68%;
+		padding-left: 2%;
+		float: left;
+	}
+
+	.texte{
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+}
+
+/* MEDIA QUERIES POUR DES ECRANS ENTRE 769 ET 1000PX DE LARGE */
+@media screen and (min-width: 769px) and (max-width: 1000px){
+
+	#tablette{
+		display: inline;
+		width: 90%;
+		margin: auto;
+	}
+
+	.image{
+		width: 30%;
+		float: left;
+	}
+
+	.article{
+		width: 68%;
+		padding-left: 2%;
+		float: left;
+	}
+
+}
+
+/* MEDIA QUERIES POUR DES ECRANS DE MOINS DE 768PX LARGE */
+@media screen and (max-width: 768px){
+
+	#mobile{
+		display: inline;
+		width: 90%;
+		margin: auto;
+	}
+
+}
+
+

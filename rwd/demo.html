@@ -8,19 +8,24 @@ La démo à éditer
 	<head>
 
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="author" content="*l'auteur*" />
-		<meta name="description" content="*description de la démo*" />
+		
+		<!--VIEWPORT -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>Nom de la démo</title>
+
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="author" content="Elodie Dassance" />
+		<meta name="description" content="Responsive Web Design Démo Tutoriel" />
+
+
+		<title>RWD :: Démo</title>
 
 		<!--STYLE GENERAL-->
 		<link rel="stylesheet" href="../css/foundation.css" />
 		<link rel="stylesheet" href="../css/style.css" />
 
 		<!--STYLE ADDITIONNEL-->
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="style-demo.css" />
 		
 		<!--SCRIPT-->
 		<script src="../js/vendor/modernizr.js"></script>
@@ -28,6 +33,50 @@ La démo à éditer
 	</head>
 
 	<body>
+
+		<div class="header">
+				<p id="desktop"><b>Largeur maximum :</b> --  | <b>Largeur minimum :</b> 1001 pixels</p>
+
+				<p id="tablette"><b>Largeur maximum :</b> 1000 pixels  | <b>Largeur minimum :</b> 769 pixels</p>
+
+				<p id="mobile"><b>Largeur maximum :</b> 768 pixels  | <b>Largeur minimum :</b> --</p>
+		</div>
+
+		<div class="wrapper">
+
+
+			<div class="contenu">
+				<h1>Le panda roux</h1>
+
+				<div class="image">
+					<!-- L'image change de cadrage pour les mobiles -->
+					<picture>
+						<source srcset="img/image-paysage.jpg" media="(max-width: 768px)" >
+						<source srcset="img/image-portrait.jpg" media="(min-width: 769px)" width="100%" >
+						<img src="img/image-portrait.jpg" alt="panda roux" />
+					</picture>
+				</div>
+
+				<div class="article">
+
+					<h2>Morphologie</h2>
+
+					<p class="texte">Le petit panda est de la taille d'un grand chat : le corps sans la queue mesure de 50 à 65 cm, la queue mesure de 30 à 60 cm. Les mâles pèsent de 3,5 à 6,2 kg et les femelles de 3 à 6 kg.
+					<br>Le bout des oreilles, les sourcils et les joues sont blancs tandis que le museau et la gueule sont noirs ; une bande brune raye le museau et les joues ; les courtes pattes sont noires et le reste du corps est roux. Sa queue, d’une quarantaine de centimètres, s'orne de neuf bandes blanches et jaunes et finit par une touffe noire. Leurs griffes puissantes leur permettent de descendre des arbres la tête en bas.</p>
+
+					<h2>Petit panda et <i>Firefox</i></h2>
+
+					<p class="texte">Le petit panda est la mascotte officielle du navigateur web Firefox, dérivé de la suite logicielle libre Mozilla. En effet, le mot firefox est en anglais un surnom du panda roux. La ressemblance du renard roux avec cet animal et la traduction littérale du mot « firefox » (« renard de feu ») font qu'on les confond souvent.
+					<br>Pour officialiser cette affirmation, la Fondation Mozilla a adopté, en décembre 2010, deux bébés panda roux pendant quelques mois.
+					<br>Le mot anglais "Firefox" (renard de feu) est souvent annoncé comme étant une traduction littérale du mot Chinois pour Red Panda. Cependant le mot chinois 火狐 dont il est question concerne le logiciel Mozilla Firefox et non l'animal qui se dit 小熊貓 et 红熊猫.
+					<p align="right"><i>Source : Wikipédia</i></p></p>
+
+				</div>
+			</div>
+
+		</div>
+
+
 		
 		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
 		<script src="../js/vendor/jquery.js"></script>
