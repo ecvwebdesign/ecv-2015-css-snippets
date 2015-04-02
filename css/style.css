@@ -106,6 +106,13 @@ _______________
 	margin: auto;
 }
 
+/* démarrage au centren */
+*.centerRep {
+	justify-content: center;
+		-webkit-justify-content: center;
+			-moz-justify-content: center;
+}
+
 /* démarrage à ma fin */
 *.endRep {
 	justify-content: flex-end;
@@ -885,6 +892,9 @@ Can I use ?
 
 *#CIU .browser {
 	text-align: center;
+	flex: 0 1 19%;
+		-webkit-flex: 0 1 19%;
+			-moz-flex: 0 1 19%;
 }
 
 *#CIU h2 {
@@ -926,7 +936,7 @@ Auteur
 	fill: #11141c;
 }
 
-/*
+/*S
 FOOTER
 _______________
 */
@@ -946,27 +956,12 @@ ADAPTIVE
 _______________
 */
 
-@media only screen and (max-width: 48rem) {
+ @media only screen and (max-width: 48rem) {
 	*.txtRow, figure.expl, *.smallRow, *.row {
 		width: 90%;
 		max-width: 90%;
 	}
 
-	*.large-6, *.medium-6, *.small-6,
-	*.large-1, *.medium-1, *.small-1,
-	*.large-2, *.medium-2, *.small-2,
-	*.large-3, *.medium-3, *.small-3, 
-	*.large-4, *.medium-4, *.small-4, 
-	*.large-5, *.medium-5, *.small-5,
-	*.large-7, *.medium-7, *.small-7,
-	*.large-8, *.medium-8, *.small-8,
-	*.large-9, *.medium-9, *.small-9,
-	*.large-10, *.medium-10, *.small-10,
-	*.large-11, *.medium-11, *.small-11,
-	*.large-12, *.medium-12, *.small-12 {
-		width: 100%;
-		max-width: 100%;
-	}
 
 	*.sendBut {
 		width: 100%;
@@ -974,15 +969,6 @@ _______________
 
 	ul.links li + li {
 		margin: 2.0rem 0 0;
-	}
-
-	[class*="column"] + [class*="column"]:last-child {
-		float: left;
-		margin: 4.0rem 0 0;
-	}
-
-	[class*="column"] + [class*="column"] {
-		margin: 4.0rem 0 0;
 	}
 
 	/* boutons */
