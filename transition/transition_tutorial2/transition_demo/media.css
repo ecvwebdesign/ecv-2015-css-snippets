@@ -1,0 +1,190 @@
+@media screen and (max-width: 727px) {
+
+.container3 {
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color:#5f8783;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height:900px;
+}
+
+.container4 {
+
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: #b7dccb;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 900px;
+
+}
+.container5 {
+
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color:  #e3f0f2;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 900px;
+
+}
+
+.alonger,
+.couleur,
+.deplacer,
+.fadeout2,
+.fadeout,
+.rotation,
+.grandir,
+.skew,
+.bounce,
+.swing,
+.shake,
+.rubberBand,
+.flash,
+.tada,
+.wobble,
+.flipInX,
+.lightSpeedIn
+{
+ text-align: center;
+ color: #ffffff;
+ background: #31464e;
+ padding: 10px 10px 10px 10px;
+ width: 120px;
+ height: 50px;
+ border-radius: 5px;
+ font-weight: bold;
+ font-style: none;
+ font-size: 18px;
+ font-family: Arial bold;
+ margin: 40px;
+ background: 1;
+
+ } 
+ /*icon slide*/
+#icon-wrapper{
+  width:100%;
+  height:50px;
+}
+
+.icons {
+  width:100%;
+  position:relative;
+}
+
+.icon-slide-container{
+  
+  overflow:hidden;
+  text-align: left;
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  left: 50%;
+  margin-left: -85px;
+  margin-top: 45px;
+}
+
+.slide-icon{
+  width:120px;
+  height:auto;
+  position:absolute;
+  margin-top:-80px;
+  -webkit-transition:.4s ease;
+  -moz-transition:.4s ease;
+  -ms-transition:.4s ease;
+  -o-transition:.4s ease;
+  transition:.4 ease;
+}
+  
+.slide-icon:hover{
+  position:absolute;
+  margin-top:0;
+}
+
+}
+
+
+
+@media screen and (min-width: 728px) and (max-width: 1049px) {
+	
+.alonger,
+.couleur,
+.deplacer,
+.fadeout2,
+.fadeout,
+.rotation,
+.grandir,
+.skew,
+.bounce,
+.swing,
+.shake,
+.rubberBand,
+.flash,
+.tada,
+.wobble,
+.flipInX,
+.lightSpeedIn
+{
+ text-align: center;
+ color: #ffffff;
+ background: #31464e;
+ padding: 10px 10px 10px 10px;
+ width: 120px;
+ height: 55px;
+ border-radius: 5px;
+ font-weight: bold;
+ font-style: none;
+ font-size: 18px;
+ font-family: Arial bold;
+ margin: 20px;
+ background: 1;
+
+ } 
+ /*icon slide*/
+#icon-wrapper{
+  width:100%;
+  height:55px;
+}
+
+.icons {
+  width:100%;
+  position:relative;
+}
+
+.icon-slide-container{
+  
+  overflow:hidden;
+  text-align: left;
+  position: absolute;
+  width: 120px;
+  height: 55px;
+  left: 50%;
+  margin-left: -70px;
+  margin-top: 20px;
+}
+
+.slide-icon{
+  width:120px;
+  height:auto;
+  position:absolute;
+  margin-top:-60px;
+  -webkit-transition:.4s ease;
+  -moz-transition:.4s ease;
+  -ms-transition:.4s ease;
+  -o-transition:.4s ease;
+  transition:.4 ease;
+}
+  
+.slide-icon:hover{
+  position:absolute;
+  margin-top:0;
+}
+
+}
+
+
+@media screen and (min-width: 1050px) {
+	
+}
