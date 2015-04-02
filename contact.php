@@ -1,7 +1,7 @@
 <?php
 	define( 'MAIL_TO', 'aurelien.grimaud@ineedvitamins.fr' );
 	define( 'MAIL_NAME', '' );
-	define( 'MAIL_FROM', 'aurelien.grimaud@ineedvitamins.fr' );
+	define( 'MAIL_FROM', 'mail@domaine.com' );
 	define( 'MAIL_OBJECT', '' );
 	define( 'MAIL_MESSAGE', '' );
 
@@ -19,7 +19,7 @@
 		} 
 
 		$from = filter_input( INPUT_POST, 'from', FILTER_VALIDATE_EMAIL );
-		if( $from === NULL )
+		if( $from === NULL OR $from === MAIL_FROM )
 		{
 			$errors[] = 'Il faudrait votre adresse mail.';
 		}
@@ -199,7 +199,7 @@
 							</label>
 							<label for="from" class="blkColor upCase level3">
 								adresse e-mail *
-								<input id="from" type="text" name="from" value="<?php echo( $from ); ?>" />
+								<input id="from" type="text" name="from" value="<?php echo( $from ); ?>" placeholder="mail@domaine.com"/>
 							</label>
 							<label for="object" class="blkColor upCase level3">
 								thème *
@@ -253,7 +253,7 @@
 						$('input#name').css('border', '2px solid <?php echo $alert; ?>');
 					<?php }; 
 
-					if( $from === NULL OR $from === false OR empty( $from ) OR $from === MAIL_TO )
+					if( $from === NULL OR $from === false OR empty( $from ) OR $from === MAIL_TO OR $from === MAIL_FROM )
 					{
 					?>
 						$('input#from').css('border', '2px solid <?php echo $alert; ?>');
