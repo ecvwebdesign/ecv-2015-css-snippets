@@ -1,23 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
+    <script src="../js/vendor/jquery.js"></script>
+    <script src="js/main.js"></script>
 
 </head>
 <body>
 <div class="container">
     <div class="container2">
-        <div class="title"><h1>Transform in CSS3</h1></div>
+        <div class="title"><h1>L'atelier de Transformation</h1>
+            <h2>Devenez le maître de la perspective</h2><br><br>
+            <h3>La propriété transformation va vous permettre de pivoter, augmenter, tourner, réduire ou incliner un élément en 2D ou bien 3D.
+            Assez facile à mettre en oeuvre en 2D, les effets de transformations vous permettrons de vous distinguer dans certaines de vos présentations lorsqu’elles prennent une autre dimension en 3D ou bien combiner à l’effet de <a href="#">transition</a>.
+            À appliquer au bon endroit au bon moment, cette propriété peut s’avérer pratique dans certain cas.<br><br>
+            Avant de commencer il est nécessaire de savoir écrire la bonne syntaxe.
+            transform: fonction(valeur);<br>
+            Vous avez aussi la possibilité de combiner plusieurs propriété ainsi...
+            <br><br>Pour mieux comprendre cette propriété place à la <a href="#">démo</a>.<br>
+            Sinon passons à la pratique.</h3>   
+        </div>
 
 
+            <div class="description"><h2>D’abord commençons par la 2D:<br>(Niveau Facile)</h2>
+            </div> 
 
-            <div id="rotation" style="padding-bottom=50px"><div class="titlebox">Hello</div></div>
-                <div class="description"><h3>ROTATION AUTO<br><br>Gradually rotate the DIV element 180 degrees, and back:<br>The transform property is <em>animatable</em> in CSS.<br><strong>Note:</strong> CSS Animations do not work in Internet Explorer 9 and earlier versions.</h3>
-                </div>  
-                
+            <div class="description"><h2>Inclinaison alias Skew</h2><br><br>
+                <h3>Skew permet d’incliner (angle en degré) un élément sur l’axe x ou y ou les deux à la fois.<br><br> 
+                CSS code :<br>
+                #div {<br>
+                    background-color:blue;
+                    transform:skew(20deg,20deg);<br>}
+                </h3>
+            </div> 
+             <div id="myDIV">BYE</div>
 
-                <div id="rotate2"><div class="titlebox2">ALLO</div></div>
-                <script>
+             <div class="description"><h2>Échelle alias Scale</h2><br><br>
+                <h3>Scale augmente ou diminue la taille d’un élément sur son axe x ou y ou bien les deux à la fois.
+                Dans l’exemple qui suit, l’élément div sera augmenté de 2 fois sa largeur d’origine et 3 fois sa hauteur d’origine.<br><br> 
+                CSS code :<br>
+                #div {<br>
+                    background-color:blue;
+                    transform:scale(2,3);<br>}
+                </h3>
+            </div> 
+             <div id="myDIV2">BYE</div>
+
+             <div class="description"><h2>Déplacement alias Translate</h2><br><br>
+                <h3>Translate permet de déplacer un élément de sa position actuelle (selon les paramètres indiqués pour x et y d’origine).
+                L’exemple qui suit déplace l’élément div de 50 pixels vers la droite et 100 pixels vers le bas de sa position actuelle.<br><br> 
+                CSS code :<br>
+                #div {<br>
+                    background-color:blue;
+                    transform:translate(50px,100px);<br>}
+                </h3>
+            </div> 
+             <div id="myDIV3">BYE</div>
+
+            <div class="description"><h2>Rotation alias Rotate</h2><br><br>
+                <h3>Rotate vous permet de pivoter un élément dans le sens horaire (ou anti horaire) selon un degré donné.
+                L’exemple qui suit pivote l’élément div de 20 degré vers la droite.
+                <br><br> 
+                CSS code :<br>
+                #div {<br>
+                    background-color:blue;
+                    transform:translate(50px,100px);<br>}
+                </h3>
+            </div> 
+             
+
+            <div id="rotate2"><div class="titlebox2">ALLO</div></div>
+                <!--<script>
                 function myFunction() {
                 // Code for Chrome, Safari, Opera
                 document.getElementById("rotate2").style.WebkitTransform = "rotate(20deg)"; 
@@ -25,32 +79,44 @@
                 document.getElementById("rotate2").style.msTransform = "rotate(20deg)"; 
                 document.getElementById("rotate2").style.transform = "rotate(20deg)"; 
                 }
-                </script>
-                <div class="description"><h3>ROTATE</h3>
+                </script>-->
+
                 <div style="width"></div>
-                <button class="button" onclick="myFunction()" align="center">Try it !</button>
-                <h3>Rotate your div with different angles.<br>Note Internet Explorer 8 and earlier versions do not support the transform property.<br><b>Note:</b> Internet Explorer 9 supports an alternative, the msTransform property. Newer versions of IE support the transform property (do not need the ms prefix)<b>Note:</b> Chrome, Safari and Opera supports an alternative, the WebkitTransform property.</h3>
-                </div>
+                <button class="button" align="center">Try it!</button>
 
-                <div id="myDIV">BYE</div>
-                <div class="description"><h3>SKEW<br><br>(x-angle,y-angle)<br>Defines a 2D skew transformation along the X- and the Y-axis</h3>
-                </div>
 
+                <div class="description"><h2>et enfin la Matrice alias Matrix</h2><br><br>
+                <h3>Matrix vous permet de combiner tous les transformations 2D en une. Les six paramètres enregistrés vous permette d’agrandir, pivoter, incliner, déplacer les éléments.
+                <br><br> 
+                CSS code :<br>
+                #div {<br>
+                    background-color:blue;
+                    transform:matrix(1, -0.3,0,1,0,0);<br>}
+                </h3>
+            </div>
                 <div id="DIV">OLA</div>
-                <div class="description"><h3>MATRIX<br><br>(n,n,n,n,n,n)<br>Defines a 2D transformation, using a matrix of six values</h3>
-                </div>
+                
 
-                <code> 
-                <script type="text/javascript"> 
-                //Affichage de 10 lignes numerotees 
-                var i; 
-                for (i=1; i<=10; i++) 
-                { 
-                document.write("Ligne : " + i + "<br/>"); 
-                } 
-                </script> 
-                </code>
+                <div class="description"><h2>et enfin la 3D:<br>(Niveau Intermédiaire)</h2><br><br>
+                <h3>Matrix vous permet de combiner tous les transformations 2D en une. Les six paramètres enregistrés vous permette d’agrandir, pivoter, incliner, déplacer les éléments.
+                <br><br> 
+                CSS code :<br>
+                #div {<br>
+                    background-color:blue;
+                    transform:matrix(1, -0.3,0,1,0,0);<br>}
+                </h3>
+            </div>
 
+            <div id="rotation" style="padding-bottom=50px"><div class="titlebox">Hello</div></div>
+                <div class="description"><h3>ROTATION AUTO<br><br>Gradually rotate the DIV element 180 degrees, and back:<br>The transform property is <em>animatable</em> in CSS.<br><strong>Note:</strong> CSS Animations do not work in Internet Explorer 9 and earlier versions.</h3>
+                </div>  
+                
+
+
+                
+
+                
+  
     </div>
 </div>
 

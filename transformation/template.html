@@ -6,10 +6,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="author" content="*auteur de la page, donc vous*" />
-		<meta name="description" content="*description du tutoriel*" />
+		<meta name="author" content="Thibaud Sabathier" />
+		<meta name="description" content="Comprendre les fonctionnalités de la propriété css transform" />
 
-		<title>Nom du tutoriel</title>
+		<title>Transformation</title>
 
 		<!--STYLE GENERAL-->
 		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
 
 		<!--STYLE ADDITIONNEL-->
-		<!--<link rel="stylesheet" href="style.css" />-->
+		<!--<link rel="stylesheet" href="style.css" />
 
 		<!--FONTES-->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
@@ -74,29 +74,29 @@
 				<article class="largeRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
-					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
+					<h1 class="blkColor ttTitle">Transformation</h1>
 
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+						<p class="blkColor level4">Avec l'atelier de Transformation, devenez le maître de la perspective !<br>La propriété transformation va vous permettre de pivoter, augmenter, tourner, réduire ou incliner un élément en 2D ou bien 3D.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">L'inclinaison ou Skew</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">Échelle alias Scale</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">Déplacement alias Translate</a></li>
 
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">Rotation alias Rotate</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">Matrice alias Matrix</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">Un peu de 3D</a></li>
 
 							</div>
 						</ol>
@@ -104,7 +104,7 @@
 					</div>
 
 					<!--EDITEZ VOTRE NOM-->
-					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
+					<p class="ttAuteur">Créé par Thibaud Sabathier le 02/04/2015</p>
 
 					<div class="ttbuttons row">
 						<div class="medium-6 columns">
@@ -136,7 +136,11 @@
 				<article class="txtRow">
 
 					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.<br>Grâce à quelques lignes de CSS3, il est possible de définir ces différentes structures en fonction de la résolution de l’écran du média utilisé.</p>
+					<p class="blkColor level3">La propriété transformation va vous permettre de pivoter, augmenter, tourner, réduire ou incliner un élément en 2D ou bien 3D.
+           			Assez facile à mettre en oeuvre en 2D, les effets de transformations vous permettrons de vous distinguer dans certaines de vos présentations lorsqu’elles prennent une autre dimension en 3D ou bien combiner à l’effet de <a href="/template.html">transition</a>.
+            		À appliquer au bon endroit au bon moment, cette propriété peut s’avérer pratique dans certain cas.<br><br>
+            		Avant de commencer il est nécessaire de savoir écrire la bonne syntaxe:</p>
+            		<p class="blkColor level3">transform: fonction(valeur);</p>
 
 				</article>
 
@@ -148,7 +152,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">1. viewport et breakpoints.</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. Inclinaison alias Skew</h2>
 
 				</article>
 
@@ -156,9 +160,7 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Pour attribuer des styles CSS différents à plusieurs résolutions différentes, il faut tout d’abord définir ces résolutions. Il suffit de déterminer les largeurs d’écran, en pixels, des différentes versions de votre futur site web reponsive : largeur d’un écran desktop, largeur d’un écran de tablette, de smartphone...<br>Ces différentes étapes sont appelées “breakpoints”, ou “points de rupture”.</p>
-					<p class="blkColor">On définit les différents breakpoints grâce à des classes CSS appelées “media queries”.</p>
-					<p class="blkColor">Ces media queries pourront être calculées par les navigateurs à l’aide d’une balise essentielle pour le reste de ce tutoriel. Elle permet de calculer la taille dite du “viewport”, ou de la fenêtre d’affichage, afin de pouvoir assurer la bonne fonction de vos media queries.</p>
+					<p class="blkColor">Skew permet d’incliner (angle en degré) un élément sur l’axe x ou y ou les deux à la fois.</p>
 
 				</article>
 
@@ -208,7 +210,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">2. à chaque breakpoint ses styles css</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">2. Échelle alias Scale</h2>
 
 				</article>
 
@@ -216,7 +218,7 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Chaque résolution est ensuite définie pour chaque breakpoints par des intervalles de valeurs, indiquant les largeurs d’écran maximales et minimales d’affichage des styles concernés.</p>
+					<p class="blkColor">Scale augmente ou diminue la taille d’un élément sur son axe x ou y ou bien les deux à la fois. Dans l’exemple qui suit, l’élément div sera augmenté de 2 fois sa largeur d’origine et 3 fois sa hauteur d’origine.</p>
 
 				</article>
 
@@ -267,7 +269,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">3. syntaxe</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. Déplacement alias Translate</h2>
 
 				</article>
 
@@ -275,7 +277,7 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Comme aperçu plus haut, on peut donc attribuer des styles à des résolutions selon différentes conditions. Voici un exemple des différentes conditions que vous pouvez utiliser pour définir vos breakpoints :</p>
+					<p class="blkColor">Translate permet de déplacer un élément de sa position actuelle (selon les paramètres indiqués pour x et y d’origine). L’exemple qui suit déplace l’élément div de 50 pixels vers la droite et 100 pixels vers le bas de sa position actuelle.</p>
 
 					<!--Si jamais vous avez une liste-->
 					<ul class="txtList">
@@ -298,7 +300,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">4. utilisation de plusieurs feuilles de style</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. Rotation alias Rotate</h2>
 
 				</article>
 
@@ -306,8 +308,7 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">En cas de media queries lourds en styles CSS, on peut également séparer notre feuille de style en plusieurs feuilles de styles différentes, chacune étant associée à une résolution différente et contenant les styles attribués.</p>
-					<p class="blkColor">Il suffira de lier chaque feuille de style entre les balises <code class="smallSnippet blkColor">&lt;head&gt;</code> et <code class="smallSnippet blkColor">&lt;/head&gt;</code> de votre fichier HTML, de la même manière d’une feuille de style CSS unique. La seule différence sera un attribut, différent pour chaque feuille de style liée, qui associera ces feuilles à leurs résolutions d’écran correspondantes :</p>
+					<p class="blkColor">Rotate vous permet de pivoter un élément dans le sens horaire (ou anti horaire) selon un degré donné. L’exemple qui suit pivote l’élément div de 20 degré vers la droite.</p>
 
 				</article>
 
@@ -334,7 +335,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">5. images flexibles</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">5. Matrice alias Matrix</h2>
 
 				</article>
 
@@ -342,9 +343,7 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">S’il est possible de rendre des images flexibles en utilisant l’attribut CSS <code class="smallSnippet blkColor">max-width : 100%</code>, cet élément pose encore des soucis d’affichage sur des écrans type Retina, mais manque surtout de pertinence quant au changement de format des médias. En effet, une image au format paysage s’affichera parfaitement sur un site web, mais s’en trouvera excessivement réduite pour correspondre à la largeur d’un smartphone.</p>
-					<p class="blkColor">On peut gérer ce changement de plateforme grâce à la balise <code class="smallSnippet blkColor">&lt;picture&gt;</code>, qui permet alors d’appeler différentes versions d’une même image (cadrée différemment, par exemple) selon la résolution de l’écran sur lequel elle est visionnée.</p>
-					<p class="blkColor">L’ordre d’appel des différentes versions de l’image est important : il faudra appeler les images de la résolution la plus grande jusqu’à la plus petite, pour éviter les conflits entre media queries.</p>
+					<p class="blkColor">Matrix vous permet de combiner tous les transformations 2D en une. Les six paramètres enregistrés vous permette d’agrandir, pivoter, incliner, déplacer les éléments.</p>
 
 				</article>
 
@@ -383,7 +382,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">6. texte flexible</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. Un peu de 3D</h2>
 
 				</article>
 
@@ -391,9 +390,7 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Si l’on peut, comme avec les images, donner à son texte des tailles différentes en fonction de la résolution grâce aux media queries CSS, il est également désormais possible d’avoir du texte à la taille relative aux dimensions du viewport.</p>
-					<p class="blkColor">Il s’agit ici d’utiliser les attributs CSS “vw” et “vh”, acronymes de “viewport width” et “viewport height”. Une unité vw/vh correspond ici à 1% de la largeur ou de la hauteur de la fenêtre (selon l’unité choisie). Par exemple, pour une fenêtre large de 1000 pixels et haute de 500 pixels, 1 vw correspondra à une taille de texte de 10 pixels, et 1 vh correspondra à une taille de 5 pixels.</p>
-					<p class="blkColor">N’oubliez tout de même pas d’ajouter des tailles de texte “classiques”, en pixels, dans votre CSS afin d’assurer la visibilité de votre site en cas de navigateur incompatible.</p>
+					<p class="blkColor">Matrix vous permet de combiner tous les transformations 2D en une. Les six paramètres enregistrés vous permette d’agrandir, pivoter, incliner, déplacer les éléments.</p>
 
 				</article>
 
@@ -469,19 +466,12 @@
 
 				<!--EDITEZ VOS LIENS-->
 				<ul class="row largeRow links">
-					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
+					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/cssref/css3_pr_transform.asp</a></li>
 
-					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/TR/css3-mediaqueries/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org/TR/css3-mediaqueries/</a></li>
+					<li><span class="blkColor level4 upCase">David deSandro - </span><a href="http://desandro.github.io/3dtransforms/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://desandro.github.io/3dtransforms/</a></li>
 
-					<li><span class="blkColor level4 upCase">mediaqueri.es - </span><a href="http://mediaqueri.es/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://mediaqueri.es/</a></li>
+					<li><span class="blkColor level4 upCase">microsoft - </span><a href="http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_3d-transforms.htm" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_3d-transforms.htm</a></li>
 
-					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
-
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/n</a></li>
-
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/</a></li>
-
-					<li><span class="blkColor level4 upCase">sitepoint - </span><a href="http://www.sitepoint.com/new-css3-relative-font-size/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.sitepoint.com/</a></li>
 				</ul>
 				
 			</section>
@@ -497,33 +487,29 @@
 					<div class="medium-4 columns">
 
 						<!--EDITEZ VOTRE PHOTO-->
-						<img src="../img/team/elodie.jpg" alt="photo auteur" />
+						<img src="../img/team/thibaud.jpg" alt="photo auteur" />
 
 					</div>
 
 					<div class="medium-8 columns end details">
 
 						<!--EDITEZ VOTRE ID-->
-						<h2 class="whColor upCase">élodie dassance</h2>
-						<p class="level4 blkColor marginU marginD">Spécialiste certifiée en pop-idols japonaises et docteur en fabrication de cookies maison, mon but est de diffuser une idée fun, fraîche et multilingue du webdesign… avec le sourire ( • ̀ω•́  )✧</p>
+						<h2 class="whColor upCase">Thibaud Sabathier</h2>
+						<p class="level4 blkColor marginU marginD">Thibaud Sabathier est un étudiant en design graphique à l’ECV. Son travail s’axe sur le digital, l’identité et le print. Influencé par le style international son travail met en avant l’information de manière rigoureuse et esthétique. De temps à autre au détour d’un voyage il joue avec la photographie comme en témoigne ses blogs.</p>
 
 						<!--EDITEZ VOS LIENS-->
 						<div class="iconWrapper centerOrigin flex equalRep large-6">
 
 							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
-							<a href="#" alt="lien vers le portfolio">
+							<a href="www.thibaud-sabathier.com" alt="lien vers le portfolio">
 								<i class="iconSC whColor urlIcn animation"></i>
 							</a>
 
-							<a href="#" alt="lien vers linkedin">
+							<a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile" alt="lien vers linkedin">
 								<i class="iconSC whColor lnkinIcn animation"></i>
 							</a>
 
-							<a href="#" alt="lien vers viadeo">
-								<i class="iconSC whColor vdoIcn animation"></i>
-							</a>
-
-							<a href="#" alt="lien vers twitter">
+							<a href="https://twitter.com/SabathierT" alt="lien vers twitter">
 								<i class="iconSC whColor twtrIcn animation"></i>
 							</a>
 

@@ -13,21 +13,34 @@
 	padding-bottom: 40px;
 }
 
+.rotation {
+    transform: rotate(20deg);
+}
+
 h1
 {
-	font-family: helvetica neue;
-	font-size: 32px;
+	font-family: helvetica;
+	font-size: 46px;
+	font-weight: bold;
+	color: ;
+	text-align: center;
+}
+
+h2
+{
+	font-family: helvetica;
+	font-size: 20px;
 	font-weight: 700;
 	color: black;
-	text-align: center;
+	text-align: center;	
 }
 
 h3
 {
 	font-family: Helvetica neue;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 700;
-	text-align: center;
+	text-align: left;
 	color: black;
 
 }
@@ -111,9 +124,33 @@ h3
 
 #myDIV {
     background-color: blue;
-    transform:skew(510deg,10deg);
+    transform:skew(20deg,20deg);
     width: 200px;
     height: 200px;
+    margin: auto;
+    color: white;
+    font-family: helvetica neue;
+    font-size: 32px;
+    text-align: center;
+}
+
+#myDIV2 {
+    background-color: blue;
+    transform:scale(0.9,1.5);
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: helvetica neue;
+    font-size: 32px;
+    text-align: center;
+}
+
+#myDIV3 {
+    background-color: blue;
+    transform:translate(20px,10px);
+    width: 100px;
+    height: 100px;
     margin: auto;
     color: white;
     font-family: helvetica neue;
