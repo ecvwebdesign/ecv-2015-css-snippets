@@ -2,12 +2,19 @@
 fonts.css
 Feuille de style de polices de caractère
 
-Author: Aurélien Grimaud
+Directeur de la publication: Ian Smallwood
 
-Author URI: http://ineedvitamins.fr/
+Contributeurs: Alexis Doyen, Elodie Dassance, Dan Gu, Aurélien Grimaud,
+Justine Pinaud, Anne Astima, Yann Beduchaud,
+Yingyin Zhang, Jiazhi Gao, Thibaud Sabathier
 
-@ineedVitamins
+Développement front-end: Aurélien Grimaud
+
+Polices: Font Awesome
+
+Outils: Icomoon // icomoon.io
 */
+
 
 /* Font Awesome */
 @font-face {

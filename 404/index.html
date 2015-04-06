@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="author" content="Aurélien Grimaud" />
+		<meta name="description" content="Page de contact, dans un contexte de réussite" />
+
+		<title>Fameuse erreur 404 not found</title>
+
+		<!--STYLE GENERAL-->
+		<link rel="stylesheet" media="all" type="text/css" href="css/foundation.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+
+
+		<!--FONTE-->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
+
+		<!--SCRIPT-->
+		<script type="text/javascript" src="js/vendor/modernizr.js"></script>
+		<script src="js/vendor/jquery.js" type="text/javascript"></script>
+		<script src="js/foundation.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			// ensemble des scripts
+			imready = function() {
+				cover();
+			}
+
+			// couverture adaptable
+			cover = function() {
+				var innerHeight = (window.innerHeight);
+				$('.adaptableCover').css('height', +innerHeight+"px");
+				$(window).on('resize', function() {
+					$('.adaptableCover').css('height', +innerHeight+"px");
+				})
+			}
+
+			$(document).foundation().ready(imready);
+		</script>
+
+	</head>
+
+	<body>
+
+		<section class="blBG adaptableCover tryAgain flex">
+
+			<article class="row centerBlock card whBG"> 
+				<h1 class="sectionTitle">Fameuse erreur 404 not found.<br>(ノಠ益ಠ)ノ彡┻━┻</h1>
+				<div class="medium-3 columns">
+					<a href="../ecv-2015-css-snippets" class="button medium centerOrigin animation return blBut"><span class="animation">accueil</span></a>
+				</div>
+			</article>
+
+		</section>
+
+	</body>
+
+</html>

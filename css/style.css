@@ -7,7 +7,9 @@ Contributeurs: Alexis Doyen, Elodie Dassance, Dan Gu, Aurélien Grimaud,
 Justine Pinaud, Anne Astima, Yann Beduchaud,
 Yingyin Zhang, Jiazhi Gao, Thibaud Sabathier
 
-Framework: Foundation par Zurb
+Framework: Foundation par Zurb // http://foundation.zurb.com
+
+Développement front-end: Aurélien Grimaud
 */
 
 /*
@@ -389,6 +391,9 @@ i.whColor::before {
 i.whColor:hover::before {
 	color: #11141c;
 }
+i.blHover:hover::before {
+	color: #5A9596;
+}
 
 i.burgerIcn::before {
 	content: "\f0c9";
@@ -440,8 +445,27 @@ i.iconSC::after, i.iconFA::after {
 	position: absolute;
 	z-index: 0;
 	top: 50%; left: 50%;
+}
+
+i.burgerIcn::after {
+	transform: translateX(-50%) translateY(-58%);
+		-webkit-transform: translateX(-50%) translateY(-58%);
+			-moz-transform: translateX(-50%) translateY(-58%);
+}
+i.urlIcn::after {
 	transform: translateX(-50%) translateY(-63%);
-	
+		-webkit-transform: translateX(-50%) translateY(-63%);
+			-moz-transform: translateX(-50%) translateY(-63%);
+}
+i.lnkinIcn::after, i.vdoIcn::after {
+	transform: translateX(-50%) translateY(-60%);
+		-webkit-transform: translateX(-50%) translateY(-60%);
+			-moz-transform: translateX(-50%) translateY(-60%);
+}
+i.twtrIcn::after {
+	transform: translateX(-50%) translateY(-64%);
+		-webkit-transform: translateX(-50%) translateY(-64%);
+			-moz-transform: translateX(-50%) translateY(-64%);
 }
 
 i.blColor::after {
@@ -704,6 +728,7 @@ h1.sectionTitle::before {
 
 *.flexMosaic li span .thumbContainer p {
 	text-align: center;
+	max-width: 3.0rem 0;
 	margin: 2.0rem 0;
 	transform: scale(0);
 		-webkit-transform: scale(0);
@@ -727,37 +752,14 @@ h1.sectionTitle::before {
 			-moz-transform: scale(1);
 }
 
-/* équipe vignettes */
-*.teamWrapper li.teamPics {
-	background-size: contain;
+/* thèmes vignettes */
+*.toppicWrapper li .urDesign {
+	width: 100%;
 }
 
-*.elodie {
-	background: url(../img/team/elodie.jpg) 50% 50% no-repeat;
-}
-*.justine {
-	background: url(../img/team/justine.jpg) 50% 50% no-repeat;
-}
-*.thibaud {
-	background: url(../img/team/thibaud.jpg) 50% 50% no-repeat;
-}
-*.yingyin {
-	background: url(../img/team/yingyin.jpg) 50% 50% no-repeat;
-}
-*.dan {
-	background: url(../img/team/dan.jpg) 50% 50% no-repeat;
-}
-*.yann {
-	background: url(../img/team/yann.jpg) 50% 50% no-repeat;
-}
-*.anne {
-	background: url(../img/team/anne.jpg) 50% 50% no-repeat;
-}
-*.alexis {
-	background: url(../img/team/alexis.jpg) 50% 50% no-repeat;
-}
-*.jiazhi {
-	background: url(../img/team/jiazhi.jpg) 50% 50% no-repeat;
+/* équipe vignettes */
+*.teamWrapper li.teamPics img {
+	width: 100%;
 }
 
 span.thumb .iconWrapper {
@@ -770,14 +772,9 @@ span.thumb .iconWrapper a {
 	background: transparent;
 	padding: 0;
 	opacity: 0;
-	flex: 0 1 4.0rem;
 	transform: translateY(2.0rem);
 		-webkit-transform: translateY(2.0rem);
 			-moz-transform: translateY(2.0rem);
-}
-
-span.thumb .iconWrapper svg {
-	margin: 0 auto;
 }
 
 *.teamWrapper li span .thumbContainer h2 {
@@ -786,9 +783,6 @@ span.thumb .iconWrapper svg {
 			-moz-transform: scale(0);
 }
 
-*.flexMosaic li:hover span.thumb .iconWrapper a:hover svg path {
-	fill: #5A9596;
-}
 *.flexMosaic li:hover span.thumb .iconWrapper a {
 	opacity: 1;
 	transform: translateY(0);
@@ -863,7 +857,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	float: right;
 }
 
-/* page de contact */
+/* page de contact erreur - succès */
 *.card {
 	padding: 4.0rem;
 }
@@ -975,7 +969,7 @@ Initialisation
 
 figure.expl {
 	margin: 3.6rem auto !important;
-	height: 20.0rem; /* en attendant, sinon ça s'adaptera à votre contenu */
+	height: 20.0rem;
 	border: #11141c solid .1rem;
 	background: transparent;
 }
@@ -1091,7 +1085,36 @@ ADAPTIVE
 _______________
 */
 
-@media only screen and (max-width: 61.25em) {
+/* BP 1440 */
+@media only screen and (max-width: 90em) {
+
+	/* mosaïque */
+	*.flexMosaic li {
+		flex: 0 1 25%;
+			-webkit-flex: 0 1 25%;
+				-moz-flex: 0 1 25%;
+	}
+
+	*.flexMosaic li span .thumbContainer p {
+		margin: 3.0rem 0;
+	}
+
+}
+
+/* BP 1280 */
+@media only screen and (max-width: 80em) {
+
+	/* mosaïque */
+	*.flexMosaic li {
+		flex: 0 1 33.33%;
+			-webkit-flex: 0 1 33.33%;
+				-moz-flex: 0 1 33.33%;
+	}
+
+}
+
+/* BP 1024 */
+@media only screen and (max-width: 64em) {
 	
 	/* enveloppes */
 	*.txtRow, figure.expl, *.smallRow, *.row {
@@ -1108,19 +1131,69 @@ _______________
   		font: 11.2rem 'Snicons', monospace;
 	}
 
-}
+	/* vignettes accueil */
+	*.flexMosaic li span.thumb {
+		background: #fff;
+		position: relative;
+		margin: 3.0rem 0;
+		height: auto;
+	}
 
-@media only screen and (max-width: 45em) {
+	*.flexMosaic li:hover span.thumb {
+		background: #fff;
+	}
 
+	*.flexMosaic li span .thumbContainer h2,
+	*.flexMosaic li span .thumbContainer p,
+	span.thumb .iconWrapper a,
+	span.thumb .iconWrapper a .whColor::before,
+	*.flexMosaic li span .thumbContainer a.button,
+	*.flexMosaic li:hover span .thumbContainer a.button,
+	*.flexMosaic li:hover span .thumbContainer p,
+	*.flexMosaic li:hover span .thumbContainer h2 {
+		color: #11141c;
+		transform: scale(1) translateY(0) !important;
+			-webkit-transform: scale(1) translateY(0) !important;
+				-moz-transform: scale(1) translateY(0) !important;
+	}
+
+	span.thumb .iconWrapper a, 
+	span.thumb .iconWrapper a:hover {
+		opacity: 1;
+	}
+	span.thumb .iconWrapper a .WhColor::before {
+		color: #11141c;
+	}
+
+	span.thumb .iconWrapper a:hover .WhColor::before {
+		color: #5A9596;
+	}
+
+	*.flexMosaic li span .thumbContainer p {
+		text-align: left;
+		margin: 4.0rem 0;
+	}
+	
+	*.flexMosaic li span .thumbContainer a.whBut {
+		border: #11141c solid .1rem;
+	}
+
+	*.flexMosaic li span .thumbContainer a.whBut span {
+		color: #11141c;
+	}
+
+	*.flexMosaic li span .thumbContainer a.whBut:active {
+		background: #11141c;
+	}
+	*.flexMosaic li span .thumbContainer a.whBut:active span {
+		color: #fff;
+	}
+	
+	/* push */
 	body {
 		overflow-x: hidden;
 	}
 
-	i.icon.whColor:hover::before {
-		color: #fff;
-	}
-
-	/* push */
 	*.pushBody {
 		right: 24.0rem;
 		transition: none;
@@ -1281,8 +1354,21 @@ _______________
 		background: rgba(255, 255, 255, .2);
 	}
 
+	span.thumb .iconWrapper a:hover .rwdWh::before {
+		color: #11141c;
+	}
+	span.thumb .iconWrapper a:active i.whColor::after {
+		background: rgba(0, 0, 0, .2);
+	}
+
+	/* forme de contact - page de contact */
+	a.return {
+		margin: 5.0rem 0 0;
+	}
+
 }
 
+/* BP 640 */
 @media only screen and (max-width: 40em) {
 	
 	*.medium-6 + *.medium-6,
@@ -1313,11 +1399,11 @@ _______________
 
 	*#siteTitle {
 		height: auto !important;
-		padding: 13.6rem 0 10.0rem;
+		padding: 20rem 0 10.0rem;
 	}
 
 	*#siteTitle .ttTitle {
-		margin: 5.0rem 0 5.0rem 0;
+		margin: 0 0 5.0rem;
 	}
 
 	*.ttBottom {
@@ -1332,8 +1418,19 @@ _______________
 		margin: 1.0rem;
 	}
 
+	/* forme de contact - page d'erreur - page récapitulatif */
+	section.tryAgain {
+		height: auto;
+		background: #fff;
+	}
+
+	*.card {
+		padding: 10.0rem 0;
+	}
+
 }
 
+/* BP 720-480 */
 @media only screen and (min-width: 30.065em) and (max-width: 45em) {
 	
 	*#CIU .browser {
@@ -1351,8 +1448,16 @@ _______________
 		display: none;
 	}
 
+	/* mosaïques flexibles */
+	*.flexMosaic li {
+		flex: 0 1 50%;
+			-webkit-flex: 0 1 50%;
+				-moz-flex: 0 1 50%;
+	}
+
 }
 
+/* BP 480 */
 @media only screen and (max-width: 30.0em) {
 
 	*#CIU .browser {
@@ -1360,6 +1465,13 @@ _______________
 			-webkit-flex: 0 1 100%;
 				-moz-flex: 0 1 100%;
 		margin: 3.0rem 0 0;
+	}
+
+	/* mosaïques flexibles */
+	*.flexMosaic li {
+		flex: 0 1 100%;
+			-webkit-flex: 0 1 100%;
+				-moz-flex: 0 1 100%;
 	}
 	
 }
