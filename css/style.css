@@ -88,61 +88,48 @@ _______________
 *.flex {
 	display: flex;
 		display: -webkit-flex;
-			display: -moz-box;
 }
 *.flexList {
 	flex-flow: column wrap;
 		-webkit-flex-flow: column wrap;
-			-moz-flex-flow: column wrap;
 }
 *.flexColumn {
 	flex-flow: row wrap;
 		-webkit-flex-flow: row wrap;
-			-moz-flex-flow: row wrap;
 }
 *.flexNoWrap {
 	flex-flow: column nowrap;
 		-webkit-flex-flow: column nowrap;
-			-moz-flex-flow: column nowrap;
-}
-
-*.centerBlock {
-	margin: auto;
 }
 
 /* démarrage au centre */
 *.centerRep {
 	justify-content: center;
 		-webkit-justify-content: center;
-			-moz-justify-content: center;
 }
 
 /* démarrage à ma fin */
 *.endRep {
 	justify-content: flex-end;
 		-webkit-justify-content: flex-end;
-			-moz-justify-content: flex-end;
 }
 
 /* répartition égale */
 *.equalRep {
 	justify-content: space-between;
 		-webkit-justify-content: space-between;
-			-moz-justify-content: space-between;
 }
 
 /* répartition ajustée */
 *.smartRep {
 	justify-content: space-around;
 		-webkit-justify-content: space-around;
-			-moz-justify-content: space-around;
 }
 
 /* items égaux */
 *.equalCol {
 	flex: 1;
 		-webkit-flex: 1;
-			-moz-box-flex: 1;
 }
 
 /* centrer automatique dans la parent */
@@ -702,7 +689,6 @@ h1.sectionTitle::before {
 *.flexMosaic li {
 	flex: 0 1 20%;
 		-webkit-flex: 0 1 20%;
-			-moz-flex: 0 1 20%;
 	border: #fff solid .1rem;
 	position: relative;
 }
@@ -1024,7 +1010,6 @@ Can I use ?
 	text-align: center;
 	flex: 0 1 19%;
 		-webkit-flex: 0 1 19%;
-			-moz-flex: 0 1 19%;
 }
 
 *#CIU h2 {
@@ -1092,7 +1077,6 @@ _______________
 	*.flexMosaic li {
 		flex: 0 1 25%;
 			-webkit-flex: 0 1 25%;
-				-moz-flex: 0 1 25%;
 	}
 
 	*.flexMosaic li span .thumbContainer p {
@@ -1108,7 +1092,6 @@ _______________
 	*.flexMosaic li {
 		flex: 0 1 33.33%;
 			-webkit-flex: 0 1 33.33%;
-				-moz-flex: 0 1 33.33%;
 	}
 
 }
@@ -1436,7 +1419,6 @@ _______________
 	*#CIU .browser {
 		flex: 0 1 50%;
 			-webkit-flex: 0 1 50%;
-				-moz-flex: 0 1 50%;
 		margin: 4.0rem 0 0;
 	}
 	
@@ -1451,8 +1433,6 @@ _______________
 	/* mosaïques flexibles */
 	*.flexMosaic li {
 		flex: 0 1 50%;
-			-webkit-flex: 0 1 50%;
-				-moz-flex: 0 1 50%;
 	}
 
 }
@@ -1463,7 +1443,6 @@ _______________
 	*#CIU .browser {
 		flex: 0 1 100%;
 			-webkit-flex: 0 1 100%;
-				-moz-flex: 0 1 100%;
 		margin: 3.0rem 0 0;
 	}
 
@@ -1471,7 +1450,6 @@ _______________
 	*.flexMosaic li {
 		flex: 0 1 100%;
 			-webkit-flex: 0 1 100%;
-				-moz-flex: 0 1 100%;
 	}
 	
 }
