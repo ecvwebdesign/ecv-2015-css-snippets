@@ -9,13 +9,19 @@
 		<meta name="author" content="*auteur de la page, donc vous*" />
 		<meta name="description" content="*description du tutoriel*" />
 
-		<title>Nom du tutoriel</title>
+		<title>Transition CSS</title>
 
 		<!--STYLE GENERAL-->
 		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
 		<link rel="stylesheet" media="all" type="text/css" href="../css/style.css" />
 		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
+<<<<<<< Updated upstream
 
+=======
+		
+        <link href="css/transition_style.css" rel="stylesheet">
+        <link href="css/media.css" rel="stylesheet">
+>>>>>>> Stashed changes
 		<!--STYLE ADDITIONNEL-->
 		<!--<link rel="stylesheet" href="style.css" />-->
 
@@ -74,29 +80,29 @@
 				<article class="largeRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
-					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
+					<h1 class="blkColor ttTitle">Transition CSS</h1>
 
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+						<p class="blkColor level4">Avec CSS3 transition, on peut ajouter les effets de changement de forme et animer les pages web uniquement à l'aide de styles CSS, sans apport de JavaScript.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">Que-ce que c'est la transition dans CSS?</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">Code basique de transition</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">Transition timing-function</a></li>
 
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">Transitions en proportion data</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">Transitions en surlignant menus</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">Transitions en image galerie</a></li>
 
 							</div>
 						</ol>
@@ -104,7 +110,7 @@
 					</div>
 
 					<!--EDITEZ VOTRE NOM-->
-					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
+					<p class="ttAuteur">Créé par Jiazhi GAO le 02/04/2015</p>
 
 					<div class="ttbuttons row">
 						<div class="medium-6 columns">
@@ -125,30 +131,156 @@
 			</section>
 
 			<!--TUTORIEL-->
-			<section id="ttInit" class="whBG airU">
+			<section class="container6">
+			<div id="ttInit" class="whBG airU">
 				
 				<article class="row">
 
 					<h1 class="blkColor sectionTitle">tutoriel</h1>
 
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.<br>Grâce à quelques lignes de CSS3, il est possible de définir ces différentes structures en fonction de la résolution de l’écran du média utilisé.</p>
 
 				</article>
 
-			</section>
-
-			<!--UNE SECTION PAR PARTIE-->
 			<section id="ttPrt1" class="whBG smallAir">
 
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">1. viewport et breakpoints.</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">1.Que-ce que c'est la transition dans CSS?</h2>
+
+				</article>
+
+				
+
+				<article class="txtRow">
+
+					<!--EDITEZ L-'INTRODUCTION-->
+					<p class="blkColor">Grâce aux dernières évolutions du langage et au module CSS3 Transitions, il est désormais possible de réaliser des transitions basiques à l'aide de CSS dans les navigateurs récents.<br>Comme premier exemple, je vais vous montrer quelque chose de vraiment basilaire (je promets, la prochaine sera plus excitant)<br>Passez votre souris sur les deux ronds en base:</p>
+
+					<div class="row">
+                    <div class="large-6 columns"><div class="rond1">1</div><p class="rond_text">Comportement classique</p></div>
+                    <div class="large-6 columns"><div class="rond2">2</div><p class="rond_text">CSS transition</p></div>
+                    </div>
+
+				</article>
+                </div>
+			</section>
+
+
+            <section class="container7">
+                <div id="ttPrt2" class="whBG smallAir">
+            	
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">2.Code basique de transition</h2>
+					<p class="blkColor"><strong>transition:</strong> un raccourci pour fixer les quatre propriétés de transition dans une propriété unique.<br>
+					<strong>transition-property:</strong> spécifie le nom de la propriété CSS qui a besoin de l'effet de transition.<br>
+					<strong>transition-duration:</strong> spécifie le nombre de secondes ou milli-secondes un effet de transition prend pour terminer.<br>
+                    <strong>transition-timing-function:</strong> spécifie la courbe de vitesse de l'effet de transition.<br>
+                    <strong>transition-delay:</strong> spécifie un délai ( en secondes) pour l'effet de transition.</p>
+
+				</article>
+
+
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="me   dium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+                    .div {
+                    background-color: #31464e;
+                    transition-property: background-color; 
+                    transition-duration: .5s;
+                    transition-timing-function: linear;
+                    transition-delay: 1s;
+                     }
+                     
+						</code>
+                    
+					</div>
+				</pre>
+				<article class="txtRow">
+				<p class="blkColor">La version abrégée：</p>
+				</article>
+				<pre class="snippet row largeRow">
+					<div class="me   dium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+                    .div {
+                    background-color: #31464e;
+                    -webkit-transition: background-color .5s linear, 1s; /* Safari */
+                    -o-transition: background-color .5s linear, 1s; /* Opera */
+                    -moz-transition: background-color .5s linear, 1s; /* Firefox */
+                    }
+                     
+						</code>
+						</div>
+				</pre>
+
+				<article class="txtRow">
+                    
+					<!--EDITEZ L-'INTRODUCTION-->
+					<p class="blkColor">Pour crée un effet de transition, on dois spécifier deux points:<br>
+                    • le propriété de CSS qu’on veut ajouter les effets;<br>
+                    • la duration des effets. </p>
+
+                    <p>Voici est l'effet qu'on a fait: (Passez votre souris sur les éléments en base)</p>
+                    <div id='animateTest' class="couleur1">Hello World!</div>
+
+				</article>
+			            </div>
+
+			</section>
+
+			
+
+
+		    <!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt3" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. Transition timing-function</h2>
+
+				</article>
+
+				<article class="txtRow">
+			    <p class="blkColor">La propriété transition - timing-function peut avoir les valeurs suivantes:<br><br>
+<strong>ease</strong> - spécifie un effet de transition avec un démarrage lent, puis rapide, puis se arrête lentement ( ce est par défaut).<br>
+<strong>linear</strong> - spécifie un effet de transition à la même vitesse du début à la fin.<br>
+<strong>ease-in</strong> - spécifie un effet de transition avec un démarrage lent.<br>
+<strong>ease-out</strong> - spécifie un effet de transition avec une extrémité lente. <br>
+<strong>ease-in-out</strong> - spécifie un effet de transition avec un démarrage lent et à la fin.<br>
+<strong>cubic-bezier(n,n,n,n)</strong> - nous permet de définir nos propres valeurs dans une fonction cubique - Bézier.</p>
+                <div class="row">
+      <div class="large-4 columns"><img class="time_function" src="img/css transition-ease.svg"></img><p>ease</p><div class="time_fontion_example1"></div></div>
+      <div class="large-4 columns"><img class="time_function" src="img/css transition-linear.svg"></img><p>linear</p><div class="time_fontion_example2"></div></div>
+      <div class="large-4 columns"><img class="time_function" src="img/css transition-ease-in.svg"></img><p>ease-in</p><div class="time_fontion_example3"></div></div>
+      <div class="large-4 columns"><img class="time_function" src="img/css transition-ease-out.svg"></img><p>ease-out</p><div class="time_fontion_example4"></div></div>
+      <div class="large-4 columns"><img class="time_function" src="img/css transition-in-out.svg"></img><p>ease-in-out</p><div class="time_fontion_example5"></div></div>
+      <div class="large-4 columns"><img class="time_function" src="img/css transition-bezier.svg"></img><p>cubic-bezier</p><a target='_blank' href="http://cubic-bezier.com/#.17,.67,.83,.67" class='buton'>voir plus les infos</a></div>
+      </div>
+
+ 
+            </section>
+  
+
+
+<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt4" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. Transitions en proportion data</h2>
 
 				</article>
 
@@ -156,14 +288,12 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Pour attribuer des styles CSS différents à plusieurs résolutions différentes, il faut tout d’abord définir ces résolutions. Il suffit de déterminer les largeurs d’écran, en pixels, des différentes versions de votre futur site web reponsive : largeur d’un écran desktop, largeur d’un écran de tablette, de smartphone...<br>Ces différentes étapes sont appelées “breakpoints”, ou “points de rupture”.</p>
-					<p class="blkColor">On définit les différents breakpoints grâce à des classes CSS appelées “media queries”.</p>
-					<p class="blkColor">Ces media queries pourront être calculées par les navigateurs à l’aide d’une balise essentielle pour le reste de ce tutoriel. Elle permet de calculer la taille dite du “viewport”, ou de la fenêtre d’affichage, afin de pouvoir assurer la bonne fonction de vos media queries.</p>
+					
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row"><div class="data" id="data1">50%</div><div class="data" id="data2">80%</div><div class="data" id="data3">30%</div></figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
@@ -172,161 +302,59 @@
 
 						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-		...
-	&lt;/head&gt;
-	...
-&lt;/html&gt;
+&lt;div class="data" id="data1"&gt;50%&lt;/div&gt;<br>&lt;div class="data" id="data2"&gt;80%&lt;/div&gt;<br>&lt;div class="data" id="data3"&gt;30%&lt;/div&gt;
 						</code>
 					</div>
-
 					<div class="medium-6 columns end">
 						<h3 class="whColor">css</h3>
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-.txtRow {
-	width: 64.0rem;
-	margin: 0 auto;
+.data{
+background-color:#5A9596; 
+text-align: center;
+width: 50px;
+height: 50px;
+margin: 10px;
+padding: 5px;
+color: white;
+font-size: 20px;
+transition:width 2s ease,  background-color 2s ease;
 }
 
-.ttPrtTitle {
-	text-transform: uppercase;
-	margin: 0 0 2.0rem;
+.data:hover{
+background-color: #a88963;
 }
-						</code>
+
+#data1:hover{
+width:440px;
+}
+#data2:hover{
+width: 700px;
+}
+#data3:hover{
+width: 200px;
+}
+  </code>
 					</div>
+
+				
 				</pre>
-
-			</section>
-
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt2" class="whBG smallAir">
-
-				<article class="txtRow">
-					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">2. à chaque breakpoint ses styles css</h2>
-
-				</article>
 
 				<article class="txtRow">
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Chaque résolution est ensuite définie pour chaque breakpoints par des intervalles de valeurs, indiquant les largeurs d’écran maximales et minimales d’affichage des styles concernés.</p>
-
-				</article>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">css</h3>
-
-						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
-						<code class="css">
-@media screen and (min-width: 900px) {
-	body {
-		color: red;
-	}
-}
-						</code>
-
-					</div>
-				</pre>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">css</h3>
-
-						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
-						<code class="css">
-@media screen and (min-width: 500px) and (max-width: 900px) {
-	body {
-		background-color: black;
-	}
-}
-						</code>
-					</div>
-				</pre>
-
-			</section>
-
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt3" class="whBG smallAir">
-
-				<article class="txtRow">
 					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">3. syntaxe</h2>
-
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Comme aperçu plus haut, on peut donc attribuer des styles à des résolutions selon différentes conditions. Voici un exemple des différentes conditions que vous pouvez utiliser pour définir vos breakpoints :</p>
-
-					<!--Si jamais vous avez une liste-->
-					<ul class="txtList">
-						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
-						<li><code class="smallSnippet blkColor">@media screen all</code> : toutes résolutions</li>
-						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx)</code> : écrans de largeur minimale de X pixels</li>
-						<li><code class="smallSnippet blkColor">@media screen and (max-width: Xpx)</code> : écrans de largeur maximale de X pixels</li>
-						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx) and (max-width: Ypx)</code> : écrans de largeur minimale de X pixels et de largeur maximale de Y pixels</li>
-					</ul>
-
-					<p class="blkColor">Il existe d’autres conditions utilisables dans des cas plus rares, les lignes citées ci-dessus étant les plus couramment utilisées pour le responsive web design.</p>
-
 				</article>
 
 			</section>
 
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt4" class="whBG smallAir">
+  
 
-				<article class="txtRow">
-					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">4. utilisation de plusieurs feuilles de style</h2>
 
-				</article>
 
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">En cas de media queries lourds en styles CSS, on peut également séparer notre feuille de style en plusieurs feuilles de styles différentes, chacune étant associée à une résolution différente et contenant les styles attribués.</p>
-					<p class="blkColor">Il suffira de lier chaque feuille de style entre les balises <code class="smallSnippet blkColor">&lt;head&gt;</code> et <code class="smallSnippet blkColor">&lt;/head&gt;</code> de votre fichier HTML, de la même manière d’une feuille de style CSS unique. La seule différence sera un attribut, différent pour chaque feuille de style liée, qui associera ces feuilles à leurs résolutions d’écran correspondantes :</p>
-
-				</article>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">html</h3>
-
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
-						<code class="xml">
-&lt;link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 900px)" href="style1.css" /&gt;
-						</code>
-					</div>
-				</pre>
-
-			</section>
+			
 
 			<!--UNE SECTION PAR PARTIE-->
 			<section id="ttPrt5" class="whBG smallAir">
@@ -334,7 +362,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">5. images flexibles</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">5. Transitions en surlignant menus</h2>
 
 				</article>
 
@@ -342,48 +370,85 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">S’il est possible de rendre des images flexibles en utilisant l’attribut CSS <code class="smallSnippet blkColor">max-width : 100%</code>, cet élément pose encore des soucis d’affichage sur des écrans type Retina, mais manque surtout de pertinence quant au changement de format des médias. En effet, une image au format paysage s’affichera parfaitement sur un site web, mais s’en trouvera excessivement réduite pour correspondre à la largeur d’un smartphone.</p>
-					<p class="blkColor">On peut gérer ce changement de plateforme grâce à la balise <code class="smallSnippet blkColor">&lt;picture&gt;</code>, qui permet alors d’appeler différentes versions d’une même image (cadrée différemment, par exemple) selon la résolution de l’écran sur lequel elle est visionnée.</p>
-					<p class="blkColor">L’ordre d’appel des différentes versions de l’image est important : il faudra appeler les images de la résolution la plus grande jusqu’à la plus petite, pour éviter les conflits entre media queries.</p>
+					
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+					
+  <p class="large-3 columns"><a class="menuButton" href="#">Home</a></p>
+  <p class="large-3 columns"><a class="menuButton" href="#">About</a></p>
+  <p class="large-3 columns"><a class="menuButton" href="#">Contact Us</a></p>
+  <p class="large-3 columns"><a class="menuButton" href="#">Links</a></p>
+                    
+                </figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
+					<div class="medium-6 columns">
 						<h3 class="whColor">html</h3>
 
 						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
-&lt;picture>
-	&lt;source srcset="image-1.jpg" media="(min-width: 1000px)">
-	&lt;source srcset="image-2.jpg" media="(min-width: 500px)">
-	&lt;img src="image.jpg" alt="description de l’image">
-&lt;/picture>
+&lt;div class="sidebar"&gt;
+  &lt;p>&lt;a class="menuButton" href="home">Home&lt;/a>&lt;/p>
+  &lt;p>&lt;a class="menuButton" href="about">About&lt;/a>&lt;/p>
+  &lt;p>&lt;a class="menuButton" href="contact">Contact Us&lt;/a>&lt;p>
+  &lt;p>&lt;a class="menuButton" href="links">Links&lt;/a>&lt;/p>
+&lt;/div&gt;
 						</code>
 					</div>
+					<div class="medium-6 columns end">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.menuButton {
+position: absolute;
+text-align: center;
+background-color: #5A9596;
+width: 80%;
+height: 50px;
+color: white;
+font-family: sans-serif;
+font-size: 20px;
+text-decoration: none;
+padding: 6px;
+border: solid 3px white;
+margin: 50px 7px 0 7px;
+transition-property: background-color, color, border;
+transition-duration: .4s;
+transition-timing-function: ease-out;
+transition: all .5s ease-out;
+}
+
+.menuButton:hover {
+position: absolute;
+transition-property: background-color, color, border;
+transition-duration: .5s;
+transition-timing-function: ease-out;
+transform: scale(1.2);
+background-color:white;
+color:#5A9596;
+border: solid 3px #5A9596;
+}
+
+						</code>
+					</div>
+
 				</pre>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">On n’oublie évidemment pas de rajouter la balise <strong>viewport</strong> entre les balises <code class="smallSnippet blkColor">&lt;head&gt;&lt;/head&gt;</code> de notre page HTML afin d’assurer le fonctionnement des media queries.</p>
-
-				</article>
 
 			</section>
 
+			
 			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt6" class="whBG airD">
+			<section id="ttPrt6" class="whBG smallAir">
 
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">6. texte flexible</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. Transitions en image galerie</h2>
 
 				</article>
 
@@ -391,11 +456,138 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Si l’on peut, comme avec les images, donner à son texte des tailles différentes en fonction de la résolution grâce aux media queries CSS, il est également désormais possible d’avoir du texte à la taille relative aux dimensions du viewport.</p>
-					<p class="blkColor">Il s’agit ici d’utiliser les attributs CSS “vw” et “vh”, acronymes de “viewport width” et “viewport height”. Une unité vw/vh correspond ici à 1% de la largeur ou de la hauteur de la fenêtre (selon l’unité choisie). Par exemple, pour une fenêtre large de 1000 pixels et haute de 500 pixels, 1 vw correspondra à une taille de texte de 10 pixels, et 1 vh correspondra à une taille de 5 pixels.</p>
-					<p class="blkColor">N’oubliez tout de même pas d’ajouter des tailles de texte “classiques”, en pixels, dans votre CSS afin d’assurer la visibilité de votre site en cas de navigateur incompatible.</p>
+					
 
 				</article>
+				<figure class="insertExHere expl row">
+					
+			     <div class="large-3 columns">
+                  <div class="ext" ontouchstart="this.classList.toggle('hover');">
+	               <div class="int">
+		            <div class="front"> 
+		            	<img class="img" src="img/_MG_9263.jpg">
+			<!-- your custom content --> 
+		            </div>
+		            <div class="back"> 
+		            	#image1
+			<!-- your custom content --> 
+		            </div>
+	               </div>
+                  </div>
+                 </div>
+
+                 <div class="large-3 columns">
+			      <div class="ext" ontouchstart="this.classList.toggle('hover');">
+	               <div class="int">
+		            <div class="front"> 
+		            	<img class="img" src="img/_MG_9263.jpg">
+			<!-- your custom content --> 
+		            </div>
+		            <div class="back"> 
+		            	#image2
+			<!-- your custom content --> 
+		            </div>
+	               </div>
+                  </div>
+                 </div>
+
+                 <div class="large-3 columns">
+			      <div class="ext" ontouchstart="this.classList.toggle('hover');">
+	               <div class="int">
+		            <div class="front"> 
+		            	<img class="img" src="img/_MG_9263.jpg">
+			<!-- your custom content --> 
+		            </div>
+		            <div class="back"> 
+		            	#image3
+			<!-- your custom content --> 
+		            </div>
+	               </div>
+                  </div>
+                 </div>
+
+                 <div class="large-3 columns">
+			      <div class="ext" ontouchstart="this.classList.toggle('hover');">
+	               <div class="int">
+		            <div class="front"> 
+		            	<img class="img" src="img/_MG_9263.jpg">
+			<!-- your custom content --> 
+		            </div>
+		            <div class="back"> 
+		            	#image4
+			<!-- your custom content --> 
+		            </div>
+	               </div>
+                  </div>
+                 </div>
+                 </div>
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-6 columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+&lt;div class="ext" ontouchstart=<br>"this.classList.toggle<br>('hover');"&gt;
+&lt;div class="int"&gt;
+&lt;div class="front"&gt;
+&lt;!-- your custom content --&gt;
+&lt;/div&gt;
+&lt;div class="back"&gt;
+&lt;!-- your custom content --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+						</code>
+					</div>
+					<div class="medium-6 columns end">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.ext { 
+perspective: 1000; 
+}
+
+.ext,
+.front,
+.back {	height: 260px; width: 190px; }
+
+.ext:hover .int, 
+.ext.hover .int { 
+transform: rotateY(180deg); 
+}
+
+.int { 
+transition: .75s;
+transform-style: preserve-3d;
+}
+
+.front, 
+.back {
+-visibility: hidden;
+background: #FFF; 
+border: 1px solid #666; 
+position: absolute; top: 0; left: 0;
+}
+
+.front { 
+z-index: 2; 
+}
+
+.back { 
+transform: rotateY(180deg); 
+}
+
+  </code>
+					</div>
+
+				
+				</pre>
+
 
 			</section>
 
@@ -414,7 +606,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">21+</span>
+						<span class="whColor level2 version">26+</span>
 					</div>
 
 					<div class="browser">
@@ -424,7 +616,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">4+</span>
+						<span class="whColor level2 version">3.2+</span>
 					</div>
 
 					<div class="browser">
@@ -434,7 +626,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">10.5+</span>
 					</div>
 
 					<div class="browser">
@@ -444,7 +636,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">3.5+</span>
+						<span class="whColor level2 version">4+</span>
 					</div>
 
 					<div class="browser">
@@ -454,7 +646,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">10+</span>
 					</div>
 				</div>
 				
@@ -469,19 +661,21 @@
 
 				<!--EDITEZ VOS LIENS-->
 				<ul class="row largeRow links">
-					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
+					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/css/css3_transitions.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
 
-					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/TR/css3-mediaqueries/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org/TR/css3-mediaqueries/</a></li>
+					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://dev.w3.org/csswg/css-transitions/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://dev.w3.org/</a></li>
 
-					<li><span class="blkColor level4 upCase">mediaqueri.es - </span><a href="http://mediaqueri.es/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://mediaqueri.es/</a></li>
+					<li><span class="blkColor level4 upCase">cubic-bezier - </span><a href="http://cubic-bezier.com/#.17,.67,.83,.67" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://cubic-bezier.com/</a></li>
 
-					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
+					<li><span class="blkColor level4 upCase">MDN-mozilla developer network - </span><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions" class="txtLink blkTxt" alt="lien vers alsacréations">https://developer.mozilla.org/</a></li>
 
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/n</a></li>
+					<li><span class="blkColor level4 upCase">CSS-tricks - </span><a href="https://css-tricks.com/almanac/properties/t/transition/" class="txtLink blkTxt" alt="lien vers demosthenes.info">https://css-tricks.com/</a></li>
 
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/</a></li>
+					<li><span class="blkColor level4 upCase">creative link effects - </span><a href="http://tympanus.net/Development/CreativeLinkEffects/#cl-effect-9" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://tympanus.net/</a></li>
 
-					<li><span class="blkColor level4 upCase">sitepoint - </span><a href="http://www.sitepoint.com/new-css3-relative-font-size/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.sitepoint.com/</a></li>
+					<li><span class="blkColor level4 upCase">hover.css - </span><a href="http://ianlunn.github.io/Hover/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://ianlunn.github.io/</a></li>
+
+					<li><span class="blkColor level4 upCase">adobe - </span><a href="http://www.adobe.com/inspire-apps/css_transitions_dreamweaver_demo/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.adobe.com/</a></li>
 				</ul>
 				
 			</section>
@@ -497,33 +691,29 @@
 					<div class="medium-4 columns">
 
 						<!--EDITEZ VOTRE PHOTO-->
-						<img src="../img/team/elodie.jpg" alt="photo auteur" />
+						<img src="../img/team/jiazhi.jpg" alt="photo auteur" />
 
 					</div>
 
 					<div class="medium-8 columns end details">
 
 						<!--EDITEZ VOTRE ID-->
-						<h2 class="whColor upCase">élodie dassance</h2>
-						<p class="level4 blkColor marginU marginD">Spécialiste certifiée en pop-idols japonaises et docteur en fabrication de cookies maison, mon but est de diffuser une idée fun, fraîche et multilingue du webdesign… avec le sourire ( • ̀ω•́  )✧</p>
+						<h2 class="whColor upCase">Jiazhi GAO</h2>
+						<p class="level4 blkColor marginU marginD">Bonjour! Je suis une graphiste designer dans le domaine de design interactif et web design. J’aime les nouvelles technologies mais je ne suis pas une geek! Je suis passionnée par l’illustration, le motion design et la data visualisation.</p>
 
 						<!--EDITEZ VOS LIENS-->
 						<div class="iconWrapper centerOrigin flex equalRep large-6">
 
 							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
-							<a href="#" alt="lien vers le portfolio">
+							<a href="http://jiazhigao.com" alt="lien vers le portfolio">
 								<i class="iconSC whColor urlIcn animation"></i>
 							</a>
 
-							<a href="#" alt="lien vers linkedin">
+							<a href="fr.linkedin.com/pub/jiazhi-gao/72/771/1b/en" alt="lien vers linkedin">
 								<i class="iconSC whColor lnkinIcn animation"></i>
 							</a>
 
-							<a href="#" alt="lien vers viadeo">
-								<i class="iconSC whColor vdoIcn animation"></i>
-							</a>
-
-							<a href="#" alt="lien vers twitter">
+							<a href="https://twitter.com/SophiaKOjazzy" alt="lien vers twitter">
 								<i class="iconSC whColor twtrIcn animation"></i>
 							</a>
 
@@ -554,7 +744,7 @@
 						<!--EDITEZ VALUE AVEC VOTRE THEME-->
 						<label for="object" class="blkColor upCase level3">
 							thème *
-							<input id="object" type="text" name="object" value="Responsive Web design" />
+							<input id="object" type="text" name="object" value="Transition CSS" />
 						</label>
 
 					</div>

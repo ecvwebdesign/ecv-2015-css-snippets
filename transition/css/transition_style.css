@@ -20,11 +20,6 @@ body{
   font-size: 16px;
 }
 
-.buton2{
-  color: #5f8783;
-}
-
-
 
 .container1 {
 
@@ -38,13 +33,14 @@ body{
 }
 
 .container6 {
-  margin-top: 0;
-  padding-top: 50px;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-bottom: 50px;
-  background-color:  #e3f0f2;
-  height: 1200px;
+  margin-top: 0px;
+  background-color: white;
+  height: 860px;
+}
+.container7 {
+  margin-top: 0px;
+  background-color: white;
+  height: 1500px;
 }
 
 .container2 {
@@ -63,19 +59,19 @@ body{
   padding-left: 20%;
   padding-right: 20%;
   padding-bottom: 50px;
-  background-color:  #e3f0f2;
+  background-color:  white;
   height: 500px;
 }
 
 
 .rond1{
   text-align: center;
-  background-color:#88ab83;
+  background-color:#5A9596;
   border-radius: 100%;
   width: 200px;
   height: 200px;
   padding:70px 20px 20px 20px;
-  margin: 50px; 
+  margin: 30px 60px 30px 80px; 
   font-size: 36px;
   color: white;
 
@@ -91,17 +87,21 @@ body{
 
 .rond_text{
   text-align: center;
-  margin-left:-90px; 
+  margin-left:-30px; 
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 .rond2{
   text-align: center;
-  background-color:#88ab83;
+  background-color:#5A9596;
   border-radius: 100%;
   width: 200px;
   height: 200px;
   padding:70px 20px 20px 20px;
-  margin: 50px; 
+  margin: 30px 60px 30px 80px; 
   font-size: 36px;
   color: white;
   -webkit-transition: width  .5s ease, height  .5s ease, padding .5s ease;
@@ -117,11 +117,12 @@ body{
 
 .forme_css_transition{
   border: 10px solid #b7dccb;
-  margin: 15px 0 20px 0;
+  margin: 20px 0 20px 0;
   padding: 10px;
 }
 
-.col-md-4{
+.large-4{
+  
   text-align: center;
 }
 
@@ -140,11 +141,11 @@ body{
 .time_fontion_example3,
 .time_fontion_example4,
 .time_fontion_example5{
-  margin: 0 0px 0 65px;
+  margin: 10px 0px 0 65px;
   width: 40px;
   height: 20px;
   border-radius: 5px;
-  background-color: #31464e;
+  background-color: #5A9596;
 }
 
 .time_fontion_example1{
@@ -177,34 +178,17 @@ body{
 .time_fontion_example3:hover,
 .time_fontion_example4:hover,
 .time_fontion_example5:hover{
-  width: 130px;
+  width: 125px;
   background-color: #a88963;
 
 }
 
-.button{
 
-font-family: Open Sans, 300;
-display: inline-block;
-color: #88ab83;
-background-color: #ffffff;
-font-weight: bold;
-font-size: 18px;
-text-align: center;
-padding: 10px 20px 10px 20px;
-text-decoration: none;
-margin-left: 10%;
-margin-top: 100px;
-margin-bottom: 30px;
-border: 2px solid #88ab83;
-border-radius: 0px;
-white-space: nowrap;
-}
 
 .couleur1
 { text-align: center;
  color: #ffffff;
- background: #31464e;
+ background: #5A9596;
  padding: 20px;
  width: 150px;
  border-radius: 5px;
@@ -226,6 +210,108 @@ white-space: nowrap;
 
 
 
+.menuButton {
+  position: absolute;
+  text-align: center;
+  background-color: #5A9596;
+  width: 80%;
+  height: 50px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 6px;
+  border: solid 3px white;
+  margin: 50px 7px 0 7px;
+  transition-property: background-color, color, border;
+  transition-duration: .4s;
+  transition-timing-function: ease-out;
+  transition: all .5s ease-out;
+}
+
+.menuButton:hover {
+  position: absolute;
+  transition-property: background-color, color, border;
+  transition-duration: .5s;
+  transition-timing-function: ease-out;
+  transform: scale(1.2);
+  background-color:white;
+  color:#5A9596;
+  border: solid 3px #5A9596;
+}
+
+figure.expl {
+  margin: 3.6rem auto !important;
+  max-width: 67.0rem;
+  width: 100%;
+  border: white solid .1rem;
+  background: transparent;
+}
+
+
+.data{
+  background-color:#5A9596; 
+  text-align: center;
+  margin: 20px;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  transition:width 2s ease,  background-color 2s ease;
+}
+
+.data:hover{
+  background-color: #a88963;
+}
+#data1:hover{
+  width:50%;}
+  #data2:hover{
+  width:80%;}
+  #data3:hover{
+  width:30%;}
+
+  .ext { 
+  perspective: 1000; 
+}
+
+.ext,
+.front,
+.back { height: 260px; width: 190px; }
+
+.ext:hover .int, 
+.ext.hover .int { 
+  transform: rotateY(180deg); 
+}
+
+.int { 
+  transition: .75s;
+  transform-style: preserve-3d;
+}
+
+.front, 
+.back {
+  backface-visibility: hidden;
+  position: absolute; top: 0; left: 0;
+}
+
+.front { 
+  z-index: 2;
+   
+}
+
+.back { 
+  transform: rotateY(180deg);
+  background: #5A9596; 
+  text-align: center;
+  font-size: 36px;
+  color: white;
+  padding-top:100px;
+}
+
+.img{
+  height: 100%;
+}
 
 
 
