@@ -351,6 +351,7 @@ a.whTxt:hover {
 ICONES
 _______________
 */
+
 i.iconSC, i.iconFA {
 	position: relative;
 }
@@ -801,6 +802,7 @@ span.thumb .iconWrapper a:nth-child(4) {
 FORME DE CONTACT
 _______________
 */
+
 label + label {
 	margin: 3.8rem 0 0;
 }
@@ -955,7 +957,7 @@ Initialisation
 
 figure.expl {
 	margin: 3.6rem auto !important;
-	height: 20.0rem;
+	height: auto;
 	border: #11141c solid .1rem;
 	background: transparent;
 }
@@ -963,7 +965,7 @@ figure.expl {
 pre.snippet {
 	margin: 3.6rem auto !important;
 	background: #11141c;
-	padding: 4.0rem;
+	padding: 5.0rem;
 	white-space: normal;
 }
 
@@ -978,6 +980,13 @@ pre.snippet code {
 pre.snippet h3 {
 	margin: 0;
 	text-transform: uppercase;
+}
+
+pre.snippet .medium-8 {
+	width: 100%;
+}
+pre.snippet .medium-8:last-child {
+	margin: 4.0rem 0 0;
 }
 
 code.smallSnippet {

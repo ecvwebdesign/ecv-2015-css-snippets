@@ -81,6 +81,7 @@ p.smallF {
 *.flex {
 	display: flex;
 		display: -webkit-flex;
+			display: -moz-box;
 				display: -ms-flexbox;
 }
 
@@ -93,27 +94,32 @@ p.smallF {
 *.flexColumnRWrap {
 	flex-flow: row wrap;
 		-webkit-flex-flow: row wrap-reverse;
+			-moz-flex-flow: row wrap-reverse;
 				-ms-flex-flow: row wrap-reverse;
 }
 *.flexColumnNoWrap {
 	flex-flow: row nowrap;
 		-webkit-flex-flow: row nowrap;
+			-moz-flex-flow: row nowrap;
 				-ms-flex-flow: row nowrap;
 }
 
 *.flexListWrap {
 	flex-flow: column wrap;
 		-webkit-flex-flow: column wrap;
+			-moz-flex-flow: column wrap;
 				-ms-flex-flow: column wrap;
 }
 *.flexListRWrap {
 	flex-flow: column wrap;
 		-webkit-flex-flow: column wrap-reverse;
+			-moz-flex-flow: column wrap-reverse;
 				-ms-flex-flow: column wrap-reverse;
 }
 *.flexListNoWrap {
 	flex-flow: column nowrap;
 		-webkit-flex-flow: column nowrap;
+			-moz-flex-flow: column nowrap;
 				-ms-flex-flow: column nowrap;
 }
 
@@ -121,26 +127,31 @@ p.smallF {
 *.justifyLeft {
 	justify-content: flex-start;
 		-webkit-justify-content: flex-start;
+			-moz-justify-content: flex-start;
 				-ms-justify-content: flex-start;
 }
 *.justifyRight {
 	justify-content: flex-end;
 		-webkit-justify-content: flex-end;
+			-moz-justify-content: flex-end;
 				-ms-justify-content: flex-end;
 }
 *.justifyCenter {
 	justify-content: center;
 		-webkit-justify-content: center;
+			-moz-justify-content: center;
 				-ms-justify-content: center;
 }
 *.justifySB {
 	justify-content: space-between;
 		-webkit-justify-content: space-between;
+			-moz-justify-content: space-between;
 				-ms-justify-content: space-between;
 }
 *.justifySA {
 	justify-content: space-around;
 		-webkit-justify-content: space-around;
+			-moz-justify-content: space-around;
 				-ms-justify-content: space-around;
 }
 
@@ -148,26 +159,31 @@ p.smallF {
 *.alignUp {
 	align-items: flex-start;
 		-webkit-align-items: flex-start;
+			-moz-align-items: flex-start;
 				-ms-align-items: flex-start;
 }
 *.alignDown {
 	align-items: flex-end;
 		-webkit-align-items: flex-end;
+			-moz-align-items: flex-end;
 				-ms-align-items: flex-end;
 }
 *.alignCenter {
 	align-items: center;
 		-webkit-align-items: center;
+			-moz-align-items: center;
 				-ms-align-items: center;
 }
 *.alignBase {
 	align-items: baseline;
 		-webkit-align-items: baseline;
+			-moz-align-items: baseline;
 				-ms-align-items: baseline;
 }
 *.alignStretch {
 	align-items: stretch;
 		-webkit-align-items: stretch;
+			-moz-align-items: stretch;
 				-ms-align-items: stretch;
 }
 
@@ -175,11 +191,13 @@ p.smallF {
 *.alignSelfUp {
 	align-self: flex-start;
 		-webkit-align-self: flex-start;
+			-moz-align-self: flex-start;
 				-ms-align-self: flex-start;
 }
 *.alignSelfDown {
 	align-self: flex-end;
 		-webkit-align-self: flex-end;
+			-moz-align-self: flex-end;
 				-ms-align-self: flex-end;
 }
 
@@ -187,59 +205,70 @@ p.smallF {
 *.equalCol {
 	flex: 1;
 		-webkit-flex: 1;
+			-moz-box-flex: 1;
 				-ms-flex: 1;
 }
 
 *.smartCol {
 	flex: 1 1 30%;
 		-webkit-flex: 1 1 30%;
+			-moz-box-flex: 1 1 30%;
 				-ms-flex: 1 1 30%;
 }
 
 *.sCol {
 	flex: 0 1 5.0rem;
 		-webkit-flex: 0 1 5.0rem;
+			-moz-box-flex: 0 1 5.0rem;
 				-ms-flex: 0 1 5.0rem;
 }
 
 *.sysCol1 {
 	flex: 0 1 8.33%;
 		-webkit-flex: 0 1 8.33%;
+			-moz-box-flex: 0 1 8.33%;
 				-ms-flex: 0 1 8.33%;
 }
 *.sysCol2 {
 	flex: 0 1 16.66%;
 		-webkit-flex: 0 1 16.66%;
+			-moz-box-flex: 0 1 16.66%;
 				-ms-flex: 0 1 16.66%;
 }
 *.sysCol3 {
 	flex: 0 1 25%;
 		-webkit-flex: 0 1 25%;
+			-moz-box-flex: 0 1 25%;
 				-ms-flex: 0 1 25%;
 }
 *.sysCol4 {
 	flex: 0 1 33.33%;
 		-webkit-flex: 0 1 33.33%;
+			-moz-box-flex: 0 1 33.33%;
 				-ms-flex: 0 1 33.33%;
 }
 *.sysCol6 {
 	flex: 0 1 50%;
 		-webkit-flex: 0 1 50%;
+			-moz-box-flex: 0 1 50%;
 				-ms-flex: 0 1 50%;
 }
 *.sysCol8 {
 	flex: 0 1 66.66%;
 		-webkit-flex: 0 1 66.66%;
+			-moz-box-flex: 0 1 66.66%;
 				-ms-flex: 0 1 66.66%;
 }
 *.sysCol10 {
 	flex: 0 1 83.33%;
 		-webkit-flex: 0 1 83.33%;
+			-moz-box-flex: 0 1 83.33%;
 				-ms-flex: 0 1 83.33%;
 }
 *.sysCol12 {
 	flex: 0 0 100%;
 		-webkit-flex: 0 1 100%;
+			-moz-box-flex: 0 1 100%;
 				-ms-flex: 0 1 100%;
 }
 
@@ -247,14 +276,17 @@ p.smallF {
 *.first {
 	order: -1;
 		-webkit-order: -1;
+			-moz-box-ordinal-group: -1;
 }
 *.middle {
 	order: 1;
 		-webkit-order: 1;
+			-moz-box-ordinal-group: 1;
 }
 *.last {
 	order: 2;
 		-webkit-order: 2;
+			-moz-box-ordinal-group: 2;
 }
 
 /* extermination de bordure */
