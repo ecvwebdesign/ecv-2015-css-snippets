@@ -17,7 +17,7 @@
 		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
 
 		<!--STYLE ADDITIONNEL-->
-		<!--<link rel="stylesheet" href="style.css" />-->
+		<link rel="stylesheet" href="../svg/css/svgstyle.css"/>
 
 		<!--FONTES-->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
@@ -29,7 +29,7 @@
 		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
 		<script src="../js/foundation.min.js" type="text/javascript"></script>
 		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
-		<script src="../js/plugins/jquery.tuto.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
 
 	</head>
 
@@ -69,34 +69,34 @@
 		<div id="sectionWrap">
 
 			<!--TITRE DU SITE-->
-<section id="siteTitle" class="blBG adaptableCover flex insertYOdesign">
+			<section id="siteTitle" class="blBG adaptableCover flex insertYOdesign">
 
 				<article class="largeRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
-					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
+					<h1 class="blkColor ttTitle">Le SVG</h1>
 
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+						<p class="blkColor level4">Le SVG (abréviation de «Scalable Vector Graphics») est un format de fichier qui permet à des applications graphiques en deux dimensions de s’afficher en XML. </p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">LES FORMES VECTORIELLES SIMPLES</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt"> IMPORTER DU SVG</a></li>
+								
 
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">LES CONTOURS</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">ANIMER DU SVG</a></li>
+								
 
 							</div>
 						</ol>
@@ -104,7 +104,7 @@
 					</div>
 
 					<!--EDITEZ VOTRE NOM-->
-					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
+					<p class="ttAuteur">Créé par Justine Pinaud le 07/04/2015</p>
 
 					<div class="ttbuttons row">
 						<div class="medium-6 columns">
@@ -119,27 +119,6 @@
 					</div>
 
 					<span class="ttBottom"><a href="#ttInit"></a></span>
-
-				</article>
-
-			</section>
-
-			<!--TUTORIEL-->
-			<section id="ttInit" class="whBG airU">
-				
-				<article class="row">
-
-					<h1 class="blkColor sectionTitle">tutoriel</h1>
-
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">D’après le W3C, le SVG (abréviation de «Scalable Vector Graphics») est un format de fichier qui permet à des applications graphiques en deux dimensions de s’afficher en XML. 
-					Il permet trois types d’objet graphiques : des formes vectorielles (traits, courbes, ellipses..), des images et du texte.
-					Contrairement aux formats GIF et JPEG qui ont une taille spécifique, les documents SVG peuvent être agrandis sans perte de résolution et être modifiés directement dans le HTML et le CSS. 
-					</p>
 
 				</article>
 
@@ -165,7 +144,51 @@
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+        <div class="row">
+            <div class="small-4 columns">
+                <svg width="326" height="200">
+                    <rect x="100" y="50" width="100" height="100" style="fill:grey;stroke:black;stroke-width:3;fill-opacity:0.1;stroke-opacity:0.9">  
+                    <!-- svg width = largeur du canevas SVG
+                        svg height = hauteur du canevas SVG
+                            rect x = position du rectangle x
+                            rect y = position du rectangle y
+                        rect width = largeur du rectangle
+                       rect height = hauteur du rectangle
+                             style = pour controler le style dans le html
+                     --> 
+                </svg>
+            </div>
+
+            <div class="small-4 columns">
+                <svg height="220" width="326">
+                    <ellipse class="ellipse" cx="150" cy="100" rx="50" ry="50" />
+                    <!-- cx = position du cercle en x
+                         cy = position du cercle en y
+                         rx = rayon du cercle en x
+                         ry = rayon du cercle en y
+                         class ellipse = pour controler le style dans le css.
+                     --> 
+                </svg>
+            </div>
+            <div class="small-4 columns">
+                <svg height="220" width="326">
+                    <path d="M160 50 L100 150 L220 150 Z"
+                    style="fill:white;stroke:grey;stroke-width:3" />
+                    <!--  M90 = position point du haut en x
+                           50 = position point du haut en y
+                          L35 = position point à gauche en x
+                          150 = position point à gauche en y
+                         L150 = position point à droite en x
+                          150 = position point à droite en y
+                     -->
+                </svg>
+            </div>
+        </div>
+
+
+
+				</figure>
 
 				<article class="txtRow">
 
@@ -173,7 +196,7 @@
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
 					<p class="blkColor">
 
-				<strong>Pour le rectangle,</strong> il faut ouvrir une balise (ex :<code class="smallSnippet blkColor">&lt;rect&gt;</code>) et y inclure :
+				<strong>Pour le carré,</strong> il faut ouvrir une balise (ex :<code class="smallSnippet blkColor">&lt;rect&gt;</code>) et y inclure :
 
 <br>- svg width et svg height, qui correspondent à la largeur et la hauteur du canevas SVG (soit la zone dans laquelle le SVG apparaît).
 <br>- «rect x» et «rect y» qui correspondent à la position du rectangle x et en y;
@@ -196,7 +219,8 @@ La balise «style» quand à elle permet de contrôler le style du SVG directeme
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="html">
 &lt;svg width="220" height="200"&gt;
-&lt;rect x="50" y="50" width="100" height="100" style="fill:grey;stroke:black;stroke-width:3;fill-opacity:0.1;stroke-opacity:0.9"&gt;  
+&lt;rect x="50" y="50" width="100" height="100" style="fill:grey;stroke:black;
+stroke-width:3;fill-opacity:0.1;stroke-opacity:0.9"&gt;  
 &lt;/svg&gt;
 						</code>
 
@@ -283,7 +307,52 @@ style="fill:white;stroke:grey;stroke-width:3" /&gt;
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+		<div class="row">
+            <div class="small-4 columns">
+                <svg width="200px" height="200px" viewBox="-50 0 250 200" enable-background="new 0 0 200 200" xml:space="preserve">
+                <polygon fill="#9D9D9C" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="100.146,17.235 120.69,80.462 
+                187.171,80.462 133.387,119.537 153.931,182.765 100.146,143.689 46.363,182.765 66.906,119.537 13.123,80.462 79.603,80.462 "/>
+            	</svg>
+                    <!--  sur illustrator, fichier/ enregistrer sous, selectionner SVG /
+                    cliquer sur code SVG... / copier coller ici le code affiché.
+                     -->
+            </div>
+            <div class="small-4 columns">
+                <img src="img/ecureuil.svg" alt="ecureuil">
+                    <!--  sur illustrator, fichier/ enregistrer sous, selectionner SVG /
+                    OK / enregistrer dans le dossier img de votre page / insérer img src sur le html.
+                     -->
+            </div>
+            <div class="small-4 columns">
+              <svg width="250px" height="200px" viewBox="0 0 220 220" enable-background="new 0 0 200 200" xml:space="preserve">
+              <g id="Calque_1">
+                <g>
+                  <path d="M59.926,43.846c29.798,0,54.04,24.242,54.04,54.04s-24.242,54.039-54.04,54.039s-54.04-24.241-54.04-54.039
+                    S30.128,43.846,59.926,43.846 M59.926,38.959C27.382,38.959,1,65.341,1,97.886c0,32.544,26.382,58.926,58.926,58.926
+                    c32.543,0,58.926-26.382,58.926-58.926C118.853,65.341,92.47,38.959,59.926,38.959L59.926,38.959z"/>
+                </g>
+              </g>
+              <g id="Calque_2">
+                <g>
+                  <path d="M141.073,43.846c29.798,0,54.04,24.242,54.04,54.04s-24.242,54.039-54.04,54.039c-29.797,0-54.039-24.241-54.039-54.039
+                    S111.276,43.846,141.073,43.846 M141.073,38.959c-32.542,0-58.925,26.382-58.925,58.926c0,32.544,26.383,58.926,58.925,58.926
+                    c32.546,0,58.927-26.382,58.927-58.926C200,65.341,173.619,38.959,141.073,38.959L141.073,38.959z"/>
+                </g>
+              </g>
+                    <!--  Lorsque vous séparez vos calques sur illustrator et que vous copiez collez le code svg du document, des balises <g id="Calque"> sont crées.
+                    Ils est ainsi plus simple de modifier le css pour chacun des calques.
+
+                     -->
+            </svg>
+
+          </div>
+        </div>
+
+
+
+
+				</figure>
 
 				<article class="txtRow">
 
@@ -347,15 +416,21 @@ En effet, sur illustrator, si les différentes formes d’une même image sont r
 &lt;svg width="250px" height="200px" viewBox="0 0 220 220" enable-background="new 0 0 200 200" xml:space="preserve"&gt;
 &lt;g id="Calque_1"&gt;
 &lt;g&gt;
-&lt;path d="M59.926,43.846c29.798,0,54.04,24.242,54.04,54.04s-24.242,54.039-54.04,54.039s-54.04-24.241-54.04-54.039 S30.128,43.846,59.926,43.846 M59.926,38.959C27.382,38.959,1,
-65.341,1,97.886c0,32.544,26.382,58.926,58.926,58.926 c32.543,0,58.926-26.382,58.926-58.926C118.853,65.341,92.47,38.959,59.926,
+&lt;path d="M59.926,43.846c29.798,0,54.04,24.242,
+54.04,54.04s-24.242,54.039-54.04,54.039s-54.04-24.241
+-54.04-54.039 S30.128,43.846,59.926,43.846 M59.926,38.959C27.382,38.959,1,
+65.341,1,97.886c0,32.544,26.382,58.926,
+58.926,58.926 c32.543,0,
+58.926-26.382,
+58.926-58.926C118.853,65.341,92.47,38.959,59.926,
 38.959L59.926,38.959z"/&gt;
 &lt;/g&gt;
 &lt;/g&gt;
 &lt;g id="Calque_2"&gt;
 &lt;g&gt;
 &lt;path d="M141.073,43.846c29.798,0,54.04,24.242,
-54.04,54.04s-24.242,54.039-54.04,54.039c-29.797,0-54.039-24.241-54.039-54.039 S111.276,43.846,141.073,43.846 M141.073,38.959c-32.542,0-58.925,26.382-58.925,58.926c0,32.544,26.383,58.926,58.925,58.926 c32.546,0,58.927-26.382,58.927-58.926C200,65.341,173.619,
+54.04,54.04s-24.242,54.039-54.04,54.039c-29.797,0-54.039-24.241-54.039-54.039 S111.276,43.846,141.073,43.846 M141.073,38.959c-32.542,0-58.925,26.382-58.925,58.926c0,32.544,26.383,
+58.926,58.925,58.926 c32.546,0,58.927-26.382,58.927-58.926C200,65.341,173.619,
 38.959,141.073,38.959L141.073,38.959z"/&gt;
 &lt;/g&gt;
 &lt;/g&gt;
@@ -387,7 +462,53 @@ En effet, sur illustrator, si les différentes formes d’une même image sont r
 
 				</article>
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+
+        <div class="row">
+          
+
+
+          <div class="small-4 columns">
+            <svg width="250px" height="200px" viewBox="-80 0 300 200" enable-background="new 0 0 200 200" xml:space="preserve">
+              <g id="rectangle3">
+                <g>
+                  <rect x="21.649" y="144.279" fill="#C6C6C6" width="156.701" height="38.414"/>
+                </g>
+              </g>
+              <g id="rectangle2">
+                <g>
+                  <rect x="21.649" y="80.793" fill="#C6C6C6" width="156.701" height="38.414"/>
+                </g>
+              </g>
+              <g id="rectangle1">
+                <g>
+                  <rect x="21.649" y="18.307" fill="#C6C6C6" width="156.701" height="38.414"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <div class="small-4 columns">
+            <svg width="230px" height="200px" viewBox="-70 0 270 200" enable-background="new 0 0 200 200" xml:space="preserve">
+            <g id="rectangle4">
+              <g>
+                <rect x="20" y="20" fill="#C6C6C6" width="150" height="160" style="fill:white;stroke:grey;stroke-width:4"/>
+              </g>
+            </g>
+            </svg>
+          </div>
+        
+
+          <div class="small-4 columns"> 
+                <img src="img/losange.svg" alt="losange">
+          </div>
+          
+      </div>
+
+
+
+
+				</figure>
 
 				<article class="txtRow">
 
@@ -595,7 +716,61 @@ Il faut aussi faire <strong>attention à bien utiliser les préfixes</strong> de
 				</article>
 
 					<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+
+        <div class="row">
+          <div class="small-4 columns">
+
+            <svg height="200" width="230" viewBox="-20 -20 100 200">
+              <circle cx="75" cy="75" r="20" style="fill:white;stroke:black;stroke-width:10">
+              <animate attributeName="r" from="0" to="60" dur="0.4s" repeatCount="indefinite"></animate>
+
+          </div>
+
+          <div class="small-4 columns">
+            <svg height="200" width="200">
+              <circle cx="120" cy="90" r="20">
+                <animate id="grand" begin="0s;petit.end" attributeName="r" from="50" to="75" dur="1s">
+                </animate>
+                <animate id="petit" begin="grand.end" attributeName="r" from="75" to="50" dur="1s">
+                </animate>
+                <animate begin="5s" attributeName="fill" fill="freeze" to="grey" dur="1s">
+                </animate>
+                <animate begin="10s" attributeName="fill" fill="freeze" to="black" dur="1s">
+                </animate>
+                <animate begin="15s" attributeName="fill" fill="freeze" to="grey" dur="1s">
+                </animate>
+                <animate begin="20s" attributeName="fill" fill="freeze" to="black" dur="1s">
+                </animate>
+
+              </circle>
+            </svg>
+          </div>
+
+          <div class="small-4 columns">
+
+            <svg width="200" height="200" viewBox="-40 0 210 150">
+              <circle cx="0" cy="0" r="15">
+                <animateMotion path="M12 75 L75 12 L137 75 L75 137 Z" dur="2s" repeatCount="indefinite"></animateMotion>
+              </circle>
+                    <!--  M12 = position cercle lorsqu'il est sur la gauche de l'ecran en x
+                           75 = position cercle lorsqu'il est sur la gauche de l'ecran en y
+                          L75 = position cercle lorsqu'il est sur le haut de l'ecran en x
+                           12 = position cercle lorsqu'il est sur le haut de l'ecran en y
+                         L137 = position cercle lorsqu'il est sur la droite de l'ecran en x
+                           75 = position cercle lorsqu'il est sur la droite de l'ecran en y
+                          L75 = position cercle lorsqu'il est sur le bas de l'ecran en x
+                          137 = position cercle lorsqu'il est sur le bas de l'ecran en y -->
+            </svg>
+          </div>
+        </div>
+
+
+
+
+
+
+				</figure>
 
 				<article class="txtRow">
 
@@ -743,7 +918,7 @@ dur=«2s» indique que l’animation dure 2 secondes.
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">21+</span>
+						<span class="whColor level2 version">16+</span>
 					</div>
 
 					<div class="browser">
@@ -753,7 +928,7 @@ dur=«2s» indique que l’animation dure 2 secondes.
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">4+</span>
+						<span class="whColor level2 version">3.2+</span>
 					</div>
 
 					<div class="browser">
@@ -763,7 +938,7 @@ dur=«2s» indique que l’animation dure 2 secondes.
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">11.6+</span>
 					</div>
 
 					<div class="browser">
@@ -773,7 +948,7 @@ dur=«2s» indique que l’animation dure 2 secondes.
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">3.5+</span>
+						<span class="whColor level2 version">3.6+</span>
 					</div>
 
 					<div class="browser">

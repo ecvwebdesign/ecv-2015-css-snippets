@@ -1,188 +1,902 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="fr">
 
-<head>
+  <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="author" content="*auteur de la page, donc vous*" />
+    <meta name="description" content="*description du tutoriel*" />
 
-    <title>SVG Snippet</title>
+    <title>Nom du tutoriel</title>
 
-   <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--STYLE GENERAL-->
+    <link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
 
-</head>
-<body>
-    <div class="content">
-        <h1> Basic shapes </h1>
-        <div class="bordure"></div>
-        <div class="row">
-            <div class="col-md-4">
-                <svg width="220" height="200">
-                    <rect x="50" y="50" width="100" height="100" style="fill:grey;stroke:black;stroke-width:3;fill-opacity:0.1;stroke-opacity:0.9">  
-                    <!-- svg width = largeur du canevas SVG
-                        svg height = hauteur du canevas SVG
-                            rect x = position du rectangle x
-                            rect y = position du rectangle y
-                        rect width = largeur du rectangle
-                       rect height = hauteur du rectangle
-                             style = pour controler le style dans le html
-                     --> 
-                </svg>
-            </div>
+    <!--STYLE ADDITIONNEL-->
+    <!--<link rel="stylesheet" href="style.css" />-->
 
-            <div class="col-md-4">
-                <svg height="220" width="220">
-                    <ellipse class="ellipse" cx="110" cy="100" rx="50" ry="50" />
-                    <!-- cx = position du cercle en x
-                         cy = position du cercle en y
-                         rx = rayon du cercle en x
-                         ry = rayon du cercle en y
-                         class ellipse = pour controler le style dans le css.
-                     --> 
-                </svg>
-            </div>
-            <div class="col-md-4">
-                <svg height="220" width="220">
-                    <path d="M90 50 L30 150 L150 150 Z"
-                    style="fill:white;stroke:grey;stroke-width:3" />
-                    <!--  M90 = position point du haut en x
-                           50 = position point du haut en y
-                          L35 = position point à gauche en x
-                          150 = position point à gauche en y
-                         L150 = position point à droite en x
-                          150 = position point à droite en y
-                     -->
-                </svg>
-            </div>
+    <!--FONTES-->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" media="all" type="text/css" href="../css/fonts.css" />
+
+    <!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
+    <script type="text/javascript" src="../js/vendor/modernizr.js"></script>
+    <script src="../js/vendor/jquery.js" type="text/javascript"></script>
+    <script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../js/foundation.min.js" type="text/javascript"></script>
+    <script src="../js/plugins/highlight.js" type="text/javascript"></script>
+    <script src="../js/plugins/jquery.tuto.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+
+    <header class="blkBG">
+
+      <div class="row headerContent">
+        <div class="medium-4 columns headerColumn7">
+          <a href="../../ecv-2015-css-snippets" alt="lien vers l'accueil"><img id="logotype" src="../img/logotype.svg" alt="logotype snippets" /></a>
         </div>
 
+        <nav id="mainNav" class="medium-8 columns flex flexColumn endRep">
+          <a href="../#topics" class="noMargin" alt="lien vers les thèmes">thèmes</a>
+          <a href="../#team" alt="lien vers l'équipe">l'équipe</a>
+          <a href="#contact" alt="ancre vers la section contact">contact</a>
+        </nav>
 
-        <h1> Import SVG </h1>
-        <div class="bordure"></div>
-        <div class="row">
-            <div class="col-md-4">
-                <svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
-                <polygon fill="#9D9D9C" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="100.146,17.235 120.69,80.462 
-                187.171,80.462 133.387,119.537 153.931,182.765 100.146,143.689 46.363,182.765 66.906,119.537 13.123,80.462 79.603,80.462 "/>
-            </svg>
-                    <!--  sur illustrator, fichier/ enregistrer sous, selectionner SVG /
-                    cliquer sur code SVG... / copier coller ici le code affiché.
-                     -->
-            </div>
-            <div class="col-md-4">
-                <img src="img/ecureuil.svg" alt="ecureuil">
-                    <!--  sur illustrator, fichier/ enregistrer sous, selectionner SVG /
-                    OK / enregistrer dans le dossier img de votre page / insérer img src sur le html.
-                     -->
-            </div>
-            <div class="col-md-4">
-              <svg width="250px" height="200px" viewBox="0 0 220 220" enable-background="new 0 0 200 200" xml:space="preserve">
-              <g id="Calque_1">
-                <g>
-                  <path d="M59.926,43.846c29.798,0,54.04,24.242,54.04,54.04s-24.242,54.039-54.04,54.039s-54.04-24.241-54.04-54.039
-                    S30.128,43.846,59.926,43.846 M59.926,38.959C27.382,38.959,1,65.341,1,97.886c0,32.544,26.382,58.926,58.926,58.926
-                    c32.543,0,58.926-26.382,58.926-58.926C118.853,65.341,92.47,38.959,59.926,38.959L59.926,38.959z"/>
-                </g>
-              </g>
-              <g id="Calque_2">
-                <g>
-                  <path d="M141.073,43.846c29.798,0,54.04,24.242,54.04,54.04s-24.242,54.039-54.04,54.039c-29.797,0-54.039-24.241-54.039-54.039
-                    S111.276,43.846,141.073,43.846 M141.073,38.959c-32.542,0-58.925,26.382-58.925,58.926c0,32.544,26.383,58.926,58.925,58.926
-                    c32.546,0,58.927-26.382,58.927-58.926C200,65.341,173.619,38.959,141.073,38.959L141.073,38.959z"/>
-                </g>
-              </g>
-                    <!--  Lorsque vous séparez vos calques sur illustrator et que vous copiez collez le code svg du document, des balises <g id="Calque"> sont crées.
-                    Ils est ainsi plus simple de modifier le css pour chacun des calques.
+        <div id="toggleMenu" class="medium-1 columns headerColumn3">
+          <button>
+            <i class="iconFA rwdIconFA whColor burgerIcn animation"></i>
+          </button>
+        </div>  
 
-                     -->
-            </svg>
-
-          </div>
-        </div>
-
-
-
-        <h1> STROKE </h1>
-        <div class="bordure"></div>
-        <div class="row">
-          
-
-
-          <div class="col-md-4">
-            <svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
-              <g id="rectangle3">
-                <g>
-                  <rect x="21.649" y="144.279" fill="#C6C6C6" width="156.701" height="38.414"/>
-                </g>
-              </g>
-              <g id="rectangle2">
-                <g>
-                  <rect x="21.649" y="80.793" fill="#C6C6C6" width="156.701" height="38.414"/>
-                </g>
-              </g>
-              <g id="rectangle1">
-                <g>
-                  <rect x="21.649" y="18.307" fill="#C6C6C6" width="156.701" height="38.414"/>
-                </g>
-              </g>
-            </svg>
-          </div>
-
-          <div class="col-md-4">
-            <svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
-            <g id="rectangle4">
-              <g>
-                <rect x="20" y="20" fill="#C6C6C6" width="150" height="160" style="fill:white;stroke:grey;stroke-width:4"/>
-              </g>
-            </g>
-            </svg>
-          </div>
-        
-
-          <div class="col-md-4"> 
-                <img src="img/losange.svg" alt="losange">
-          </div>
-          
+        <nav class="navMenu" id="rwdNav">
+          <h3 class="blBG blkColor">Menu</h3>
+          <a href="../#topics" class="snLink" alt="lien vers les thèmes">thèmes</a>
+          <a href="../#team" class="snLink" alt="lien vers l'équipe">l'équipe</a>
+          <a href="#contact" class="snLink" alt="ancre vers la section contact">contact</a>
+          <a alt="vers le haut" class="ttTop"><i class="iconFA rwdIconFA whColor arrowUIcn animation"></i>vers le haut</a>
+        </nav>
       </div>
 
-        <h1> ANIMATE </h1>
-        <div class="bordure"></div>
-        <div class="row">
-          <div class="col-md-4">
+    </header>
 
-            <svg height="200" width="200" viewBox="0 0 200 200">
-              <circle cx="75" cy="75" r="20" style="fill:white;stroke:black;stroke-width:10">
-              <animate attributeName="r" from="0" to="60" dur="0.4s" repeatCount="indefinite"></animate>
+    <!--ENVELOPPE-->
+    <div id="sectionWrap">
+
+      <!--TITRE DU SITE-->
+      <section id="siteTitle" class="blBG adaptableCover flex insertYOdesign">
+
+        <article class="largeRow centerBlock">
+
+          <!--EDITEZ VOTRE TITRE-->
+          <h1 class="blkColor ttTitle">Responsive Web Design</h1>
+
+          <div class="ttIntro row">
+
+            <!--EDITEZ VOTRE INTRODUCTION-->
+            <p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+
+            <!--EDITEZ VOS PARTIES-->
+            <!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
+            <ol class="contents row">
+              <div class="medium-6 columns">
+
+                <li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
+                <li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
+                <li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+
+              </div>
+
+              <div class="medium-6 columns end">
+
+                <li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
+                <li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
+                <li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
+
+              </div>
+            </ol>
 
           </div>
 
-          <div class="col-md-4">
-            <svg height="200" width="200">
-              <circle cx="100" cy="80" r="20">
-                <animate id="grand" begin="0s;petit.end" attributeName="r" from="50" to="75" dur="1s"></animate>
-                <animate id="petit" begin="grand.end" attributeName="r" from="75" to="50" dur="1s"></animate>
-                <animate begin="5s" attributeName="fill" fill="freeze" to="grey" dur="1s"></animate>
-                <animate begin="10s" attributeName="fill" fill="freeze" to="black" dur="1s"></animate>
-                <animate begin="15s" attributeName="fill" fill="freeze" to="grey" dur="1s"></animate>
-                <animate begin="20s" attributeName="fill" fill="freeze" to="black" dur="1s"></animate>
+          <!--EDITEZ VOTRE NOM-->
+          <p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
 
-              </circle>
-            </svg>
+          <div class="ttbuttons row">
+            <div class="medium-6 columns">
+              <a href="demo.html" alt='lien vers la démo' class="button medium demo centerOrigin animation whBut"><span class="animation">démo</span></a>
+            </div>
+            <div class="medium-6 columns end marginSU">
+
+              <!--Editez la class du lien au lieu de rwdSize, qui est propre à ce qu'à fait élodie, voir à style.css-->
+              <a href="#" alt='lien de téléchargement' class="button medium centerOrigin animation rwdSize whBut"><span class="animation">télécharger</span></a>
+
+            </div>
           </div>
 
-          <div class="col-md-4">
+          <span class="ttBottom"><a href="#ttInit"></a></span>
 
-            <svg width="150" height="150" viewBox="0 0 150 150">
-              <circle cx="0" cy="0" r="15">
-                <animateMotion path="M12 75 L75 12 L137 75 L75 137 Z" dur="2s" repeatCount="indefinite"></animateMotion>
-              </circle>
-            </svg>
+        </article>
+
+      </section>
+
+      <!--UNE SECTION PAR PARTIE-->
+      <section id="ttPrt1" class="whBG smallAir">
+
+        <article class="txtRow">
+          
+          <!--EDITEZ LE SOUS-TITRE-->
+          <h2 class="blkColor sectionTitle ttPrtTitle">1. LES FORMES VECTORIELLES SIMPLES.</h2>
+
+        </article>
+
+        <article class="txtRow">
+
+          <!--EDITEZ LE TEXTE-->
+          <!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+          <p class="blkColor">Les formes vectorielles simples en format SVG peuvent être directement intégrées dans le code HTML dans des balises <code class="smallSnippet blkColor">&lt;svg&gt;</code>.</p>
+
+
+        </article>
+
+        <!--EDITEZ VOTRE EXEMPLE-->
+        <figure class="insertExHere expl row"></figure>
+
+        <article class="txtRow">
+
+          <!--EDITEZ LE TEXTE-->
+          <!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+          <p class="blkColor">
+
+        <strong>Pour le rectangle,</strong> il faut ouvrir une balise (ex :<code class="smallSnippet blkColor">&lt;rect&gt;</code>) et y inclure :
+
+<br>- svg width et svg height, qui correspondent à la largeur et la hauteur du canevas SVG (soit la zone dans laquelle le SVG apparaît).
+<br>- «rect x» et «rect y» qui correspondent à la position du rectangle x et en y;
+<br>- «rect width» et «rect height» qui correspondent à la largeur et la hauteur du rectangle;
+<br>
+La balise «style» quand à elle permet de contrôler le style du SVG directement dans le html. Ici,
+<br>- «fill» correspond à la couleur du fond;
+<br>- «stroke» correspond à la couleur du contour;
+<br>- «stroke-width» correspond à l’épaisseur du contour;
+<br>- «fill-opacity» correspond à l’opacité du fond;
+<br>- «stroke-opacity» correspond à l’opacité du contour;
+          </p>
+
+        </article>
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="html">
+&lt;svg width="220" height="200"&gt;
+&lt;rect x="50" y="50" width="100" height="100" style="fill:grey;stroke:black;stroke-width:3;fill-opacity:0.1;stroke-opacity:0.9"&gt;  
+&lt;/svg&gt;
+            </code>
+
+          </div>
+        </pre>
+        <article class="txtRow">
+          <p class="blkColor">
+            <strong>Pour le cercle,</strong> il faut ouvrir une balise (ex: <ellipse>) et y inclure :
+
+<br>- «cx» et «cy», qui sont les positions du cercle en x et en y;
+<br>- «rx» et «ry», qui correspondent au rayon du cercle en x et en y.
+Dans cet exemple, le style du cercle a été appliqué dans le css en ouvrant une classe «ellipse».
+
+          </p>
+
+        </article>
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="html">
+&lt;svg height="220" width="220"&gt;
+&lt;ellipse class="ellipse" cx="110" cy="100" rx="50" ry="50" /&gt;
+&lt;/svg&gt;
+            </code>
+
+          </div>
+        </pre>
+        <article class="txtRow">
+
+          <p class="blkColor">
+
+<strong>Pour le triangle,</strong> il faut ouvrir une balise (ex: <code class="smallSnippet blkColor">&lt;path&gt;</code>), dont les coordonnées de l’exemple correspondent à :
+
+<br>- M90, position point du haut en x;
+<br>- 50, position point du haut en y;
+<br>- L35, position point à gauche en x;
+<br>- 50, position point à gauche en y;
+<br>- L150, position point à droite en x;
+<br>- 150, position point à droite en y.
+
+          </p>
+
+        </article>
+
+
+
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="html">
+&lt;svg height="220" width="220"&gt;
+&lt;path d="M90 50 L30 150 L150 150 Z"
+style="fill:white;stroke:grey;stroke-width:3" /&gt;
+&lt;/svg&gt;
+            </code>
+
+          </div>
+        </pre>
+
+      </section>
+
+      <!--UNE SECTION PAR PARTIE-->
+      <section id="ttPrt2" class="whBG smallAir">
+
+        <article class="txtRow">
+          
+          <!--EDITEZ LE SOUS-TITRE-->
+          <h2 class="blkColor sectionTitle ttPrtTitle">2.  IMPORTER DU SVG</h2>
+
+        </article>
+
+        <article class="txtRow">
+
+          <!--EDITEZ LE TEXTE-->
+          <!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+          <p class="blkColor">Il existe différentes manières d’importer un SVG sur un éditeur de texte. Les trois éditeurs graphique les plus populaires sont Illustrator, Sketch et Inkscape.</p>
+
+        </article>
+
+        <!--EDITEZ VOTRE EXEMPLE-->
+        <figure class="insertExHere expl row"></figure>
+
+        <article class="txtRow">
+
+          <!--EDITEZ LE TEXTE-->
+          <!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+          <p class="blkColor"><strong>La première</strong> consiste à, comme représenté avec l’étoile, copier/coller le code SVG sur un éditeur de texte. 
+Pour récupérer ce code sur Illustrator : fichier/ enregistrer sous, sélectionner SVG / cliquer sur code SVG... / copier coller le code affiché dans votre document HTML.
+</p>
+
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="html">
+
+&lt;svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve"&gt;
+&lt;polygon fill="#9D9D9C" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="100.146,17.235 120.69,80.462 187.171,80.462 133.387,119.537 153.931,182.765 100.146,143.689 46.363,182.765 66.906,119.537 13.123,80.462 79.603,80.462 "/&gt;
+&lt;/svg&gt;
+            </code>
+
+          </div>
+        </pre>
+        <article class="txtRow">
+
+          <p class="blkColor">
+<strong>La seconde</strong> consiste à, comme représenté avec l’écureuil, l’enregistrer en format SVG et l’importer dans des balises <code class="smallSnippet blkColor">&lt;img src&gt;</code>. 
+Pour enregistrer un SVG sur illustrator : fichier/ enregistrer sous, selectionner SVG /
+OK / enregistrer dans le dossier img de votre page web/ insérer img src sur le html.
+Il est alors recommandé de modifier directement le style du SVG dans le document SVG lui même à l’intérieur de balises <code class="smallSnippet blkColor">&lt;style&gt;</code>.
+</p>
+          </article>
+
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="html">
+&lt;img src="img/ecureuil.svg" alt="ecureuil"&gt;
+            </code>
+
+          </div>
+        </pre>
+        <article class="txtRow">
+<p class="blkColor">
+<strong>La troisième manière,</strong> qui représente les deux cercles de l’exemple, permet surtout de s’organiser et se repérer plus facilement et rapidement dans les codes du SVG.
+En effet, sur illustrator, si les différentes formes d’une même image sont rangées sur différents calques, le code SVG se modifie légèrement : des balises <code class="smallSnippet blkColor">&lt;g id=«Calque»&gt;</code> sont crées. Ils est ainsi plus pratique de modifier le css pour chacun des calques lorsque l’on veut que chacun d’entre eux ai un style différent.</p>
+
+        </article>
+
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="html">
+&lt;svg width="250px" height="200px" viewBox="0 0 220 220" enable-background="new 0 0 200 200" xml:space="preserve"&gt;
+&lt;g id="Calque_1"&gt;
+&lt;g&gt;
+&lt;path d="M59.926,43.846c29.798,0,54.04,24.242,54.04,54.04s-24.242,54.039-54.04,54.039s-54.04-24.241-54.04-54.039 S30.128,43.846,59.926,43.846 M59.926,38.959C27.382,38.959,1,
+65.341,1,97.886c0,32.544,26.382,58.926,58.926,58.926 c32.543,0,58.926-26.382,58.926-58.926C118.853,65.341,92.47,38.959,59.926,
+38.959L59.926,38.959z"/&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;g id="Calque_2"&gt;
+&lt;g&gt;
+&lt;path d="M141.073,43.846c29.798,0,54.04,24.242,
+54.04,54.04s-24.242,54.039-54.04,54.039c-29.797,0-54.039-24.241-54.039-54.039 S111.276,43.846,141.073,43.846 M141.073,38.959c-32.542,0-58.925,26.382-58.925,58.926c0,32.544,26.383,58.926,58.925,58.926 c32.546,0,58.927-26.382,58.927-58.926C200,65.341,173.619,
+38.959,141.073,38.959L141.073,38.959z"/&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+            </code>
+
+          </div>
+        </pre>
+
+
+      </section>
+
+      <!--UNE SECTION PAR PARTIE-->
+      <section id="ttPrt3" class="whBG smallAir">
+
+        <article class="txtRow">
+          
+          <!--EDITEZ LE SOUS-TITRE-->
+          <h2 class="blkColor sectionTitle ttPrtTitle">3. LES CONTOURS</h2>
+
+        </article>
+
+        <article class="txtRow">
+
+          <!--EDITEZ LE TEXTE-->
+          <!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+          <p class="blkColor">L’apparence du contour est définie par les attributs de couleur (stroke), de largeur (stroke-width) et/ou de pointillés (stroke-dasharray). 
+          </p>
+
+        </article>
+        <!--EDITEZ VOTRE EXEMPLE-->
+        <figure class="insertExHere expl row"></figure>
+
+        <article class="txtRow">
+
+          <!--EDITEZ LE TEXTE-->
+          <!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+
+<p class="blkColor">
+<strong>Les 3 rectangles du premier exemple</strong> possèdent des propriétés CSS différentes:
+le premier est noir, avec un épaisseur de 2px et a comme longueur de pointillés 1px;
+le deuxième est noir, avec un épaisseur de 2px et a comme longueur de pointillés 5px;
+le troisième est aussi noir, avec un épaisseur de 3px et a comme longueur de pointillés 30px.
+</p>
+
+</article>
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-6 columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+            <code class="xml">
+&lt;svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve"&gt;
+&lt;g id="rectangle3"&gt;
+&lt;g&gt;
+&lt;rect x="21.649" y="144.279" fill="#C6C6C6" width="156.701" height="38.414"/&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;g id="rectangle2"&gt;
+&lt;g&gt;
+&lt;rect x="21.649" y="80.793" fill="#C6C6C6" width="156.701" height="38.414"/&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;g id="rectangle1"&gt;
+&lt;g&gt;
+&lt;rect x="21.649" y="18.307" fill="#C6C6C6" width="156.701" height="38.414"/&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+            </code>
+          </div>
+
+          <div class="medium-6 columns end">
+            <h3 class="whColor">css</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="css">
+#rectangle3{
+  stroke:black;
+    stroke-dasharray: 30;
+    stroke-width:3;
+}
+
+#rectangle2{
+  stroke:black;
+  stroke-dasharray: 5;
+  stroke-width:2;
+}
+
+#rectangle1{
+  stroke:black;
+  stroke-dasharray: 1;
+  stroke-width:2;
+}
+
+
+
+
+            </code>
+          </div>
+        </pre>
+<article class="txtRow">
+<p class="blkColor">
+Il existe aussi une propriété qui permet de spécifier l’apparence des extrémités d’une ligne. Il s’agit de la propriété stroke-linecap. Elle peut prendre trois valeurs :
+<br>- butt : c’est la valeur par défaut : l’extrémité est un carré;
+<br>- round : l’extrémité est arrondie.
+
+<br>Il est aussi possible d’animer les pointillés (ou «stroke-dasharray»). La forme doit impérativement avoir une épaisseur de trait pour que l’animation fonctionne.
+</p>
+<p class="blkColor">
+<strong>Pour l’exemple du carré,</strong> l’attribut «stroke-dashoffset» a été utilisé. Il permet de décaler le démarrage des tirets petit à petit : c’est ce qui donne cette impression d’animation.
+<br>
+«5s» correspondent à la durée de l’animation (ou plus concrètement dans cet exemple, le temps que met un tiret pourrevenir à sa position initiale), et «linear infinite» fait en sorte que l’animation ne s’arrête jamais.
+</p>
+
+</article>
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-6 columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+            <code class="xml">
+&lt;svg width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve"&gt;
+&lt;g id="rectangle4"&gt;
+&lt;g&gt;
+&lt;rect x="20" y="20" fill="#C6C6C6" width="150" height="160" style="fill:white;stroke:grey;
+stroke-width:4"/&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+            </code>
+          </div>
+
+          <div class="medium-6 columns end">
+            <h3 class="whColor">css</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="css">
+#rectangle4{
+  stroke-dasharray: 100;
+  -webkit-animation: dash 5s linear infinite;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+            </code>
+          </div>
+        </pre>
+<article class="txtRow">
+<p class="blkColor">
+<strong>Pour l’exemple du polygone,</strong> l’attribut «stroke-dashoffset» a là aussi été utilisé. Ici, l’animation est définie à l’intérieur des fichiers SVG (recommandation du w3c) entre des balises <code class="smallSnippet blkColor">&lt;style&gt;</code>. 
+Dans cet exemple, l’idée est de remplir le contour au fur et à mesure. On créé donc un tiret qui fait 0px au début de l’animation et 800px à la fin. Plus le tracé ou le contour est long, plus il faut augmenter le nombre de pixel final.
+</p>
+
+</article>
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-6 columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+            <code class="xml">
+&lt;img src="img/losange.svg" alt="losange"&gt;
+            </code>
+          </div>
+
+          <div class="medium-6 columns end">
+            <h3 class="whColor">SVG</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="css">
+&lt;defs&gt;
+&lt;style&gt;
+#losange{
+stroke-dasharray: 800;
+stroke-dashoffset: 0;
+-webkit-animation: dash 5s linear infinite;
+-o-animation: dash 5s linear infinite;
+-ms-animation: dash 5s linear infinite;
+-moz-animation: dash 5s linear infinite;
+animation: dash 5s linear infinite;
+}
+
+@-webkit-keyframes dash {
+from {
+stroke-dashoffset: 800;
+}
+to {
+stroke-dashoffset: 0;
+}
+      
+&lt;/style&gt;
+
+&lt;/defs&gt;
+            </code>
+          </div>
+        </pre>
+<article class="txtRow">
+<p class="blkColor">
+Il faut aussi faire <strong>attention à bien utiliser les préfixes</strong> devant «animations» car ils permettent l’affichage des animations en fonction des différents navigateurs. Il est d’ailleurs préférable de tous les mettre, afin qu’il soient visible pour tout le monde:
+<br>-webkit-animation ;
+<br>-o-animation ;
+<br>-ms-animation ;
+<br>-moz-animation ;
+<br>- animation.
+</p>
+    
+
+        </article>
+
+      </section>
+
+      <!--UNE SECTION PAR PARTIE-->
+      <section id="ttPrt4" class="whBG smallAir">
+
+        <article class="txtRow">
+          
+          <!--EDITEZ LE SOUS-TITRE-->
+          <h2 class="blkColor sectionTitle ttPrtTitle">4. ANIMER DU SVG</h2>
+
+        </article>
+
+
+
+
+        <article class="txtRow">
+
+          <!--EDITEZ LE TEXTE-->
+          <!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+          <p class="blkColor">Il est aussi possible d’animer la taille, la couleur ou la position du SVG.</p>
+
+        </article>
+
+          <!--EDITEZ VOTRE EXEMPLE-->
+        <figure class="insertExHere expl row"></figure>
+
+        <article class="txtRow">
+
+          <!--EDITEZ LE TEXTE-->
+          <!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+          <p class="blkColor"><strong>Pour le premier exemple,</strong> c’est la taille du cercle qui est modifiée. Dans le HTML, il faut introduire des balises <code class="smallSnippet blkColor">&lt;animate&gt;</code>
+
+<br>- r correspond au rayon du cercle;
+<br>- from=»0» indique que le rayon du cercle au début de l’animation est de 0px; 
+<br>- to=»60»  indique que le rayon du cercle à la fin de l’animation est de 60px; 
+<br>- dur=»0.4s» indique que l’animation dure 0.4 secondes;
+<br>- repeatCount=»indefinite» fait en sorte que l’animation se répète indéfiniment.
+</p>
+
+          </article>
+
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="html">
+&lt;svg height="200" width="200" viewBox="0 0 200 200"&gt;
+&lt;circle cx="75" cy="75" r="20" style="fill:white;stroke:black;stroke-width:10"&gt;
+&lt;animate attributeName="r" from="0" to="60" dur="0.4s" repeatCount="indefinite"&gt;&lt;/animate&gt;
+&lt;/svg&gt;
+            </code>
+
+          </div>
+        </pre>
+
+        <article class="txtRow">
+          <p class="blkColor">
+<strong>Pour le deuxième exemple,</strong> c’est la taille et la couleur du cercle qui sont modifiées.
+Il faut une balise ‹animate› pour chaque attribut d’animation.
+Pour que le cercle passe de petit à grand et de grand à petit, il faut définir une sorte de boucle. Avec l’attribut «begin» vous pouvez déclencher une animation à un instant précis ou lorsqu’une autre animation se termine.
+</p>
+<p class="blkColor">
+Pour chaque changement de couleur, 
+«begin»=«5s» indique le temps au bout duquel la couleur doit changer, ici, 5 secondes,
+attributeName= «fill» indique l’attribut que l’on veut modifier (ici c’est la couleur de fond du cercle que l’on veut modifier),
+fill=«freeze» le changement d’état (on aurait utilisé «remove» si l’on voulait enlever un effet);
+to=«black»
+dur=«1s» correspond au temps que prend l’animation à changer de couleur.
+</p>
+
+          </article>
+
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+            <code class="html">
+&lt;svg height="200" width="200"&gt;
+&lt;circle cx="100" cy="80" r="20"&gt;
+&lt;animate id="grand" begin="0s;petit.end" attributeName="r" from="50" to="75" dur="1s"&gt;
+&lt;/animate&gt;
+&lt;animate id="petit" begin="grand.end" attributeName="r" from="75" to="50" dur="1s"&gt;
+&lt;/animate&gt;
+&lt;animate begin="5s" attributeName="fill" fill="freeze" to="grey" dur="1s"&gt;
+&lt;/animate&gt;
+&lt;animate begin="10s" attributeName="fill" fill="freeze" to="black" dur="1s"&gt;
+&lt;/animate&gt;
+&lt;animate begin="15s" attributeName="fill" fill="freeze" to="grey" dur="1s"&gt;
+&lt;/animate&gt;
+&lt;animate begin="20s" attributeName="fill" fill="freeze" to="black" dur="1s"&gt;
+&lt;/animate&gt;
+
+&lt;/circle&gt;
+&lt;/svg&gt;
+            </code>
+
+          </div>
+        </pre>
+
+        <article class="txtRow">
+<p class="blkColor">
+<strong>Pour le troisième exemple,</strong> c’est la position du cercle qui est modifiée. Dans le HTML, il faut introduire des balises <code class="smallSnippet blkColor">&lt;animateMotion&gt;</code>. 
+</p>
+<p class="blkColor">
+C’est après «path=» que l’on indique les différentes coordonnées par lequel le cercle doit passer. Ici, le cercle se repositionne 4 fois :
+</p>
+<p class="blkColor">
+La position 1 est représentée par les coordonnées suivantes:
+<br>M12 indique la position cercle (soit lorsqu’il est sur la gauche de l’ecran) en x
+<br>75 indique la position cercle (soit lorsqu’il est sur la gauche de l’ecran) en y
+</p>
+<p class="blkColor">
+La position 2 est représentée par les coordonnées:
+<br>L75 indique la position cercle (soit lorsqu’il est sur le haut de l’ecran) en x
+<br>12 indique la position cercle (soit lorsqu’il est sur le haut de l’ecran) en y
+</p>
+<p class="blkColor">
+La position 3 est représentée par les coordonnées:
+<br>L137 indique la position cercle (soit lorsqu’il est sur la droite de l’ecran) en x
+<br>75 indique la position cercle (soit lorsqu’il est sur la droite de l’ecran) en y
+</p>
+<p class="blkColor">
+La position 4 est représentée par les coordonnées:
+<br>L75 indique la position cercle (soit lorsqu’il est sur le bas de l’ecran) en x
+<br>137 indique la position cercle (soit lorsqu’il est sur le bas de l’ecran) en y
+</p>
+<p class="blkColor">
+dur=«2s» indique que l’animation dure 2 secondes.
+<br>repeatCount=«ndefinite» fait en sorte que l’animation se répète indéfiniment.
+</p>
+
+
+
+
+        <!--EDITEZ VOTRE CODE SOURCE-->
+        <pre class="snippet row largeRow">
+          <div class="medium-8 medium-centered columns">
+            <h3 class="whColor">html</h3>
+
+            <!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+            <code class="xml">
+&lt;svg width="150" height="150" viewBox="0 0 150 150"&gt;
+&lt;circle cx="0" cy="0" r="15"&gt;
+&lt;animateMotion path="M12 75 L75 12 L137 75 L75 137 Z" dur="2s" repeatCount="indefinite"&gt;&lt;/animateMotion&gt;
+&lt;/circle&gt;
+&lt;/svg&gt;
+            </code>
+          </div>
+        </pre>
+
+      </section>
+
+
+      <!--CAN I USE-->
+      <section id="CIU" class="blBG air">
+
+        <article class="row">
+          <h1 class="blkColor sectionTitle">Support</h1>
+        </article>
+
+        <div class="row browsers flex flexColumn equalRep">
+          <div class="browser">
+            <h2 class="blkColor">chrome</h2>
+            <div class="browserIcns">
+              <i class="iconSCB blkColor chromeIcn animation"></i>
+            </div>
+            <p class="whColor level4">Fonctionne sur</p>
+            <!--Editez la ou les versions-->
+            <span class="whColor level2 version">21+</span>
+          </div>
+
+          <div class="browser">
+            <h2 class="blkColor">safari</h2>
+            <div class="browserIcns">
+              <i class="iconSCB blkColor safariIcn animation"></i>
+            </div>
+            <p class="whColor level4">Fonctionne sur</p>
+            <!--Editez la ou les versions-->
+            <span class="whColor level2 version">4+</span>
+          </div>
+
+          <div class="browser">
+            <h2 class="blkColor">opera</h2>
+            <div class="browserIcns">
+              <i class="iconSCB blkColor operaIcn animation"></i>
+            </div>
+            <p class="whColor level4">Fonctionne sur</p>
+            <!--Editez la ou les versions-->
+            <span class="whColor level2 version">9+</span>
+          </div>
+
+          <div class="browser">
+            <h2 class="blkColor">firefox</h2>
+            <div class="browserIcns">
+              <i class="iconSCB blkColor ffIcn animation"></i>
+            </div>
+            <p class="whColor level4">Fonctionne sur</p>
+            <!--Editez la ou les versions-->
+            <span class="whColor level2 version">3.5+</span>
+          </div>
+
+          <div class="browser">
+            <h2 class="blkColor">ie</h2>
+            <div class="browserIcns">
+              <i class="iconSCB blkColor ieIcn animation"></i>
+            </div>
+            <p class="whColor level4">Fonctionne sur</p>
+            <!--Editez la ou les versions-->
+            <span class="whColor level2 version">9+</span>
           </div>
         </div>
-  </div>
-</body>
+        
+      </section>
+
+      <!--REFERENCES-->
+      <section id="refs" class="whBG air">
+
+        <article class="row">
+          <h1 class="blkColor sectionTitle">références</h1>
+        </article>
+
+        <!--EDITEZ VOS LIENS-->
+        <ul class="row largeRow links">
+          <li><span class="blkColor level4 upCase">tuts+ - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://webdesign.tutsplus.com/tutorials/how-to-animate-festive-svg-icons-with-css--webdesign-17658</a></li>
+
+          <li><span class="blkColor level4 upCase">css-tricks - </span><a href="http://www.w3.org/TR/css3-mediaqueries/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">https://css-tricks.com/using-svg/</a></li>
+
+          <li><span class="blkColor level4 upCase">w3schools.com - </span><a href="http://mediaqueri.es/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://www.w3schools.com/svg/svg_examples.asp</a></li>
+
+          <li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/tuto/lire/1421-svg-initiation-syntaxe-outils.html</a></li>
+
+          <li><span class="blkColor level4 upCase">studio.gd - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://blog.studio.gd/blog/id/10/how_to_style_svg_with_css_-_part_2-3</a></li>
+
+
+        </ul>
+        
+      </section>
+
+      <!--AUTEUR-->
+      <section id="author" class="blBG air">
+
+        <article class="row">
+          <h1 class="blkColor sectionTitle">auteur</h1>
+        </article>
+
+        <div class="row largeRow">
+          <div class="medium-4 columns">
+
+            <!--EDITEZ VOTRE PHOTO-->
+            <img src="../img/team/justine.jpg" alt="photo auteur" />
+
+          </div>
+
+          <div class="medium-8 columns end details">
+
+            <!--EDITEZ VOTRE ID-->
+            <h2 class="whColor upCase">Justine Pinaud</h2>
+            <p class="level4 blkColor marginU marginD">Passionnée de dessin, l'apprentissage du webdesign m'a permis d'élargir mes capacités créatives. Mais je ne me sépare pas pour autant d'un bon vieux stylo et d'une feuille de papier !</p>
+
+            <!--EDITEZ VOS LIENS-->
+            <div class="iconWrapper centerOrigin flex equalRep large-6">
+
+              <!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
+              <a href="http://www.justinepinaud.com" alt="lien vers le portfolio">
+                <i class="iconSC whColor urlIcn animation"></i>
+              </a>
+
+              <a href="http://www.linkedin.com/in/pinaudjustine" alt="lien vers linkedin">
+                <i class="iconSC whColor lnkinIcn animation"></i>
+              </a>
+
+              <a href="http://www.viadeo.com/profile/0021vr4axm0dpjqa" alt="lien vers viadeo">
+                <i class="iconSC whColor vdoIcn animation"></i>
+              </a>
+
+
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <!--CONTACT-->
+      <section id="contact" class="whBG air">
+
+        <article class="row">
+          <h1 class="blkColor sectionTitle">contact</h1>
+        </article>
+
+        <form class="row" method="post" action="../contact.php" autocomplete="on">
+          <div class="medium-6 columns">
+
+            <label for="name" class="blkColor upCase level3">
+              nom *
+              <input id="name" type="text" name="name" />
+            </label>
+            <label for="from" class="blkColor upCase level3">
+              adresse e-mail *
+              <input id="from" type="text" name="from" placeholder="mail@domaine.com"/>
+            </label>
+            <!--EDITEZ VALUE AVEC VOTRE THEME-->
+            <label for="object" class="blkColor upCase level3">
+              thème *
+              <input id="object" type="text" name="object" value="Responsive Web design" />
+            </label>
+
+          </div>
+
+          <div class="medium-6 columns">
+
+            <label for="message" class="blkColor upCase level3">
+              message *
+              <textarea id="message" type="text" name="message"></textarea>
+            </label>
+            <div class="sendBut">
+              <button type="submit"  name="send" class="button medium centerOrigin animation send blBut"><span class="animation">envoyer</span></button>
+            </div>
+
+          </div>
+        </form>
+        
+      </section>
+
+    </div>
+
+    <footer class="blkBG">
+
+      <div class="row">
+        <div class="medium-6 column">
+
+          <a href="../mentions-obligatoires" alt="lien vers les mentions légales" class="txtLink whTxt">Mentions obligatoire</a>
+
+        </div>
+
+        <div class="medium-6 column">
+
+          <p class="whColor">© Mastère 2 spécialité digital - ECV Aquitaine - promotion 2015 - tous droits réservés</p>
+
+        </div>
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>
