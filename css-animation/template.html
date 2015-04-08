@@ -9,7 +9,7 @@
 		<meta name="author" content="*auteur de la page, donc vous*" />
 		<meta name="description" content="*description du tutoriel*" />
 
-		<title>Nom du tutoriel</title>
+		<title>Tutoriel Animation CSS</title>
 
 		<!--STYLE GENERAL-->
 		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
 
 		<!--STYLE ADDITIONNEL-->
-		<!--<link rel="stylesheet" href="style.css" />-->
+		<link rel="stylesheet" href="style-t.css" />
 
 		<!--FONTES-->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
@@ -29,7 +29,7 @@
 		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
 		<script src="../js/foundation.min.js" type="text/javascript"></script>
 		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
-		<script src="../js/plugins/jquery.tuto.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
 
 	</head>
 
@@ -74,21 +74,21 @@
 				<article class="largeRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
-					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
+					<h1 class="blkColor ttTitle">CSS Animation</h1>
 
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+						<p class="blkColor level4">CSS Animations est un module qui permet l'animation de la plupart des éléments HTML en utilisant CSS sans JavaScript ou Flash.  Les animations sont fluides, même avec un système plutôt chargé. Elles sont faciles à utiliser pour faire les animations simples.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">composants d'une Animation</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">L’accointance avec les autres CSS</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">PRÉFIXES POUR DES NAVIGATEURS</a></li>
 
 							</div>
 
@@ -104,7 +104,7 @@
 					</div>
 
 					<!--EDITEZ VOTRE NOM-->
-					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
+					<p class="ttAuteur">Créé par Yingyin ZHANG le 02/04/2015</p>
 
 					<div class="ttbuttons row">
 						<div class="medium-6 columns">
@@ -136,7 +136,8 @@
 				<article class="txtRow">
 
 					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.<br>Grâce à quelques lignes de CSS3, il est possible de définir ces différentes structures en fonction de la résolution de l’écran du média utilisé.</p>
+					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.</p>
+					<p class="blkColor level4">[ Passez le souris au dessus le carré pour voir l'animation. ]</p>
 
 				</article>
 
@@ -148,7 +149,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">1. viewport et breakpoints.</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. Deux composants d'une séquence Animation CSS.</h2>
 
 				</article>
 
@@ -156,14 +157,83 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Pour attribuer des styles CSS différents à plusieurs résolutions différentes, il faut tout d’abord définir ces résolutions. Il suffit de déterminer les largeurs d’écran, en pixels, des différentes versions de votre futur site web reponsive : largeur d’un écran desktop, largeur d’un écran de tablette, de smartphone...<br>Ces différentes étapes sont appelées “breakpoints”, ou “points de rupture”.</p>
-					<p class="blkColor">On définit les différents breakpoints grâce à des classes CSS appelées “media queries”.</p>
-					<p class="blkColor">Ces media queries pourront être calculées par les navigateurs à l’aide d’une balise essentielle pour le reste de ce tutoriel. Elle permet de calculer la taille dite du “viewport”, ou de la fenêtre d’affichage, afin de pouvoir assurer la bonne fonction de vos media queries.</p>
+					<p class="blkColor">1. Animation Properties: Un style décrivant l'animation<br>(L'élément que vous souhaitez animer à l'aide de la propriété animation et de ses sous-propriétés).</p>
+					<p class="blkColor"> 
+						•    animation-name
+                    <br>•    animation-duration
+                    <br>•    animation-timing-function
+	                <br>•    animation-delay
+	                <br>•    animation-iteration-count
+	                <br>•    animation-direction
+	                <br>•    animation-fill-mode
+	                <br>•    animation-play-state</p>
+
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+/*décrire les propriétés individuels*/
+{animation: bounce;
+ animation-duration: 4s;
+ animation-iteration-count: 10;
+ animation-direction: alternate;
+ animation-timing-function: ease-out;
+ animation-fill-mode: forwards;
+ animation-delay: 2s;}
+
+/*ou décrire les propriétés ensembles
+animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay][animation-iteration-count] [animation-direction] [animation-fill-mode] [animation-play-state]*/
+{animation: bounce 4s ease-out 2s 10 alternate forwards;}
+                        </code>
+
+					</div>
+				</pre>
+	               
+					<p class="blkColor">2. @keyframes qui indique l’instant dans la séquence à laquelle elle est située du style CSS de l'animation, ainsi que des points de passage intermédiaires en utilisant un percentage. 0% indique le premier instant de la séquence, tandis que 100% indique l'instant final de l'animation. </p>
+			    <pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+/*@keyframes [animation-name] 
+{from {propriété_à_animer: valeur_initiale;}to {propriété_à_animer: valeur_initiale;}}*/
+@keyframes bounce
+{from {background:white;} to{background:yellow;}}
+                        </code>
+
+					</div>
+				</pre>
+                    <p class="blkColor"><"from" et "to" équivalent à 0% et 100%. On passe ainsi d'un état initial qui est 0% à un état final qui est 100% avec si l'on utilise les pourcentages différentes étapes intermédiares. A chaque étape, on redéfini les valeurs des styles css qui sont animés la transition entre les valeurs étant réalisée automatiquement.></p>
+			    <pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+/*@keyframes [animation-name]
+{ 0% {propriété_à_animer: valeur_initiale;} 
+45% {propriété_à_animer: valeur_intermédiaire;} 
+100% {propriété_à_animer: valeur_finale;}}*/
+@keyframes bounce
+{ 0% {background:white;} 
+45% {background:black;} 
+100% {background:yellow;}}
+                        </code>
+
+					</div>
+				</pre>
+
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+					<div class="rr rect1"></div>
+				    <div class="rr rect2"></div>
+				</figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
@@ -174,7 +244,10 @@
 						<code class="xml">
 &lt;html&gt;
 	&lt;head&gt;
-		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+	  &lt;div class="animation1"&gt;
+	  &lt;/div&gt;
+	  &lt;div class="animation2"&gt;
+	  &lt;/div&gt;
 		...
 	&lt;/head&gt;
 	...
@@ -187,14 +260,27 @@
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-.txtRow {
-	width: 64.0rem;
-	margin: 0 auto;
+/*commence animer par hover*/
+.animation1:hover {
+   animation: coleur 3s infinite;}
+
+@keyframes coleur  {
+   from {background: #3eb1a9; 
+         opacity:.3;}
+   to {background: #e89213; 
+       opacity:1;}
 }
 
-.ttPrtTitle {
-	text-transform: uppercase;
-	margin: 0 0 2.0rem;
+.animation2:hover {
+   animation: coleurs 3s infinite;}
+
+@keyframes coleurs  {
+   0% {opacity:.6; 
+       background: #3eb1a9;}
+   45% {opacity:.1; 
+        background: #ca1a62;}
+   100% {opacity:1; 
+         background: #e89213;}
 }
 						</code>
 					</div>
@@ -208,7 +294,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">2. à chaque breakpoint ses styles css</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">2. L’accointance avec les autres CSS</h2>
 
 				</article>
 
@@ -216,12 +302,19 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Chaque résolution est ensuite définie pour chaque breakpoints par des intervalles de valeurs, indiquant les largeurs d’écran maximales et minimales d’affichage des styles concernés.</p>
+					<p class="blkColor">CSS Animations travaille tout simplement sur les mêmes valeurs que CSS <a href="../transition/template.html">Transition</a> et <a href="../transformation/template.html">Transformation.</a>.
+					<br>Aussi CSS Animation peut combiner avec les propriétés des objets SVG pour animer directement sur des éléments <a href="../svg/template.html">SVG</a> dans des navigateurs.</p>
+					<p class="blkColor">[Attention!! :
+					La différence principale entre les animations CSS et les transitions CSS réside dans la règle @keyframes. Par conséquent, vous êtes obligé d’exécuter l’animation dans une direction (du début à la fin) avec les animations CSS aussi bien à animer toutes les propriétés voulues en même temps.]</p>
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+					<div class="rr rect3"></div>
+				    <div class="rr rect4"></div>
+				    <div class="rr rect5"></div>
+				</figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
@@ -230,10 +323,31 @@
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-@media screen and (min-width: 900px) {
-	body {
-		color: red;
-	}
+
+@keyframes bounceOutUp {
+  20% {transform: translate3d(0, -10px, 0);}
+  40%, 45% {opacity: 1;
+            transform: translate3d(0, 20px, 0);}
+  100% {opacity: 0;
+        transform: translate3d(0, -100px, 0);}
+}
+
+@keyframes coleurs  {
+   0% {transform: scale3d(.3, .3, .3);
+       background: #3eb1a9;}
+   45% {transform: scale3d(.9, .9, .9);
+        background: #ca1a62;}
+   100% {transform: scale3d(1, 1, 1);
+         background: #e89213;}
+}
+
+@keyframes tossing {
+  0% {transform: rotate(-10deg); 
+      background: #3eb1a9;}
+  50% {transform: rotate(10deg);
+       background: #ca1a62;}
+  100% {transform: rotate(-10deg); 
+        background: #e89213;}           
 }
 						</code>
 
@@ -241,7 +355,10 @@
 				</pre>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+				 <div class="svgs"><object type="image/svg+xml" data="dumpling1.svg"></object></div>
+				<div class="svgs"><object type="image/svg+xml" data="dumpling1.svg"></object></div>
+				</figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
@@ -250,10 +367,14 @@
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-@media screen and (min-width: 500px) and (max-width: 900px) {
-	body {
-		background-color: black;
-	}
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {transform: translate3d(0,0,0);}
+
+  40%, 43% {transform: translate3d(0, -8px, 0);}
+
+  70% {transform: translate3d(0, -8px, 0);}
+
+  90% {transform: translate3d(0,-2px,0);}
 }
 						</code>
 					</div>
@@ -267,7 +388,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">3. syntaxe</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">3.compatibilité dans les navigateurs</h2>
 
 				</article>
 
@@ -275,18 +396,17 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Comme aperçu plus haut, on peut donc attribuer des styles à des résolutions selon différentes conditions. Voici un exemple des différentes conditions que vous pouvez utiliser pour définir vos breakpoints :</p>
+					<p class="blkColor">Les animations CSS3 sont compatibles avec IE 1.1, Firefox 3.6, Chrome 4.1, Safari 8, Opéra 2.7 et sur iOS Safari 8.1 et Android 4. Cependant, pour pouvoir les utiliser, il faut préfixer toutes les propriétés ainsi que les étapes définies avec @keyframes.</p>
 
 					<!--Si jamais vous avez une liste-->
 					<ul class="txtList">
 						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
-						<li><code class="smallSnippet blkColor">@media screen all</code> : toutes résolutions</li>
-						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx)</code> : écrans de largeur minimale de X pixels</li>
-						<li><code class="smallSnippet blkColor">@media screen and (max-width: Xpx)</code> : écrans de largeur maximale de X pixels</li>
-						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx) and (max-width: Ypx)</code> : écrans de largeur minimale de X pixels et de largeur maximale de Y pixels</li>
+						<li><code class="smallSnippet blkColor">-webkit-</code> : @keyframes et animation pour chrome,safari,opera.</li>
+						<li><code class="smallSnippet blkColor">-moz-</code> : @keyframes et animation pour firefox.</li>
+						<li><code class="smallSnippet blkColor">-o-</code> : @keyframes et animation pour opera 12.</li>
 					</ul>
 
-					<p class="blkColor">Il existe d’autres conditions utilisables dans des cas plus rares, les lignes citées ci-dessus étant les plus couramment utilisées pour le responsive web design.</p>
+					<p class="blkColor">Il existe d’autres conditions utilisables dans des cas plus rares, les lignes citées ci-dessus étant les plus couramment utilisées pour l'animation css.</p>
 
 				</article>
 
@@ -469,19 +589,19 @@
 
 				<!--EDITEZ VOS LIENS-->
 				<ul class="row largeRow links">
-					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
+					<li><span class="blkColor level4 upCase">W3c - </span><a href="http://www.w3schools.com/css/css3_animations.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com</a></li>
 
-					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/TR/css3-mediaqueries/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org/TR/css3-mediaqueries/</a></li>
+					<li><span class="blkColor level4 upCase">MDN mozilla developer network - </span><a href="https://developer.mozilla.org/fr/docs/Web/CSS/Animations_CSS" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">https://developer.mozilla.org</a></li>
 
-					<li><span class="blkColor level4 upCase">mediaqueri.es - </span><a href="http://mediaqueri.es/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://mediaqueri.es/</a></li>
+					<li><span class="blkColor level4 upCase">msdn.microsoft - </span><a href="https://msdn.microsoft.com/fr-fr/library/ie/jj680076(v=vs.85).aspx" class="txtLink blkTxt" alt="lien vers demosthenes.info">https://msdn.microsoft.com</a></li>
 
-					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
+					<li><span class="blkColor level4 upCase">CSS3 Animation Cheat Sheet - </span><a href="http://www.justinaguilar.com/animations/index.html#how" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://www.justinaguilar.com/animations</a></li>
 
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/n</a></li>
+					<li><span class="blkColor level4 upCase">daneden animation - </span><a href="http://daneden.github.io/animate.css/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://daneden.github.io</a></li>
 
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/</a></li>
+					<li><span class="blkColor level4 upCase">animations magic- </span><a href="http://www.minimamente.com/example/magic_animations/" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.minimamente.com</a></li>
 
-					<li><span class="blkColor level4 upCase">sitepoint - </span><a href="http://www.sitepoint.com/new-css3-relative-font-size/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.sitepoint.com/</a></li>
+					<li><span class="blkColor level4 upCase">codepen - </span><a href="http://codepen.io/collection/nbEZgX/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://codepen.io</a></li>
 				</ul>
 				
 			</section>
@@ -497,15 +617,16 @@
 					<div class="medium-4 columns">
 
 						<!--EDITEZ VOTRE PHOTO-->
-						<img src="../img/team/elodie.jpg" alt="photo auteur" />
+						<img src="../img/team/yingyin.jpg" alt="photo auteur" />
 
 					</div>
 
 					<div class="medium-8 columns end details">
 
 						<!--EDITEZ VOTRE ID-->
-						<h2 class="whColor upCase">élodie dassance</h2>
-						<p class="level4 blkColor marginU marginD">Spécialiste certifiée en pop-idols japonaises et docteur en fabrication de cookies maison, mon but est de diffuser une idée fun, fraîche et multilingue du webdesign… avec le sourire ( • ̀ω•́  )✧</p>
+						<h2 class="whColor upCase">yingyin zhang</h2>
+						<p class="level4 blkColor marginU marginD">Je suis passionnée de design interactif et d’illustration. 
+						<br>J’aime voyager et faire connaissance avec les gens, et je suis une amoureuse des chiens !</p>
 
 						<!--EDITEZ VOS LIENS-->
 						<div class="iconWrapper centerOrigin flex equalRep large-6">
