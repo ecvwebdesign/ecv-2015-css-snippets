@@ -19,17 +19,11 @@
 		<!--STYLE ADDITIONNEL-->
 		<!--<link rel="stylesheet" href="style.css" />-->
 
-		<!--FONTES-->
+		<!--FONTE-->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" media="all" type="text/css" href="../css/fonts.css" />
 
-		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
+		<!--SCRIPT-->
 		<script type="text/javascript" src="../js/vendor/modernizr.js"></script>
-		<script src="../js/vendor/jquery.js" type="text/javascript"></script>
-		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
-		<script src="../js/foundation.min.js" type="text/javascript"></script>
-		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
-		<script src="../js/plugins/jquery.tuto.js" type="text/javascript"></script>
 
 	</head>
 
@@ -38,28 +32,14 @@
 		<header class="blkBG">
 
 			<div class="row headerContent">
-				<div class="medium-4 columns headerColumn7">
-					<a href="../../ecv-2015-css-snippets" alt="lien vers l'accueil"><img id="logotype" src="../img/logotype.svg" alt="logotype snippets" /></a>
+				<div class="large-3 medium-3 small-3 columns">
+					<a href="../../ecv-2015-css-snippets" alt="lien vers l'accueil"><img src="../img/logotype.svg" alt="logotype snippets" /></a>
 				</div>
 
-				<nav id="mainNav" class="medium-8 columns flex flexColumn endRep">
-					<a href="../#topics" class="noMargin" alt="lien vers les thèmes">thèmes</a>
-					<a href="../#team" alt="lien vers l'équipe">l'équipe</a>
-					<a href="#contact" alt="ancre vers la section contact">contact</a>
-				</nav>
-
-				<div id="toggleMenu" class="medium-1 columns headerColumn3">
-					<button>
-						<i class="iconFA rwdIconFA whColor burgerIcn animation"></i>
-					</button>
-				</div>	
-
-				<nav class="navMenu" id="rwdNav">
-					<h3 class="blBG blkColor">Menu</h3>
-					<a href="../#topics" class="snLink" alt="lien vers les thèmes">thèmes</a>
-					<a href="../#team" class="snLink" alt="lien vers l'équipe">l'équipe</a>
-					<a href="#contact" class="snLink" alt="ancre vers la section contact">contact</a>
-					<a alt="vers le haut" class="ttTop"><i class="iconFA rwdIconFA whColor arrowUIcn animation"></i>vers le haut</a>
+				<nav class="large-6 medium-6 small-6 columns">
+					<a href="#">thèmes</a>
+					<a href="#">l'équipe</a>
+					<a href="#">contact</a>
 				</nav>
 			</div>
 
@@ -71,34 +51,25 @@
 			<!--TITRE DU SITE-->
 			<section id="siteTitle" class="blBG adaptableCover flex insertYOdesign">
 
-				<article class="largeRow centerBlock">
+				<article class="smallRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
 					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
 
-					<div class="ttIntro row">
+					<div class="ttIntro">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
 						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
-						<ol class="contents row">
-							<div class="medium-6 columns">
-
-								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
-
-							</div>
-
-							<div class="medium-6 columns end">
-
-								<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
-
-							</div>
+						<ol class="contents">
+							<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
+							<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
+							<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+							<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
+							<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
+							<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
 						</ol>
 
 					</div>
@@ -107,14 +78,13 @@
 					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
 
 					<div class="ttbuttons row">
-						<div class="medium-6 columns">
+						<div class="large-6 medium-6 small-6 columns">
 							<a href="demo.html" alt='lien vers la démo' class="button medium demo centerOrigin animation whBut"><span class="animation">démo</span></a>
 						</div>
-						<div class="medium-6 columns end marginSU">
+						<div class="large-6 medium-6 small-6 columns">
 
 							<!--Editez la class du lien au lieu de rwdSize, qui est propre à ce qu'à fait élodie, voir à style.css-->
 							<a href="#" alt='lien de téléchargement' class="button medium centerOrigin animation rwdSize whBut"><span class="animation">télécharger</span></a>
-
 						</div>
 					</div>
 
@@ -160,14 +130,13 @@
 					<p class="blkColor">On définit les différents breakpoints grâce à des classes CSS appelées “media queries”.</p>
 					<p class="blkColor">Ces media queries pourront être calculées par les navigateurs à l’aide d’une balise essentielle pour le reste de ce tutoriel. Elle permet de calculer la taille dite du “viewport”, ou de la fenêtre d’affichage, afin de pouvoir assurer la bonne fonction de vos media queries.</p>
 
+					<p class="blkColor"><b>Balise de calcul de la taille du viewport :</b></p>
+
 				</article>
 
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
 				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-6 columns">
+				<pre class="snippet row">
+					<div class="large-8 medium-8 small-8 columns centerBlock">
 						<h3 class="whColor">html</h3>
 
 						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
@@ -179,23 +148,6 @@
 	&lt;/head&gt;
 	...
 &lt;/html&gt;
-						</code>
-					</div>
-
-					<div class="medium-6 columns end">
-						<h3 class="whColor">css</h3>
-
-						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
-						<code class="css">
-.txtRow {
-	width: 64.0rem;
-	margin: 0 auto;
-}
-
-.ttPrtTitle {
-	text-transform: uppercase;
-	margin: 0 0 2.0rem;
-}
 						</code>
 					</div>
 				</pre>
@@ -218,14 +170,13 @@
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
 					<p class="blkColor">Chaque résolution est ensuite définie pour chaque breakpoints par des intervalles de valeurs, indiquant les largeurs d’écran maximales et minimales d’affichage des styles concernés.</p>
 
+					<p class="blkColor"><b>Exemple :</b> pour les écrans de largeur minimale de 900 pixels, le texte de la page sera rouge.</p>
+
 				</article>
 
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
 				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
+				<pre class="snippet row">
+					<div class="large-8 medium-8 small-8 columns centerBlock">
 						<h3 class="whColor">css</h3>
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
@@ -240,12 +191,15 @@
 					</div>
 				</pre>
 
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<article class="txtRow">
+
+					<p class="blkColor"><b>Exemple :</b> pour les écrans de largeur comprise entre 500 et 900 pixels, le fond de la page sera noir.</p>
+
+				</article>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
+				<pre class="snippet row">
+					<div class="large-8 medium-8 small-8 columns centerBlock">
 						<h3 class="whColor">css</h3>
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
@@ -309,14 +263,13 @@
 					<p class="blkColor">En cas de media queries lourds en styles CSS, on peut également séparer notre feuille de style en plusieurs feuilles de styles différentes, chacune étant associée à une résolution différente et contenant les styles attribués.</p>
 					<p class="blkColor">Il suffira de lier chaque feuille de style entre les balises <code class="smallSnippet blkColor">&lt;head&gt;</code> et <code class="smallSnippet blkColor">&lt;/head&gt;</code> de votre fichier HTML, de la même manière d’une feuille de style CSS unique. La seule différence sera un attribut, différent pour chaque feuille de style liée, qui associera ces feuilles à leurs résolutions d’écran correspondantes :</p>
 
+					<p class="blkColor"><b>Exemple :</b> pour les écrans de largeur comprise entre 500 et 900 pixels, la page chargera la feuille de style <u>style1.css</u></p>
+
 				</article>
 
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
 				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
+				<pre class="snippet row">
+					<div class="large-8 medium-8 small-8 columns centerBlock">
 						<h3 class="whColor">html</h3>
 
 						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
@@ -348,12 +301,9 @@
 
 				</article>
 
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
 				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
+				<pre class="snippet row">
+					<div class="large-8 medium-8 small-8 columns centerBlock">
 						<h3 class="whColor">html</h3>
 
 						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
@@ -403,55 +353,47 @@
 			<section id="CIU" class="blBG air">
 
 				<article class="row">
-					<h1 class="blkColor sectionTitle">Support</h1>
+					<h1 class="blkColor sectionTitle">can i use ?</h1>
 				</article>
 
-				<div class="row browsers flex flexColumn equalRep">
-					<div class="browser">
+				<div class="row browsers">
+					<div class="large-4 medium-4 small-4 columns browser">
 						<h2 class="blkColor">chrome</h2>
-						<div class="browserIcns">
-							<i class="iconSCB blkColor chromeIcn animation"></i>
-						</div>
+						<img src="../img/pictogrammes/chrome.svg" alt="pictogramme chrome" />
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
 						<span class="whColor level2 version">21+</span>
 					</div>
 
-					<div class="browser">
+					<div class="large-4 medium-4 small-4 columns browser">
 						<h2 class="blkColor">safari</h2>
-						<div class="browserIcns">
-							<i class="iconSCB blkColor safariIcn animation"></i>
-						</div>
+						<img src="../img/pictogrammes/safari.svg" alt="pictogramme safari" />
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
 						<span class="whColor level2 version">4+</span>
 					</div>
 
-					<div class="browser">
+					<div class="large-4 medium-4 small-4 columns browser">
 						<h2 class="blkColor">opera</h2>
-						<div class="browserIcns">
-							<i class="iconSCB blkColor operaIcn animation"></i>
-						</div>
+						<img src="../img/pictogrammes/opera.svg" alt="pictogramme opera" />
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
 						<span class="whColor level2 version">9+</span>
 					</div>
+				</div>
 
-					<div class="browser">
+				<div class="row browsers">
+					<div class="large-6 medium-6 small-6 columns browser">
 						<h2 class="blkColor">firefox</h2>
-						<div class="browserIcns">
-							<i class="iconSCB blkColor ffIcn animation"></i>
-						</div>
+						<img src="../img/pictogrammes/firefox.svg" alt="pictogramme firefox" />
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
 						<span class="whColor level2 version">3.5+</span>
 					</div>
 
-					<div class="browser">
+					<div class="large-6 medium-6 small-6 columns browser">
 						<h2 class="blkColor">ie</h2>
-						<div class="browserIcns">
-							<i class="iconSCB blkColor ieIcn animation"></i>
-						</div>
+						<img src="../img/pictogrammes/ie.svg" alt="pictogramme ie" />
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
 						<span class="whColor level2 version">9+</span>
@@ -468,20 +410,20 @@
 				</article>
 
 				<!--EDITEZ VOS LIENS-->
-				<ul class="row largeRow links">
-					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
+				<ul class="row links">
+					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/cssref/css3_pr_mediaquery.asp</a></li>
 
 					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/TR/css3-mediaqueries/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org/TR/css3-mediaqueries/</a></li>
 
 					<li><span class="blkColor level4 upCase">mediaqueri.es - </span><a href="http://mediaqueri.es/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://mediaqueri.es/</a></li>
 
-					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
+					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html</a></li>
 
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/n</a></li>
+					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design</a></li>
 
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/</a></li>
+					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element</a></li>
 
-					<li><span class="blkColor level4 upCase">sitepoint - </span><a href="http://www.sitepoint.com/new-css3-relative-font-size/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.sitepoint.com/</a></li>
+					<li><span class="blkColor level4 upCase">sitepoint - </span><a href="http://www.sitepoint.com/new-css3-relative-font-size/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.sitepoint.com/new-css3-relative-font-size/</a></li>
 				</ul>
 				
 			</section>
@@ -494,14 +436,14 @@
 				</article>
 
 				<div class="row largeRow">
-					<div class="medium-4 columns">
+					<div class="large-4 medium-4 small-4 columns">
 
 						<!--EDITEZ VOTRE PHOTO-->
 						<img src="../img/team/elodie.jpg" alt="photo auteur" />
 
 					</div>
 
-					<div class="medium-8 columns end details">
+					<div class="large-8 medium-8 small-8 columns">
 
 						<!--EDITEZ VOTRE ID-->
 						<h2 class="whColor upCase">élodie dassance</h2>
@@ -510,21 +452,30 @@
 						<!--EDITEZ VOS LIENS-->
 						<div class="iconWrapper centerOrigin flex equalRep large-6">
 
-							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
+							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent-->
 							<a href="#" alt="lien vers le portfolio">
-								<i class="iconSC whColor urlIcn animation"></i>
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+									<path class="animation" fill="#ffffff" d="M-8.8,35.1c-8.6,0-15.7,7.1-15.7,15.7c0,8.6,7.1,15.7,15.7,15.7S6.8,59.4,6.8,50.8C6.8,42.1-0.2,35.1-8.8,35.1L-8.8,35.1z M0.5,52.6H-7v7.4h-3.7v-7.4h-7.4v-3.7h7.4v-7.4H-7v7.4h7.4V52.6z"/>
+								</svg>
 							</a>
 
 							<a href="#" alt="lien vers linkedin">
-								<i class="iconSC whColor lnkinIcn animation"></i>
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+									<path class="animation" fill="#ffffff" d="M-16.7,63.4V44.2h-6.4v19.2L-16.7,63.4L-16.7,63.4z M-19.9,41.6c2.2,0,3.6-1.5,3.6-3.3c0-1.9-1.4-3.3-3.6-3.3c-2.2,0-3.6,1.4-3.6,3.3C-23.4,40.1-22.1,41.6-19.9,41.6L-19.9,41.6L-19.9,41.6z M-13.1,63.4h6.4V52.7c0-0.6,0-1.1,0.2-1.6
+									C-6,50-5,48.8-3.2,48.8c2.3,0,3.2,1.8,3.2,4.3v10.3h6.4v-11c0-5.9-3.2-8.6-7.4-8.6c-3.5,0-5,1.9-5.8,3.2h0v-2.8h-6.4C-13,46-13.1,63.4-13.1,63.4L-13.1,63.4z"/>
+								</svg>
 							</a>
 
 							<a href="#" alt="lien vers viadeo">
-								<i class="iconSC whColor vdoIcn animation"></i>
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+									<path class="animation" fill="#ffffff" d="M0.1,51.1C0.1,51,0,51,0,50.9c-0.3,0.2-0.6,0.3-0.9,0.5c-0.3,0.1-0.6,0.3-0.9,0.4c-0.3,0.1-0.6,0.2-0.9,0.3c0,0,0,0,0,0.1c0,0,0,0.1,0,0.1c0.4,1.1,0.6,2.3,0.6,3.4c0,1-0.1,1.9-0.4,2.9c-0.4,1.4-1.1,2.7-2.2,3.8c-1.5,1.6-3.4,2.4-5.5,2.6c-0.2,0-0.4,0-0.6,0c0,0,0-0.1,0-0.1c0.1-0.1,0.2-0.2,0.3-0.3c2.3-1.7,4-3.8,5.3-6.3c1-2.1,1.6-4.3,1.6-6.7c0-1.1-0.1-2.3-0.3-3.4c-0.2-1.3-0.6-2.5-1-3.8c0,0-0.1-0.1-0.1-0.2c0-0.2,0-0.3,0-0.3c0,0,0-0.1,0-0.1c-0.1-1.1-0.3-2.1-0.6-3.1c-0.4-1.4-1-2.7-1.7-3.9c-0.5-0.8-1.2-1.6-1.9-2.3c-0.1-0.1-0.1-0.1-0.2-0.2c0,0,0,0.1,0,0.1c0.1,0.1,0.1,0.2,0.2,0.3c1.3,2.3,2.5,4.6,3.5,7.1c0.3,0.7,0.5,1.3,0.8,2l0.1,0.1c0,0,0,0.1,0,0.3c0,0.4,0,0.7,0,1c0,1.9,0,3.7-0.2,5.5c-0.1,0.9-0.2,1.7-0.3,2.5c-0.2,1.1-0.4,2.1-0.7,3.1C-6.5,57.7-7,59-7.6,60.1c-0.6,1-1.2,2-2.1,2.8c-0.8,0.8-1.7,1.3-2.7,1.8c-0.1,0-0.2,0.1-0.3,0c-1.4-0.3-2.6-0.8-3.7-1.7c-0.9-0.7-1.7-1.7-2.3-2.7c-0.6-1.1-1-2.3-1.1-3.6c-0.1-0.8-0.1-1.5,0-2.2c0.1-0.9,0.3-1.8,0.7-2.6c0.6-1.3,1.4-2.3,2.4-3.2c0.8-0.7,1.7-1.3,2.7-1.6c0.6-0.2,1.3-0.4,2-0.5c0.6-0.1,1.2-0.1,1.8,0c0.8,0.1,1.5,0.2,2.2,0.5c0.1,0,0.1,0,0.2,0.1c0.1-0.5,0.2-1,0.3-1.4c0.1-0.5,0.3-0.9,0.6-1.3c-0.1-0.1-0.2-0.1-0.4-0.1c-1-0.3-2-0.5-3-0.5c-1.1-0.1-2.2,0-3.3,0.2c-1.3,0.3-2.5,0.7-3.6,1.4c-1.1,0.7-2,1.5-2.8,2.4c-1.8,2.1-2.8,4.5-2.9,7.3c0,0.8,0,1.6,0.1,2.4c0.1,1.1,0.4,2.2,0.9,3.2c0.7,1.7,1.8,3.1,3.1,4.3c1,0.9,2.1,1.6,3.4,2.1c1.2,0.4,2.4,0.7,3.6,0.7c1.2,0.1,2.3,0,3.4-0.2c1.5-0.3,2.9-0.9,4.2-1.9c1-0.7,1.8-1.6,2.6-2.6c1.5-1.9,2.2-4.1,2.4-6.5c0.1-1,0-2-0.1-2.9C0.6,52.7,0.4,51.9,0.1,51.1L0.1,51.1zM5.7,38c-0.3-0.9-0.6-1.8-1.1-2.7c-0.1-0.1-0.1-0.2-0.2-0.4c-0.1,0.1-0.1,0.2-0.2,0.3C3.9,35.9,3.5,36.5,3,37c-0.8,0.8-1.7,1.3-2.8,1.6c-0.1,0-0.2,0-0.3,0.1c-0.8,0.2-1.6,0.5-2.3,0.9c-0.5,0.3-0.9,0.6-1.3,1.1c-0.6,0.8-1,1.8-0.9,2.8c0,0.9,0.3,1.7,0.7,2.4c0,0,0,0.1,0.1,0.1c3.4-0.8,5.9-2.8,7.7-5.8c0,0.1,0,0.2,0,0.2c-0.1,0.3-0.2,0.5-0.3,0.8c-0.3,0.5-0.6,1-1,1.5c-0.7,0.8-1.5,1.4-2.3,2.1c-1,0.8-2,1.4-3.1,2.1c-0.1,0-0.2,0.1-0.2,0.2c0.1,0.1,0.3,0.3,0.4,0.4c0.6,0.5,1.2,0.8,1.9,1.1c0.6,0.2,1.3,0.3,2,0.2c0.8-0.1,1.5-0.5,2.2-1c0.6-0.5,1.1-1.2,1.5-1.8c0.2-0.4,0.5-0.8,0.6-1.2c0.3-0.9,0.5-1.9,0.6-2.8C6.2,40.4,6.1,39.2,5.7,38L5.7,38z"/>
+								</svg>
 							</a>
 
 							<a href="#" alt="lien vers twitter">
-								<i class="iconSC whColor twtrIcn animation"></i>
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="-29 31 40 40" enable-background="new -29 31 40 40" xml:space="preserve">
+									<path class="animation" fill="#FFFFFF" d="M-9.6,46.2c1.2-3.6,2.6-5.9,4.2-7.6c1.2-1.3,1.8-1.7,1.1-0.3c0.3-0.3,0.8-0.6,1.1-0.8c2-0.9,1.8-0.1,0.5,0.7c3.7-1.3,3.6,0.4-0.3,1.2c3.2,0.1,6.6,2.1,7.6,6.4c0.1,0.6,0,0.5,0.6,0.6c1.3,0.2,2.6,0.2,3.8-0.2c-0.1,0.9-1.3,1.5-3.2,1.9c-0.7,0.1-0.8,0.1,0,0.3c1,0.2,2.1,0.3,3.3,0.2c-0.9,1.1-2.4,1.6-4.3,1.6c-1.1,4.2-3.8,7.2-7.1,9.1c-7.8,4.4-19.1,3.8-24.8-4.2c3.7,2.9,9.3,3.6,13.4-0.5c-2.7,0-3.4-2-1.3-3.1c-2,0-3.3-0.7-4.1-1.8c-0.3-0.4-0.3-0.5,0.2-0.8c0.5-0.4,1.2-0.5,1.9-0.6c-2.1-0.6-3.4-1.7-3.8-3.1c-0.1-0.5-0.2-0.5,0.3-0.6c0.5-0.1,1.1-0.2,1.7-0.2c-1.6-1-2.6-2.2-2.9-3.6c-0.2-1.3,0-0.9,1-0.6C-16.3,41.9-12.1,43.6-9.6,46.2z"/>
+								</svg>
 							</a>
 
 						</div>
@@ -534,14 +485,14 @@
 			</section>
 
 			<!--CONTACT-->
-			<section id="contact" class="whBG air">
+			<section id="author" class="whBG air">
 
 				<article class="row">
 					<h1 class="blkColor sectionTitle">contact</h1>
 				</article>
 
 				<form class="row" method="post" action="../contact.php" autocomplete="on">
-					<div class="medium-6 columns">
+					<div class="large-6 medium-6 small-6 columns">
 
 						<label for="name" class="blkColor upCase level3">
 							nom *
@@ -559,7 +510,7 @@
 
 					</div>
 
-					<div class="medium-6 columns">
+					<div class="large-6 medium-6 small-6 columns">
 
 						<label for="message" class="blkColor upCase level3">
 							message *
@@ -579,13 +530,13 @@
 		<footer class="blkBG">
 
 			<div class="row">
-				<div class="medium-6 column">
+				<div class="large-6 medium-6 small-6 column">
 
-					<a href="../mentions-obligatoires" alt="lien vers les mentions légales" class="txtLink whTxt">Mentions obligatoire</a>
+					<a href="../mentions-obligatoires" alt="lien vers les mentions légales" class="txtLink whTxt">Mentions oligatoire</a>
 
 				</div>
 
-				<div class="medium-6 column">
+				<div class="large-6 medium-6 small-6 column">
 
 					<p class="whColor">© Mastère 2 spécialité digital - ECV Aquitaine - promotion 2015 - tous droits réservés</p>
 
@@ -593,6 +544,55 @@
 			</div>
 
 		</footer>
+		
+		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
+		<script src="../js/vendor/jquery.js" type="text/javascript"></script>
+		<script src="../js/foundation.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			// ensemble des scripts
+			imready = function() {
+				cover();
+				initSnippet();
+				smoothScroll();
+			}
+
+			// couverture adaptable
+			cover = function() {
+				var innerHeight = (window.innerHeight);
+				$('.adaptableCover').css('height', +innerHeight+"px");
+				$(window).on('resize', function() {
+					$('.adaptableCover').css('height', +innerHeight+"px");
+				})
+			}
+
+			// initialisation du style de snippets
+			initSnippet = function() {
+				hljs.initHighlightingOnLoad();
+				$('pre.snippet code').each(function(i, block) {
+					hljs.highlightBlock(block);
+				});
+
+				hljs.configure({
+					tabReplace: '    ',
+					classPrefix: 'hljs',
+					languages: 'html, css'
+				})
+			}
+
+			smoothScroll = function() {
+				$('ol.contents a, .ttBottom a').click(function() {
+					var page = $(this).attr('href');
+					var speed = 300;
+					var scroll = ($(page).offset().top)-136;
+
+					$('html, body').animate({scrollTop: scroll}, speed);
+					return false;
+				});	
+			}
+
+			$(document).foundation().ready(imready);
+		</script>
 
 	</body>
 

@@ -1,40 +1,584 @@
-<!--
-Le tutoriel à récupérer et à éditer
--->
-
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="fr">
 
 	<head>
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="author" content="*l'auteur*" />
+		<meta name="author" content="*auteur de la page, donc vous*" />
 		<meta name="description" content="*description du tutoriel*" />
 
 		<title>Nom du tutoriel</title>
 
 		<!--STYLE GENERAL-->
-		<link rel="stylesheet" href="../css/foundation.css" />
-		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
 
 		<!--STYLE ADDITIONNEL-->
-		<link rel="stylesheet" href="style.css" />
+		<!--<link rel="stylesheet" href="style.css" />-->
 
-		<!--SCRIPT-->
-		<script src="../js/vendor/modernizr.js"></script>
+		<!--FONTES-->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" media="all" type="text/css" href="../css/fonts.css" />
+
+		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
+		<script type="text/javascript" src="../js/vendor/modernizr.js"></script>
+		<script src="../js/vendor/jquery.js" type="text/javascript"></script>
+		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="../js/foundation.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
 
 	</head>
 
 	<body>
-		
-		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
-		<script src="../js/vendor/jquery.js"></script>
-		<script src="../js/foundation.min.js"></script>
-		<script>
-			$(document).foundation();
-		</script>
+
+		<header class="blkBG">
+
+			<div class="row headerContent">
+				<div class="medium-4 columns headerColumn7">
+					<a href="../../ecv-2015-css-snippets" alt="lien vers l'accueil"><img id="logotype" src="../img/logotype.svg" alt="logotype snippets" /></a>
+				</div>
+
+				<nav id="mainNav" class="medium-8 columns flex flexColumn endRep">
+					<a href="../#topics" class="noMargin" alt="lien vers les thèmes">thèmes</a>
+					<a href="../#team" alt="lien vers l'équipe">l'équipe</a>
+					<a href="#contact" alt="ancre vers la section contact">contact</a>
+				</nav>
+
+				<div id="toggleMenu" class="medium-1 columns headerColumn3">
+					<button>
+						<i class="iconFA rwdIconFA whColor burgerIcn animation"></i>
+					</button>
+				</div>	
+
+				<nav class="navMenu" id="rwdNav">
+					<h3 class="blBG blkColor">Menu</h3>
+					<a href="../#topics" class="snLink" alt="lien vers les thèmes">thèmes</a>
+					<a href="../#team" class="snLink" alt="lien vers l'équipe">l'équipe</a>
+					<a href="#contact" class="snLink" alt="ancre vers la section contact">contact</a>
+					<a alt="vers le haut" class="ttTop"><i class="iconFA rwdIconFA whColor arrowUIcn animation"></i>vers le haut</a>
+				</nav>
+			</div>
+
+		</header>
+
+		<!--ENVELOPPE-->
+		<div id="sectionWrap">
+
+			<!--TITRE DU SITE-->
+			<section id="siteTitle" class="blBG adaptableCover flex insertYOdesign">
+
+				<article class="largeRow centerBlock">
+
+					<!--EDITEZ VOTRE TITRE-->
+					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
+
+					<div class="ttIntro row">
+
+						<!--EDITEZ VOTRE INTRODUCTION-->
+						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+
+						<!--EDITEZ VOS PARTIES-->
+						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
+						<ol class="contents row">
+							<div class="medium-6 columns">
+
+								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+
+							</div>
+
+							<div class="medium-6 columns end">
+
+								<li><a href="#ttPrt4" class="txtLink whTxt">Feuilles de style multiples</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
+
+							</div>
+						</ol>
+
+					</div>
+
+					<!--EDITEZ VOTRE NOM-->
+					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
+
+					<div class="ttbuttons row">
+						<div class="medium-6 columns">
+							<a href="demo.html" alt='lien vers la démo' class="button medium demo centerOrigin animation whBut"><span class="animation">démo</span></a>
+						</div>
+						<div class="medium-6 columns end marginSU">
+
+							<!--Editez la class du lien au lieu de rwdSize, qui est propre à ce qu'à fait élodie, voir à style.css-->
+							<a href="#" alt='lien de téléchargement' class="button medium centerOrigin animation rwdSize whBut"><span class="animation">télécharger</span></a>
+
+						</div>
+					</div>
+
+					<span class="ttBottom"><a href="#ttInit"></a></span>
+
+				</article>
+
+			</section>
+
+			<!--TUTORIEL-->
+			<section id="ttInit" class="whBG airU">
+				
+				<article class="row">
+
+					<h1 class="blkColor sectionTitle">tutoriel</h1>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ L-'INTRODUCTION-->
+					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.<br>Grâce à quelques lignes de CSS3, il est possible de définir ces différentes structures en fonction de la résolution de l’écran du média utilisé.</p>
+
+				</article>
+
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt1" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. viewport et breakpoints.</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Pour attribuer des styles CSS différents à plusieurs résolutions différentes, il faut tout d’abord définir ces résolutions. Il suffit de déterminer les largeurs d’écran, en pixels, des différentes versions de votre futur site web reponsive : largeur d’un écran desktop, largeur d’un écran de tablette, de smartphone...<br>Ces différentes étapes sont appelées “breakpoints”, ou “points de rupture”.</p>
+					<p class="blkColor">On définit les différents breakpoints grâce à des classes CSS appelées “media queries”.</p>
+					<p class="blkColor">Ces media queries pourront être calculées par les navigateurs à l’aide d’une balise essentielle pour le reste de ce tutoriel. Elle permet de calculer la taille dite du “viewport”, ou de la fenêtre d’affichage, afin de pouvoir assurer la bonne fonction de vos media queries.</p>
+
+				</article>
+
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		...
+	&lt;/head&gt;
+	...
+&lt;/html&gt;
+						</code>
+					</div>
+				</pre>
+
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt2" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">2. à chaque breakpoint ses styles css</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Chaque résolution est ensuite définie pour chaque breakpoints par des intervalles de valeurs, indiquant les largeurs d’écran maximales et minimales d’affichage des styles concernés.</p>
+
+					<p class="blkColor"><b>Exemple :</b> pour tous les écrans de largeur minimale de 900 pixels, le texte sera rouge.</p>
+
+				</article>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+@media screen and (min-width: 900px) {
+	body {
+		color: red;
+	}
+}
+						</code>
+
+					</div>
+				</pre>
+
+				<article class="txtRow">
+
+					<p class="blkColor"><b>Exemple :</b> pour tous les écrans de largeur comprise entre 500 et 900 pixels, le fond de la page sera noir.</p>
+
+				</article>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+@media screen and (min-width: 500px) and (max-width: 900px) {
+	body {
+		background-color: black;
+	}
+}
+						</code>
+					</div>
+				</pre>
+
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt3" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. syntaxe</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Comme aperçu plus haut, on peut donc attribuer des styles à des résolutions selon différentes conditions. Voici un exemple des différentes conditions que vous pouvez utiliser pour définir vos breakpoints :</p>
+
+					<!--Si jamais vous avez une liste-->
+					<ul class="txtList">
+						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
+						<li><code class="smallSnippet blkColor">@media screen all</code> : toutes résolutions</li>
+						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx)</code> : écrans de largeur minimale de X pixels</li>
+						<li><code class="smallSnippet blkColor">@media screen and (max-width: Xpx)</code> : écrans de largeur maximale de X pixels</li>
+						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx) and (max-width: Ypx)</code> : écrans de largeur minimale de X pixels et de largeur maximale de Y pixels</li>
+					</ul>
+
+					<p class="blkColor">Il existe d’autres conditions utilisables dans des cas plus rares, les lignes citées ci-dessus étant les plus couramment utilisées pour le responsive web design.</p>
+
+				</article>
+
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt4" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. Feuilles de style multiples</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">En cas de media queries lourds en styles CSS, on peut également séparer notre feuille de style en plusieurs feuilles de styles différentes, chacune étant associée à une résolution différente et contenant les styles attribués.</p>
+					<p class="blkColor">Il suffira de lier chaque feuille de style entre les balises <code class="smallSnippet blkColor">&lt;head&gt;</code> et <code class="smallSnippet blkColor">&lt;/head&gt;</code> de votre fichier HTML, de la même manière d’une feuille de style CSS unique. La seule différence sera un attribut, différent pour chaque feuille de style liée, qui associera ces feuilles à leurs résolutions d’écran correspondantes :</p>
+
+
+					<p class="blkColor"><b>Exemple :</b> pour tous les écrans de largeur comprise entre 500 et 900 pixels, la page chargera la feuille de style appelée "style1.css".</p>
+
+
+				</article>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+&lt;link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 900px)" href="style1.css" /&gt;
+						</code>
+					</div>
+				</pre>
+
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt5" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">5. images flexibles</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">S’il est possible de rendre des images flexibles en utilisant l’attribut CSS <code class="smallSnippet blkColor">max-width : 100%</code>, cet élément pose encore des soucis d’affichage sur des écrans type Retina, mais manque surtout de pertinence quant au changement de format des médias. En effet, une image au format paysage s’affichera parfaitement sur un site web, mais s’en trouvera excessivement réduite pour correspondre à la largeur d’un smartphone.</p>
+					<p class="blkColor">On peut gérer ce changement de plateforme grâce à la balise <code class="smallSnippet blkColor">&lt;picture&gt;</code>, qui permet alors d’appeler différentes versions d’une même image (cadrée différemment, par exemple) selon la résolution de l’écran sur lequel elle est visionnée.</p>
+					<p class="blkColor">L’ordre d’appel des différentes versions de l’image est important : il faudra appeler les images de la résolution la plus grande jusqu’à la plus petite, pour éviter les conflits entre media queries.</p>
+
+
+					<p class="blkColor"><b>Exemple :</b> la balise appelle deux cadrages différents de l'image, pour les largeurs minimales de 1000 pixels et les écrans entre 500 et 1000 pixels.</p>
+
+
+				</article>
+
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+&lt;picture>
+	&lt;source srcset="image-1.jpg" media="(min-width: 1000px)">
+	&lt;source srcset="image-2.jpg" media="(min-width: 500px)">
+	&lt;img src="image.jpg" alt="description de l’image">
+&lt;/picture>
+						</code>
+					</div>
+				</pre>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">On n’oublie évidemment pas de rajouter la balise <strong>viewport</strong> entre les balises <code class="smallSnippet blkColor">&lt;head&gt;&lt;/head&gt;</code> de notre page HTML afin d’assurer le fonctionnement des media queries.</p>
+
+				</article>
+
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt6" class="whBG airD">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. texte flexible</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Si l’on peut, comme avec les images, donner à son texte des tailles différentes en fonction de la résolution grâce aux media queries CSS, il est également désormais possible d’avoir du texte à la taille relative aux dimensions du viewport.</p>
+					<p class="blkColor">Il s’agit ici d’utiliser les attributs CSS “vw” et “vh”, acronymes de “viewport width” et “viewport height”. Une unité vw/vh correspond ici à 1% de la largeur ou de la hauteur de la fenêtre (selon l’unité choisie). Par exemple, pour une fenêtre large de 1000 pixels et haute de 500 pixels, 1 vw correspondra à une taille de texte de 10 pixels, et 1 vh correspondra à une taille de 5 pixels.</p>
+					<p class="blkColor">N’oubliez tout de même pas d’ajouter des tailles de texte “classiques”, en pixels, dans votre CSS afin d’assurer la visibilité de votre site en cas de navigateur incompatible.</p>
+
+				</article>
+
+			</section>
+
+			<!--CAN I USE-->
+			<section id="CIU" class="blBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">Support</h1>
+				</article>
+
+				<div class="row browsers flex flexColumn equalRep">
+					<div class="browser">
+						<h2 class="blkColor">chrome</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor chromeIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">21+</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">safari</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor safariIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">4+</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">opera</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor operaIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">9+</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">firefox</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor ffIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">3.5+</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">ie</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor ieIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">9+</span>
+					</div>
+				</div>
+				
+			</section>
+
+			<!--REFERENCES-->
+			<section id="refs" class="whBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">références</h1>
+				</article>
+
+				<!--EDITEZ VOS LIENS-->
+				<ul class="row largeRow links">
+					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
+
+					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/TR/css3-mediaqueries/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org/TR/css3-mediaqueries/</a></li>
+
+					<li><span class="blkColor level4 upCase">mediaqueri.es - </span><a href="http://mediaqueri.es/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://mediaqueri.es/</a></li>
+
+					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
+
+					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/n</a></li>
+
+					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/</a></li>
+
+					<li><span class="blkColor level4 upCase">sitepoint - </span><a href="http://www.sitepoint.com/new-css3-relative-font-size/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.sitepoint.com/</a></li>
+				</ul>
+				
+			</section>
+
+			<!--AUTEUR-->
+			<section id="author" class="blBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">auteur</h1>
+				</article>
+
+				<div class="row largeRow">
+					<div class="medium-4 columns">
+
+						<!--EDITEZ VOTRE PHOTO-->
+						<img src="../img/team/elodie.jpg" alt="photo auteur" />
+
+					</div>
+
+					<div class="medium-8 columns end details">
+
+						<!--EDITEZ VOTRE ID-->
+						<h2 class="whColor upCase">élodie dassance</h2>
+						<p class="level4 blkColor marginU marginD">Spécialiste certifiée en pop-idols japonaises et docteur en fabrication de cookies maison, mon but est de diffuser une idée fun, fraîche et multilingue du webdesign… avec le sourire ( • ̀ω•́  )✧</p>
+
+						<!--EDITEZ VOS LIENS-->
+						<div class="iconWrapper centerOrigin flex equalRep large-6">
+
+							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
+							<a href="#" alt="lien vers le portfolio">
+								<i class="iconSC whColor urlIcn animation"></i>
+							</a>
+
+							<a href="#" alt="lien vers linkedin">
+								<i class="iconSC whColor lnkinIcn animation"></i>
+							</a>
+
+							<a href="#" alt="lien vers viadeo">
+								<i class="iconSC whColor vdoIcn animation"></i>
+							</a>
+
+							<a href="#" alt="lien vers twitter">
+								<i class="iconSC whColor twtrIcn animation"></i>
+							</a>
+
+						</div>
+					</div>
+				</div>
+				
+			</section>
+
+			<!--CONTACT-->
+			<section id="contact" class="whBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">contact</h1>
+				</article>
+
+				<form class="row" method="post" action="../contact.php" autocomplete="on">
+					<div class="medium-6 columns">
+
+						<label for="name" class="blkColor upCase level3">
+							nom *
+							<input id="name" type="text" name="name" />
+						</label>
+						<label for="from" class="blkColor upCase level3">
+							adresse e-mail *
+							<input id="from" type="text" name="from" placeholder="mail@domaine.com"/>
+						</label>
+						<!--EDITEZ VALUE AVEC VOTRE THEME-->
+						<label for="object" class="blkColor upCase level3">
+							thème *
+							<input id="object" type="text" name="object" value="Responsive Web design" />
+						</label>
+
+					</div>
+
+					<div class="medium-6 columns">
+
+						<label for="message" class="blkColor upCase level3">
+							message *
+							<textarea id="message" type="text" name="message"></textarea>
+						</label>
+						<div class="sendBut">
+							<button type="submit"  name="send" class="button medium centerOrigin animation send blBut"><span class="animation">envoyer</span></button>
+						</div>
+
+					</div>
+				</form>
+				
+			</section>
+
+		</div>
+
+		<footer class="blkBG">
+
+			<div class="row">
+				<div class="medium-6 column">
+
+					<a href="../mentions-obligatoires" alt="lien vers les mentions légales" class="txtLink whTxt">Mentions obligatoire</a>
+
+				</div>
+
+				<div class="medium-6 column">
+
+					<p class="whColor">© Mastère 2 spécialité digital - ECV Aquitaine - promotion 2015 - tous droits réservés</p>
+
+				</div>
+			</div>
+
+		</footer>
 
 	</body>
 
