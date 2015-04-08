@@ -2,8 +2,153 @@
 Feuille de style additionnelle.
 Utile pour styliser quelques éléments du tutoriel, pour le rendre fun et cooooool.
 
-Auteur: *nom et prénom*
+Auteur: Dan Gu
 
 Coordonnées de l'auteur:
 *les coordonnées, faites-toi plaisir*
 */
+
+.contentexm1{
+	height:100px;
+	width:100%;
+}
+
+.static{
+	font-size: 30px;
+}
+
+.contentexm2{
+	height:200px;
+	width:100%;
+}
+
+.absolu{
+	width:80px;
+	height:80px;
+	background-color: #79a9fd;
+	position: absolute;
+	margin-top: 110px;
+	margin-left: 10px;
+}
+
+.contentexm3{
+	height:200px;
+	width:auto;	
+}
+
+.contentexm4{
+	height:300px;
+	width:auto;	
+}
+
+.elemabsolu{
+	width:300px;
+	height:200px;
+	background-color: #79a9fd;
+	position: absolute;
+	margin-top: 40px;
+	margin-left: 330px;
+}
+
+.yorelatif{
+	width:100px;
+	height:100px;
+	background-color: #fff186;
+	position: relative;
+	margin: 10px 0 0 20px;
+}
+
+.contentexm5{
+	height:400px;
+	width:auto;	
+}
+
+.ex1{
+	width: 300px;
+	height: auto;
+	text-align: center;
+	margin: 68px 0 0 250px;
+	position: relative;
+	z-index: 2;
+}
+
+.rectindex1{
+	background-color: rgba(255,0,0,0.34);
+	width:200px;
+	height:200px;
+	position: relative;
+	margin: -150px 0 0 150px;
+	z-index:1;
+}
+
+.rectindex2{
+	background-color: #f6ff7d;
+	width:200px;
+	height:200px;
+	position: relative;
+	margin: -290px 0 0 500px;
+	z-index:3;
+}
+
+.contentexm6{
+	height:180px;
+	width:auto;	
+}
+
+.para-content{
+	width:240px;
+	height:130px;
+	margin:auto;
+	margin-top: 50px;
+}
+
+.para1{
+	font-family: sans-serif;
+	font-size: 16px;
+	
+}
+
+.lettring{
+	float:left;
+	width:0.7em;
+	font-size: 55px;
+	font-family: courier;
+	line-height: 90%;
+	color: #ce5a5a;
+}
+
+.float-right{
+	padding:0;
+	width:80%;
+	height:100px;
+	margin-left:90px;
+	list-style: none;
+}
+.float-right li{
+	display: inline;
+	padding:10px;
+	margin-top: 55px;
+}
+
+.left{
+	float: left;
+	font-size: 20px;
+}
+
+.menu-right{
+	float:right;
+}
+
+.menu-right a{
+	text-decoration:none;
+	font-size: 20px;
+	background-color: #e2ff76;
+	color:black;
+	padding:5px 15px 5px 15px;
+}
+
+.menu-right a:hover{
+	text-decoration:none;
+	color:#e2ff76;
+	background-color: black;
+}

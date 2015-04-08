@@ -9,7 +9,7 @@
 		<meta name="author" content="*auteur de la page, donc vous*" />
 		<meta name="description" content="*description du tutoriel*" />
 
-		<title>Nom du tutoriel</title>
+		<title>Le positioning et float</title>
 
 		<!--STYLE GENERAL-->
 		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
@@ -29,7 +29,7 @@
 		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
 		<script src="../js/foundation.min.js" type="text/javascript"></script>
 		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
-		<script src="../js/plugins/jquery.tuto.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
 
 	</head>
 
@@ -74,29 +74,29 @@
 				<article class="largeRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
-					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
+					<h1 class="blkColor ttTitle">Positioning & Float</h1>
 
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+						<p class="blkColor level4">Les propriétés de positionnement CSS vous permettent de positionner un élément librement dans votre page web.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">Le positionnement static</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">Le positionnement absolu</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">Le positionnement fix</a></li>
 
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">Le positionnement relatif</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">La propriété z-index</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">la propriété float</a></li>
 
 							</div>
 						</ol>
@@ -104,7 +104,7 @@
 					</div>
 
 					<!--EDITEZ VOTRE NOM-->
-					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
+					<p class="ttAuteur">Créé par Dan Gu le 02/04/2015</p>
 
 					<div class="ttbuttons row">
 						<div class="medium-6 columns">
@@ -136,7 +136,8 @@
 				<article class="txtRow">
 
 					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.<br>Grâce à quelques lignes de CSS3, il est possible de définir ces différentes structures en fonction de la résolution de l’écran du média utilisé.</p>
+					<p class="blkColor level3">Les propriétés de positionnement CSS vous permettent de positionner un élément. Il peut également placer un élément derrière un autre, et de spécifier ce qui doit se produire lorsque le contenu d’un élément est trop long. Nous allons apprendre à modifier la position des éléments sur notre page.
+Vous allez voir, il existe plusieurs techniques permettant d’effectuer la mise en page du site. Chacune a ses avantages et ses défauts, ce sera à vous de sélectionner celle qui vous semble la meilleure selon votre cas.</p>
 
 				</article>
 
@@ -148,7 +149,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">1. viewport et breakpoints.</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. Le positionnement static.</h2>
 
 				</article>
 
@@ -156,12 +157,11 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Pour attribuer des styles CSS différents à plusieurs résolutions différentes, il faut tout d’abord définir ces résolutions. Il suffit de déterminer les largeurs d’écran, en pixels, des différentes versions de votre futur site web reponsive : largeur d’un écran desktop, largeur d’un écran de tablette, de smartphone...<br>Ces différentes étapes sont appelées “breakpoints”, ou “points de rupture”.</p>
-					<p class="blkColor">On définit les différents breakpoints grâce à des classes CSS appelées “media queries”.</p>
-					<p class="blkColor">Ces media queries pourront être calculées par les navigateurs à l’aide d’une balise essentielle pour le reste de ce tutoriel. Elle permet de calculer la taille dite du “viewport”, ou de la fenêtre d’affichage, afin de pouvoir assurer la bonne fonction de vos media queries.</p>
+					<p class="blkColor">Les éléments peuvent être positionnés en utilisant le ‘top’, le ‘bottom’, le ‘left’, et le ‘right’ propriétés. Cependant, ces propriétés ne fonctionnera que si la propriété position est réglé en premier. Ils travaillent également différemment selon le procédé de positionnement.</p>
+					<p class="blkColor">Il existe quatre méthodes de positionnement différents. On va d'abord parler le positionnement 'static' qui est le positionnement par défaut, il n'est pas affecté par le ‘top’, le ‘bottom’, le ‘left’, et le ‘right’ propriétés.</p>
 
 				</article>
-
+				
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row"></figure>
 
@@ -173,11 +173,11 @@
 						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
 &lt;html&gt;
-	&lt;head&gt;
-		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-		...
-	&lt;/head&gt;
 	...
+	&lt;body&gt;
+		&lt;h1&gt;Hello world!
+		&lt;/h1&gt;
+	&lt;/body&gt;
 &lt;/html&gt;
 						</code>
 					</div>
@@ -187,14 +187,8 @@
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-.txtRow {
-	width: 64.0rem;
-	margin: 0 auto;
-}
-
-.ttPrtTitle {
-	text-transform: uppercase;
-	margin: 0 0 2.0rem;
+h1{
+	position: static;
 }
 						</code>
 					</div>
