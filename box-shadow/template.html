@@ -29,7 +29,7 @@
 		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
 		<script src="../js/foundation.min.js" type="text/javascript"></script>
 		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
-		<script src="../js/plugins/jquery.tuto.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
 
 	</head>
 
@@ -74,37 +74,30 @@
 				<article class="largeRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
-					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
+					<h1 class="blkColor ttTitle">BOX SHADOW</h1>
 
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+						<p class="blkColor level4">La propriété de feuille de style css box-shadow permet d'ajouter un effet d'ombre à un élément HTML, comme du texte ou encore un bloc.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">Les valeurs des box-shadow</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt"> Et aussi les text-shadow!</a></li>
 
 							</div>
 
-							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
-
-							</div>
 						</ol>
 
 					</div>
 
 					<!--EDITEZ VOTRE NOM-->
-					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
+					<p class="ttAuteur">Créé par Anne Astima le 08/04/2015</p>
 
 					<div class="ttbuttons row">
 						<div class="medium-6 columns">
@@ -136,7 +129,10 @@
 				<article class="txtRow">
 
 					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.<br>Grâce à quelques lignes de CSS3, il est possible de définir ces différentes structures en fonction de la résolution de l’écran du média utilisé.</p>
+					<p class="blkColor level3">
+					Les ombres portées prennent aujourd’hui une place importante dans le web design et permettent la mise en avant d’éléments importants, ou l’ajout d’une touche de profondeur dans vos graphismes. Il est évident, comme tout effet graphique, que l’utilisation des ombres doit être faite avec parcimonie et ne pas gêner l'utilisateur.
+					<br>Deux types d’ombres existent en CSS, les box-shadow (les ombres ajoutées aux éléments de type bloc) et les text-shadow (les ombres ajoutées au contenu textuel).
+					Nous allons nous occuper ici plus spécifiquement des box-shadow, qui fonctionnent avec plusieurs navigateurs comme Chrome 10, Safari 3.2, Firefox 3.6, SeaMonkey, MSIE 9+, Opera 10.6.</p>
 
 				</article>
 
@@ -148,7 +144,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">1. viewport et breakpoints.</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. Les valeurs des box-shadow.</h2>
 
 				</article>
 
@@ -156,9 +152,19 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Pour attribuer des styles CSS différents à plusieurs résolutions différentes, il faut tout d’abord définir ces résolutions. Il suffit de déterminer les largeurs d’écran, en pixels, des différentes versions de votre futur site web reponsive : largeur d’un écran desktop, largeur d’un écran de tablette, de smartphone...<br>Ces différentes étapes sont appelées “breakpoints”, ou “points de rupture”.</p>
-					<p class="blkColor">On définit les différents breakpoints grâce à des classes CSS appelées “media queries”.</p>
-					<p class="blkColor">Ces media queries pourront être calculées par les navigateurs à l’aide d’une balise essentielle pour le reste de ce tutoriel. Elle permet de calculer la taille dite du “viewport”, ou de la fenêtre d’affichage, afin de pouvoir assurer la bonne fonction de vos media queries.</p>
+					<p class="blkColor">Dans la propriété de notre box-shadow, nous avons trois valeurs différentes exprimées en px (pixel) ainsi qu'une couleur hexadécimale. La feuille de style css box-shadow accepte comme valeur (dans l'ordre) :</p>
+					<p class="blkColor">- inset : valeur optionnelle (mot clé), si elle est spécifier l'ombre est à l'intérieur sinon l'ombre est à l'extérieur de l'élément HTML.</p>
+					<p class="blkColor">- x : valeur numérique obligatoire qui spécifie la distance horizontale de l'ombre, si elle est négative l'ombre est placée à gauche.</p>
+					<p class="blkColor">- y : valeur numérique obligatoire qui spécifie la distance verticale de l'ombre, si elle est négative l'ombre est placée au dessus.</p>
+					<p class="blkColor">- blur-radius : valeur optionnelle numérique positive suivie de px ou % ou pt ou em, correspond à la largeur de l'estompage de l'ombre (flou). Pour la valeur 0 l'ombre est nette.</p>
+					<p class="blkColor">- color : valeur optionnelle elle indique la couleur de l'ombre. La couleur sélectionnée dépendra du navigateur elle est exprimée en hexadécimal (#000000) ou en couleur rgba.</p>
+					<p class="blkColor">ATTENTION il faut également rajouter dans le code css les différents préfixes des navigateurs afin que votre magnifique box-shadows soit visible par tout le monde!</p>
+
+
+					<p class="blkColor">Vous pouvez également spécifiez une ombre pour chaque coté.
+					Il vous suffit de répéter 4 fois les valeurs de box-shadow séparer par une virgule.
+					Vous pouvez aussi changer les autres valeurs.
+					&lt;div style="margin-left:20px;width:350px;height:80px;box-shadow:0 10px 5px 0 #000,10px 0 5px 0 blue, 0 -10px 5px 0 red ,-10px 0 5px 0 gold;">box-shadow:0 10px 5px 0 #000, 10px 0 5px 0 blue, 0 -10px 5px 0 red , -10px 0 5px 0 gold;&gt;</p>
 
 				</article>
 
@@ -174,7 +180,7 @@
 						<code class="xml">
 &lt;html&gt;
 	&lt;head&gt;
-		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		&lt;div class="shadow1"&gt;
 		...
 	&lt;/head&gt;
 	...
@@ -187,15 +193,18 @@
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-.txtRow {
-	width: 64.0rem;
-	margin: 0 auto;
+.shadow1 {
+	background-color: white;
+	height: 300px;
+	margin-bottom: 50px;
+
+	box-shadow: inset -5px -5px 5px #888;
+	-moz-box-shadow: inset -5px -5px 5px #888; /* prefixe (-moz) pour firefox*/
+	-webkit-box-shadow: inset -5px -5px 5px #888; /* prefixe (-webkit) pour chrome-opera-safari*/
+	-ms-box-shadow: inset -5px -5px 5px #888; /* prefixe (-ms) pour internet explorer*/
+	-o-box-shadow: inset -5px -5px 5px #888; /* prefixe (-o) pour opera*/
 }
 
-.ttPrtTitle {
-	text-transform: uppercase;
-	margin: 0 0 2.0rem;
-}
 						</code>
 					</div>
 				</pre>
@@ -208,7 +217,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">2. à chaque breakpoint ses styles css</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">2. Et aussi les text-shadow!</h2>
 
 				</article>
 
@@ -216,188 +225,50 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Chaque résolution est ensuite définie pour chaque breakpoints par des intervalles de valeurs, indiquant les largeurs d’écran maximales et minimales d’affichage des styles concernés.</p>
+					<p class="blkColor">La propriété text-shadow permet, comme son nom l'indique, de rajouter une ombre portée aux contenus textuels.
+					La syntaxe est la suivante: text-shadow: h-pos v-pos (blur) (color);</p>
+
+					<p class="blkColor">Dans la propriété de notre text-shadow, nous avons quatres valeurs différentes. La feuille de style css text-shadow accepte comme valeur (dans l'ordre) :</p>
+					<p class="blkColor">- h-pos : Position horizontale de l’ombre. Il s’agit de son décalage par rapport à la position de l’élément à ombrer sur l’axe des X. La valeur peut également être négative.</p>
+					<p class="blkColor">- v-pos : Position verticale de l’ombre. Il s’agit de son décalage par rapport à la position de l’élément à ombrer sur l’axe des Y. La valeur peut également être négative.</p>
+					<p class="blkColor">- blur : Distance du flou, correspond à l’étendu du dégradé de la couleur opaque vers le transparent. (optionnelle - défaut : 0)</p>
+					<p class="blkColor">- color : Couleur de l’ombre. Définit la couleur de votre ombre, voire son opacité grâce à la gestion de la couche Alpha. (optionnelle - défaut : valeur de la propriété color de l'élément.)</p>
+					
+
+					<p class="blkColor">Comme pour box-shadow, les spécifications précisent que sans couleur renseignée pour l'ombre, la valeur de la propriété color de l'élément sert de référent à la couleur de l'ombre.
+					Cependant, si Firefox et Opera attribuent la valeur de la propriété CSS color du texte, Chrome et Safari attribuent du transparent, la couleur semble donc obligatoire sur WebKit.</p>
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row"></figure>
+					<article class="txtRow">
+						<p class="blkColor">L'ombre portée utilisée simplement peut permettre d'ajouter un peu de profondeur au contenu textuel. C'est idéal pour un titre par exemple. Voici la syntaxe de l'ombre :</p>
+					</article>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
 					<div class="medium-8 medium-centered columns">
 						<h3 class="whColor">css</h3>
 
-						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
-						<code class="css">
-@media screen and (min-width: 900px) {
-	body {
-		color: red;
-	}
-}
-						</code>
 
-					</div>
-				</pre>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">css</h3>
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-@media screen and (min-width: 500px) and (max-width: 900px) {
-	body {
-		background-color: black;
-	}
-}
+text-shadow: 1px 2px 3px rgba(0,0,0, 0.5);
 						</code>
+
 					</div>
 				</pre>
 
-			</section>
-
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt3" class="whBG smallAir">
-
-				<article class="txtRow">
-					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">3. syntaxe</h2>
-
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Comme aperçu plus haut, on peut donc attribuer des styles à des résolutions selon différentes conditions. Voici un exemple des différentes conditions que vous pouvez utiliser pour définir vos breakpoints :</p>
-
-					<!--Si jamais vous avez une liste-->
-					<ul class="txtList">
-						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
-						<li><code class="smallSnippet blkColor">@media screen all</code> : toutes résolutions</li>
-						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx)</code> : écrans de largeur minimale de X pixels</li>
-						<li><code class="smallSnippet blkColor">@media screen and (max-width: Xpx)</code> : écrans de largeur maximale de X pixels</li>
-						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx) and (max-width: Ypx)</code> : écrans de largeur minimale de X pixels et de largeur maximale de Y pixels</li>
-					</ul>
-
-					<p class="blkColor">Il existe d’autres conditions utilisables dans des cas plus rares, les lignes citées ci-dessus étant les plus couramment utilisées pour le responsive web design.</p>
-
-				</article>
+				
 
 			</section>
 
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt4" class="whBG smallAir">
+			
 
-				<article class="txtRow">
-					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">4. utilisation de plusieurs feuilles de style</h2>
+				
 
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">En cas de media queries lourds en styles CSS, on peut également séparer notre feuille de style en plusieurs feuilles de styles différentes, chacune étant associée à une résolution différente et contenant les styles attribués.</p>
-					<p class="blkColor">Il suffira de lier chaque feuille de style entre les balises <code class="smallSnippet blkColor">&lt;head&gt;</code> et <code class="smallSnippet blkColor">&lt;/head&gt;</code> de votre fichier HTML, de la même manière d’une feuille de style CSS unique. La seule différence sera un attribut, différent pour chaque feuille de style liée, qui associera ces feuilles à leurs résolutions d’écran correspondantes :</p>
-
-				</article>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">html</h3>
-
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
-						<code class="xml">
-&lt;link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 900px)" href="style1.css" /&gt;
-						</code>
-					</div>
-				</pre>
-
-			</section>
-
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt5" class="whBG smallAir">
-
-				<article class="txtRow">
-					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">5. images flexibles</h2>
-
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">S’il est possible de rendre des images flexibles en utilisant l’attribut CSS <code class="smallSnippet blkColor">max-width : 100%</code>, cet élément pose encore des soucis d’affichage sur des écrans type Retina, mais manque surtout de pertinence quant au changement de format des médias. En effet, une image au format paysage s’affichera parfaitement sur un site web, mais s’en trouvera excessivement réduite pour correspondre à la largeur d’un smartphone.</p>
-					<p class="blkColor">On peut gérer ce changement de plateforme grâce à la balise <code class="smallSnippet blkColor">&lt;picture&gt;</code>, qui permet alors d’appeler différentes versions d’une même image (cadrée différemment, par exemple) selon la résolution de l’écran sur lequel elle est visionnée.</p>
-					<p class="blkColor">L’ordre d’appel des différentes versions de l’image est important : il faudra appeler les images de la résolution la plus grande jusqu’à la plus petite, pour éviter les conflits entre media queries.</p>
-
-				</article>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">html</h3>
-
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
-						<code class="xml">
-&lt;picture>
-	&lt;source srcset="image-1.jpg" media="(min-width: 1000px)">
-	&lt;source srcset="image-2.jpg" media="(min-width: 500px)">
-	&lt;img src="image.jpg" alt="description de l’image">
-&lt;/picture>
-						</code>
-					</div>
-				</pre>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">On n’oublie évidemment pas de rajouter la balise <strong>viewport</strong> entre les balises <code class="smallSnippet blkColor">&lt;head&gt;&lt;/head&gt;</code> de notre page HTML afin d’assurer le fonctionnement des media queries.</p>
-
-				</article>
-
-			</section>
-
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt6" class="whBG airD">
-
-				<article class="txtRow">
-					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">6. texte flexible</h2>
-
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Si l’on peut, comme avec les images, donner à son texte des tailles différentes en fonction de la résolution grâce aux media queries CSS, il est également désormais possible d’avoir du texte à la taille relative aux dimensions du viewport.</p>
-					<p class="blkColor">Il s’agit ici d’utiliser les attributs CSS “vw” et “vh”, acronymes de “viewport width” et “viewport height”. Une unité vw/vh correspond ici à 1% de la largeur ou de la hauteur de la fenêtre (selon l’unité choisie). Par exemple, pour une fenêtre large de 1000 pixels et haute de 500 pixels, 1 vw correspondra à une taille de texte de 10 pixels, et 1 vh correspondra à une taille de 5 pixels.</p>
-					<p class="blkColor">N’oubliez tout de même pas d’ajouter des tailles de texte “classiques”, en pixels, dans votre CSS afin d’assurer la visibilité de votre site en cas de navigateur incompatible.</p>
-
-				</article>
-
-			</section>
 
 			<!--CAN I USE-->
 			<section id="CIU" class="blBG air">
@@ -469,19 +340,11 @@
 
 				<!--EDITEZ VOS LIENS-->
 				<ul class="row largeRow links">
-					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
+					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_box-shadow.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
 
-					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/TR/css3-mediaqueries/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org/TR/css3-mediaqueries/</a></li>
+					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/tuto/lire/910-creer-des-ombrages-ombres-css-box-shadow-text-shadow.html" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.alsacreations.com/</a></li>
 
-					<li><span class="blkColor level4 upCase">mediaqueri.es - </span><a href="http://mediaqueri.es/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://mediaqueri.es/</a></li>
-
-					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
-
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/n</a></li>
-
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/</a></li>
-
-					<li><span class="blkColor level4 upCase">sitepoint - </span><a href="http://www.sitepoint.com/new-css3-relative-font-size/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.sitepoint.com/</a></li>
+					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/tuto/lire/1414-css3-texte-shadow-ombre.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
 				</ul>
 				
 			</section>
@@ -497,34 +360,26 @@
 					<div class="medium-4 columns">
 
 						<!--EDITEZ VOTRE PHOTO-->
-						<img src="../img/team/elodie.jpg" alt="photo auteur" />
+						<img src="../img/team/anne.jpg" alt="photo auteur" />
 
 					</div>
 
 					<div class="medium-8 columns end details">
 
 						<!--EDITEZ VOTRE ID-->
-						<h2 class="whColor upCase">élodie dassance</h2>
-						<p class="level4 blkColor marginU marginD">Spécialiste certifiée en pop-idols japonaises et docteur en fabrication de cookies maison, mon but est de diffuser une idée fun, fraîche et multilingue du webdesign… avec le sourire ( • ̀ω•́  )✧</p>
+						<h2 class="whColor upCase">Anne Astima</h2>
+						<p class="level4 blkColor marginU marginD">J’ai découvert le code HTML il y a un an. Si j’ai réussi à développer mon site internet, c’est que tout est possible ! </p>
 
 						<!--EDITEZ VOS LIENS-->
 						<div class="iconWrapper centerOrigin flex equalRep large-6">
 
 							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
-							<a href="#" alt="lien vers le portfolio">
-								<i class="iconSC whColor urlIcn animation"></i>
-							</a>
-
-							<a href="#" alt="lien vers linkedin">
+							<a href="#fr.linkedin.com/in/anneastima" alt="lien vers linkedin">
 								<i class="iconSC whColor lnkinIcn animation"></i>
 							</a>
 
 							<a href="#" alt="lien vers viadeo">
 								<i class="iconSC whColor vdoIcn animation"></i>
-							</a>
-
-							<a href="#" alt="lien vers twitter">
-								<i class="iconSC whColor twtrIcn animation"></i>
 							</a>
 
 						</div>
