@@ -86,17 +86,17 @@
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">L'inclinaison ou Skew</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">Échelle alias Scale</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">Déplacement alias Translate</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">L'inclinaison</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">Mise à l'Échelle</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">Déplacement ou translation</a></li>
 
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">Rotation alias Rotate</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">Matrice alias Matrix</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">Un peu de 3D</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">Rotation ou pivot</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">Matrice ou tableau</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">poursuivre avec de la 3D</a></li>
 
 							</div>
 						</ol>
@@ -140,7 +140,29 @@
            			Assez facile à mettre en oeuvre en 2D, les effets de transformations vous permettrons de vous distinguer dans certaines de vos présentations lorsqu’elles prennent une autre dimension en 3D ou bien combiner à l’effet de <a href="/template.html">transition</a>.
             		À appliquer au bon endroit au bon moment, cette propriété peut s’avérer pratique dans certain cas.<br><br>
             		Avant de commencer il est nécessaire de savoir écrire la bonne syntaxe:</p>
-            		<p class="blkColor level3">transform: fonction(valeur);</p>
+            		<pre class="snippet row largeRow">
+					<div class="medium-6 columns">
+						<h3 class="whColor">css</h3>
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+transform: fonction(valeur);
+						</code>
+					</div>
+				</pre> 
+
+            		<p class="blkColor level3">Vous avez la possibilité de combiner les transformations en utilisant la syntaxe ainsi:</p>
+            		<pre class="snippet row largeRow">
+					<div class="medium-6 columns">
+						<h3 class="whColor">css</h3>
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+transform : function1(value1) function2(value2) function3(value3);
+						</code>
+					</div>
+				</pre> 
+
+            		<p class="blkColor level3">Pensez à utiliser les préfixes des navigateurs en question (-webkit-, -moz-, etc.) devant la propriété transform. Cela s'averera utile pour les utiliser sur les anciennes et nouvelles versions des navigateurs.</p>
+            		<p class="blkColor level3">Let's start !!</p>
 
 				</article>
 
@@ -275,7 +297,7 @@ height: 100px;
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Translate permet de déplacer un élément de sa position actuelle (selon les paramètres indiqués pour x et y d’origine). L’exemple qui suit déplace l’élément div de 50 pixels vers la droite et 100 pixels vers le bas de sa position actuelle.</p>
+					<p class="blkColor">Translate permet de déplacer un élément de sa position actuelle (selon les paramètres indiqués pour x et y d’origine). L’exemple qui suit déplace l’élément div de 200 pixels vers la droite et 10 pixels vers le bas de sa position actuelle.</p>
 
 					<!--Si jamais vous avez une liste-->
 					<!--<ul class="txtList">
@@ -351,7 +373,7 @@ height: 100px;
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
 							<div class="rotationoriginal">Original</div>
-							<div class="rotation">Rotation 20°</div>
+							<div class="rotation">Rotation 50°</div>
 
 				</figure>
 
@@ -457,7 +479,7 @@ transform: matrix(1, -0.3, 2, 1, 0, 5);
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">6. Un peu de 3D</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. Pour aller plus loin avec peu de 3D</h2>
 
 				</article>
 
@@ -465,7 +487,7 @@ transform: matrix(1, -0.3, 2, 1, 0, 5);
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">En paramétrant un axe supplémentaire Z vous definissez un espace en 3D. Tous les fonctions précédentes peuvent avoir une troisième valeur. L'exemple ci-dessous s'applique à la rotation sur Z.</p>
+					<p class="blkColor">En paramétrant un axe supplémentaire Z vous definissez un espace en 3D. Toutes les fonctions précédentes peuvent avoir une troisième valeur. L'exemple ci-dessous s'applique à la rotation sur Z.</p>
 
 				</article>
 
@@ -524,7 +546,7 @@ transform: rotateZ(90deg);
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">21+</span>
+						<span class="whColor level2 version">4+</span>
 					</div>
 
 					<div class="browser">
@@ -534,7 +556,7 @@ transform: rotateZ(90deg);
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">4+</span>
+						<span class="whColor level2 version">3.1+</span>
 					</div>
 
 					<div class="browser">
@@ -544,7 +566,7 @@ transform: rotateZ(90deg);
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">10.5+</span>
 					</div>
 
 					<div class="browser">
@@ -586,6 +608,8 @@ transform: rotateZ(90deg);
 					<li><span class="blkColor level4 upCase">Microsoft - </span><a href="http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_3d-transforms.htm" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_3d-transforms.htm</a></li>
 
 					<li><span class="blkColor level4 upCase">CSS Tricks - </span><a href="https://css-tricks.com/almanac/properties/t/transform/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">https://css-tricks.com/almanac/properties/t/transform/</a></li>
+
+					<li><span class="blkColor level4 upCase">matrix construction set- </span><a href="http://www.useragentman.com/matrix/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://www.useragentman.com/matrix/</a></li>
 
 				</ul>
 				
