@@ -1,0 +1,174 @@
+.container
+{
+	margin: auto;
+	background-color: yellow;
+}
+
+.container2
+{
+	width: 900px;
+	margin: auto;
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.rotation {
+    transform: rotate(20deg);
+}
+
+h1
+{
+	font-family: helvetica;
+	font-size: 46px;
+	font-weight: bold;
+	color: ;
+	text-align: center;
+}
+
+h2
+{
+	font-family: helvetica;
+	font-size: 20px;
+	font-weight: 700;
+	color: black;
+	text-align: center;	
+}
+
+h3
+{
+	font-family: Helvetica neue;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: left;
+	color: black;
+
+}
+
+.title
+{
+	margin: auto;
+	padding-bottom: 100px;
+}
+
+.titlebox
+{
+	text-align: center;
+	padding-top: 120px;
+	font-family: helvetica neue;
+	font-size: 50px;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+}
+
+.titlebox2
+{
+	text-align: center;
+	padding-top: 50px;
+	font-family: helvetica neue;
+	font-size: 50px;
+	font-weight: 700;
+	color: white;
+	text-align: center;
+}
+
+.description
+{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#rotation 
+{
+    margin: auto; 
+    font-family: helvetica neue;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+    border: 5px solid white;
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    color: white;
+    -webkit-animation: mymove 15s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 10s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {-webkit-transform: rotate(360deg);}
+}
+
+}
+
+.button
+{
+	 position: absolute;
+	 top: 50%;
+}
+
+#rotate2
+{
+    margin: auto;
+    border: 5px solid white;
+    width: 300px;
+    height: 150px;
+    background-color: blue;
+    color: white;
+    font-family: helvetica neue;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: center;
+}
+
+#myDIV {
+    background-color: blue;
+    transform:skew(20deg,20deg);
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    color: white;
+    font-family: helvetica neue;
+    font-size: 32px;
+    text-align: center;
+}
+
+#myDIV2 {
+    background-color: blue;
+    transform:scale(0.9,1.5);
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: helvetica neue;
+    font-size: 32px;
+    text-align: center;
+}
+
+#myDIV3 {
+    background-color: blue;
+    transform:translate(20px,10px);
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: helvetica neue;
+    font-size: 32px;
+    text-align: center;
+}
+
+#DIV {
+    background-color: blue;
+    transform:matrix(0.866,0.6,-0.8,0.866,0,0);
+    font-family: helvetica neue;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    color: white;
+    font-family: helvetica neue;
+    font-size: 32px;
+    text-align: center;
+}
+
+

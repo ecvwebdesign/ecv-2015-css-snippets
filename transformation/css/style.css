@@ -1,174 +1,180 @@
-.container
+.skeworiginal
 {
-	margin: auto;
-	background-color: yellow;
-}
-
-.container2
-{
-	width: 900px;
-	margin: auto;
-	background-color: white;
-	padding-top: 20px;
-	padding-bottom: 40px;
-}
-
-.rotation {
-    transform: rotate(20deg);
-}
-
-h1
-{
-	font-family: helvetica;
-	font-size: 46px;
-	font-weight: bold;
-	color: ;
-	text-align: center;
-}
-
-h2
-{
-	font-family: helvetica;
-	font-size: 20px;
-	font-weight: 700;
-	color: black;
-	text-align: center;	
-}
-
-h3
-{
-	font-family: Helvetica neue;
-	font-size: 14px;
-	font-weight: 700;
-	text-align: left;
-	color: black;
-
-}
-
-.title
-{
-	margin: auto;
-	padding-bottom: 100px;
-}
-
-.titlebox
-{
-	text-align: center;
-	padding-top: 120px;
-	font-family: helvetica neue;
-	font-size: 50px;
-	font-weight: 700;
-	color: white;
-	text-align: center;
-}
-
-.titlebox2
-{
-	text-align: center;
-	padding-top: 50px;
-	font-family: helvetica neue;
-	font-size: 50px;
-	font-weight: 700;
-	color: white;
-	text-align: center;
-}
-
-.description
-{
-	padding-top: 40px;
-	padding-bottom: 40px;
-}
-
-#rotation 
-{
-    margin: auto; 
-    font-family: helvetica neue;
-	font-size: 16px;
-	font-weight: 700;
-	text-align: center;
-    border: 5px solid white;
-    width: 300px;
-    height: 300px;
-    background-color: blue;
-    color: white;
-    -webkit-animation: mymove 15s infinite; /* Chrome, Safari, Opera */
-    animation: mymove 10s infinite;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-    50% {-webkit-transform: rotate(360deg);}
-}
-
-}
-
-.button
-{
-	 position: absolute;
-	 top: 50%;
-}
-
-#rotate2
-{
-    margin: auto;
-    border: 5px solid white;
-    width: 300px;
-    height: 150px;
-    background-color: blue;
-    color: white;
-    font-family: helvetica neue;
-	font-size: 16px;
-	font-weight: 700;
-	text-align: center;
-}
-
-#myDIV {
-    background-color: blue;
-    transform:skew(20deg,20deg);
+	background-color: #5A9596;
     width: 200px;
     height: 200px;
     margin: auto;
     color: white;
-    font-family: helvetica neue;
+    font-family: "Helvetica";
     font-size: 32px;
     text-align: center;
+    padding-top: 70px;	
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-#myDIV2 {
-    background-color: blue;
-    transform:scale(0.9,1.5);
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    color: white;
-    font-family: helvetica neue;
-    font-size: 32px;
-    text-align: center;
-}
-
-#myDIV3 {
-    background-color: blue;
-    transform:translate(20px,10px);
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    color: white;
-    font-family: helvetica neue;
-    font-size: 32px;
-    text-align: center;
-}
-
-#DIV {
-    background-color: blue;
-    transform:matrix(0.866,0.6,-0.8,0.866,0,0);
-    font-family: helvetica neue;
+.skew
+{
+	background-color: #5A9596;
+    -ms-transform: skewX(15deg); /* IE 9 */
+    -webkit-transform: skewX(15deg); /* Safari */
+    transform: skewX(15deg);
     width: 200px;
     height: 200px;
     margin: auto;
     color: white;
-    font-family: helvetica neue;
+    font-family: "Helvetica";
     font-size: 32px;
     text-align: center;
+    padding-top: 50px;	
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
+
+.scaleoriginal{
+	background-color: #5A9596;
+    width: 150px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 30px;
+}
+
+.scale{
+	background-color: #5A9596;
+    -ms-transform: scale(3,1.5); /* IE 9 */
+    -webkit-transform: scale(3,1.5); /* Safari */
+    transform: scale(3,1.5); /* Standard syntax */
+    width: 150px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.translate1{
+	background-color: #5A9596;
+    width: 250px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.translate2{
+	background-color: #5A9596;
+    -ms-transform: translate(200px,10px); /* IE 9 */
+   	-webkit-transform: translate(200px,10px); /* Safari */
+    transform: translate(200px,10px);
+    width: 250px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;  
+}
+
+.rotationoriginal{
+	background-color: #5A9596;
+	width: 250px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.rotation{
+	background-color: #5A9596;
+	width: 250px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    -ms-transform: rotateX(50deg); /* IE 9 */
+    -webkit-transform: rotateX(50deg); /* Safari */
+    transform: rotateX(50deg);
+}
+
+.matrixoriginal{
+	background-color: #5A9596;
+	width: 250px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.matrix{
+	background-color: #5A9596;
+	width: 250px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+	-ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
+    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
+    transform: matrix(1, -0.3, 2, 1, 0, 5);
+}
+
+
+.rotation3D{
+	background-color: #5A9596;
+	width: 250px;
+    height: 100px;
+    margin: auto;
+    color: white;
+    font-family: "Helvetica";
+    padding-top: 25px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+	-webkit-transform: rotateZ(90deg); /* Safari */
+    transform: rotateZ(90deg);
+}
+ 
+
+
+
+
+
 
 
