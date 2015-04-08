@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 La propri\'e9t\'e9 de feuille de style CSS box-shadow permet d'ajouter un effet d'ombre \'e0 un \'e9l\'e9ment HTML.\
+Les ombres port\'e9es prennent aujourd\'92hui une place importante dans le web design et permettent la mise en avant d\'92\'e9l\'e9ments importants, ou l\'92ajout d\'92une touche de profondeur dans vos graphismes. Il est \'e9vident, comme tout effet graphique, que l\'92utilisation des ombres doit \'eatre faite avec parcimonie et ne pas g\'eaner l'utilisateur.\
+\
+Deux types d\'92ombres existent en CSS, les box-shadow (les ombres ajout\'e9es aux \'e9l\'e9ments de type block) et les text-shadow (les ombres ajout\'e9es au contenu textuel).\
+Nous allons nous occuper ici plus sp\'e9cifiquement des box-shadow, qui fonctionnent avec plusieurs navigateurs comme Chrome 10, Safari 3.2, Firefox 3.6, SeaMonkey, MSIE 9+, Opera 10.6.\
+\
+La feuille de style CSS box-shadow accepte comme valeur (dans l'ordre) :\
+- inset : valeur optionnelle (mot cl\'e9). Si elle est sp\'e9cifi\'e9e, l'ombre est \'e0 l'int\'e9rieur, sinon l'ombre est \'e0 l'ext\'e9rieur de l\'92\'e9l\'e9ment HTML.\
+- offset-x : valeur num\'e9rique obligatoire qui sp\'e9cifie la distance horizontale de l'ombre. Si elle est n\'e9gative, l'ombre est plac\'e9e \'e0 gauche.\
+- offset-y : valeur num\'e9rique obligatoire qui sp\'e9cifie la distance verticale de l'ombre. Si elle est n\'e9gative, l'ombre est plac\'e9e au dessus.\
+- blur-radius : valeur optionnelle num\'e9rique positive (suivie de px, %, pt ou em selon l\'92unit\'e9 utilis\'e9e), qui correspond \'e0 la largeur de l'estompage de l'ombre (flou). Pour la valeur 0, l'ombre est nette.\
+- spread-radius : valeur optionnelle num\'e9rique positive (suivie de px, %, pt ou em selon l\'92unit\'e9 utilis\'e9e), qui correspond \'e0 la longueur du rayon d\'92\'e9tendue (voir image).\
+- color : valeur optionnelle de type format de couleurs (hexad\'e9cimale, RGBA\'85). La couleur s\'e9lectionn\'e9e d\'e9pendra du navigateur.\
+L'ombre prend l'arrondi de la propri\'e9t\'e9 de feuille de style CSS border-radius si elle est sp\'e9cifi\'e9e.\
+\
+\
+Vous pouvez \'e9galement sp\'e9cifier une ombre pour chaque c\'f4t\'e9.\
+Il vous suffit de r\'e9p\'e9ter 4 fois les valeurs de box-shadow s\'e9par\'e9es par une virgule.\
+Vous pouvez aussi changer les autres valeurs.\
+<div style="margin-left:20px;width:350px;height:80px;box-shadow:0 10px 5px 0 #000,10px 0 5px 0 blue, 0 -10px 5px 0 red ,-10px 0 5px 0 gold;">box-shadow:0 10px 5px 0 #000, 10px 0 5px 0 blue, 0 -10px 5px 0 red , -10px 0 5px 0 gold;</div>\
+\
+\
+\
+Le style CSS3 :\
+#tuto_box-shadow \{\
+    width : 300px ;\
+    height : 200px ;\
+    background : #6666CC ;\
+    box-shadow : 15px 10px 12px  #000000 ;\
+\}\
+\
+Explication :\
+Dans la propri\'e9t\'e9 de notre box-shadow, nous avons trois valeurs diff\'e9rentes exprim\'e9es en px (pixel) ainsi qu'une couleur hexad\'e9cimale.\
+ - La premi\'e8re valeur (15px) indique le d\'e9calage horizontal vers la droite.\
+ - La seconde valeur (10px) correspond au d\'e9calage vertical vers le bas.\
+ - La troisi\'e8me valeur (12px) correspond \'e0 l\'92\'e9tendue du flou appliqu\'e9.\
+ - #000000 (noir en hexad\'e9cimal) indique la couleur de l'ombre (on peut aussi la remplacer par une couleur rgba(0,0,0,1). Nous parlerons de rgba dans un autre tuto.)}

@@ -1,0 +1,185 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 Georgia;\f2\fswiss\fcharset0 ArialMT;
+\f3\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;\red65\green67\blue75;\red38\green38\blue38;\red53\green53\blue53;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11905\paperh16837\margl1440\margr1440\vieww18040\viewh15540\viewkind0
+\deftab720
+\pard\pardeftab720\sl420
+
+\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
+////////////////////////////////////////////////////////\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+Introduction: \
+\
+CSS Animations est un module qui permet l'animation de la plupart des \'e9l\'e9ments HTML en utilisant CSS, sans JavaScript ou Flash.  Les animations sont fluides, m\'eame avec un syst\'e8me plut\'f4t charg\'e9. Elles sont faciles \'e0 utiliser pour faire les animations simples.\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab720\sl600\sa240
+\cf0 \expnd0\expndtw0\kerning0
+Configuration de l'animation\kerning1\expnd0\expndtw0 :\
+\expnd0\expndtw0\kerning0
+Une s\'e9quence anim\'e9e en CSS poss\'e9dant deux composants:\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+1. Animation Properties: les attributs de style d\'e9crivant l'animation (associ\'e9s \'e0 l'\'e9l\'e9ment que vous souhaitez animer \'e0 l'aide de la propri\'e9t\'e9 animation et de ses sous-propri\'e9t\'e9s)\
+\
+   \kerning1\expnd0\expndtw0 \'95      animation-name\
+\expnd0\expndtw0\kerning0
+   \kerning1\expnd0\expndtw0 \'95      animation-duration\expnd0\expndtw0\kerning0
+\
+   \kerning1\expnd0\expndtw0 \'95	\expnd0\expndtw0\kerning0
+animation-timing-function\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl449
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+animation-delay\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+animation-iteration-count\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+animation-direction\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+animation-fill-mode\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+animation-play-state
+\f1\fs28 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+
+\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+\cf0 \kerning1\expnd0\expndtw0 2. \expnd0\expndtw0\kerning0
+@keyframes, qui d\'e9finit l\'92animation gr\'e2ce \'e0 des points de passage (keyframes) interm\'e9diaires en utilisant un pourcentage. 0% indique le d\'e9but de la s\'e9quence, tandis que 100% indique l'instant final de l'animation. \
+\pard\pardeftab720\sl600\sa240
+\cf0 \kerning1\expnd0\expndtw0 Par exemple:\
+\{ animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay];\
+@keyframes [animation-name] \
+\{   from \{\expnd0\expndtw0\kerning0
+propri\'e9t\'e9_\'e0_animer: valeur_initiale\kerning1\expnd0\expndtw0 ;\}  \
+    to \{\expnd0\expndtw0\kerning0
+propri\'e9t\'e9_\'e0_animer: valeur_initiale\kerning1\expnd0\expndtw0 ;\}     \}\
+//\expnd0\expndtw0\kerning0
+"from" et "to" \'e9quivalent \'e0 0% et 100%. On passe ainsi d'un \'e9tat initial qui est 0% \'e0 un \'e9tat final qui est 100% avec, si l'on utilise les pourcentages, diff\'e9rentes \'e9tapes interm\'e9diaires. A chaque \'e9tape, on red\'e9finit les valeurs des styles CSS anim\'e9es, la transition entre les valeurs \'e9tant r\'e9alis\'e9e automatiquement. \
+\kerning1\expnd0\expndtw0 @keyframes [animation-name]\
+\pard\pardeftab720\sl300
+\cf0 \expnd0\expndtw0\kerning0
+\{\
+\'a0\'a0\'a00% \{propri\'e9t\'e9_\'e0_animer: valeur_initiale\kerning1\expnd0\expndtw0 ;\expnd0\expndtw0\kerning0
+\} \
+\'a0\'a0\'a045% \{propri\'e9t\'e9_\'e0_animer: valeur_interm\'e9diaire\kerning1\expnd0\expndtw0 ;\expnd0\expndtw0\kerning0
+\} \
+\'a0\'a0\'a0100% \{propri\'e9t\'e9_\'e0_animer: valeur_finale;\} \
+\}\kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl420
+\cf0 \
+\pard\pardeftab720\sl420
+\cf0 \expnd0\expndtw0\kerning0
+[Attention! :\
+\pard\pardeftab720\sl420
+\cf3 \expnd0\expndtw0\kerning0
+CSS3 Animations travaille tout simplement sur les m\'eames valeurs que CSS3 Transitions. (voir Transition CSS)\cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl342
+\cf0 \expnd0\expndtw0\kerning0
+La diff\'e9rence principale entre les animations CSS et les transitions CSS r\'e9side dans la r\'e8gle @keyframes. Par cons\'e9quent, vous \'eates oblig\'e9 d\'92ex\'e9cuter l\'92animation dans une direction (du d\'e9but \'e0 la fin) avec les animations CSS, toutes les propri\'e9t\'e9s voulues \'e9tant anim\'e9es en m\'eame temps.]\
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\cf4 \expnd0\expndtw0\kerning0
+\
+\cf0 \expnd0\expndtw0\kerning0
+Association avec d\'92autres \'e9l\'e9ments CSS :\
+\
+Les animations CSS peuvent \'eatre combin\'e9es avec les propri\'e9t\'e9s des objets SVG pour animer directement les \'e9l\'e9ments SVG dans les navigateurs (voir \'91SVG\'92).\
+\pard\pardeftab720\sl342
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab720\sl431\sa300
+\cf0 \expnd0\expndtw0\kerning0
+Propri\'e9t\'e9s des animations CSS :\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+La propri\'e9t\'e9 CSS Animation est un raccourci pour d\'e9finir les propri\'e9t\'e9s \cf4 \expnd0\expndtw0\kerning0
+qui offrent un contr\'f4le plus affin\'e9 sur notre contenu anim\'e9.\
+\cf0 \expnd0\expndtw0\kerning0
+\
+- animation-name: \
+D\'e9fini le nom de l\'92animation, elle-m\'eame d\'e9crite avec la propri\'e9t\'e9 @keyframes (d\'e9crivant les keyframes de l'animation).\
+\
+- animation-duration: \
+\pard\pardeftab720\sl428
+\cf0 \expnd0\expndtw0\kerning0
+D\'e9finit la dur\'e9e d\'92un seul cycle de votre animation - en secondes (s) ou millisecondes (ms).\
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+-animation-delay:\
+\pard\pardeftab720\sl420
+\cf0 \expnd0\expndtw0\kerning0
+Configure le d\'e9lai entre l'instant auquel l'\'e9l\'e9ment est charg\'e9 et le d\'e9but de l'animation.\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+-animation-iteration-count:\
+\pard\pardeftab720\sl420
+\cf0 \expnd0\expndtw0\kerning0
+Configure le nombre de fois que l'animation doit se r\'e9p\'e9ter : vous pouvez d\'e9finir infinite pour que l'animation se r\'e9p\'e8te ind\'e9finiment.\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+-animation-direction:\
+\pard\pardeftab720\sl420
+\cf0 \expnd0\expndtw0\kerning0
+D\'e9termine si l'animation doit se jouer tour \'e0 tour en avant puis en arri\'e8re \'e0 chaque cycle de la s\'e9quence, ou si elle doit revenir \'e0 son point de d\'e9part et se r\'e9p\'e9ter.\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+-animation-fill-mode:\
+\pard\pardeftab720\sl420
+\cf0 \expnd0\expndtw0\kerning0
+Configure les valeurs qui doivent \'eatre appliqu\'e9es par l'animation avant et apr\'e8s qu'elle soit ex\'e9cut\'e9e.\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+-animation-play-state:\
+\pard\pardeftab720\sl420
+\cf0 \expnd0\expndtw0\kerning0
+Vous permet de mettre en pause et de reprendre la lecture de la s\'e9quence anim\'e9e.\
+\
+\pard\pardeftab720\sl342
+\cf0 \expnd0\expndtw0\kerning0
+-animation-timing-function:\
+Sp\'e9cifie les valeurs des propri\'e9t\'e9s interm\'e9diaires \'e0 utiliser pendant un cycle unique d\'92une animation.\
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab720\sl660\sa200
+
+\f2 \cf3 \expnd0\expndtw0\kerning0
+Navigateurs pris en charge pour les animations CSS:\
+
+\f0 Navigateurs IE, Chrome,   firefox,     safari,        opera qui soutient pleinement la propri\'e9t\'e9 avec un pr\'e9fixe\
+\pard\pardeftab720\sl428\sa200
+\cf3 \expnd0\expndtw0\kerning0
+                            -webkit-,   -moz-,    -webkit-,  -webkit-ou-O-.
+\f3 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl420
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+///////////////////////////////////////////////////////////////////////////////////////////////////////////\
+\
+tutoriel\
+combiner des effects 1-7\
+\pard\pardeftab720\sl420
+\cf0 \expnd0\expndtw0\kerning0
+\
+}

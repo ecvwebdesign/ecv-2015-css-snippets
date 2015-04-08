@@ -1,0 +1,234 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11905\paperh16837\margl1440\margr1440\vieww21580\viewh12040\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\qc
+
+\f0\fs48 \cf0 \ul \ulc0 GRID LAYOUT\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b\fs36 \cf0 Intro\
+
+\b0\fs24 \ulnone Grid Layout (ou "positionnement en grille") est une m\'e9thode de disposition. Elle permet de diviser l'espace des principales r\'e9gions d'une page web en fonction d'une quantit\'e9 fixe, de l'espace disponible dans la fen\'eatre du navigateur, ou d'une combinaison des deux.\
+\
+Pour r\'e9sumer, la m\'e9thode Grid Layout permet une d\'e9coupe en lignes et en colonnes de votre interface, comme nous le ferions pour un tableau de mise en page.\
+\
+
+\b\fs36 \ul Terminologies sp\'e9cifiques\
+
+\b0\fs24 \ulnone Pour se familiariser rapidement et facilement avec Grid Layout, il est important de comprendre les \'e9l\'e9ments qui composent cette grille ainsi que leurs terminologies.\
+\
+- \ul Grid Lines: \ulnone Les "Grid Lines" sont les lignes qui composent la grille. Elle peuvent \'eatre horizontales ou verticales. Nous pouvons r\'e9f\'e9rer \'e0 elles par des noms ou des num\'e9ros.\
+\
+- \ul Grid Track: \ulnone Une "Grid Track" correspond \'e0 l'espace entre deux lignes, horizontales ou verticales.\
+\
+- \ul Grid Cell: \ulnone Une "Grid Cell" correspond \'e0 l'espace entre quatre lignes. C'est l'unit\'e9 la plus petite sur notre grille pour placer texte et/ou image.\
+\
+- \ul Grid Area: \ulnone Une "Grid Area" correspond \'e0 n'importe quelle zone sur la grille attach\'e9e par quatre lignes. Elle peu contenir un certain nombre de cellule (Grid Cell).\
+\
+Maintenant que vous en savez plus sur votre grille, nous allons voir comment interpr\'e9ter ces terminologies en langage web.\
+\
+\
+
+\b\fs36 \ul Terminologies sp\'e9cifiques\
+
+\b0\fs24 \ulnone \
+\ul Propri\'e9t\'e9\ulnone                                                                                                 \ul Description\
+\
+\ulnone -ms-grid-column                                                                                   Obtenir ou mettre une valeur qui sp\'e9cifie dans quelle colonne de la grille l'on place l'objet/texte.\
+\
+-ms-grid-column-align                                                                         Obtenir ou mettre une valeur qui sp\'e9cifie l'alignement horizontal de l'objet/texte dans la colonne de grille.\
+\
+-ms-grid-columns                                                                                 Obtenir ou mettre une ou plusieurs valeurs qui sp\'e9cifient la largeur de chaque colonne de grille.\
+\
+-ms-grid-column span                                                                         Obtenir ou mettre une valeur qui sp\'e9cifie le nombre de colonnes de la grille que l'objet/texte enjambe.\
+\
+-ms-grid-row                                                                                          Obtenir ou mettre une valeur qui sp\'e9cifie dans quelle rang\'e9e de la grille l'objet/texte est plac\'e9.\
+\
+-ms-grid-row-align                                                                                Obtenir ou mettre une valeur qui sp\'e9cifie l'alignement vertical de l'objet/texte dans la rang\'e9e de la grille.\
+\
+-ms-grid-rows                                                                                        Obtenir ou mettre une valeur qui sp\'e9cifie la hauteur de chaque rang\'e9e de la grille.\
+\
+-ms-grid-row-span                                                                                Obtenir ou mettre une valeur qui sp\'e9cifie le nombre de rang\'e9es de la grille que l'objet/texte enjambe.\
+\
+-ms-grid-cell                                                                                           Positionnement d'un \'e9l\'e9ment au sein d'une cellule nomm\'e9e.\
+\
+-ms-grid-layer                                                                                        Niveau du plan pour \'e9l\'e9ments superpos\'e9s.\
+\
+\
+\
+
+\b\fs36 \ul EXERCICE 1:\
+
+\b0\fs24 \ulnone \
+\ul D\'e9finir une grille (conception de la structure de la page)
+\b\fs36 \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs24 \cf0 \ulnone HTML
+\b0 \
+Nous commen\'e7ons par \'e9crire le code HTML simple de mani\'e8re \'e0 obtenir la structure de base de la page mais aussi pour cr\'e9er diff\'e9rentes "box" qui accueilleront les \'e9l\'e9ments de notre design.\
+\
+
+\b CSS\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b0 \cf0 Nous allons maintenant cr\'e9er dans le CSS l'\'e9l\'e9ment Grilles puis sp\'e9cifier les lignes et les colonnes.\
+La premi\'e8re chose \'e0 faire est d'ajouter l'\'e9l\'e9ment "display" et de lui attribuer la valeur 
+\b -ms-grid
+\b0 . Cette action cr\'e9e l'\'e9l\'e9ment grille. Dans l'\'e9l\'e9ment grille, nous utilisons la propri\'e9t\'e9 
+\b -ms-grid-column
+\b0  pour sp\'e9cifier la largeur de chaque colonne dans une liste d\'e9limit\'e9e par des espaces. Nous utiliserons aussi la propri\'e9t\'e9 
+\b -ms-grid-rows
+\b0  pour sp\'e9cifier la hauteur de chaque colonne dans une liste d\'e9limit\'e9 par des espaces.
+\b\fs36 \ul \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b0\fs28 \cf0 HTML\ulnone                                                                                                   \ul CSS\
+\
+ \ulnone     \'85..\ul \
+      \ulnone <div class="Wrapper">                                                                      .Wrapper\{\
+        <div class="box a">A</div>                                                                  display: -ms-grid;\
+        <div class="box b">B</div>                                                                  -ms-grid-columns: 100px 10px 100px 10px 100px;
+\b\fs36 \ul \
+
+\b0\fs28 \ulnone         <div class="box c">C</div>                                                                  -ms-grid-rows: auto 10px auto;\
+        <div class="box d">D</div>                                                             \}\
+        <div class="box e">E</div>
+\b\fs36 \ul \
+    
+\b0\fs28 \ulnone </div>
+\b\fs36 \ul \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b0\fs24 \cf0 Le placement de base\
+\
+\ulnone Utiliser la grille d\'e9j\'e0 d\'e9finie et positionner les \'e9l\'e9ments en subdivision afin d'organiser des "espaces de rangements".\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs28 \cf0 \ul HTML\ulnone                                                                                                   \ul CSS\
+\
+ \ulnone     \'85..\ul \
+      \ulnone <div class="Wrapper">                                                                      .a\{\
+        <div class="box a">A</div>                                                                  grid-column-start: 1;\
+        <div class="box b">B</div>                                                                  grid-column-end: 2;
+\b\fs36 \ul \
+
+\b0\fs28 \ulnone         <div class="box c">C</div>                                                                  grid-row-start: 1;\
+        <div class="box d">D</div>                                                                  grid-row-end: 2;\
+        <div class="box e">E</div>                                                                  \'85\'85\'85
+\b\fs36 \ul \
+    
+\b0\fs28 \ulnone </div>                                                                                                  \}
+\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b\fs36 \cf0 \ul \
+\
+\
+
+\b0\fs24 \ulnone Vous pouvez obtenir le m\'eame r\'e9sultat en utilisant une syntaxe plus courte qui d\'e9clare la valeur de fin et la valeur de d\'e9but. Les valeurs sont s\'e9par\'e9es par "/"\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs28 \cf0 \ul HTML\ulnone                                                                                                   \ul CSS\
+\
+ \ulnone     \'85..\ul \
+      \ulnone <div class="Wrapper">                                                                      .a\{\
+        <div class="box a">A</div>                                                                  grid-column-start: 1/2;\
+        <div class="box b">B</div>                                                                  grid-row: 1/2;
+\b\fs36 \ul \
+
+\b0\fs28 \ulnone         <div class="box c">C</div>                                                                  \'85.\
+        <div class="box d">D</div>                                                             \}\
+        <div class="box e">E</div>                                                                  
+\b\fs36 \ul \
+    
+\b0\fs28 \ulnone </div>                                                                                                  
+\fs24 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b\fs36 \cf0 \ul \
+\
+
+\b0\fs24 \ulnone Vous pouvez cr\'e9er des espaces plus grands qu'une cellule individuelle en \'e9tablissant une ligne de fin plus grande que celle-ci.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs28 \cf0 \ul HTML\ulnone                                                                                                   \ul CSS\
+\
+ \ulnone     \'85..\ul \
+      \ulnone <div class="Wrapper">                                                                      .a\{\
+        <div class="box a">A</div>                                                                  grid-column-start: 1/4;\
+        <div class="box b">B</div>                                                                  grid-row: 1/2;
+\b\fs36 \ul \
+
+\b0\fs28 \ulnone         <div class="box c">C</div>                                                                  \'85.\
+        <div class="box d">D</div>                                                             \}\
+        <div class="box e">E</div>                                                                  
+\b\fs36 \ul \
+    
+\b0\fs28 \ulnone </div>
+\b\fs36 \ul \
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b0\fs24 \cf0 L'organisation de zones\
+\
+\ulnone Vous pouvez nommer les zones de votre grille afin d'y ins\'e9rer du contenu sp\'e9cifique. Pour ce faire, nous utiliserons la propri\'e9t\'e9 "grid-area".\
+R\'e9p\'e9ter le nom d'une zone indique que celle-ci occupe un espace plus important sur la grille. Utilis\'e9 un "." indique un espace vide.\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs28 \cf0 \ul HTML\ulnone                                                                                                   \ul CSS\
+\
+ \ulnone     \'85..\ul \
+      \ulnone <div class="Wrapper">                                                                .sidebar\{\
+        <div class="header">Header</div>                                                   grid-area: sidebar;\
+        <div class="sidebar">Sidebar</div>                                           \}
+\b\fs36 \ul \
+
+\b0\fs28 \ulnone         <div class="content">Content</div>                                          .content\{\
+      </div>                                                                                                  grid-area: content;\
+                                                                                                           \}\
+                                                                                                           .header
+\b\fs36 \ul \
+                                                                                           
+\b0\fs28 \ulnone grid-area: header;
+\b\fs36 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b0\fs24 \cf0 \ulnone                                                                                                                                               
+\fs28 \}
+\fs24 \
+                                                                                                                                              
+\fs28 .Wrapper\{\
+                                                                                                             display: grid;\
+                                                                                                                 grid-template-rows: auto;\
+                                                                                                                 grid-template-areas: "header header header header header"\
+                                                                                                                                                  "sidebar.content content content"\
+\
+Voil\'e0 maintenant une page pr\'eate \'e0 fonctionner !
+\fs24 \
+
+\b\fs36 \ul \
+\
+\
+\
+\
+\
+\
+\
+\
+
+\b0\fs24 \ulnone \
+}
