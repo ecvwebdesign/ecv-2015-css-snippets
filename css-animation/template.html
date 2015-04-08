@@ -88,15 +88,15 @@
 
 								<li><a href="#ttPrt1" class="txtLink whTxt">composants d'une Animation</a></li>
 								<li><a href="#ttPrt2" class="txtLink whTxt">L’accointance avec les autres CSS</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">PRÉFIXES POUR DES NAVIGATEURS</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">compatibilité dans les navigateurs</a></li>
 
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">FONCTIONNALITÉS DE PROPRIÉTÉS</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">ANIMATIONS MULTIPLES</a></li>
+							
 
 							</div>
 						</ol>
@@ -136,7 +136,7 @@
 				<article class="txtRow">
 
 					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.</p>
+					<p class="blkColor level3">L'animation avec le CSS peut avoir quelques limites, mais global elles offrent un certain nombre d'avantages par rapport aux animations qui sont actionnées par JS. Plus facile à fonctionner avec et étant le matériel accéléré sont juste deux des avantages de la clé CSS.Naturellement les animations actionnées par CSS ont quelques inconvénients, tels que lui étant difficile d'avoir le contrôle complet au-dessus de eux.</p>
 					<p class="blkColor level4">[ Passez le souris au dessus le carré pour voir l'animation. ]</p>
 
 				</article>
@@ -369,11 +369,8 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 						<code class="css">
 @keyframes bounce {
   0%, 20%, 53%, 80%, 100% {transform: translate3d(0,0,0);}
-
   40%, 43% {transform: translate3d(0, -8px, 0);}
-
   70% {transform: translate3d(0, -8px, 0);}
-
   90% {transform: translate3d(0,-2px,0);}
 }
 						</code>
@@ -408,6 +405,30 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 
 					<p class="blkColor">Il existe d’autres conditions utilisables dans des cas plus rares, les lignes citées ci-dessus étant les plus couramment utilisées pour l'animation css.</p>
 
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.div {
+  -webkit-animation: bounceOut;
+  -moz-animation: bounceOut;
+       animation: bounceOut;}
+
+@-webkit-keyframes bounceOut {
+  0% {-webkit-transform: scale3d(.3,.3,.3);
+      -moz-transform: scale3d(.3,.3,.3);
+              transform: scale3d(.3,.3,.3);}
+  100% {-webkit-transform: scale3d(1, 1, 1);
+        -moz-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);}
+}
+                        </code>
+
+					</div>
+				</pre>
+
 				</article>
 
 			</section>
@@ -418,7 +439,7 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">4. utilisation de plusieurs feuilles de style</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. fonctionnalités de propriétés</h2>
 
 				</article>
 
@@ -426,76 +447,158 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">En cas de media queries lourds en styles CSS, on peut également séparer notre feuille de style en plusieurs feuilles de styles différentes, chacune étant associée à une résolution différente et contenant les styles attribués.</p>
-					<p class="blkColor">Il suffira de lier chaque feuille de style entre les balises <code class="smallSnippet blkColor">&lt;head&gt;</code> et <code class="smallSnippet blkColor">&lt;/head&gt;</code> de votre fichier HTML, de la même manière d’une feuille de style CSS unique. La seule différence sera un attribut, différent pour chaque feuille de style liée, qui associera ces feuilles à leurs résolutions d’écran correspondantes :</p>
+					<p class="blkColor">- Animation-Duration: 
+                    <br>La propriété animation durée définit le nombre de secondes ou millisecondes une animation faut pour terminer un cycle.</p>
+					<p class="blkColor">- Animation-Timing-Function:
+                    <br>Spécifie les valeurs des propriétés intermédiaires à utiliser pendant un cycle unique d’une animation.
+                    </p>
+                    <p class="blkColor">[ Les options: 
+                    <code class="smallSnippet blkColor">ease</code> ,
+                    <code class="smallSnippet blkColor">linear</code> ,
+                    <code class="smallSnippet blkColor">ease-in</code> ,
+                    <code class="smallSnippet blkColor">ease-out</code> ,
+                    <code class="smallSnippet blkColor">ease-in-out</code> ,
+                    <code class="smallSnippet blkColor">initial</code> ,
+                    <code class="smallSnippet blkColor">inherit</code> .
+                    <br>Si vous voulez plus de temps options avancés,vous pouvez créer une coutume timing-function par 
+                    <code class="smallSnippet blkColor">cubic-bezier curve</code> . ]</p>
+                    <p class="blkColor">- Animation-Iteration-Count:
+                    <br>Configure le nombre de fois que l'animation doit se répéter : vous pouvez définir infinite pour que l'animation se répète indéfiniment.</p>
+                    <p class="blkColor">[ Les valeurs: 
+                    <code class="smallSnippet blkColor">#</code>: un nombre spécifique d'itérations(1 par défaut).
+                    <code class="smallSnippet blkColor">infinite</code>: l'animation répète toujours.
+                    <br><code class="smallSnippet blkColor">initial</code>: définit le nombre d'itérations à la valeur par défaut.
+                    <code class="smallSnippet blkColor">inherit</code>: hérite de la valeur du parent. ]</p>
+                    <p class="blkColor">- Animation-Delay:
+                    <br>Configure le délai entre l'instant auquel l'élément est chargé et le début de l'animation. 
+                    <br>La value est définié par second(s) ou milliseconde(mil)</p>
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="insertExHere expl row">
+				    <div class="rr rect6"></div>
+				    <div class="rr rect7"></div>
+				    <div class="rr rect8"></div>
+				    <div class="rr rect9"></div>
+				    <div class="rr rect10"></div>
+				    <div class="rr rect11"></div>
+				    <div class="rr rect12"></div>
+				    <div class="rr rect13"></div>
+				    <div class="rr rect14"></div>
+				    <div class="rr rect15"></div>
+				</figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
 					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">html</h3>
+						<h3 class="whColor">css</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
-						<code class="xml">
-&lt;link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 900px)" href="style1.css" /&gt;
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+/* même option de .div peut écrire ensemble*/
+/* nom-animation temps-duration iteration-count */
+.div1,.div2,.div3,.div4,.div5,
+{ position:relative; animation: mmove 1.5s infinite; }
+/* nom-animation temps-duration delay iteration-count */
+.div6,.div7,.div8,.div9,.div10,
+{ position:relative; animation: mmoves 1.5s 1s infinite; }
+
+/* timing-fonction */
+.div1,.div6{animation-timing-function: linear;}
+.div2,.div7{animation-timing-function: ease;}
+.div3,.div8{animation-timing-function: ease-in;}
+.div4,.div9{animation-timing-function: ease-out;}
+.div5,.div10{animation-timing-function: ease-in-out;}
+
+@keyframes mmove 
+{ from {top: 0px;}  to {top: 160px;} }
+
+@keyframes mmoves 
+{ from {top: 0px;}  to {top: 160px;} }
+
 						</code>
+
+					</div>
+				</pre>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">- Animation-Direction: 
+                    <br>Configure si l'animation doit se jouer tour à tour en avant puis en arrière à chaque cycle de la séquence ou si elle doit revenir à son point de départ ou se répéter.</p>
+                    <p class="blkColor">[ Les valeurs: 
+                    <code class="smallSnippet blkColor">normal</code> ,
+                    <code class="smallSnippet blkColor">reverse</code> ,
+                    <code class="smallSnippet blkColor">alternate</code> ,
+                    <code class="smallSnippet blkColor">alternate-reverse</code> . ]</p>
+					<p class="blkColor">- Animation-Fill-Mode:
+                    <br>Configure les valeurs qui doivent être appliquée par l'animation avant et après qu'elle soit exécutée.
+                    </p>
+                    <p class="blkColor">[ Les options: 
+                    <code class="smallSnippet blkColor">backwards</code> ,
+                    <code class="smallSnippet blkColor">forwards</code> ,
+                    <code class="smallSnippet blkColor">both</code> ,
+                    <code class="smallSnippet blkColor">normal</code> . ]
+                    </p>
+                    <p class="blkColor">- Animation-Play-State:
+                    <br>Vous permet de mettre en pause et de reprendre la lecture de la séquence animée.</p>
+                    <p class="blkColor">[ Les valeurs: 
+                    <code class="smallSnippet blkColor">playing</code> ,
+                    <code class="smallSnippet blkColor">paused</code> . ]
+                    </p>
+
+				</article>
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="insertExHere expl row">
+				    <div class="rec1"></div>
+				    <div class="rec2"></div>
+				    <div class="rec3"></div>
+				    <div class="rec4"></div>
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.div1
+{ animation: rise 20s ease-in-out 2s infinite Alternate both; }
+.div2
+{ animation: slideOver 10s infinite Alternate-reverse both; }
+
+@keyframes rise {
+  0% {background: tomato; opacity: 0; transform: translateY(50px);}
+  10% {opacity: 1;}
+  20% {background: goldenred;}
+  55% {background: golden;}
+  100% {transform: translateY(-50px);}
+}
+
+@keyframes slideOver {
+  0% {transform: translateX(-150px); opacity: 0;}
+  20% {opacity: 1;}
+  90% {opacity: 1;}
+  100% {transform: translateX(10px); opacity: 0;}
+}
+
+.div3:hover
+{ cursor: pointer; animation: scale 2s forwards;}
+.div4:hover
+{ cursor: pointer; animation: scale 2s;}
+
+
+						</code>
+
 					</div>
 				</pre>
 
 			</section>
 
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt5" class="whBG smallAir">
-
-				<article class="txtRow">
-					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">5. images flexibles</h2>
-
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">S’il est possible de rendre des images flexibles en utilisant l’attribut CSS <code class="smallSnippet blkColor">max-width : 100%</code>, cet élément pose encore des soucis d’affichage sur des écrans type Retina, mais manque surtout de pertinence quant au changement de format des médias. En effet, une image au format paysage s’affichera parfaitement sur un site web, mais s’en trouvera excessivement réduite pour correspondre à la largeur d’un smartphone.</p>
-					<p class="blkColor">On peut gérer ce changement de plateforme grâce à la balise <code class="smallSnippet blkColor">&lt;picture&gt;</code>, qui permet alors d’appeler différentes versions d’une même image (cadrée différemment, par exemple) selon la résolution de l’écran sur lequel elle est visionnée.</p>
-					<p class="blkColor">L’ordre d’appel des différentes versions de l’image est important : il faudra appeler les images de la résolution la plus grande jusqu’à la plus petite, pour éviter les conflits entre media queries.</p>
-
-				</article>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">html</h3>
-
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
-						<code class="xml">
-&lt;picture>
-	&lt;source srcset="image-1.jpg" media="(min-width: 1000px)">
-	&lt;source srcset="image-2.jpg" media="(min-width: 500px)">
-	&lt;img src="image.jpg" alt="description de l’image">
-&lt;/picture>
-						</code>
-					</div>
-				</pre>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">On n’oublie évidemment pas de rajouter la balise <strong>viewport</strong> entre les balises <code class="smallSnippet blkColor">&lt;head&gt;&lt;/head&gt;</code> de notre page HTML afin d’assurer le fonctionnement des media queries.</p>
-
-				</article>
-
-			</section>
 
 			<!--UNE SECTION PAR PARTIE-->
 			<section id="ttPrt6" class="whBG airD">
@@ -503,7 +606,7 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">6. texte flexible</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">5. Animations multiples</h2>
 
 				</article>
 
@@ -511,11 +614,21 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Si l’on peut, comme avec les images, donner à son texte des tailles différentes en fonction de la résolution grâce aux media queries CSS, il est également désormais possible d’avoir du texte à la taille relative aux dimensions du viewport.</p>
-					<p class="blkColor">Il s’agit ici d’utiliser les attributs CSS “vw” et “vh”, acronymes de “viewport width” et “viewport height”. Une unité vw/vh correspond ici à 1% de la largeur ou de la hauteur de la fenêtre (selon l’unité choisie). Par exemple, pour une fenêtre large de 1000 pixels et haute de 500 pixels, 1 vw correspondra à une taille de texte de 10 pixels, et 1 vh correspondra à une taille de 5 pixels.</p>
-					<p class="blkColor">N’oubliez tout de même pas d’ajouter des tailles de texte “classiques”, en pixels, dans votre CSS afin d’assurer la visibilité de votre site en cas de navigateur incompatible.</p>
+					<p class="blkColor">Pour ajouter des animations multiples à un sélecteur, vous séparez simplement les valeurs avec une virgule.</p>
+                </article>
 
-				</article>
+                <pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.div 
+{ animation: slideIn 2s, rotate 1.75s; }
+						</code>
+
+					</div>
+				</pre>
 
 			</section>
 
@@ -534,7 +647,7 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">21+</span>
+						<span class="whColor level2 version">4.1+</span>
 					</div>
 
 					<div class="browser">
@@ -544,7 +657,7 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">4+</span>
+						<span class="whColor level2 version">8+</span>
 					</div>
 
 					<div class="browser">
@@ -554,7 +667,7 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">2.7+</span>
 					</div>
 
 					<div class="browser">
@@ -564,7 +677,7 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">3.5+</span>
+						<span class="whColor level2 version">3.6+</span>
 					</div>
 
 					<div class="browser">
@@ -574,7 +687,7 @@ animation: [animation-name] [animation-duration] [animation-timing-function] [an
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">1.1+</span>
 					</div>
 				</div>
 				
