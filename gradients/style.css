@@ -1,11 +1,14 @@
 
+
 html{
     background-color: #edf7eb;
+    font-family: 'Open Sans', sans-serif;
 }
 
-body{margin-left:100px;
-    margin-right:100px;
+body{
+   
     background-color: #ffffff;
+     font-family: 'Open Sans', sans-serif;
 }
 
 .container{
@@ -31,7 +34,7 @@ body{margin-left:100px;
     width: 100%;
     text-align: center;
     font-size: 30px;
-    font-family: Open Sans, 700;
+    font-family: 'Open Sans', 700;
  }   
 
  .title2 {
@@ -40,7 +43,7 @@ body{margin-left:100px;
     width: 100%;
     text-align: left;
     font-size: 30px;
-    font-family: Open Sans, 300;
+    font-family:'Open Sans', 300;
  }   
 
 .discription{
@@ -51,7 +54,7 @@ body{margin-left:100px;
     font-size: 18px;
     background-color: #d6e3df;
     padding: 10px 10px 10px 10px;
-    font-family: Open Sans, 400;
+    font-family: 'Open Sans', 400;
     border-radius: 10px;
 
 }
@@ -63,44 +66,44 @@ body{margin-left:100px;
     width: 100%;
     text-align: left;
     font-size: 14px;
-    font-family: Open Sans, 300;
+    font-family: 'Open Sans', 300;
 }
 
 .example_text{
     font-size: 14px;
-    font-family: Open Sans, 300;
+    font-family: 'Open Sans', 300;
 
 }
 
 .note{
     font-size: 14px;
     color: #88ab83;
-    font-family: Open Sans, 300;
+    font-family: 'Open Sans', 300;
 
 }
 
 .code_title{
     font-size: 20px;
     color: #4d6357;
-    font-family: Open Sans, 700;
+    font-family: 'Open Sans', 700;
 
 }
 
 .Degrade1 {
-background-image:linear-gradient(blue, red);
+background-image:linear-gradient(to bottom, blue, red);
 padding: 100px;
 margin-bottom: 20px;
 
 }
 
 .Degrade2 {
-background-image:linear-gradient(to right,blue , red );
-padding: 100px;
-margin-bottom: 20px;
+background:linear-gradient(to right,blue , red );
+
+
 
 }
 
-
+figure.expl{border: none;height:200px;}
 .Degrade3 {
 background-image:linear-gradient(to right,blue 10px, red 90px);
 padding: 100px;
@@ -115,20 +118,104 @@ margin-bottom: 20px;
 
 }
 .Degrade5 {
-background-image:radial-gradient(blue , red);
+background: radial-gradient(ellipse at center top, red, blue);
 padding: 100px;
 margin-bottom: 20px;
 }
 
 .Degrade6 {
-background: radial-gradient(closest-side at 60% 55%,blue,red,yellow,white);
+background: radial-gradient(closest-side at 10% 55%,red,blue);
 
 padding: 100px;
 margin-bottom: 20px;
 
 }
+.Degrade7 {
+background: linear-gradient(to right,blue,rgba(255,0,0,0));
+padding: 100px;
+margin-bottom: 20px;
+}
+.Degrade8 {
+background: linear-gradient(to right,blue,red,yellow,green);
+padding: 100px;
+margin-bottom: 20px;
+}
+
+.backimg{background-image: url("images/box-gradient.png");
+padding-top: 100px;
+background-repeat:no-repeat;
+background-position: 50% 50%;
+width:100%;}
+
+.backimg2{background-image: url("images/box-gradient-2.png");
+padding-top: 100px;
+background-repeat:no-repeat;
+background-position: 50% 50%;
+width:100%;}
 
 
+.backimg3{background-image: url("images/box-gradient-4.png");
+padding-top: 100px;
+background-repeat:no-repeat;
+background-position: 50% 50%;
+width:100%;}
+
+
+.backimg4{background-image: url("images/box-gradient-5.png");
+padding-top: 100px;
+background-repeat:no-repeat;
+background-position: 50% 50%;
+width:100%;
+ }
+
+figure.expl{height:350px;
+
+}
+
+
+
+.chiffre{
+
+    font-size: 50px;
+    font-family: 'Open Sans', 800;
+padding-left: 110px;
+
+}
+
+.chiffre2{
+
+    font-size: 50px;
+    font-family: 'Open Sans', 800;
+padding-left: 240px;
+
+}
+
+
+.chiffre3{
+
+    font-size: 50px;
+    font-family: 'Open Sans', 800;
+padding-left:240px;
+
+
+}
+
+.chiffre4{
+
+    font-size: 50px;
+    font-family: 'Open Sans', 800;
+padding-left:250px;
+
+
+}
+
+.chiffre5{
+
+    font-size: 50px;
+    font-family: 'Open Sans', 800;
+padding-left: 250px;
+
+}
 
 .buton{
 

@@ -6,10 +6,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="author" content="*auteur de la page, donc vous*" />
-		<meta name="description" content="*description du tutoriel*" />
+		<meta name="author" content="yann beduchaud" />
+		<meta name="description" content="un tutoriel sur les degrades" />
 
-		<title>Nom du tutoriel</title>
+		<title>Dégradés</title>
 
 		<!--STYLE GENERAL-->
 		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
 
 		<!--STYLE ADDITIONNEL-->
-		<!--<link rel="stylesheet" href="style.css" />-->
+		<link rel="stylesheet" href="style.css" />
 
 		<!--FONTES-->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
@@ -29,7 +29,7 @@
 		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
 		<script src="../js/foundation.min.js" type="text/javascript"></script>
 		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
-		<script src="../js/plugins/jquery.tuto.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
 
 	</head>
 
@@ -74,29 +74,31 @@
 				<article class="largeRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
-					<h1 class="blkColor ttTitle">Responsive Web Design</h1>
+					<h1 class="blkColor ttTitle">Dégradés</h1>
 
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique.</p>
+						<p class="blkColor level4">Vous voulez de beaux dégradés sur votre site ? Très simple, avec ce tutoriel vous allez produire des dégradés de qualité.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">viewport et breakpoints</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">à chaque breakpoint ses styles css</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">syntaxe</a></li>
-
+								<li><a href="#ttPrt1" class="txtLink whTxt">la syntaxe pour linear-gradient</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">créer un dégradé de gauche à droite</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">un dégradé de haut en bas</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">changer la position du centre du dégradé</a></li>
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">utilisation de plusieurs feuilles de style</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">images flexibles</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">texte flexible</a></li>
+								
+								<li><a href="#ttPrt5" class="txtLink whTxt">modifier le degré du dégradé</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">dégradé de la couleur à la transparence</a></li>
+								<li><a href="#ttPrt7" class="txtLink whTxt">syntaxe pour radial-gradient</a></li>
+								<li><a href="#ttPrt8" class="txtLink whTxt">créer un dégradé radial</a></li>
 
 							</div>
 						</ol>
@@ -104,7 +106,7 @@
 					</div>
 
 					<!--EDITEZ VOTRE NOM-->
-					<p class="ttAuteur">Créé par Élodie Dassance le 02/04/2015</p>
+					<p class="ttAuteur">Créé par Yann Beduchaud le 02/04/2015</p>
 
 					<div class="ttbuttons row">
 						<div class="medium-6 columns">
@@ -136,7 +138,7 @@
 				<article class="txtRow">
 
 					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">Un site web responsive est un site internet dont l’apparence et la structure sont adaptés à toutes résolutions, de manière fluide et dynamique. Si autrefois, la tendance était à l’élaboration d’une version des sites internet dédiée aux appareils portables complètement indépendante du site web classique, il existe désormais des moyens faciles de rendre votre site adaptable sans devoir le dupliquer.<br>Grâce à quelques lignes de CSS3, il est possible de définir ces différentes structures en fonction de la résolution de l’écran du média utilisé.</p>
+					<p class="blkColor level3">Avant, pour faire des dégradés il fallait appliquer une image en background-image, mais maintenant de nouvelles propriétés permettent de réaliser et gérer des arrières-plans de teintes dégradées. Il s'agit de linear-gradient pour les dégradés linéaires et radial-gradient pour les dégradés radiaux.</p>
 
 				</article>
 
@@ -148,7 +150,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">1. viewport et breakpoints.</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. La syntaxe pour linear-gradient.</h2>
 
 				</article>
 
@@ -156,14 +158,63 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Pour attribuer des styles CSS différents à plusieurs résolutions différentes, il faut tout d’abord définir ces résolutions. Il suffit de déterminer les largeurs d’écran, en pixels, des différentes versions de votre futur site web reponsive : largeur d’un écran desktop, largeur d’un écran de tablette, de smartphone...<br>Ces différentes étapes sont appelées “breakpoints”, ou “points de rupture”.</p>
-					<p class="blkColor">On définit les différents breakpoints grâce à des classes CSS appelées “media queries”.</p>
-					<p class="blkColor">Ces media queries pourront être calculées par les navigateurs à l’aide d’une balise essentielle pour le reste de ce tutoriel. Elle permet de calculer la taille dite du “viewport”, ou de la fenêtre d’affichage, afin de pouvoir assurer la bonne fonction de vos media queries.</p>
+					<p class="blkColor">Les dégradés linéaires empruntent la valeur-fonction linear-gradient() de la propriété background-image (ou background en raccourci). Il convient de préciser au minimum le point d'arrivée du dégradé ainsi que deux couleurs (ou plus).
+</p>
+					
 
 				</article>
 
+
+<pre class="snippet row largeRow">
+				
+
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Degrade {
+
+	background : linear-gradient(x y, couleur1, couleur2, couleurN)
+
+	/*x et/ou y définissent la direction du dégradé. Exemple : "to right" ou "to left bottom",couleur : le nom, la valeur hexadécimale ou la valeur RGBa*/
+
+
+}
+
+
+						</code>
+					</div>
+				</pre>
+				</section>
+
+<section id="ttPrt2" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">2. Créer un degradé de gauche à droite.</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Lorsque l'on crée un dégradé on remarque que les deux couleurs se mélangent à 50/50
+					
+
+				</article>
+
+
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="Degrade2 expl row ">
+				</figure>
+
+				<figure class="backimg4 expl row ">
+				<span class="chiffre3">50%</span>
+     			<span class="chiffre4">50%</span>  
+				</figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
@@ -173,11 +224,14 @@
 						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
 &lt;html&gt;
-	&lt;head&gt;
-		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-		...
-	&lt;/head&gt;
-	...
+
+	&lt;...&gt;
+
+	&lt;div class="Degrade2"&gt; 	
+	&lt;/div&gt;
+
+	&lt;...&gt;
+
 &lt;/html&gt;
 						</code>
 					</div>
@@ -187,74 +241,16 @@
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-.txtRow {
-	width: 64.0rem;
-	margin: 0 auto;
+.Degrade2 {
+
+	background:linear-gradient(to right,blue ,red );
+
+	/*spécifiez une hauteur à votre background car c'est un fond.*/
+
+	height:200px;
 }
 
-.ttPrtTitle {
-	text-transform: uppercase;
-	margin: 0 0 2.0rem;
-}
-						</code>
-					</div>
-				</pre>
 
-			</section>
-
-			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt2" class="whBG smallAir">
-
-				<article class="txtRow">
-					
-					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">2. à chaque breakpoint ses styles css</h2>
-
-				</article>
-
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Chaque résolution est ensuite définie pour chaque breakpoints par des intervalles de valeurs, indiquant les largeurs d’écran maximales et minimales d’affichage des styles concernés.</p>
-
-				</article>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">css</h3>
-
-						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
-						<code class="css">
-@media screen and (min-width: 900px) {
-	body {
-		color: red;
-	}
-}
-						</code>
-
-					</div>
-				</pre>
-
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">css</h3>
-
-						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
-						<code class="css">
-@media screen and (min-width: 500px) and (max-width: 900px) {
-	body {
-		background-color: black;
-	}
-}
 						</code>
 					</div>
 				</pre>
@@ -267,7 +263,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">3. syntaxe</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. Un dégradé de haut en bas.</h2>
 
 				</article>
 
@@ -275,20 +271,35 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Comme aperçu plus haut, on peut donc attribuer des styles à des résolutions selon différentes conditions. Voici un exemple des différentes conditions que vous pouvez utiliser pour définir vos breakpoints :</p>
-
-					<!--Si jamais vous avez une liste-->
-					<ul class="txtList">
-						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
-						<li><code class="smallSnippet blkColor">@media screen all</code> : toutes résolutions</li>
-						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx)</code> : écrans de largeur minimale de X pixels</li>
-						<li><code class="smallSnippet blkColor">@media screen and (max-width: Xpx)</code> : écrans de largeur maximale de X pixels</li>
-						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx) and (max-width: Ypx)</code> : écrans de largeur minimale de X pixels et de largeur maximale de Y pixels</li>
-					</ul>
-
-					<p class="blkColor">Il existe d’autres conditions utilisables dans des cas plus rares, les lignes citées ci-dessus étant les plus couramment utilisées pour le responsive web design.</p>
+					<p class="blkColor">Changer le sens du dégradé est extrêmement simple, il suffit de mettre to bottom dans la syntaxte linear-gradient pour avoir un dégradé de haut en bas.</p>
 
 				</article>
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="Degrade1 expl row"></figure>
+
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Degrade2 {
+
+	background:linear-gradient(to bottom,blue ,red );
+
+	/*spécifiez une hauteur à votre background car c'est un fond.*/
+
+	height:200px;
+}
+						</code>
+
+					</div>
+				</pre>
+
+			
 
 			</section>
 
@@ -298,7 +309,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">4. utilisation de plusieurs feuilles de style</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. Changer la position du centre du dégradé</h2>
 
 				</article>
 
@@ -306,25 +317,62 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">En cas de media queries lourds en styles CSS, on peut également séparer notre feuille de style en plusieurs feuilles de styles différentes, chacune étant associée à une résolution différente et contenant les styles attribués.</p>
-					<p class="blkColor">Il suffira de lier chaque feuille de style entre les balises <code class="smallSnippet blkColor">&lt;head&gt;</code> et <code class="smallSnippet blkColor">&lt;/head&gt;</code> de votre fichier HTML, de la même manière d’une feuille de style CSS unique. La seule différence sera un attribut, différent pour chaque feuille de style liée, qui associera ces feuilles à leurs résolutions d’écran correspondantes :</p>
+					<p class="blkColor">On peut modifier le centre du dégradé en donnant les pourcentages de couleurs. </p>
+</article>
+					<!--Si jamais vous avez une liste-->
+					<figure class="Degrade3 expl row"></figure>
+					<figure class="backimg expl row"> <span class="chiffre">10%</span>
+     <span class="chiffre2">90%</span> </figure>
 
-				</article>
 
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
+<pre class="snippet row largeRow">
 					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">html</h3>
+						<h3 class="whColor">css</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
-						<code class="xml">
-&lt;link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 900px)" href="style1.css" /&gt;
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Degrade2 {
+
+	background-image:linear-gradient(to right,blue 10%, red 90%);
+
+
+	/*spécifiez une hauteur à votre background car c'est un fond.*/
+
+	height:200px;
+}
 						</code>
+
 					</div>
 				</pre>
+<article class="txtRow">
+
+					<p class="blkColor">Vous pouvez également créer plusieurs dégradés successifs et même choisir le pourcentage de chaques couleurs, comme ceci:</p>
+				</article>
+			<figure class="Degrade8 expl row"></figure>
+			<article class="txtRow">
+
+			<p class="blkColor">Il vous suffit de placer les couleurs les unes à la suite des autres </p>
+		</article>
+			<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Degrade2 {
+
+	background-image:linear-gradient(to right,blue,red,yellow,green);
+
+
+	/*spécifiez une hauteur à votre background car c'est un fond.*/
+
+	height:200px;
+}
+						</code>
+
+					</div>
+				</pre>
+				</article>
 
 			</section>
 
@@ -334,7 +382,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">5. images flexibles</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">5. Modifier le degré du dégradé</h2>
 
 				</article>
 
@@ -342,28 +390,82 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">S’il est possible de rendre des images flexibles en utilisant l’attribut CSS <code class="smallSnippet blkColor">max-width : 100%</code>, cet élément pose encore des soucis d’affichage sur des écrans type Retina, mais manque surtout de pertinence quant au changement de format des médias. En effet, une image au format paysage s’affichera parfaitement sur un site web, mais s’en trouvera excessivement réduite pour correspondre à la largeur d’un smartphone.</p>
-					<p class="blkColor">On peut gérer ce changement de plateforme grâce à la balise <code class="smallSnippet blkColor">&lt;picture&gt;</code>, qui permet alors d’appeler différentes versions d’une même image (cadrée différemment, par exemple) selon la résolution de l’écran sur lequel elle est visionnée.</p>
-					<p class="blkColor">L’ordre d’appel des différentes versions de l’image est important : il faudra appeler les images de la résolution la plus grande jusqu’à la plus petite, pour éviter les conflits entre media queries.</p>
+					<p class="blkColor">On peut carrement mettre un angle à notre dégradé pour un effet d'autant plus stylisé.</p>
+				
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row"></figure>
+				<figure class="Degrade4 expl row"></figure>
+				<figure class="backimg2 expl row"> <span class="chiffre5">30°</span>
+      </figure>
+      <article class="txtRow">
+
+<p class="blkColor">Il faut placer le degré choisis dans la direction</p>
+</article>
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Degrade2 {
+
+	background-image:linear-gradient(30deg,blue, red);}
+
+
+	/*spécifiez une hauteur à votre background car c'est un fond.*/
+
+	height:200px;
+}
+						</code>
+
+					</div>
+				</pre>
+				
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt6" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. Dégradé de la couleur à la transparence</h2>
+
+				</article>
+
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Pour encore plus de style tu peux créer de majestueux fondus, pour celà nous allons créer un dégradé de la couleur à la transparence. 
+
+				</article>
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="Degrade7 expl row"></figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
 				<pre class="snippet row largeRow">
 					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">html</h3>
+						<h3 class="whColor">css</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
-						<code class="xml">
-&lt;picture>
-	&lt;source srcset="image-1.jpg" media="(min-width: 1000px)">
-	&lt;source srcset="image-2.jpg" media="(min-width: 500px)">
-	&lt;img src="image.jpg" alt="description de l’image">
-&lt;/picture>
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Degrade2 {
+
+	background-image:linear-gradient(to right,blue , rgba(255,255,255,0));
+
+
+	/*spécifiez une hauteur à votre background car c'est un fond.*/
+
+	height:200px;
+}
 						</code>
+
 					</div>
 				</pre>
 
@@ -371,19 +473,19 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">On n’oublie évidemment pas de rajouter la balise <strong>viewport</strong> entre les balises <code class="smallSnippet blkColor">&lt;head&gt;&lt;/head&gt;</code> de notre page HTML afin d’assurer le fonctionnement des media queries.</p>
+					<p class="blkColor">Pour se faire, nous avons agis sur la quatrième couche alpha que nous avons mis à 0 pour lui donner une totale transparence, mais vous pouvez modifiez le pourcentage de la transparence en réglant la couleur de 0 à 255</p>
 
 				</article>
 
 			</section>
 
 			<!--UNE SECTION PAR PARTIE-->
-			<section id="ttPrt6" class="whBG airD">
+			<section id="ttPrt7" class="whBG airD">
 
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">6. texte flexible</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">7. Syntaxe pour radial-gradient</h2>
 
 				</article>
 
@@ -391,11 +493,69 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Si l’on peut, comme avec les images, donner à son texte des tailles différentes en fonction de la résolution grâce aux media queries CSS, il est également désormais possible d’avoir du texte à la taille relative aux dimensions du viewport.</p>
-					<p class="blkColor">Il s’agit ici d’utiliser les attributs CSS “vw” et “vh”, acronymes de “viewport width” et “viewport height”. Une unité vw/vh correspond ici à 1% de la largeur ou de la hauteur de la fenêtre (selon l’unité choisie). Par exemple, pour une fenêtre large de 1000 pixels et haute de 500 pixels, 1 vw correspondra à une taille de texte de 10 pixels, et 1 vh correspondra à une taille de 5 pixels.</p>
-					<p class="blkColor">N’oubliez tout de même pas d’ajouter des tailles de texte “classiques”, en pixels, dans votre CSS afin d’assurer la visibilité de votre site en cas de navigateur incompatible.</p>
+					<p class="blkColor">Les dégradés radiaux sont réalisables à l'aide de la valeur-fonction radial-gradient(). Elle nécessite d'indiquer la forme du dégradé : circulaire (circle) ou elliptique (ellipse) ainsi que son point de départ.</p>
 
 				</article>
+				<pre class="snippet row largeRow">
+				
+
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Degrade {
+
+	background : radial-gradient(forme at x y, couleur1, ..., couleurN)
+
+	/* x et/ou y définissent le point d'origine du dégradé radial, 
+	couleur : le nom, la valeur hexadécimale ou la valeur RGBa*/
+
+
+}
+
+
+						</code>
+					</div>
+				</pre>
+<section id="ttPrt8" class="whBG airD">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">8. Créer un dégradé radial</h2>
+
+				</article>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Pour le radial-gradient il faut choisir le centre et où le situé, dans le cas ci dessous nous avons placer le centre en haut et au centre du cadre</p>
+
+				</article>
+			<figure class="Degrade5 expl row"></figure>
+<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Degrade2 {
+
+	background: radial-gradient(ellipse at center top, red, blue);
+
+
+	/*spécifiez une hauteur à votre background car c'est un fond.*/
+
+	height:200px;
+}
+						</code>
+
+					</div>
+				</pre>
 
 			</section>
 
@@ -414,7 +574,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">21+</span>
+						<span class="whColor level2 version">44+</span>
 					</div>
 
 					<div class="browser">
@@ -424,7 +584,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">4+</span>
+						<span class="whColor level2 version">8+</span>
 					</div>
 
 					<div class="browser">
@@ -434,7 +594,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">29+</span>
 					</div>
 
 					<div class="browser">
@@ -444,7 +604,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">3.5+</span>
+						<span class="whColor level2 version">39+</span>
 					</div>
 
 					<div class="browser">
@@ -454,7 +614,7 @@
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">11+</span>
 					</div>
 				</div>
 				
@@ -469,19 +629,18 @@
 
 				<!--EDITEZ VOS LIENS-->
 				<ul class="row largeRow links">
-					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
+					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/css/css3_gradients.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
 
-					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/TR/css3-mediaqueries/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org/TR/css3-mediaqueries/</a></li>
+					
+			
 
-					<li><span class="blkColor level4 upCase">mediaqueri.es - </span><a href="http://mediaqueri.es/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://mediaqueri.es/</a></li>
+					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/tuto/lire/813-css3-background-radial-linear-gradient.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
 
-					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
+					<li><span class="blkColor level4 upCase">red team design - </span><a href="http://red-team-design.com/cross-browser-css-gradient-buttons/" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://red-team-design.com</a></li>
 
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/586/CSS-Fluid-Image-Techniques-for-Responsive-Site-Design" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/n</a></li>
+					<li><span class="blkColor level4 upCase">mammouthland - </span><a href="http://css.mammouthland.net/css3/degrades-sans-image.php" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://css.mammouthland.net</a></li>
 
-					<li><span class="blkColor level4 upCase">demosthenes - </span><a href="http://demosthenes.info/blog/936/Responsive-Images-For-Designers-The-HTML5-picture-element" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://demosthenes.info/</a></li>
-
-					<li><span class="blkColor level4 upCase">sitepoint - </span><a href="http://www.sitepoint.com/new-css3-relative-font-size/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.sitepoint.com/</a></li>
+				
 				</ul>
 				
 			</section>
@@ -497,15 +656,15 @@
 					<div class="medium-4 columns">
 
 						<!--EDITEZ VOTRE PHOTO-->
-						<img src="../img/team/elodie.jpg" alt="photo auteur" />
+						<img src="images/yann.jpg" alt="photo auteur" />
 
 					</div>
 
 					<div class="medium-8 columns end details">
 
 						<!--EDITEZ VOTRE ID-->
-						<h2 class="whColor upCase">élodie dassance</h2>
-						<p class="level4 blkColor marginU marginD">Spécialiste certifiée en pop-idols japonaises et docteur en fabrication de cookies maison, mon but est de diffuser une idée fun, fraîche et multilingue du webdesign… avec le sourire ( • ̀ω•́  )✧</p>
+						<h2 class="whColor upCase">yann beduchaud</h2>
+						<p class="level4 blkColor marginU marginD">Je suis intéressé par la projection et l'expérience interactive.</p>
 
 						<!--EDITEZ VOS LIENS-->
 						<div class="iconWrapper centerOrigin flex equalRep large-6">

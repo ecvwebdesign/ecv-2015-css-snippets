@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="author" content="yann beduchaud" />
+		<meta name="description" content="un tutoriel sur les degrades" />
+
+		<title>Dégradés</title>
+
+		<!--STYLE GENERAL-->
+		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
+
+		<!--STYLE ADDITIONNEL-->
+		<link rel="stylesheet" href="style.css" />
+
+		<!--FONTES-->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" media="all" type="text/css" href="../css/fonts.css" />
+
+		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
+		<script type="text/javascript" src="../js/vendor/modernizr.js"></script>
+		<script src="../js/vendor/jquery.js" type="text/javascript"></script>
+		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="../js/foundation.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
+
+	</head>
+
+	<body>
+
+		<header class="blkBG">
+
+			<div class="row headerContent">
+				<div class="medium-4 columns headerColumn7">
+					<a href="../../ecv-2015-css-snippets" alt="lien vers l'accueil"><img id="logotype" src="../img/logotype.svg" alt="logotype snippets" /></a>
+				</div>
+
+				<nav id="mainNav" class="medium-8 columns flex flexColumn endRep">
+					<a href="../#topics" class="noMargin" alt="lien vers les thèmes">thèmes</a>
+					<a href="../#team" alt="lien vers l'équipe">l'équipe</a>
+					<a href="#contact" alt="ancre vers la section contact">contact</a>
+				</nav>
+
+				<div id="toggleMenu" class="medium-1 columns headerColumn3">
+					<button>
+						<i class="iconFA rwdIconFA whColor burgerIcn animation"></i>
+					</button>
+				</div>	
+
+				<nav class="navMenu" id="rwdNav">
+					<h3 class="blBG blkColor">Menu</h3>
+					<a href="../#topics" class="snLink" alt="lien vers les thèmes">thèmes</a>
+					<a href="../#team" class="snLink" alt="lien vers l'équipe">l'équipe</a>
+					<a href="#contact" class="snLink" alt="ancre vers la section contact">contact</a>
+					<a alt="vers le haut" class="ttTop"><i class="iconFA rwdIconFA whColor arrowUIcn animation"></i>vers le haut</a>
+				</nav>
+			</div>
+
+		</header>
+
+			</body>
+
+</html>
