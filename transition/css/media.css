@@ -5,14 +5,21 @@
 .container6 {
   margin-top: 0;
   padding-top: 50px;
+<<<<<<< HEAD
+  
+  padding-bottom: 50px;
+  
+  height: 1350px;
+=======
   padding-bottom: 50px; 
   height: 1250px;
+>>>>>>> origin/master
 }
 
 .container7 {
   margin-top: 0px;
   background-color: white;
-  height: 1700px;
+  height: 2200px;
 }
 
 
@@ -22,21 +29,7 @@
   text-align: center;
 }
 
-.large-3{
-  width: 50%;
-  margin: 50px 0 50px 0;
-}
 
-.menuButton:hover {
-  position: absolute;
-  transition-property: background-color, color, border;
-  transition-duration: .5s;
-  transition-timing-function: ease-out;
-  transform: scale(1.075);
-  background-color:white;
-  color:#5A9596;
-  border: solid 3px #5A9596;
-}
 
 .ext { 
   perspective: 1000; 
@@ -92,7 +85,7 @@
 .container7 {
   margin-top: 0px;
   background-color: white;
-  height: 1500px;
+  height: 1700px;
 }
 
 .large-4{
@@ -100,22 +93,7 @@
   text-align: center;
 }
 
-.large-3{
-  width: 50%;
-  margin: 50px 0 50px 0;
 
-}
-
-.menuButton:hover {
-  position: absolute;
-  transition-property: background-color, color, border;
-  transition-duration: .5s;
-  transition-timing-function: ease-out;
-  transform: scale(1.1);
-  background-color:white;
-  color:#5A9596;
-  border: solid 3px #5A9596;
-}
 
   .ext { 
   perspective: 1000; 

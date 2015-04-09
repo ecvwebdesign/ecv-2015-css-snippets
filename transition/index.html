@@ -40,7 +40,7 @@
 
 			<div class="row headerContent">
 				<div class="medium-4 columns headerColumn7">
-					<a href="/" alt="lien vers l'accueil"><img id="logotype" src="../img/logotype.svg" alt="logotype snippets" /></a>
+					<a href="../../ecv-2015-css-snippets" alt="lien vers l'accueil"><img id="logotype" src="../img/logotype.svg" alt="logotype snippets" /></a>
 				</div>
 
 				<nav id="mainNav" class="medium-8 columns flex flexColumn endRep">
@@ -80,24 +80,25 @@
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Avec CSS3 transition, on peut ajouter les effets de changement de forme et animer les pages web uniquement à l'aide de styles CSS, sans apport de JavaScript.</p>
+						<p class="blkColor level4">Avec les transitions CSS3, on peut ajouter des effets de changement de forme et animer des pages web uniquement à l'aide de styles CSS, sans ajout de JavaScript.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">Que-ce que c'est la transition dans CSS?</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">Code basique de transition</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">Transition timing-function</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">QUE-CE QUE C'EST ?</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">BASES SUR TRANSITION</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">TRANSITION TIMING-FUNCTION</a></li>
 
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">Transitions en proportion data</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">Transitions en surlignant menus</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">Transitions en image galerie</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">DATAVISUALISATION</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">SURLIGNAGE DES LIENS</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">GALERIE D’IMAGES
+</a></li>
 
 							</div>
 						</ol>
@@ -141,13 +142,13 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">1.Que-ce que c'est la transition dans CSS?</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. LES TRANSITIONS, QUE-CE QUE C'EST ?</h2>
 
 				</article>
 
 				<article class="txtRow">
 
-					<p class="blkColor">Grâce aux dernières évolutions du langage et au module CSS3 Transitions, il est désormais possible de réaliser des transitions basiques à l'aide de CSS dans les navigateurs récents.<br>Comme premier exemple, je vais vous montrer quelque chose de vraiment basilaire (je promets, la prochaine sera plus excitant)<br>Passez votre souris sur les deux ronds en base:</p>
+					<p class="blkColor">Grâce aux dernières évolutions du langage et au module CSS3 Transitions, il est désormais possible de réaliser des transitions basiques à l'aide de CSS dans les navigateurs récents.<br>Comme premier exemple, je vais vous montrer quelque chose de vraiment basique (je vous promets, la prochaine étape sera plus drôle !)<br>Passez votre souris sur les deux ronds ci-dessous :</p>
 
 				</article>
 				
@@ -386,32 +387,30 @@
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
 .menuButton {
-	display: block;
-	text-align: center;
-	background-color: #5A9596;
-	width: 80%;
-	height: 50px;
-	color: white;
-	font-family: sans-serif;
-	font-size: 20px;
-	text-decoration: none;
-	padding: 6px;
-	border: solid 3px white;
-	margin: 0 auto;
+  display: block;
+  text-align: center;
+  background-color: #5A9596;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 20px 50px 20px 50px;
+  border: solid 3px white;
+  -webkit-transition: background-color 1s, color 1s, border 1s, -webkit-transition 1s; /* Safari */
+   -o-transition: background-color 1s, color 1s, border 1s, -webkit-transition 1s; /* Opera */
+    -moz-transition: background-color 1s, color 1s, border 1s, -webkit-transition 1s; /* Firefox */
+}
+
+.menuButton:hover {
+  
+  -webkit-transform: scale(1.1);
+  transform-origin: center center;
+  background-color:#ffffff;
+  color:#5A9596;
+  border: solid 3px #5A9596;
 	transition-property: background-color, color, border;
 	transition-duration: .4s;
 	transition-timing-function: ease-out;
 	transition: all .5s ease-out;
-}
-
-.menuButton:hover {
-	transition-property: background-color, color, border;
-	transition-duration: .5s;
-	transition-timing-function: ease-out;
-	transform: scale(1.2);
-	background-color:white;
-	color:#5A9596;
-	border: solid 3px #5A9596;
 }
 
 						</code>
@@ -435,7 +434,7 @@
 						<div class="ext" ontouchstart="this.classList.toggle('hover');">
 							<div class="int">
 								<div class="front"> 
-									<img class="img" src="img/ex_feuille.jpg">
+									<img class="img" src="img/tuto_image-01.jpg">
 								</div>
 								<div class="back"> 
 								#image1
@@ -448,7 +447,7 @@
 						<div class="ext" ontouchstart="this.classList.toggle('hover');">
 							<div class="int">
 								<div class="front"> 
-									<img class="img" src="img/ex_feuille.jpg">
+									<img class="img" src="img/tuto_image-02.jpg">
 								</div>
 								<div class="back"> 
 								#image2
@@ -461,7 +460,7 @@
 						<div class="ext" ontouchstart="this.classList.toggle('hover');">
 							<div class="int">
 								<div class="front"> 
-									<img class="img" src="img/ex_feuille.jpg">
+									<img class="img" src="img/tuto_image-03.jpg">
 								</div>
 								<div class="back"> 
 									#image3
@@ -474,7 +473,7 @@
 						<div class="ext" ontouchstart="this.classList.toggle('hover');">
 							<div class="int">
 								<div class="front"> 
-									<img class="img" src="img/ex_feuille.jpg">
+									<img class="img" src="img/tuto_image-04.jpg">
 								</div>
 								<div class="back"> 
 									#image4
@@ -736,7 +735,7 @@
 			<div class="row">
 				<div class="medium-6 column">
 
-					<a href="../mentions-obligatoires" alt="lien vers les mentions légales" class="txtLink whTxt">Mentions obligatoire</a>
+					<a href="../mentions-obligatoires" alt="lien vers les mentions légales" class="txtLink whTxt">Mentions obligatoires</a>
 
 				</div>
 

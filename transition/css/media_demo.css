@@ -6,7 +6,7 @@
   background-color:#5f8783;
   padding-top: 50px;
   padding-bottom: 50px;
-  height:900px;
+  height:1100px;
 }
 
 .container4 {
@@ -16,7 +16,7 @@
   background-color: #b7dccb;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: 900px;
+  height: 1100px;
 
 }
 .container5 {
@@ -26,7 +26,7 @@
   background-color:  #e3f0f2;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: 900px;
+  height: 1100px;
 
 }
 
@@ -108,6 +108,7 @@
 
 
 @media screen and (min-width: 728px) and (max-width: 1049px) {
+
 	
 .alonger,
 .couleur,
@@ -180,6 +181,35 @@
 .slide-icon:hover{
   position:absolute;
   margin-top:0;
+}
+.container3 {
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color:#5f8783;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height:900px;
+}
+
+.container4 {
+
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: #b7dccb;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 900px;
+
+}
+.container5 {
+
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color:  #e3f0f2;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 900px;
+
 }
 
 }

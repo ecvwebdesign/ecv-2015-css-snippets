@@ -29,9 +29,15 @@
 	height: 860px;
 }
 .container7 {
+<<<<<<< HEAD
+  margin-top: 0px;
+  background-color: white;
+  height: 1600px;
+=======
 	margin-top: 0px;
 	background-color: white;
 	height: 1500px;
+>>>>>>> origin/master
 }
 
 .container2 {
@@ -182,31 +188,29 @@
 
 .menuButton {
   display: block;
-	text-align: center;
-	background-color: #5A9596;
-	width: 80%;
-	height: 50px;
-	color: white;
-	font-family: sans-serif;
-	font-size: 20px;
-	text-decoration: none;
-	padding: 6px;
-	border: solid 3px white;
-	margin: 0 auto;
+  text-align: center;
+  background-color: #5A9596;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 20px 50px 20px 50px;
+  border: solid 3px white;
+  -webkit-transition: background-color 1s, color 1s, border 1s, -webkit-transition 1s; /* Safari */
+   -o-transition: background-color 1s, color 1s, border 1s, -webkit-transition 1s; /* Opera */
+    -moz-transition: background-color 1s, color 1s, border 1s, -webkit-transition 1s; /* Firefox */
+}
+
+.menuButton:hover {
+  
+  -webkit-transform: scale(1.1);
+  transform-origin: center center;
+  background-color:#ffffff;
+  color:#5A9596;
+  border: solid 3px #5A9596;
 	transition-property: background-color, color, border;
 	transition-duration: .4s;
 	transition-timing-function: ease-out;
 	transition: all .5s ease-out;
-}
-
-.menuButton:hover {
-  transition-property: background-color, color, border;
-	transition-duration: .5s;
-	transition-timing-function: ease-out;
-	transform: scale(1.2);
-	background-color:white;
-	color:#5A9596;
-	border: solid 3px #5A9596;
 }
 
 figure.expl {
@@ -265,8 +269,15 @@ figure.fixedHeight {
 
 .front, 
 .back {
+<<<<<<< HEAD
+  backface-visibility: hidden;
+  position: absolute; 
+  top: 0; 
+  left: 0;
+=======
 	backface-visibility: hidden;
 	position: absolute; top: 0; left: 0;
+>>>>>>> origin/master
 }
 
 .front { 
