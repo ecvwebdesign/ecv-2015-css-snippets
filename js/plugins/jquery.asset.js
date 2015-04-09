@@ -35,6 +35,7 @@ cover = function() {
 
 // avoir un carré peu importe la taille
 itemsRatio = function() {
+
 	var widthRef = $(".topicsWrapper li .urDesign").width();
 
 	$('.flexMosaic li .urDesign').css('height', widthRef +'px');
@@ -43,11 +44,13 @@ itemsRatio = function() {
 		var widthRef = $(".flexMosaic li .urDesign").width();
 		$('.flexMosaic li .urDesign').css('height', widthRef +'px');
 	})
+
 }
 
 // centrer le titre
 centerTitle = function() {
-	var heightRef = ($(".flexMosaic li .urDesign").height())/4;
+
+	var heightRef = ($(".flexMosaic li").height())/4;
 
 	$('.topicsWrapper li span h2').css({
 									'transform': 'translateY('+heightRef +'px)',
@@ -63,7 +66,6 @@ centerTitle = function() {
 						'transform': 'translateY(0)',
 						'-webkit-transform': 'translateY(0)',
 						'-moz-transform': 'translateY(0)',
-						'color': '#fff'
 					})
 		},
 		mouseleave: function(event){
@@ -73,10 +75,10 @@ centerTitle = function() {
 						'transform': 'translateY('+heightRef +'px)',
 						'-webkit-transform': 'translateY('+heightRef +'px)',
 						'-moz-transform': 'translateY('+heightRef +'px)',
-						'color': '#5A9596'
 					})
 		}
 	});
+
 }
 
 // initialisation du style de snippets
