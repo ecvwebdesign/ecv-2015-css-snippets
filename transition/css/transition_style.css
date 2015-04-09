@@ -176,11 +176,10 @@
 	font-weight: 900;
 	font-size: 30px;
 	margin: 50px;
-}
-
-.couleur1{
 	-webkit-transition: background-color .5s linear;
 }
+
+
 
 .couleur1:hover{
 	background-color: #a88963;

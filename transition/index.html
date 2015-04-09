@@ -115,7 +115,7 @@
 						<div class="medium-6 columns end marginSU">
 
 							<!--Editez la class du lien au lieu de rwdSize, qui est propre à ce qu'à fait élodie, voir à style.css-->
-							<a href="#" alt='lien de téléchargement' class="button medium centerOrigin animation rwdSize whBut"><span class="animation">télécharger</span></a>
+							<a href="../src/transition_zip.zip" alt='lien de téléchargement' class="button medium centerOrigin animation rwdSize whBut"><span class="animation">télécharger</span></a>
 
 						</div>
 					</div>
@@ -167,7 +167,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">2.Code basique de transition</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">2.BASES SUR TRANSITION</h2>
 
 				</article>
 
@@ -178,7 +178,7 @@
 						<li><strong>transition-property:</strong> spécifie le nom de la propriété CSS qui a besoin de l'effet de transition.</li>
 						<li><strong>transition-duration:</strong> spécifie le nombre de secondes ou milli-secondes un effet de transition prend pour terminer.</li>
 						<li><strong>transition-timing-function:</strong> spécifie la courbe de vitesse de l'effet de transition.</li>
-						<li><strong>transition-delay:</strong> spécifie un délai ( en secondes) pour l'effet de transition.</li>
+						<li><strong>transition-delay:</strong> spécifie un délai (en secondes) pour l'effet de transition.</li>
 					</ul>
 
 				</article>
@@ -203,7 +203,7 @@
 				</pre>
 
 				<article class="txtRow">
-					<p class="blkColor">La version abrégée：</p>
+					<p class="blkColor">La version abrégée “shorthand”：</p>
 				</article>
 
 				<pre class="snippet row largeRow">
@@ -227,11 +227,14 @@
 					<p class="blkColor">Pour crée un effet de transition, on dois spécifier deux points:</p>
 
 					<ul class="txtList">
-						<li>le propriété de CSS qu’on veut ajouter les effets.</li>
-						<li>la duration des effets.</li>
+						<li>•la propriété de CSS sur laquelle on veut ajouter des effets;</li>
+						<li>•la durée des effets. </li>
 					</ul>
 
-					<p>Voici est l'effet qu'on a fait: (Passez votre souris sur les éléments en base)</p>
+					<p>L'effet de transition commencera lorsque la propriété CSS spécifiée (ici, couleur) change de valeur .<br>
+
+Maintenant, précisons une nouvelle valeur pour la propriété : width. Lorsqu'un utilisateur passe la souris sur l'élément…
+</p>
 
 				</article>
 					
@@ -246,7 +249,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">3. Transition timing-function</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. TRANSITION TIMING-FUNCTION</h2>
 
 				</article>
 
@@ -255,12 +258,13 @@
 					<p class="blkColor">La propriété transition - timing-function peut avoir les valeurs suivantes:</p>
 
 					<ul class="txtList">
-						<li><strong>ease</strong> - spécifie un effet de transition avec un démarrage lent, puis rapide, puis se arrête lentement ( ce est par défaut).</li>
+						<li><strong>ease</strong> -  spécifie un effet de transition avec un démarrage lent , puis rapide, puis s’arrête lentement (par défaut).</li>
 						<li><strong>linear</strong> - spécifie un effet de transition à la même vitesse du début à la fin.</li>
 						<li><strong>ease-in</strong> - spécifie un effet de transition avec un démarrage lent.</li>
-						<li><strong>ease-out</strong> - spécifie un effet de transition avec une extrémité lente.</li>
-						<li><strong>ease-in-out</strong> - spécifie un effet de transition avec un démarrage lent et à la fin.</li>
-						<li><strong>cubic-bezier(n,n,n,n)</strong> - nous permet de définir nos propres valeurs dans une fonction cubique - Bézier.</li>
+						<li><strong>ease-out</strong> - spécifie un effet de transition avec une fin lente.</li>
+						<li><strong>ease-in-out</strong> -spécifie un effet de transition avec un démarrage et une fin lents.</li>
+						<li><strong>cubic-bezier(n,n,n,n)</strong> - nous permet de définir nos propres valeurs dans une fonction cubique de type courbes de Bézier.
+</li>
 					</ul>
 
 				</article>
@@ -286,10 +290,16 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">4. Transitions en proportion data</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">4.EXEMPLE 1 : DATAVISUALISATION</h2>
 
 				</article>
 
+				<article class="txtRow">
+
+					<p class="blkColor">Avec la transition, on peut faire des effets pour illustrer des proportions dans le cadre de datavisualisation, par exemple.<br>
+Tout d’abord, on dessine un cube avec width: 50px et background color: #5A9596. En suite, au passage de la souris, on change ses propriétés : width et  background color. On l’écrit comme ça : -webkit-transition: width 2s ease,  background-color 2s ease; /* Safari */ , la transition va durer 2s avec la vitesse ease. Sur l’état hover, on écrit les valeurs de changement.
+</p>
+                </article>
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
 					
@@ -352,9 +362,18 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">5. Transitions en surlignant menus</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">5.EXEMPLE 2 : SURLIGNAGE DES LIENS</h2>
 
 				</article>
+
+				<article class="txtRow">
+
+					<p class="blkColor">Avec la transition, on peut aussi ajouter des effets de mouvements pour les liens, dans un menu, par exemple.<br>
+On peut ajouter une propriété CSS transform pour avoir un effet plus intéressant. L’attribut transform: scale(1.2) est fait pour avoir un effet au passage de la souris, modifiant la taille de l’éléments pour qu’elle soit 1.2 fois plus grand que l’origine. 
+
+</p>
+
+					</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
@@ -424,9 +443,17 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">6. Transitions en image galerie</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. EXEMPLE 3 : GALERIE D’IMAGES</h2>
 
 				</article>
+
+				<article class="txtRow">
+
+					<p class="blkColor">Avec les transitions et la propriété transform, on peut aussi ajouter des effets sur les images.
+
+</p>
+
+					</article>
 
 				<figure class="insertExHere expl row">
 					
