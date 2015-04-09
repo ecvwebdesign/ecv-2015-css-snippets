@@ -268,16 +268,11 @@ figure.fixedHeight {
 
 .front, 
 .back {
-<<<<<<< HEAD
   backface-visibility: hidden;
   position: absolute; 
   top: 0; 
   left: 0;
-=======
-	backface-visibility: hidden;
-	position: absolute; top: 0; left: 0;
->>>>>>> origin/master
-}
+
 
 .front { 
 	z-index: 2;

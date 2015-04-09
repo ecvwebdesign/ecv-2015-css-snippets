@@ -1,4 +1,28 @@
-@media screen and (max-width: 1049px) {
+@media screen and (max-width: 1029px) {
+.rond1{
+  text-align: center;
+  background-color:#5A9596;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  padding: 50px;
+  margin: 0 auto; 
+  font-size: 20px;
+  color: white;
+}
+
+.rond2 {
+  text-align: center;
+  background-color:#5A9596;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  padding: 50px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: white;
+  -webkit-transition: width .5s ease, height  .5s ease, padding .5s ease;
+}
 
 .rond1:hover,.rond2:hover{
   width: 150px;
@@ -100,36 +124,51 @@
 }
 
 
+.ext { 
+  perspective: 1000; 
+}
+
+.ext,
+.front,
+.back { height: 140px; width: 105px; margin: 0 auto; margin-bottom: 10px; margin-top: 10px;  }
+
+.ext:hover .int, 
+.ext.hover .int { 
+  transform: rotateY(180deg); 
+}
+
+.int { 
+  transition: .75s;
+  transform-style: preserve-3d;
+}
+
+.front, 
+.back {
+  backface-visibility: hidden;
+  position: absolute; top: 0; left: 0;
+}
+
+.front { 
+  z-index: 2;
+   
+}
+
+.back { 
+  transform: rotateY(180deg);
+  background: #5A9596; 
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  padding-top:30px;
+}
+
 
 }
 
 
 @media screen and (max-width: 727px) {
 
-.rond1{
-  text-align: center;
-  background-color:#5A9596;
-  border-radius: 100%;
-  width: 120px;
-  height: 120px;
-  padding: 50px;
-  margin: 0 auto; 
-  font-size: 20px;
-  color: white;
-}
 
-.rond2 {
-  text-align: center;
-  background-color:#5A9596;
-  border-radius: 100%;
-  width: 120px;
-  height: 120px;
-  padding: 50px;
-  margin: 0 auto;
-  font-size: 20px;
-  color: white;
-  -webkit-transition: width .5s ease, height  .5s ease, padding .5s ease;
-}
 
 .large-4{
   width: 100%;
@@ -138,61 +177,13 @@
 
 
 
-.ext { 
-  perspective: 1000; 
-}
-
-.ext,
-.front,
-.back { height: 130px; width: 95px; margin: 0 auto; margin-bottom: -20px; margin-top: -20px;  }
-
-.ext:hover .int, 
-.ext.hover .int { 
-  transform: rotateY(180deg); 
-}
-
-.int { 
-  transition: .75s;
-  transform-style: preserve-3d;
-}
-
-.front, 
-.back {
-  backface-visibility: hidden;
-  position: absolute; top: 0; left: 0;
-}
-
-.front { 
-  z-index: 2;
-   
-}
-
-.back { 
-  transform: rotateY(180deg);
-  background: #5A9596; 
-  text-align: center;
-  font-size: 20px;
-  color: white;
-  padding-top:50px;
-}
-
-}
-
 
 
 
 }
 
-@media screen and (min-width: 728px) and (max-width: 1049px) {
-	.container6 {
-  margin-top: 0;
-  padding-top: 50px;
-  
-  padding-bottom: 50px;
-  
-  height:1180px;
-}
-
+@media screen and (min-width: 728px) and (max-width: 1029px) {
+	
 
 .large-4{
   width: 50%;
@@ -200,75 +191,15 @@
 }
 
 
-.rond1{
-  text-align: center;
-  background-color:#5A9596;
-  border-radius: 100%;
-  width: 120px;
-  height: 120px;
-  padding: 50px;
-  margin: 0 auto; 
-  font-size: 20px;
-  color: white;
-}
 
-.rond2 {
-  text-align: center;
-  background-color:#5A9596;
-  border-radius: 100%;
-  width: 120px;
-  height: 120px;
-  padding: 50px;
-  margin: 0 auto;
-  font-size: 20px;
-  color: white;
-  -webkit-transition: width .5s ease, height  .5s ease, padding .5s ease;
-}
 
-.ext { 
-  perspective: 1000; 
-}
-
-.ext,
-.front,
-.back { height: 200px; width: 150px; margin: 0 auto; margin-bottom: -40px; margin-top: -30px;  }
-
-.ext:hover .int, 
-.ext.hover .int { 
-  transform: rotateY(180deg); 
-}
-
-.int { 
-  transition: .75s;
-  transform-style: preserve-3d;
-}
-
-.front, 
-.back {
-  backface-visibility: hidden;
-  position: absolute; top: 0; left: 0;
-}
-
-.front { 
-  z-index: 2;
-   
-}
-
-.back { 
-  transform: rotateY(180deg);
-  background: #5A9596; 
-  text-align: center;
-  font-size: 26px;
-  color: white;
-  padding-top:80px;
-}
 
 }
 
 
 
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1030px) {
 
    .ext { 
   perspective: 1000; 
