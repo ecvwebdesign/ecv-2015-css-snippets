@@ -73,10 +73,8 @@ _______________
 }
 
 .column, .columns {
-  position: relative;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  float: left;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
 }
 
 *#sectionWrap {
@@ -228,7 +226,7 @@ _______________
 /* boutons */
 a.button, button.button {
 	width: 100%; height: 5.0rem;
-	padding: 1.3rem 0;
+	padding: 1.4rem 0;
 	margin: 0;
 	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 	font-size: 1.8rem; font-weight: 600;
@@ -240,7 +238,7 @@ a.button, button.button {
 
 a.button::before, button.button::before {
 	width: 100%; height: 100%;
-	padding: 1.3rem 0;;
+	padding: 1.4rem 0;
 	font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 	font-size: 1.8rem; font-weight: 600;
 	text-transform: uppercase;
@@ -321,7 +319,7 @@ a.blBut span, button.blBut span {
 a.txtLink {
 	font-size: 1.6rem; font-weight: 400;
 	text-decoration: none;
-	padding: 0 0 .5rem;
+	padding: 0 0 .3rem;
 }
 
 a.txtLink:hover {
@@ -543,6 +541,9 @@ _______________
 *.redColor {
 	color: #FF2744;
 }
+*.blColor {
+	color: #5A9596;
+}
 
 
 /*
@@ -554,7 +555,7 @@ header {
 	width: 100%; height: auto;
 	position: fixed;
 	top: 0; right: 0;
-	z-index: 999;
+	z-index: 9999;
 }
 
 header .headerContent {
@@ -630,6 +631,11 @@ section ul {
 	padding: 0;
 	list-style: none;
 	list-style-image: none;
+}
+
+section.snippetCover {
+	background: url(../img/couverture.svg) 50% 50% no-repeat;
+	background-size: cover;
 }
 
 h1.sectionTitle {
@@ -740,9 +746,10 @@ h1.sectionTitle::before {
 }
 
 /* thèmes vignettes */
-*.toppicWrapper li .urDesign {
+*.toppicWrapper li .urDesign img {
 	width: 100%;
 }
+
 
 /* équipe vignettes */
 *.teamWrapper li.teamPics img {
@@ -834,9 +841,9 @@ textarea[type="text"] {
 }
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-  background-color: #042744;
-  background-image: none;
-  color: #fff;
+	background-color: #042744;
+	background-image: none;
+	color: #fff;
 }
 
 *.sendBut {
@@ -984,9 +991,11 @@ pre.snippet h3 {
 pre.snippet .medium-8 {
 	width: 100%;
 }
-pre.snippet .medium-8:last-child {
+
+pre.snippet .medium-8:nth-child(2) {
 	margin: 4.0rem 0 0;
 }
+
 
 code.smallSnippet {
 	padding: .3rem;
@@ -1119,7 +1128,7 @@ _______________
 	}
 
 	i.iconSCB::before {
-  		font: 11.2rem 'Snicons', monospace;
+		font: 11.2rem 'Snicons', monospace;
 	}
 
 	/* vignettes accueil */
@@ -1339,6 +1348,10 @@ _______________
 	/* information de toucher */
 	*.iconWrapper a:active i.whColor::after {
 		background: rgba(255, 255, 255, .2);
+	}
+	*.iconWrapper.equalRep {
+		justify-content: space-around;
+			-webkit-justify-content: space-around;
 	}
 
 	header button:active i.whColor::after {

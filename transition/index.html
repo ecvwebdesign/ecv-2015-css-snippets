@@ -1,91 +1,754 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Transition CSS Tutorial</title>
+<!doctype html>
+<html class="no-js" lang="fr">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="../css/foundation.css" />
-    <link href="css/transition_style.css" rel="stylesheet">
-    <link href="css/media.css" rel="stylesheet">
-    
+	<head>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="author" content="Jiazhi Gao" />
+		<meta name="description" content="Avec CSS3 transition, on peut ajouter les effets de changement de forme et animer les pages web uniquement à l'aide de styles CSS, sans apport de JavaScript" />
+
+		<title>Transition CSS</title>
+
+		<!--STYLE GENERAL-->
+		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
+
+		<!--STYLE ADDITIONNEL-->
+		<link href="css/transition_style.css" rel="stylesheet">
+		<link href="css/media.css" rel="stylesheet">
+
+		<!--FONTES-->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" media="all" type="text/css" href="../css/fonts.css" />
+
+		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
+		<script type="text/javascript" src="../js/vendor/modernizr.js"></script>
+		<script src="../js/vendor/jquery.js" type="text/javascript"></script>
+		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="../js/foundation.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
+
+	</head>
+
+	<body>
+
+		<header class="blkBG">
+
+			<div class="row headerContent">
+				<div class="medium-4 columns headerColumn7">
+					<a href="../../ecv-2015-css-snippets" alt="lien vers l'accueil"><img id="logotype" src="../img/logotype.svg" alt="logotype snippets" /></a>
+				</div>
+
+				<nav id="mainNav" class="medium-8 columns flex flexColumn endRep">
+					<a href="../#topics" class="noMargin" alt="lien vers les thèmes">thèmes</a>
+					<a href="../#team" alt="lien vers l'équipe">l'équipe</a>
+					<a href="#contact" alt="ancre vers la section contact">contact</a>
+				</nav>
+
+				<div id="toggleMenu" class="medium-1 columns headerColumn3">
+					<button>
+						<i class="iconFA rwdIconFA whColor burgerIcn animation"></i>
+					</button>
+				</div>	
+
+				<nav class="navMenu" id="rwdNav">
+					<h3 class="blBG blkColor">Menu</h3>
+					<a href="../#topics" class="snLink" alt="lien vers les thèmes">thèmes</a>
+					<a href="../#team" class="snLink" alt="lien vers l'équipe">l'équipe</a>
+					<a href="#contact" class="snLink" alt="ancre vers la section contact">contact</a>
+					<a alt="vers le haut" class="ttTop"><i class="iconFA rwdIconFA whColor arrowUIcn animation"></i>vers le haut</a>
+				</nav>
+			</div>
+
+		</header>
+
+		<!--ENVELOPPE-->
+		<div id="sectionWrap">
+
+			<!--TITRE DU SITE-->
+			<section id="siteTitle" class="blBG adaptableCover flex insertYOdesign">
+
+				<article class="largeRow centerBlock">
+
+					<!--EDITEZ VOTRE TITRE-->
+					<h1 class="blkColor ttTitle">Transition CSS</h1>
+
+					<div class="ttIntro row">
+
+						<!--EDITEZ VOTRE INTRODUCTION-->
+						<p class="blkColor level4">Avec CSS3 transition, on peut ajouter les effets de changement de forme et animer les pages web uniquement à l'aide de styles CSS, sans apport de JavaScript.</p>
+
+						<!--EDITEZ VOS PARTIES-->
+						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
+						<ol class="contents row">
+							<div class="medium-6 columns">
+
+								<li><a href="#ttPrt1" class="txtLink whTxt">Que-ce que c'est la transition dans CSS?</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">Code basique de transition</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">Transition timing-function</a></li>
+
+							</div>
+
+							<div class="medium-6 columns end">
+
+								<li><a href="#ttPrt4" class="txtLink whTxt">Transitions en proportion data</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">Transitions en surlignant menus</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">Transitions en image galerie</a></li>
+
+							</div>
+						</ol>
+
+					</div>
+
+					<!--EDITEZ VOTRE NOM-->
+					<p class="ttAuteur">Créé par Jiazhi GAO le 02/04/2015</p>
+
+					<div class="ttbuttons row">
+						<div class="medium-6 columns">
+							<a href="demo.html" alt='lien vers la démo' class="button medium demo centerOrigin animation whBut"><span class="animation">démo</span></a>
+						</div>
+						<div class="medium-6 columns end marginSU">
+
+							<!--Editez la class du lien au lieu de rwdSize, qui est propre à ce qu'à fait élodie, voir à style.css-->
+							<a href="#" alt='lien de téléchargement' class="button medium centerOrigin animation rwdSize whBut"><span class="animation">télécharger</span></a>
+
+						</div>
+					</div>
+
+					<span class="ttBottom"><a href="#ttInit"></a></span>
+
+				</article>
+
+			</section>
+
+			<!--TUTORIEL-->
+			<section id="ttInit" class="whBG airU">
+				
+				<article class="row">
+
+					<h1 class="blkColor sectionTitle">tutoriel</h1>
+
+				</article>
+
+			</section>
+
+			<section id="ttPrt1" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">1.Que-ce que c'est la transition dans CSS?</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<p class="blkColor">Grâce aux dernières évolutions du langage et au module CSS3 Transitions, il est désormais possible de réaliser des transitions basiques à l'aide de CSS dans les navigateurs récents.<br>Comme premier exemple, je vais vous montrer quelque chose de vraiment basilaire (je promets, la prochaine sera plus excitant)<br>Passez votre souris sur les deux ronds en base:</p>
+
+				</article>
+				
+				<figure class="insertExHere expl row fixedHeight">
+					<div class="txtRow">
+						<div class="large-6 columns"><div class="rond1">1</div><p class="rond_text">Comportement classique</p></div>
+						<div class="large-6 columns"><div class="rond2">2</div><p class="rond_text">CSS transition</p></div>
+					</div>
+				</figure>
+
+			</section>
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </head>
-  <body>
-  <section class="container1">
-     <h1 class='title'>Transition Tutorial</h1>
-     <p class='discription'><strong>Que-ce que c'est la transition dans CSS?</strong><br><br>
-     <div class="row">
-     <div class="large-6 columns">Avec CSS3, on peut ajouter les effets de changement de forme et animer les pages web uniquement à l'aide de styles CSS, sans apport de JavaScript. </div>
-     <div class="large-6 columns">Grâce aux dernières évolutions du langage et au module CSS3 Transitions, il est désormais possible de réaliser des transitions basiques à l'aide de CSS dans les navigateurs récents. </div></div>
-     <div class="large-6 columns"><a target='_blank' href="demo.html" class='button'>DEMO</a></div>
-     <div class="large-6 columns"><a target='_blank' href="" class='button'>téléchargement zip.</a></div>
-  </section>
+			<section id="ttPrt2" class="whBG smallAir">
+				
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">2.Code basique de transition</h2>
 
-  <section class='container3'>
-  <p><strong>Comme premier exemple , je vais vous montrer quelque chose de vraiment basilaire ( je promets , la prochaine sera plus excitant )<br>Passez votre souris sur les deux ronds en base: :</strong></p>
-  <div class="row">
-  <div class="large-6 columns"><div class="rond1">1</div><p class="rond_text">Comportement classique</p></div>
-  <div class="large-6 columns"><div class="rond2">2</div><p class="rond_text">CSS transition</p></div>
-  </div>
-</section>
+				</article>
 
-  <section class="container6">
-     <p class='discription'><strong>Forme présentation:</strong></p> 
-     <div class="forme_css_transition"><strong>div {<br>background-color: #31464e<br>transition-property: background-color;
-     transition-duration: .5s;<br>transition-timing-function: linear;<br>transition-delay: 1s;<br>}</strong></div></strong><p> Ou on peut écrire comme ça:  <div class="forme_css_transition"><strong>div {<br>background-color: #31464e;<br>-webkit-transition: background-color .5s linear, 1s; /* Safari */<br>}</strong></div>
-      <p>Pour crée un effet de transition, on dois spécifier deux points:<br>
-      • le propriété de CSS qu’on veut ajouter les effets;<br>
-      • la duration des effets.  </p>
-      <p>L'effet de transition commencera lorsque la propriété CSS spécifié (couleur) change de valeur.<br>Maintenant , précisons une nouvelle valeur pour la propriété width lorsqu'un utilisateur passe la souris sur l'élément:</p>
-      <div class="forme_css_transition"><strong>div:hover {<br>background-color:#a88963;<br>} </strong></div>
-      <p>Voici est l'effet qu'on a fait:(Passez votre souris sur les éléments en base)</p>
-      <div id='animateTest' class="couleur1">Hello World!</div>
-   </section>
+				<article class="txtRow">
+					
+					<ul class="txtList">
+						<li><strong>transition:</strong> un raccourci pour fixer les quatre propriétés de transition dans une propriété unique.</li>
+						<li><strong>transition-property:</strong> spécifie le nom de la propriété CSS qui a besoin de l'effet de transition.</li>
+						<li><strong>transition-duration:</strong> spécifie le nombre de secondes ou milli-secondes un effet de transition prend pour terminer.</li>
+						<li><strong>transition-timing-function:</strong> spécifie la courbe de vitesse de l'effet de transition.</li>
+						<li><strong>transition-delay:</strong> spécifie un délai ( en secondes) pour l'effet de transition.</li>
+					</ul>
 
+				</article>
 
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
 
-   <section class="container2">
-      <p class='discription'><strong>La propriété transition - timing-function peut avoir les valeurs suivantes:</strong></p>
-      <p><strong>ease</strong> - spécifie un effet de transition avec un démarrage lent, puis rapide, puis se arrête lentement ( ce est par défaut).<br>
-      <strong>linear </strong> - spécifie un effet de transition à la même vitesse du début à la fin.<br>
-      <strong>ease-in</strong> - spécifie un effet de transition avec un démarrage lent.<br>
-      <strong>ease-out</strong> - spécifie un effet de transition avec une extrémité lente. <br>
-      <strong>ease-in-out</strong> - spécifie un effet de transition avec un démarrage lent et à la fin.<br>
-      <strong>cubic-bezier(n,n,n,n)</strong> - nous permet de définir nos propres valeurs dans une fonction cubique - Bézier.
-      <div class="row">
-      <div class="large-4 columns"><img class="time_function" src="img/css transition-ease.svg"></img><p>ease</p><div class="time_fontion_example1"></div></div>
-      <div class="large-4 columns"><img class="time_function" src="img/css transition-linear.svg"></img><p>linear</p><div class="time_fontion_example2"></div></div>
-      <div class="large-4 columns"><img class="time_function" src="img/css transition-ease-in.svg"></img><p>ease-in</p><div class="time_fontion_example3"></div></div>
-      <div class="large-4 columns"><img class="time_function" src="img/css transition-ease-out.svg"></img><p>ease-out</p><div class="time_fontion_example4"></div></div>
-      <div class="large-4 columns"><img class="time_function" src="img/css transition-in-out.svg"></img><p>ease-in-out</p><div class="time_fontion_example5"></div></div>
-      <div class="large-4 columns"><img class="time_function" src="img/css transition-bezier.svg"></img><p>cubic-bezier</p><a target='_blank' href="http://cubic-bezier.com/#.17,.67,.83,.67" class='buton'>voir plus les infos</a></div>
-      </div>
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.div {
+	background-color: #31464e;
+	transition-property: background-color; 
+	transition-duration: .5s;
+	transition-timing-function: linear;
+	transition-delay: 1s;
+ }				 
+						</code>
+					
+					</div>
+				</pre>
 
-</p>
-   </section>
+				<article class="txtRow">
+					<p class="blkColor">La version abrégée：</p>
+				</article>
 
-  
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
 
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.div {
+	background-color: #31464e;
+	-webkit-transition: background-color .5s linear, 1s; /* Safari */
+	-o-transition: background-color .5s linear, 1s; /* Opera */
+	-moz-transition: background-color .5s linear, 1s; /* Firefox */
+}					 
+						</code>
+					</div>
+				</pre>
 
+				<article class="txtRow">
+					
+					<p class="blkColor">Pour crée un effet de transition, on dois spécifier deux points:</p>
 
+					<ul class="txtList">
+						<li>le propriété de CSS qu’on veut ajouter les effets.</li>
+						<li>la duration des effets.</li>
+					</ul>
 
+					<p>Voici est l'effet qu'on a fait: (Passez votre souris sur les éléments en base)</p>
 
-   
+				</article>
+					
+				<figure id='animateTest'	class="insertExHere expl row couleur1">
+					Hello World!
+				</figure>
 
-</body>
+			</section>
+
+			<section id="ttPrt3" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. Transition timing-function</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<p class="blkColor">La propriété transition - timing-function peut avoir les valeurs suivantes:</p>
+
+					<ul class="txtList">
+						<li><strong>ease</strong> - spécifie un effet de transition avec un démarrage lent, puis rapide, puis se arrête lentement ( ce est par défaut).</li>
+						<li><strong>linear</strong> - spécifie un effet de transition à la même vitesse du début à la fin.</li>
+						<li><strong>ease-in</strong> - spécifie un effet de transition avec un démarrage lent.</li>
+						<li><strong>ease-out</strong> - spécifie un effet de transition avec une extrémité lente.</li>
+						<li><strong>ease-in-out</strong> - spécifie un effet de transition avec un démarrage lent et à la fin.</li>
+						<li><strong>cubic-bezier(n,n,n,n)</strong> - nous permet de définir nos propres valeurs dans une fonction cubique - Bézier.</li>
+					</ul>
+
+				</article>
+
+				<figure class="insertExHere expl row">
+
+					<div class="txtRow">
+						<div class="large-4 columns"><img class="time_function" src="img/ease.svg"></img><p>ease</p><div class="time_fontion_example1"></div></div>
+						<div class="large-4 columns"><img class="time_function" src="img/linear.svg"></img><p>linear</p><div class="time_fontion_example2"></div></div>
+						<div class="large-4 columns"><img class="time_function" src="img/ease_in.svg"></img><p>ease-in</p><div class="time_fontion_example3"></div></div>
+						<div class="large-4 columns"><img class="time_function" src="img/ease_out.svg"></img><p>ease-out</p><div class="time_fontion_example4"></div></div>
+						<div class="large-4 columns"><img class="time_function" src="img/in_out.svg"></img><p>ease-in-out</p><div class="time_fontion_example5"></div></div>
+						<div class="large-4 columns"><img class="time_function" src="img/bezier.svg"></img><p>cubic-bezier</p><a target='_blank' href="http://cubic-bezier.com/#.17,.67,.83,.67" class='buton txtLink'>voir plus les infos</a></div>
+					</div>
+				
+				</figure>
+
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt4" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. Transitions en proportion data</h2>
+
+				</article>
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="insertExHere expl row">
+					
+					<div class="txtRow">
+						<div class="data" id="data1">50%</div>
+						<div class="data" id="data2">80%</div>
+						<div class="data" id="data3">30%</div>
+					</div>
+
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+&lt;div class="data" id="data1"&gt;50%&lt;/div&gt;<br>&lt;div class="data" id="data2"&gt;80%&lt;/div&gt;<br>&lt;div class="data" id="data3"&gt;30%&lt;/div&gt;
+						</code>
+					</div>
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.data{
+	background-color:#5A9596; 
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	padding: 5px;
+	color: white;
+	font-size: 20px;
+	transition:width 2s ease,	background-color 2s ease;
+}
+
+.data:hover{
+	background-color: #a88963;
+}
+
+#data1:hover{
+	width:440px;
+}
+#data2:hover{
+	width: 700px;
+}
+#data3:hover{
+	width: 200px;
+}
+						</code>
+					</div>
+				</pre>
+
+			</section>
+
+			<section id="ttPrt5" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">5. Transitions en surlignant menus</h2>
+
+				</article>
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="insertExHere expl row">
+					
+					<p class="large-3 columns"><a class="menuButton" href="#">Home</a></p>
+					<p class="large-3 columns"><a class="menuButton" href="#">About</a></p>
+					<p class="large-3 columns"><a class="menuButton" href="#">Contact Us</a></p>
+					<p class="large-3 columns"><a class="menuButton" href="#">Links</a></p>
+					
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+&lt;div class="sidebar"&gt;
+	&lt;p>&lt;a class="menuButton" href="home">Home&lt;/a>&lt;/p>
+	&lt;p>&lt;a class="menuButton" href="about">About&lt;/a>&lt;/p>
+	&lt;p>&lt;a class="menuButton" href="contact">Contact Us&lt;/a>&lt;p>
+	&lt;p>&lt;a class="menuButton" href="links">Links&lt;/a>&lt;/p>
+&lt;/div&gt;
+						</code>
+					</div>
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.menuButton {
+	display: block;
+	text-align: center;
+	background-color: #5A9596;
+	width: 80%;
+	height: 50px;
+	color: white;
+	font-family: sans-serif;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 6px;
+	border: solid 3px white;
+	margin: 0 auto;
+	transition-property: background-color, color, border;
+	transition-duration: .4s;
+	transition-timing-function: ease-out;
+	transition: all .5s ease-out;
+}
+
+.menuButton:hover {
+	transition-property: background-color, color, border;
+	transition-duration: .5s;
+	transition-timing-function: ease-out;
+	transform: scale(1.2);
+	background-color:white;
+	color:#5A9596;
+	border: solid 3px #5A9596;
+}
+
+						</code>
+					</div>
+				</pre>
+
+			</section>
+
+			<section id="ttPrt6" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. Transitions en image galerie</h2>
+
+				</article>
+
+				<figure class="insertExHere expl row">
+					
+					<div class="large-3 columns">
+						<div class="ext" ontouchstart="this.classList.toggle('hover');">
+							<div class="int">
+								<div class="front"> 
+									<img class="img" src="img/ex_feuille.jpg">
+								</div>
+								<div class="back"> 
+								#image1
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="large-3 columns">
+						<div class="ext" ontouchstart="this.classList.toggle('hover');">
+							<div class="int">
+								<div class="front"> 
+									<img class="img" src="img/ex_feuille.jpg">
+								</div>
+								<div class="back"> 
+								#image2
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="large-3 columns">
+						<div class="ext" ontouchstart="this.classList.toggle('hover');">
+							<div class="int">
+								<div class="front"> 
+									<img class="img" src="img/ex_feuille.jpg">
+								</div>
+								<div class="back"> 
+									#image3
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="large-3 columns">
+						<div class="ext" ontouchstart="this.classList.toggle('hover');">
+							<div class="int">
+								<div class="front"> 
+									<img class="img" src="img/ex_feuille.jpg">
+								</div>
+								<div class="back"> 
+									#image4
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+&lt;div class="ext" ontouchstart=<br>"this.classList.toggle<br>('hover');"&gt;
+	&lt;div class="int"&gt;
+		&lt;div class="front"&gt;
+		&lt;!--votre contenu--&gt;
+		&lt;/div&gt;
+
+		&lt;div class="back"&gt;
+		&lt;!--votre contenu--&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+						</code>
+					</div>
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.ext { 
+	perspective: 1000; 
+}
+
+.ext,
+.front,
+.back {
+	height: 260px;
+	width: 190px;
+}
+
+.ext:hover .int, 
+.ext.hover .int { 
+	transform: rotateY(180deg); 
+}
+
+.int { 
+	transition: .75s;
+	transform-style: preserve-3d;
+}
+
+.front, 
+.back {
+	-visibility: hidden;
+	background: #FFF; 
+	border: 1px solid #666; 
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front { 
+	index: 2; 
+}
+
+.back { 
+	transform: rotateY(180deg); 
+}
+
+						</code>
+					</div>
+				</pre>
+
+			</section>
+
+			<!--CAN I USE-->
+			<section id="CIU" class="blBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">Support</h1>
+				</article>
+
+				<div class="row browsers flex flexColumn equalRep">
+					<div class="browser">
+						<h2 class="blkColor">chrome</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor chromeIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">26+</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">safari</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor safariIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">3.2+</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">opera</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor operaIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">10.5+</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">firefox</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor ffIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">4+</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">ie</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor ieIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">10+</span>
+					</div>
+				</div>
+				
+			</section>
+
+			<!--REFERENCES-->
+			<section id="refs" class="whBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">références</h1>
+				</article>
+
+				<!--EDITEZ VOS LIENS-->
+				<ul class="row largeRow links">
+					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/css/css3_transitions.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com/</a></li>
+
+					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://dev.w3.org/csswg/css-transitions/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://dev.w3.org/</a></li>
+
+					<li><span class="blkColor level4 upCase">cubic-bezier - </span><a href="http://cubic-bezier.com/#.17,.67,.83,.67" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://cubic-bezier.com/</a></li>
+
+					<li><span class="blkColor level4 upCase">MDN-mozilla developer network - </span><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions" class="txtLink blkTxt" alt="lien vers alsacréations">https://developer.mozilla.org/</a></li>
+
+					<li><span class="blkColor level4 upCase">CSS-tricks - </span><a href="https://css-tricks.com/almanac/properties/t/transition/" class="txtLink blkTxt" alt="lien vers demosthenes.info">https://css-tricks.com/</a></li>
+
+					<li><span class="blkColor level4 upCase">creative link effects - </span><a href="http://tympanus.net/Development/CreativeLinkEffects/#cl-effect-9" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://tympanus.net/</a></li>
+
+					<li><span class="blkColor level4 upCase">hover.css - </span><a href="http://ianlunn.github.io/Hover/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://ianlunn.github.io/</a></li>
+
+					<li><span class="blkColor level4 upCase">adobe - </span><a href="http://www.adobe.com/inspire-apps/css_transitions_dreamweaver_demo/" class="txtLink blkTxt" alt="lien vers sitepoint.com">http://www.adobe.com/</a></li>
+				</ul>
+				
+			</section>
+
+			<!--AUTEUR-->
+			<section id="author" class="blBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">auteur</h1>
+				</article>
+
+				<div class="row largeRow">
+					<div class="medium-4 columns">
+
+						<!--EDITEZ VOTRE PHOTO-->
+						<img src="../img/team/jiazhi.jpg" alt="photo auteur" />
+
+					</div>
+
+					<div class="medium-8 columns end details">
+
+						<!--EDITEZ VOTRE ID-->
+						<h2 class="whColor upCase">Jiazhi GAO</h2>
+						<p class="level4 blkColor marginU marginD">Bonjour! Je suis une graphiste designer dans le domaine de design interactif et web design. J’aime les nouvelles technologies mais je ne suis pas une geek! Je suis passionnée par l’illustration, le motion design et la data visualisation.</p>
+
+						<!--EDITEZ VOS LIENS-->
+						<div class="iconWrapper centerOrigin flex equalRep large-6">
+
+							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
+							<a href="http://jiazhigao.com" alt="lien vers le portfolio">
+								<i class="iconSC whColor urlIcn animation"></i>
+							</a>
+
+							<a href="fr.linkedin.com/pub/jiazhi-gao/72/771/1b/en" alt="lien vers linkedin">
+								<i class="iconSC whColor lnkinIcn animation"></i>
+							</a>
+
+							<a href="https://twitter.com/SophiaKOjazzy" alt="lien vers twitter">
+								<i class="iconSC whColor twtrIcn animation"></i>
+							</a>
+
+						</div>
+					</div>
+				</div>
+				
+			</section>
+
+			<!--CONTACT-->
+			<section id="contact" class="whBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">contact</h1>
+				</article>
+
+				<form class="row" method="post" action="../contact.php" autocomplete="on">
+					<div class="medium-6 columns">
+
+						<label for="name" class="blkColor upCase level3">
+							nom *
+							<input id="name" type="text" name="name" />
+						</label>
+						<label for="from" class="blkColor upCase level3">
+							adresse e-mail *
+							<input id="from" type="text" name="from" placeholder="mail@domaine.com"/>
+						</label>
+						<!--EDITEZ VALUE AVEC VOTRE THEME-->
+						<label for="object" class="blkColor upCase level3">
+							thème *
+							<input id="object" type="text" name="object" value="Transition CSS" />
+						</label>
+
+					</div>
+
+					<div class="medium-6 columns end">
+
+						<label for="message" class="blkColor upCase level3">
+							message *
+							<textarea id="message" type="text" name="message"></textarea>
+						</label>
+						<div class="sendBut">
+							<button type="submit" name="send" class="button medium centerOrigin animation send blBut"><span class="animation">envoyer</span></button>
+						</div>
+
+					</div>
+				</form>
+				
+			</section>
+
+		</div>
+
+		<footer class="blkBG">
+
+			<div class="row">
+				<div class="medium-6 column">
+
+					<a href="../mentions-obligatoires" alt="lien vers les mentions légales" class="txtLink whTxt">Mentions obligatoire</a>
+
+				</div>
+
+				<div class="medium-6 column">
+
+					<p class="whColor">© Mastère 2 spécialité digital - ECV Aquitaine - promotion 2015 - tous droits réservés</p>
+
+				</div>
+			</div>
+
+		</footer>
+
+	</body>
+
 </html>

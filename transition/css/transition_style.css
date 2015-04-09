@@ -1,139 +1,122 @@
-
-
-body{
-    background-color: #ffffff;
-}
-
 .title{
-  font-size: 40px;
-  color: #5f8783;
-
+	font-size: 40px;
+	color: #5f8783;
 }
 
-.discription
-{
-  margin-top: 50px;
-  font-size: 24px;
+.discription {
+	margin-top: 50px;
+	font-size: 24px;
 }
 
 .example{
-  font-size: 16px;
+	font-size: 16px;
 }
 
 
 .container1 {
-
-  margin-top: 0 auto;
-  padding-top: 50px;
+	margin-top: 0 auto;
+	padding-top: 50px;
 	padding-left: 20%;
 	padding-right: 20%;
-  padding-bottom: 50px;
-  background-color: #b7dccb;
-  height:600px;
+	padding-bottom: 50px;
+	background-color: #b7dccb;
+	height:600px;
 }
 
 .container6 {
-  margin-top: 0px;
-  background-color: white;
-  height: 860px;
+	margin-top: 0px;
+	background-color: white;
+	height: 860px;
 }
 .container7 {
-  margin-top: 0px;
-  background-color: white;
-  height: 1500px;
+	margin-top: 0px;
+	background-color: white;
+	height: 1500px;
 }
 
 .container2 {
-  margin-top: 0;
-  padding-top: 50px;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-bottom: 50px;
-  background-color:  #b7dccb;
-  height: 850px;
+	margin-top: 0;
+	padding-top: 50px;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 50px;
+	background-color:	#b7dccb;
+	height: 850px;
 }
 
 .container3 {
-  margin-top: 0;
-  padding-top: 50px;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-bottom: 50px;
-  background-color:  white;
-  height: 500px;
+	margin-top: 0;
+	padding-top: 50px;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 50px;
+	background-color:	white;
+	height: 500px;
 }
 
-
 .rond1{
-  text-align: center;
-  background-color:#5A9596;
-  border-radius: 100%;
-  width: 200px;
-  height: 200px;
-  padding:70px 20px 20px 20px;
-  margin: 30px 60px 30px 80px; 
-  font-size: 36px;
-  color: white;
-
+	text-align: center;
+	background-color:#5A9596;
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	padding: 76px;
+	margin: 0 auto; 
+	font-size: 36px;
+	color: white;
 }
 
 .rond1:hover{
-  padding:90px 20px 20px 20px;
-   
-   width: 250px;
-  height: 250px;
+	width: 250px;
+	height: 250px;
+  padding: 100px;
 
 }
 
 .rond_text{
-  text-align: center;
-  margin-left:-30px; 
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.6;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 600;
+	line-height: 1.6;
 }
 
-.rond2{
-  text-align: center;
-  background-color:#5A9596;
-  border-radius: 100%;
-  width: 200px;
-  height: 200px;
-  padding:70px 20px 20px 20px;
-  margin: 30px 60px 30px 80px; 
-  font-size: 36px;
-  color: white;
-  -webkit-transition: width  .5s ease, height  .5s ease, padding .5s ease;
+.rond2 {
+	text-align: center;
+	background-color:#5A9596;
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	padding: 76px;
+  margin: 0 auto;
+	font-size: 36px;
+	color: white;
+	-webkit-transition: width	.5s ease, height	.5s ease, padding .5s ease;
 }
 
 .rond2:hover{
-  padding:90px 20px 20px 20px;
-  width: 250px;
-  height: 250px;
-
+	padding: 100px;
+	width: 250px;
+	height: 250px;
 }
 
-
 .forme_css_transition{
-  border: 10px solid #b7dccb;
-  margin: 20px 0 20px 0;
-  padding: 10px;
+	border: 10px solid #b7dccb;
+	margin: 20px 0 20px 0;
+	padding: 10px;
 }
 
 .large-4{
-  
-  text-align: center;
+	text-align: center;
 }
 
 /*.code{
-  text-align: left;
-  font-size: 12px;
+	text-align: left;
+	font-size: 12px;
 }*/
 
 .time_function{
-  width: 50%;
-  margin: 40px 20px 0 20px;
+	width: 50%;
+	margin: 40px 20px 0 20px;
 }
 
 .time_fontion_example1,
@@ -141,36 +124,31 @@ body{
 .time_fontion_example3,
 .time_fontion_example4,
 .time_fontion_example5{
-  margin: 10px 0px 0 65px;
-  width: 40px;
-  height: 20px;
-  border-radius: 5px;
-  background-color: #5A9596;
+	margin: 10px 20px 0 46px;
+	width: 40px;
+	height: 20px;
+	border-radius: 5px;
+	background-color: #5A9596;
 }
 
 .time_fontion_example1{
-  -webkit-transition: width  .5s ease, background-color .5s ease;
-
+	-webkit-transition: width	.5s ease, background-color .5s ease;
 }
 
 .time_fontion_example2{
-  -webkit-transition: width  .5s linear, background-color .5s linear;
-
+	-webkit-transition: width	.5s linear, background-color .5s linear;
 }
 
 .time_fontion_example3{
-  -webkit-transition: width  .5s ease-in, background-color .5s ease-in;
-
+	-webkit-transition: width	.5s ease-in, background-color .5s ease-in;
 }
 
 .time_fontion_example4{
-  -webkit-transition: width  .5s ease-out, background-color .5s ease-out;
-
+	-webkit-transition: width	.5s ease-out, background-color .5s ease-out;
 }
 
 .time_fontion_example5{
-  -webkit-transition: width  .5s ease-in-out, background-color .5s ease-in-out;
-
+	-webkit-transition: width	.5s ease-in-out, background-color .5s ease-in-out;
 }
 
 .time_fontion_example1:hover,
@@ -178,142 +156,133 @@ body{
 .time_fontion_example3:hover,
 .time_fontion_example4:hover,
 .time_fontion_example5:hover{
-  width: 125px;
-  background-color: #a88963;
-
+	width: 50%;
+	background-color: #a88963;
 }
 
-
-
-.couleur1
-{ text-align: center;
- color: #ffffff;
- background: #5A9596;
- padding: 20px;
- width: 150px;
- border-radius: 5px;
-  font-weight: bold;
-  font-style: none;
-  font-size: 30px;
-  margin: 50px;
+.couleur1 {
+  text-align: center;
+  color: #ffffff;
+  background: #5A9596;
+  padding: 20px;
+  width: 150px;
+  border-radius: 5px;
+	font-weight: 900;
+	font-size: 30px;
+	margin: 50px;
 }
 
 .couleur1{
+	-webkit-transition: background-color .5s linear;
+}
 
- 
-  -webkit-transition: background-color .5s linear;
-  }
-
-  .couleur1:hover{
-  background-color: #a88963;
-  }
-
-
+.couleur1:hover{
+	background-color: #a88963;
+}
 
 .menuButton {
-  position: absolute;
-  text-align: center;
-  background-color: #5A9596;
-  width: 80%;
-  height: 50px;
-  color: white;
-  font-family: sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 6px;
-  border: solid 3px white;
-  margin: 50px 7px 0 7px;
-  transition-property: background-color, color, border;
-  transition-duration: .4s;
-  transition-timing-function: ease-out;
-  transition: all .5s ease-out;
+  display: block;
+	text-align: center;
+	background-color: #5A9596;
+	width: 80%;
+	height: 50px;
+	color: white;
+	font-family: sans-serif;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 6px;
+	border: solid 3px white;
+	margin: 0 auto;
+	transition-property: background-color, color, border;
+	transition-duration: .4s;
+	transition-timing-function: ease-out;
+	transition: all .5s ease-out;
 }
 
 .menuButton:hover {
-  position: absolute;
   transition-property: background-color, color, border;
-  transition-duration: .5s;
-  transition-timing-function: ease-out;
-  transform: scale(1.2);
-  background-color:white;
-  color:#5A9596;
-  border: solid 3px #5A9596;
+	transition-duration: .5s;
+	transition-timing-function: ease-out;
+	transform: scale(1.2);
+	background-color:white;
+	color:#5A9596;
+	border: solid 3px #5A9596;
 }
 
 figure.expl {
-  margin: 3.6rem auto !important;
-  max-width: 67.0rem;
-  width: 100%;
-  border: white solid .1rem;
-  background: transparent;
+	border: none;
 }
 
+figure.fixedHeight {
+  height: 300px;
+}
 
 .data{
-  background-color:#5A9596; 
-  text-align: center;
-  margin: 20px;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
-  color: white;
-  font-size: 20px;
-  transition:width 2s ease,  background-color 2s ease;
+	background-color:#5A9596; 
+	text-align: center;
+	margin: 20px;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	color: white;
+	font-size: 20px;
+	transition:width 2s ease,	background-color 2s ease;
 }
 
 .data:hover{
-  background-color: #a88963;
+	background-color: #a88963;
 }
 #data1:hover{
-  width:50%;}
-  #data2:hover{
-  width:80%;}
-  #data3:hover{
-  width:30%;}
+	width:50%;
+}
+#data2:hover {
+	width:80%;
+}
+#data3:hover {
+	width:30%;
+}
 
-  .ext { 
-  perspective: 1000; 
+.ext { 
+	perspective: 1000; 
 }
 
 .ext,
 .front,
-.back { height: 260px; width: 190px; }
+.back {
+  height: 260px;
+  width: 190px;
+}
 
 .ext:hover .int, 
 .ext.hover .int { 
-  transform: rotateY(180deg); 
+	transform: rotateY(180deg); 
 }
 
 .int { 
-  transition: .75s;
-  transform-style: preserve-3d;
+	transition: .75s;
+	transform-style: preserve-3d;
 }
 
 .front, 
 .back {
-  backface-visibility: hidden;
-  position: absolute; top: 0; left: 0;
+	backface-visibility: hidden;
+	position: absolute; top: 0; left: 0;
 }
 
 .front { 
-  z-index: 2;
-   
+	z-index: 2;
+	 
 }
 
 .back { 
-  transform: rotateY(180deg);
-  background: #5A9596; 
-  text-align: center;
-  font-size: 36px;
-  color: white;
-  padding-top:100px;
+	transform: rotateY(180deg);
+	background: #5A9596; 
+	text-align: center;
+	font-size: 36px;
+	color: white;
+	padding-top:100px;
 }
 
 .img{
-  height: 100%;
+	height: 100%;
 }
-
-
-
-
-

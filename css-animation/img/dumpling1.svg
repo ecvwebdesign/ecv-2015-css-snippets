@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px"
+	 height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve">
+
+<style>
+#dumpling
+  {
+          -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+          -webkit-transform-origin: center bottom;
+          -ms-transform-origin: center bottom;
+          transform-origin: center bottom;
+  }
+
+  @-webkit-keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+            transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -8px, 0);
+            transform: translate3d(0, -8px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+            transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -8px, 0);
+            transform: translate3d(0, -8px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-2px,0);
+            transform: translate3d(0,-2px,0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+            transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -8px, 0);
+            transform: translate3d(0, -8px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+            transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -8px, 0);
+            transform: translate3d(0, -8px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-2px,0);
+            transform: translate3d(0,-2px,0);
+  }
+}
+
+</style>
+
+
+
+
+<g id="bg">
+	<g>
+		<path fill="#F5F5F1" d="M0.144,69.889c0,2.754,2.232,4.986,4.986,4.986h64.74c2.754,0,4.986-2.232,4.986-4.986V4.986
+			C74.857,2.232,72.624,0,69.871,0H5.13C2.376,0,0.144,2.232,0.144,4.986V69.889z"/>
+	</g>
+</g>
+
+<g id="dumpling">
+<g id="patte">
+	<path fill="#F2D9AD" d="M20.87,27.798c0.171-3.755,1.361-5.624,4.076-6.58c2.504-0.882,4.338-0.207,6.587,2.469
+		c0.865-2.756,2.75-4.241,5.591-4.201c2.669,0.037,4.475,1.442,5.364,4.285c1.858-2.609,4.162-3.68,7.102-2.349
+		c2.621,1.187,3.728,3.306,3.418,6.375c2.473-1.656,4.835-1.537,6.876,0.279c2.187,1.946,2.963,4.392,1.386,7.281
+		c3.761-0.829,6.388,0.42,7.608,3.439c1.102,2.725,0.222,4.97-2.813,6.985c0.498,0.594,1.027,1.152,1.472,1.769
+		c1.138,1.576,1.493,3.256,0.634,5.106c-0.887,1.909-2.515,2.655-4.428,2.502c-4.182-0.335-8.363-0.75-12.517-1.333
+		c-11.302-1.585-22.538-1.05-33.762,0.735c-2.14,0.34-4.315,0.513-6.481,0.634c-2.228,0.125-4.198-0.408-5.17-2.735
+		c-0.941-2.253-0.147-4.089,1.399-5.732c0.247-0.262,0.557-0.463,0.594-0.493c-1.059-1.466-2.381-2.673-2.854-4.152
+		c-0.364-1.138,0.085-2.732,0.62-3.922c1.249-2.777,3.717-3.671,7.065-2.729c-1.127-2.982-0.777-5.573,1.801-7.553
+		C16.511,26.287,18.665,26.145,20.87,27.798z"/>
+</g>
+
+<g id="trait">
+	<g>
+		<path fill="#F0A93D" d="M57.48,38.84c-5.136-6.852-12.289-9.517-19.349-9.772c-10.846,0.031-19.715,5.101-23.256,12.578
+			c-0.615,1.299-0.928,2.599,0.64,3.34c1.424,0.674,2.087-0.339,2.887-1.453c1.583-2.203,3.141-4.604,5.247-6.22
+			c10.525-8.077,27.566-4.329,32.3,6.523c0.282,0.646,1.324,1.81,2.585,1.179c1.24-0.62,0.985-1.957,0.794-2.776
+			C59.047,41.024,58.254,39.871,57.48,38.84z"/>
+	</g>
+</g>
+</g>
+
+</svg>

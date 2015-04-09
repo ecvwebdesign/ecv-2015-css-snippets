@@ -51,7 +51,6 @@ il doit y avoir un contour pour pouvoir  ajouter un effet*/
 
   /*stroke // offset stroke*/
 
-
 #rectangle4{
   stroke-dasharray: 100;
   -webkit-animation: dash 5s linear infinite;

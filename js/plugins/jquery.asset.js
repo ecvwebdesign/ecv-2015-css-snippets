@@ -62,7 +62,8 @@ centerTitle = function() {
 			title.css({
 						'transform': 'translateY(0)',
 						'-webkit-transform': 'translateY(0)',
-						'-moz-transform': 'translateY(0)'
+						'-moz-transform': 'translateY(0)',
+						'color': '#fff'
 					})
 		},
 		mouseleave: function(event){
@@ -71,7 +72,8 @@ centerTitle = function() {
 			title.css({
 						'transform': 'translateY('+heightRef +'px)',
 						'-webkit-transform': 'translateY('+heightRef +'px)',
-						'-moz-transform': 'translateY('+heightRef +'px)'
+						'-moz-transform': 'translateY('+heightRef +'px)',
+						'color': '#5A9596'
 					})
 		}
 	});

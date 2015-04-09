@@ -1,40 +1,899 @@
-<!--
-Le tutoriel à récupérer et à éditer
--->
-
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="fr">
 
 	<head>
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="author" content="*l'auteur*" />
-		<meta name="description" content="*description du tutoriel*" />
+		<meta name="author" content="Alexis Doyen" />
+		<meta name="description" content="Grid Layouts (ou "positionnement en grille") est une méthode de disposition et d'organisation de page web." />
 
-		<title>Nom du tutoriel</title>
+		<title>Grid Layouts</title>
 
 		<!--STYLE GENERAL-->
-		<link rel="stylesheet" href="../css/foundation.css" />
-		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
 
-		<!--STYLE ADDITIONNEL-->
-		<link rel="stylesheet" href="style.css" />
+		<!--FONTES-->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" media="all" type="text/css" href="../css/fonts.css" />
 
-		<!--SCRIPT-->
-		<script src="../js/vendor/modernizr.js"></script>
+		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
+		<script type="text/javascript" src="../js/vendor/modernizr.js"></script>
+		<script src="../js/vendor/jquery.js" type="text/javascript"></script>
+		<script src="../js/vendor/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="../js/foundation.min.js" type="text/javascript"></script>
+		<script src="../js/plugins/highlight.js" type="text/javascript"></script>
+		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
 
 	</head>
 
 	<body>
-		
-		<!--SCRIPT, LA SUITE (PLACER VOS SCRIPT CI-DESSOUS)-->
-		<script src="../js/vendor/jquery.js"></script>
-		<script src="../js/foundation.min.js"></script>
-		<script>
-			$(document).foundation();
-		</script>
+
+		<header class="blkBG">
+
+			<div class="row headerContent">
+				<div class="medium-4 columns headerColumn7">
+					<a href="../../ecv-2015-css-snippets" alt="lien vers l'accueil"><img id="logotype" src="../img/logotype.svg" alt="logotype snippets" /></a>
+				</div>
+
+				<nav id="mainNav" class="medium-8 columns flex flexColumn endRep">
+					<a href="../#topics" class="noMargin" alt="lien vers les thèmes">thèmes</a>
+					<a href="../#team" alt="lien vers l'équipe">l'équipe</a>
+					<a href="#contact" alt="ancre vers la section contact">contact</a>
+				</nav>
+
+				<div id="toggleMenu" class="medium-1 columns headerColumn3">
+					<button>
+						<i class="iconFA rwdIconFA whColor burgerIcn animation"></i>
+					</button>
+				</div>	
+
+				<nav class="navMenu" id="rwdNav">
+					<h3 class="blBG blkColor">Menu</h3>
+					<a href="../#topics" class="snLink" alt="lien vers les thèmes">thèmes</a>
+					<a href="../#team" class="snLink" alt="lien vers l'équipe">l'équipe</a>
+					<a href="#contact" class="snLink" alt="ancre vers la section contact">contact</a>
+					<a alt="vers le haut" class="ttTop"><i class="iconFA rwdIconFA whColor arrowUIcn animation"></i>vers le haut</a>
+				</nav>
+			</div>
+
+		</header>
+
+		<!--ENVELOPPE-->
+		<div id="sectionWrap">
+
+			<!--TITRE DU SITE-->
+			<section id="siteTitle" class="blBG adaptableCover flex insertYOdesign">
+
+				<article class="largeRow centerBlock">
+
+					<!--EDITEZ VOTRE TITRE-->
+					<h1 class="blkColor ttTitle">Grid Layouts</h1>
+
+					<div class="ttIntro row">
+
+						<!--EDITEZ VOTRE INTRODUCTION-->
+						<p class="blkColor level4">Grid Layouts (ou "positionnement en grille") est une méthode de disposition et d'organisation de page web.</p>
+
+						<!--EDITEZ VOS PARTIES-->
+						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
+						<ol class="contents row">
+							<div class="medium-6 columns">
+
+								<li><a href="#ttPrt1" class="txtLink whTxt">syntaxe</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">propriétés usuelles</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">définir une grille</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">le placement de base</a></li>
+
+							</div>
+
+							<div class="medium-6 columns end">
+
+								<li><a href="#ttPrt5" class="txtLink whTxt">l'organisation de zone</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">le positionnement</a></li>
+								<li><a href="#ttPrt7" class="txtLink whTxt">les unités de tailles</a></li>
+								<li><a href="#ttPrt8" class="txtLink whTxt">une grille pour tous types d'écrans</a></li>
+
+							</div>
+						</ol>
+
+					</div>
+
+					<!--EDITEZ VOTRE NOM-->
+					<p class="ttAuteur">Créé par Alexis Doyen le 07/04/2015</p>
+
+					<div class="ttbuttons row">
+						<div class="medium-6 columns">
+							<a href="demo.html" alt='lien vers la démo' class="button medium demo centerOrigin animation whBut"><span class="animation">démo</span></a>
+						</div>
+						<div class="medium-6 columns end marginSU">
+
+							<!--Editez la class du lien au lieu de rwdSize, qui est propre à ce qu'à fait élodie, voir à style.css-->
+							<a href="#" alt='lien de téléchargement' class="button medium centerOrigin animation rwdSize whBut"><span class="animation">télécharger</span></a>
+
+						</div>
+					</div>
+
+					<span class="ttBottom"><a href="#ttInit"></a></span>
+
+				</article>
+
+			</section>
+
+			<!--TUTORIEL-->
+			<section id="ttInit" class="whBG airU">
+				
+				<article class="row">
+
+					<h1 class="blkColor sectionTitle">tutoriel</h1>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ L-'INTRODUCTION-->
+					<p class="blkColor level3">Grid Layouts (ou "positionnement en grille") est une méthode de disposition. Elle permet de diviser l'espace des principales régions d'une page web en fonction d'une quantité fixe, de l'espace disponible dans la fenêtre du navigateur, ou d'une combinaison des deux.
+							Pour résumé, la méthode Grid Layout permet une découpe en ligne et en colonne de votre interface comme nous le ferions pour un tableau de mise en page.</p>
+
+				</article>
+
+			</section>
+
+			<!--UNE SECTION PAR PARTIE-->
+			<section id="ttPrt1" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. syntaxe</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Pour ce familiariser rapidement et facilement avec Grid Layouts, il est important de comprendre les éléments qui composent cette grille ainsi que leurs terminologies.</p>
+
+					<!--Si jamais vous avez une liste-->
+					<ul class="txtList">
+						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
+						<li><code class="smallSnippet blkColor">Grid Lines</code> : Les "Grid Lines" sont les lignes qui composent la grille. Elle peuvent être horizontales ou verticales. Nous pouvons référer à elles par des noms ou des numéros. </li>
+						<li><code class="smallSnippet blkColor">Grid Track</code> : Une "Grid Track" correspond à l'espace entre deux lignes, horizontales ou verticales.</li>
+						<li><code class="smallSnippet blkColor">Grid Cell</code> : Une "Grid Cell" correspond à l'espace entre quatre lignes. C'est l'unité la plus petite sur notre grille pour placer texte et/ou image.</li>
+						<li><code class="smallSnippet blkColor">Grid Area</code> : Une "Grid Area" correspond à n'importe quelle zone sur la grille attachée par quatre lignes. Elle peu contenir un certain nombre de cellule (Grid Cell).</li>
+					</ul>
+
+					</article>
+
+			</section>
+
+			<section id="ttPrt2" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">2. propriétés usuelles</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Maintenant que vous en savez plus sur votre grille, nous allons voir comment interpréter ces terminologies en langage web.</p>
+
+					<!--Si jamais vous avez une liste-->
+					<ul class="txtList">
+						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
+						<li><code class="smallSnippet blkColor">ms-grid-column</code> : Obtenir ou mettre une valeur qui spécifie dans quelle colonne de la grille l'on place l'objet/texte. </li>
+						<li><code class="smallSnippet blkColor">ms-grid-column-align</code> : Obtenir ou mettre une valeur qui spécifie l'alignement horizontal de l'objet/texte dans la colonne de grille.</li>
+						<li><code class="smallSnippet blkColor">ms-grid-columns</code> : Obtenir ou mettre une ou plusieurs valeurs qui spécifient la largeur de chaque colonne de grille.</li>
+						<li><code class="smallSnippet blkColor">ms-grid-column span</code> : Obtenir ou mettre une valeur qui spécifie le nombre de colonnes de la griller que l'objet/texte enjambe.</li>
+						<li><code class="smallSnippet blkColor">ms-grid-row</code> : Obtenir ou mettre une valeur qui spécifie dans laquel des rangés de la grille l'objet/texte est placer. </li>
+						<li><code class="smallSnippet blkColor">ms-grid-row-align</code> : Obtenir ou mettre une valeur qui spécifie l'alignement vertical de l'objet/texte dans la rangée de la grille. </li>
+						<li><code class="smallSnippet blkColor">ms-grid-rows </code> : Obtenir ou mettre une valeur qui spécifie la hauteur de chaque rangées e la grille. </li>
+						<li><code class="smallSnippet blkColor">ms-grid-row-span</code> : Obtenir ou mettre une valeur qui spécifie le nombre de rangées de la grille que l'objet/texte enjambe. </li>
+						<li><code class="smallSnippet blkColor">ms-grid-cell</code> : Positionnement d'un élément au sein d'une cellule nommé. </li>
+						<li><code class="smallSnippet blkColor">ms-grid-layer</code> : Niveau du plan pour éléments superposés. </li>
+					</ul>
+
+				 </article>
+
+			</section>
+
+			<section id="ttPrt3" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. définir une grille</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Nous commençons par écrire le code HTML simple de manière à obtenir la structure de base de la page mais aussi pour créer différentes "box" qui accueillerons les éléments de notre design :</p>
+
+				</article>
+
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+...
+&lt;div class="Wrapper"&gt;
+	&lt;div class="box a"&gt;A&lt;/div&gt;
+	&lt;div class="box b"&gt;B&lt;/div&gt;
+	&lt;div class="box c"&gt;C&lt;/div&gt;
+	&lt;div class="box d"&gt;D&lt;/div&gt;
+	&lt;div class="box e"&gt;E&lt;/div&gt;
+	&lt;div class="box f"&gt;F&lt;/div&gt;
+&lt;/div&gt;
+
+						</code>
+					</div>
+				</pre>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Nous allons maintenant créer dans le CSS l'élément Grilles puis spécifier les lignes et les colonnes. La première chose à faire est d'ajouter l'élément "display" et de lui attribuer la valeur <code class="smallSnippet blkColor">ms-grid</code>. Cette action crée l'élément grille. Dans l'élément grille, nous utilisons la propriété <code class="smallSnippet blkColor">ms-grid-column</code> pour spécifier la largeur de chaque colonne dans une liste délimitée par des espaces. Nous utiliserons aussi la propriété <code class="smallSnippet blkColor">ms-grid-rows</code> pour spécifier la hauteur de chaque colonne dans une liste délimité par des espaces :</p>
+
+				</article>
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="insertExHere expl row">
+
+					<img src="img/formes-01.png" />
+
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+...
+&lt;div class="Wrapper"&gt;
+	&lt;div class="box a"&gt;A&lt;/div&gt;
+	&lt;div class="box b"&gt;B&lt;/div&gt;
+	&lt;div class="box c"&gt;C&lt;/div&gt;
+	&lt;div class="box d"&gt;D&lt;/div&gt;
+	&lt;div class="box e"&gt;E&lt;/div&gt;
+	&lt;div class="box f"&gt;F&lt;/div&gt;
+ &lt;/div&gt;
+						</code>
+					</div>
+
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.Wrapper{
+	display: ms-grid;
+	ms-grid-columns : 100px 10px 100px 10px 100px;
+	ms-grid-rows: auto 10px auto;
+}
+						</code>
+					</div>
+				</pre>
+
+			</section>
+
+			<section id="ttPrt4" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. le placement de base</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Utiliser la grille déjà définie et positionner les éléments en subdivision afin d'organiser des "espaces de rangements".</p>
+					
+				</article>
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="insertExHere expl row">
+
+					<img src="img/formes-02.png" />
+
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.a { 
+	grid-column-start: 1;
+	grid-column-end: 2; 
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.b {
+	grid-column-start: 3;
+	grid-column-end: 4; 
+	grid-row-start: 1;
+	grid-row-end: 2; 
+}
+.c { 
+	grid-column-start: 5;
+	grid-column-end: 6; 
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.d { 
+	grid-column-start: 1;
+	grid-column-end: 2; 
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+.e { 
+	grid-column-start: 3;
+	grid-column-end: 4; 
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+.f { 
+	grid-column-start: 5;
+	grid-column-end: 6; 
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+						</code>
+
+					</div>
+				</pre>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Vous pouvez obtenir le même résultat en utilisant une syntaxe plus courte qui déclare la valeur de fin et la valeur de début. Les valeurs sont séparer par <code class="smallSnippet blkColor">/</code> :</p>
+
+				</article>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.a { 
+	grid-column: 1 / 2; 
+	grid-row: 1 / 2;
+}
+.b { 
+	grid-column: 3 / 4; 
+	grid-row: 1 / 2;
+}
+.c { 
+	grid-column: 5 / 6; 
+	grid-row: 1 / 2;
+}
+.d { 
+	grid-column: 1 / 2; 
+	grid-row: 3 / 4;
+}
+.e { 
+	grid-column: 3 / 4; 
+	grid-row: 3 / 4;
+}
+.f { 
+	grid-column: 5 / 6; 
+	grid-row: 3 / 4;
+}
+						 </code>
+
+					</div>
+				</pre>	
+				
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Vous pouvez créer des espaces plus grand qu'une cellule individuelle en établissant une ligne de fin plus grande que celle-ci :</p>
+
+				</article>	
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="insertExHere expl row">
+
+					<img src="img/formes-03.png" />
+
+				</figure>	
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.a { 
+	grid-column: 1 / 4; 
+	grid-row: 1 / 2;
+}
+.b { 
+	grid-column: 5 / 6; 
+	grid-row: 1 / 4;
+}
+.c { 
+	grid-column: 1 / 2; 
+	grid-row: 3 / 4;
+}
+.d { 
+	grid-column: 3 / 4; 
+	grid-row: 3 / 4;
+}
+						 </code>
+
+					</div>
+				</pre>
+
+			</section>
+
+			<section id="ttPrt5" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">5. l'organisation de zone</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Vous pouvez nommez les zones de votre grille afin d'y insérer du contenu spécifique. Pour ce faire, nous utiliserons la propriété <code class="smallSnippet blkColor">grid-area</code>. Répéter le nom d'une zone indique que celle-ci occupe un espace plus important sur la grille. Utilisé un <code class="smallSnippet blkColor">.</code> indique un espace vide.</p>
+
+				</article>
+
+				<!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="insertExHere expl row">
+
+					<img src="img/formes-04.png" />
+
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+...
+&lt;div class="Wrapper"&gt;
+	&lt;div class="box header"&gt;Header&lt;/div&gt;
+	&lt;div class="box sidebar"&gt;Sidebar&lt;/div&gt;
+	&lt;div class="box content"&gt;Content&lt;/div&gt;
+&lt;/div&gt;
+						</code>
+					</div>
+
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.sidebar {
+	grid-area: sidebar;
+}
+.content {
+	grid-area: content;
+}
+.header {
+	grid-area: header;
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: 100px 10px 100px 10px 100px;
+	grid-template-rows: auto 10px auto;
+	grid-template-areas: "header header header header header" 
+	"sidebar . content content content";
+}
+						</code>
+					</div>
+				</pre>
+
+				
+			</section>
+
+			<section id="ttPrt6" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. le positionnement</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">L'outil Grid Layouts permet d'aligner les contenus verticalement ou horizontalement à l'aide des propriétés <code class="smallSnippet blkColor">grid-row-align</code> et <code class="smallSnippet blkColor">grid-column-align</code> dont les valeurs peuvent être les suivantes :</p>
+
+					<!--Si jamais vous avez une liste-->
+					<ul class="txtList">
+						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
+						<li><code class="smallSnippet blkColor">start</code> : aligne l'élément au début de la cellule (gauche ou droite selon le sens de la lecture). </li>
+						<li><code class="smallSnippet blkColor">end</code> : aligne l'élément à la fin de la cellule (gauche ou droite selon le sens de la lecture).</li>
+						<li><code class="smallSnippet blkColor">center</code> : place l'élément au centre de la cellule.</li>
+						<li><code class="smallSnippet blkColor">stretch</code> : étire l'élément (ses marges) pour occuper tout l'espace dans la cellule.</li>
+					</ul>
+
+				</article>
+
+					 <!--EDITEZ VOTRE EXEMPLE-->
+				<figure class="insertExHere expl row">
+
+					<img src="img/formes-05.png" />
+
+				</figure>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-6 columns">
+						<h3 class="whColor">html</h3>
+
+						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<code class="xml">
+...
+	&lt;div class="Body"&gt;
+		&lt;div class="box navigation"&gt;Navigation&lt;/div&gt;
+		&lt;div class="box galerie"&gt;Galerie&lt;/div&gt;
+		&lt;div class="box article"&gt;Article&lt;/div&gt;
+		&lt;div class="box info"&gt;Info&lt;/div&gt;
+	&lt;/div&gt;
+						</code>
+					</div>
+
+					<div class="medium-6 columns end">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.body {
+	 display: grid;
+	 grid-columns: 250px 250px;
+	 grid-rows: 250px 250px;
+}
+.navigation {
+	 grid-column: 1; grid-row: 1;
+}
+.galerie {
+	 grid-column: 2; grid-row: 1;
+	 grid-row-align : center;
+}
+.article {
+	 grid-column: 1; grid-row: 2;
+	 grid-column-align : center;
+}
+.info {
+	 grid-column: 2; grid-row: 2;
+	 grid-row-align : center;
+	 grid-column-align : center;
+}
+
+						</code>
+					</div>
+				</pre>
+
+			</section>
+
+			<section id="ttPrt7" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">7. les unités de tailles</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">Le modèle d'affichage en grille ne se contente pas d'employer les unités de largeur et hauteur habituelles; il introduit des fonctions complexes permettant de s'adapter à des contextes de contenus différents :</p>
+
+					<!--Si jamais vous avez une liste-->
+					<ul class="txtList">
+						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
+						<li><code class="smallSnippet blkColor">px, %, em, ex, rem,…</code> : pixels, pourcentages, em,… (unités courantes). </li>
+						<li><code class="smallSnippet blkColor">fr</code> : raction(s) de l'espace restant.</li>
+						<li><code class="smallSnippet blkColor">min-content</code> : se rapporte à la largeur (ou hauteur) de l'élément le plus petit.</li>
+						<li><code class="smallSnippet blkColor">max-content</code> : se rapporte à la largeur (ou hauteur) de l'élément le plus grand.</li>
+						<li><code class="smallSnippet blkColor">minmax(min, max)</code> : exemple minmax(min-content, 20%) correspond à largeur 20% (ou hauteur), mais au minimum largeur (ou hauteur) du contenu.</li>
+						<li><code class="smallSnippet blkColor">auto</code> : s'adapte à la largeur (ou hauteur) du contenu.</li>
+						<li><code class="smallSnippet blkColor">fit-content</code> : identique à <code class="smallSnippet blkColor">auto</code> et aussi à <code class="smallSnippet blkColor"> minmax</code> (min-content, max-content).</li>
+					</ul>
+
+				</article>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.body {
+	display: grid;
+	grid-columns: 250px 1fr; /* largeur 250px et "espace restant" */
+	grid-rows: 100px 1fr;
+}
+.navigation {
+	grid-column: 1; grid-row: 1;
+}
+.galerie {
+	grid-column: 2; grid-row: 1;
+}
+.article {
+	grid-column: 1; grid-row: 2;
+}
+.info {
+	grid-column: 2; grid-row: 2;
+}
+						</code>
+					</div>
+				</pre>
+
+
+			</section>
+
+			<section id="ttPrt8" class="whBG smallAir">
+
+				<article class="txtRow">
+					
+					<!--EDITEZ LE SOUS-TITRE-->
+					<h2 class="blkColor sectionTitle ttPrtTitle">8. UNE GRILLE POUR TOUS TYPES D'ÉCRANS</h2>
+
+				</article>
+
+				<article class="txtRow">
+
+					<!--EDITEZ LE TEXTE-->
+					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
+					<p class="blkColor">L'un des avantages les plus flagrants d'une grille virtuelle, indépendante des éléments HTML qui peuvent s'y placer, est qu'il est extrêmement aisé de modifier la grille selon le contexte. Par exemple, pour s'adapter immédiatement aux différentes tailles d'écran, il suffit de... changer la grille initiale.</p>
+					<p class="blkColor">Associé aux CSS3 Media Queries, le modèle de positionnement en grille donne toute sa puissance, plus particulièrement si vous avez opté pour une trame sous forme de variante "template". En effet, seul le patron de départ nécessite d'être modifié : inutile d'intervenir sur la structure HTML, ni même sur le positionnement de chaque élément de page.</p>	
+
+				</article>
+
+				<!--EDITEZ VOTRE CODE SOURCE-->
+				<pre class="snippet row largeRow">
+					<div class="medium-8 medium-centered columns">
+						<h3 class="whColor">css</h3>
+
+						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
+						<code class="css">
+.body {
+	display: grid;
+	grid-template: "abcd";
+}
+
+@media (max-width: 640px) {
+	 body {
+		display: grid;
+		grid-template: "a"
+						"b"
+						"c"
+						"d";
+	 }
+}
+						</code>
+					</div>
+				</pre>
+
+
+			</section>
+
+			<!--CAN I USE-->
+			<section id="CIU" class="blBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">Support</h1>
+				</article>
+
+				<div class="row browsers flex flexColumn equalRep">
+					<div class="browser">
+						<h2 class="blkColor">chrome</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor chromeIcn animation"></i>
+						</div>
+						<p class="whColor level4">Non supporté</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">-</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">safari</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor safariIcn animation"></i>
+						</div>
+						<p class="whColor level4">Non supporté</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">-</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">opera</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor operaIcn animation"></i>
+						</div>
+						<p class="whColor level4">Non supporté</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">-</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">firefox</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor ffIcn animation"></i>
+						</div>
+						<p class="whColor level4">Non supporté</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">-</span>
+					</div>
+
+					<div class="browser">
+						<h2 class="blkColor">ie</h2>
+						<div class="browserIcns">
+							<i class="iconSCB blkColor ieIcn animation"></i>
+						</div>
+						<p class="whColor level4">Fonctionne sur</p>
+						<!--Editez la ou les versions-->
+						<span class="whColor level2 version">10+</span>
+					</div>
+				</div>
+				
+			</section>
+
+			<!--REFERENCES-->
+			<section id="refs" class="whBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">références</h1>
+				</article>
+
+				<!--EDITEZ VOS LIENS-->
+				<ul class="row largeRow links">
+					
+					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/TR/css3-grid-layout/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org</a></li>
+
+					<li><span class="blkColor level4 upCase">microsoft - </span><a href="https://msdn.microsoft.com/fr-fr/library/ie/jj553856%28v=vs.85%29.aspx" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://microsoft.com/</a></li>
+
+					<li><span class="blkColor level4 upCase">alsacréations - </span><a href="http://www.alsacreations.com/article/lire/1388-css3-grid-layout.html" class="txtLink blkTxt" alt="lien vers alsacréations">http://www.alsacreations.com/</a></li>
+
+					<li><span class="blkColor level4 upCase">gridbyexample - </span><a href="http://gridbyexample.com/" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://gridbyexample.com/</a></li>
+
+					<li><span class="blkColor level4 upCase">css-tricks - </span><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="txtLink blkTxt" alt="lien vers demosthenes.info">http://css-tricks.com/</a></li>
+
+				</ul>
+				
+			</section>
+
+			<!--AUTEUR-->
+			<section id="author" class="blBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">auteur</h1>
+				</article>
+
+				<div class="row largeRow">
+					<div class="medium-4 columns">
+
+						<!--EDITEZ VOTRE PHOTO-->
+						<img src="../img/team/alexis.jpg" alt="photo auteur" />
+
+					</div>
+
+					<div class="medium-8 columns end details">
+
+						<!--EDITEZ VOTRE ID-->
+						<h2 class="whColor upCase">alexis doyen</h2>
+						<p class="level4 blkColor marginU marginD">Mon but est d'apporter une expérience, la plus inédite soit elle, à l'utilisateur. Un bon design passe par une bonne compréhension des besoins.</p>
+
+						<!--EDITEZ VOS LIENS-->
+						<div class="iconWrapper centerOrigin flex equalRep large-6">
+
+							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
+							<a href="http://alexisdoyen.com" alt="lien vers le portfolio">
+								<i class="iconSC whColor urlIcn animation"></i>
+							</a>
+
+							<a href="https://fr.linkedin.com/pub/alexis-doyen/8a/6ba/36a" alt="lien vers linkedin">
+								<i class="iconSC whColor lnkinIcn animation"></i>
+							</a>
+
+						</div>
+					</div>
+				</div>
+				
+			</section>
+
+			<!--CONTACT-->
+			<section id="contact" class="whBG air">
+
+				<article class="row">
+					<h1 class="blkColor sectionTitle">contact</h1>
+				</article>
+
+				<form class="row" method="post" action="../contact.php" autocomplete="on">
+					<div class="medium-6 columns">
+
+						<label for="name" class="blkColor upCase level3">
+							nom *
+							<input id="name" type="text" name="name" />
+						</label>
+						<label for="from" class="blkColor upCase level3">
+							adresse e-mail *
+							<input id="from" type="text" name="from" placeholder="mail@domaine.com"/>
+						</label>
+						<!--EDITEZ VALUE AVEC VOTRE THEME-->
+						<label for="object" class="blkColor upCase level3">
+							thème *
+							<input id="object" type="text" name="object" value="Grid Layout" />
+						</label>
+
+					</div>
+
+					<div class="medium-6 columns end">
+
+						<label for="message" class="blkColor upCase level3">
+							message *
+							<textarea id="message" type="text" name="message"></textarea>
+						</label>
+						<div class="sendBut">
+							<button type="submit" name="send" class="button medium centerOrigin animation send blBut"><span class="animation">envoyer</span></button>
+						</div>
+
+					</div>
+				</form>
+				
+			</section>
+
+		</div>
+
+		<footer class="blkBG">
+
+			<div class="row">
+				<div class="medium-6 column">
+
+					<a href="../mentions-obligatoires" alt="lien vers les mentions légales" class="txtLink whTxt">Mentions obligatoire</a>
+
+				</div>
+
+				<div class="medium-6 column">
+
+					<p class="whColor">© Mastère 2 spécialité digital - ECV Aquitaine - promotion 2015 - tous droits réservés</p>
+
+				</div>
+			</div>
+
+		</footer>
 
 	</body>
 

@@ -6,10 +6,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="author" content="Dan Gu" />
-		<meta name="description" content="Les propriétés de positionnement CSS vous permettent de positionner un élément librement dans votre page web." />
+		<meta name="author" content="Thibaud Sabathier" />
+		<meta name="description" content="Comprendre les fonctionnalités de la propriété css transform" />
 
-		<title>Le positioning et float</title>
+		<title>Transformation</title>
 
 		<!--STYLE GENERAL-->
 		<link rel="stylesheet" media="all" type="text/css" href="../css/foundation.css" />
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" media="all" type="text/css" href="../css/tomorrow-night.css" />
 
 		<!--STYLE ADDITIONNEL-->
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style.css"/>
 
 		<!--FONTES-->
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700,900' rel='stylesheet' type='text/css'>
@@ -74,29 +74,29 @@
 				<article class="largeRow centerBlock">
 
 					<!--EDITEZ VOTRE TITRE-->
-					<h1 class="blkColor ttTitle">Positioning & Float</h1>
+					<h1 class="blkColor ttTitle">Transformation</h1>
 
 					<div class="ttIntro row">
 
 						<!--EDITEZ VOTRE INTRODUCTION-->
-						<p class="blkColor level4">Les propriétés de positionnement CSS vous permettent de positionner un élément librement dans votre page web.</p>
+						<p class="blkColor level4">Avec l'atelier de Transformation, devenez le maître de la perspective !<br>La propriété transformation va vous permettre de pivoter, augmenter, tourner, réduire ou incliner un élément en 2D ou bien 3D.</p>
 
 						<!--EDITEZ VOS PARTIES-->
 						<!--N'oubliez pas de lier aux ancres, qui sont les id de vos sections-->
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
-								<li><a href="#ttPrt1" class="txtLink whTxt">Le positionnement static</a></li>
-								<li><a href="#ttPrt2" class="txtLink whTxt">Le positionnement absolu</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">Le positionnement fix</a></li>
+								<li><a href="#ttPrt1" class="txtLink whTxt">L'inclinaison</a></li>
+								<li><a href="#ttPrt2" class="txtLink whTxt">Mise à l'Échelle</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">Déplacement ou translation</a></li>
 
 							</div>
 
 							<div class="medium-6 columns end">
 
-								<li><a href="#ttPrt4" class="txtLink whTxt">Le positionnement relatif</a></li>
-								<li><a href="#ttPrt5" class="txtLink whTxt">La propriété z-index</a></li>
-								<li><a href="#ttPrt6" class="txtLink whTxt">la propriété float</a></li>
+								<li><a href="#ttPrt4" class="txtLink whTxt">Rotation ou pivot</a></li>
+								<li><a href="#ttPrt5" class="txtLink whTxt">Matrice ou tableau</a></li>
+								<li><a href="#ttPrt6" class="txtLink whTxt">poursuivre avec de la 3D</a></li>
 
 							</div>
 						</ol>
@@ -104,7 +104,7 @@
 					</div>
 
 					<!--EDITEZ VOTRE NOM-->
-					<p class="ttAuteur">Créé par Dan Gu le 02/04/2015</p>
+					<p class="ttAuteur">Créé par Thibaud Sabathier le 02/04/2015</p>
 
 					<div class="ttbuttons row">
 						<div class="medium-6 columns">
@@ -136,7 +136,35 @@
 				<article class="txtRow">
 
 					<!--EDITEZ L-'INTRODUCTION-->
-					<p class="blkColor level3">Les propriétés de positionnement CSS vous permettent de positionner un élément. Il peut également placer un élément derrière un autre, et de spécifier ce qui doit se produire lorsque le contenu d’un élément est trop long. Nous allons apprendre à modifier la position des éléments sur notre page. Vous allez voir, il existe plusieurs techniques permettant d’effectuer la mise en page du site. Chacune a ses avantages et ses défauts, ce sera à vous de sélectionner celle qui vous semble la meilleure selon votre cas.</p>
+					<p class="blkColor level3">La propriété transformation va vous permettre de pivoter, augmenter, tourner, réduire ou incliner un élément en 2D ou bien 3D.
+					Assez facile à mettre en oeuvre en 2D, les effets de transformations vous permettrons de vous distinguer dans certaines de vos présentations lorsqu’elles prennent une autre dimension en 3D ou bien combiner à l’effet de <a href="../transition" class="txtLink">transition</a>.
+					À appliquer au bon endroit au bon moment, cette propriété peut s’avérer pratique dans certain cas.</p>
+					<p class="blkColor level3">Avant de commencer il est nécessaire de savoir écrire la bonne syntaxe:</p>
+
+					<pre class="snippet row largeRow">
+						<div class="medium-8 medium-centered columns">
+							<h3 class="whColor">css</h3>
+							<!--pour le html, remplacer "<" par &lt;; et ">" &gt;. Sinon il s'exécute pour du html pur-->
+							<code class="css">
+	transform: fonction(valeur);
+							</code>
+						</div>
+					</pre> 
+
+					<p class="blkColor level3">Vous avez la possibilité de combiner les transformations en utilisant la syntaxe ainsi:</p>
+
+					<pre class="snippet row largeRow">
+						<div class="medium-8 medium-centered columns">
+							<h3 class="whColor">css</h3>
+							<!--pour le html, remplacer "<" par &lt;; et ">" &gt;. Sinon il s'exécute pour du html pur-->
+							<code class="css">
+	transform : function1(value1) function2(value2) function3(value3);
+							</code>
+						</div>
+					</pre> 
+
+					<p class="blkColor level3">Pensez à utiliser les préfixes des navigateurs en question (-webkit-, -moz-, etc.) devant la propriété transform. Cela s'averera utile pour les utiliser sur les anciennes et nouvelles versions des navigateurs.</p>
+					<p class="blkColor level3">Let's start !!</p>
 
 				</article>
 
@@ -147,7 +175,7 @@
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">1. Le positionnement static.</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">1. Inclinaison alias Skew</h2>
 
 				</article>
 
@@ -155,17 +183,15 @@
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Les éléments peuvent être positionnés en utilisant le ‘top’, le ‘bottom’, le ‘left’, et le ‘right’ propriétés. Cependant, ces propriétés ne fonctionnera que si la propriété position est réglé en premier. Ils travaillent également différemment selon le procédé de positionnement.</p>
-					<p class="blkColor">Il existe quatre méthodes de positionnement différents. On va d'abord parler le positionnement 'static' qui est le positionnement par défaut, il n'est pas affecté par le ‘top’, le ‘bottom’, le ‘left’, et le ‘right’ propriétés.</p>
+					<p class="blkColor">Skew permet d’incliner (angle en degré) un élément sur l’axe x ou y ou les deux à la fois.</p>
 
 				</article>
-				
+
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
 
-					<div class="contentexm1">
-						<h1 class="static">Hello css snippets!</h1>
-					</div>
+					<div class="skeworiginal">Original</div>
+					<div class="skew">Incliner<br>sur X</div>
 
 				</figure>
 
@@ -174,16 +200,12 @@
 					<div class="medium-8 medium-centered columns">
 						<h3 class="whColor">html</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<!--pour le html, remplacer "<" par &lt;; et ">" &gt;. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
-&lt;html&gt;
-	...
-	&lt;body&gt;
-		&lt;h1&gt;Hello css snippets!
-		&lt;/h1&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
+&lt;div class="skeworiginal">Original&lt;/div&gt;
+&lt;div class="skew"&gt;Incliner<br>sur X&lt;/div&gt;
 						</code>
+
 					</div>
 
 					<div class="medium-8 medium-centered columns">
@@ -191,8 +213,11 @@
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-h1 {
-	position: static;
+.skew {
+	background-color: #5A9596;
+	-ms-transform: skewX(15deg); /* IE 9 */
+	-webkit-transform: skewX(15deg); /* Safari */
+	transform: skewX(15deg);
 }
 						</code>
 					</div>
@@ -205,7 +230,7 @@ h1 {
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">2. Le positionnement absolu</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">2. Échelle alias Scale</h2>
 
 				</article>
 
@@ -213,16 +238,15 @@ h1 {
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Le positionnement absolu nous permet de placer un élément n’importe où sur la page (en haut à gauche, en bas à droite, tout au centre, etc.).</p>
+					<p class="blkColor">Scale augmente ou diminue la taille d’un élément sur son axe x ou y ou bien les deux à la fois. Dans l’exemple qui suit, l’élément div sera augmenté de 2 fois sa largeur d’origine et 3 fois sa hauteur d’origine.</p>
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
 
-					<div class="contentexm2">
-						<div class="absolu"></div>
-					</div>
+						<div class="scaleoriginal">Original</div>
+						<div class="scale">Scale</div>
 
 				</figure>
 
@@ -231,15 +255,10 @@ h1 {
 					<div class="medium-8 medium-centered columns">
 						<h3 class="whColor">html</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<!--pour le html, remplacer "<" par &lt;; et ">" &gt;. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
-&lt;html&gt;
-	...
-	&lt;body&gt;
-		&lt;div class="rect"&gt;
-		&lt;/div&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
+&lt;div class="scaleoriginal">Original&lt;/div&gt;
+&lt;div class="scale"&gt;scale<br>sur X&lt;/div&gt;
 						</code>
 					</div>
 
@@ -248,14 +267,19 @@ h1 {
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-.rect {
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
+.scale{
+	background-color: #5A9596;
+	-ms-transform: scale(3,1.5); /* IE 9 */
+	-webkit-transform: scale(3,1.5); /* Safari */
+	transform: scale(3,1.5); /* Standard syntax */
+	width: 150px;
+	height: 100px;
 }
 						</code>
 					</div>
 				</pre>
+
+
 			</section>
 
 			<section id="ttPrt3" class="whBG smallAir">
@@ -263,7 +287,7 @@ h1 {
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">3. Le positionnement fix</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. Déplacement alias Translate</h2>
 
 				</article>
 
@@ -271,12 +295,27 @@ h1 {
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">l’élément fix reste toujours visible, même si on descend plus bas dans la page, il est positionné relativement par rapport à la fenêtre de navigateur.</p>
+					<p class="blkColor">Translate permet de déplacer un élément de sa position actuelle (selon les paramètres indiqués pour x et y d’origine). L’exemple qui suit déplace l’élément div de 200 pixels vers la droite et 10 pixels vers le bas de sa position actuelle.</p>
+
+					<!--Si jamais vous avez une liste-->
+					<!--<ul class="txtList">
+						<!--Cette balise <code> permet de mettre légèrement en lumière la syntaxe-->
+						<!--<li><code class="smallSnippet blkColor">@media screen all</code> : toutes résolutions</li>
+						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx)</code> : écrans de largeur minimale de X pixels</li>
+						<li><code class="smallSnippet blkColor">@media screen and (max-width: Xpx)</code> : écrans de largeur maximale de X pixels</li>
+						<li><code class="smallSnippet blkColor">@media screen and (min-width: Xpx) and (max-width: Ypx)</code> : écrans de largeur minimale de X pixels et de largeur maximale de Y pixels</li>
+					</ul>
+
+					<p class="blkColor">Il existe d’autres conditions utilisables dans des cas plus rares, les lignes citées ci-dessus étant les plus couramment utilisées pour le responsive web design.</p>-->
 
 				</article>
-					<!--EDITEZ VOTRE EXEMPLE-->
+
+				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
-					<img class="contentexm3" src="img/fix.gif" alt="element fixed" />
+
+					<div class="translate1">Original</div>
+					<div class="translate2">Translate</div>
+
 				</figure>
 
 				<!--EDITEZ VOTRE CODE SOURCE-->
@@ -284,15 +323,10 @@ h1 {
 					<div class="medium-8 medium-centered columns">
 						<h3 class="whColor">html</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<!--pour le html, remplacer "<" par &lt;; et ">" &gt;. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
-&lt;html&gt;
-	...
-	&lt;body&gt;
-		&lt;div class="rect-fixed"&gt;
-		&lt;/div&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
+&lt;div class="translate1">Original&lt;/div&gt;
+&lt;div class="translate2"&gt;Translate&lt;/div&gt;
 						</code>
 					</div>
 
@@ -301,11 +335,15 @@ h1 {
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-.rect-fixed{
-	position: fixed;
-	margin: auto;
-	margin-top:40px;
+.translate2 {
+	background-color: #5A9596;
+	-ms-transform: translate(200px,10px); /* IE 9 */
+	-webkit-transform: translate(200px,10px); /* Safari */
+	transform: translate(200px,10px);
+	width: 250px;
+	height: 100px; 
 }
+
 						</code>
 					</div>
 				</pre>
@@ -317,7 +355,7 @@ h1 {
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">4. Le positionnement relatif</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. Rotation alias Rotate</h2>
 
 				</article>
 
@@ -325,19 +363,15 @@ h1 {
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Le positionnement relatif permet de décaler l’élément par rapport à sa position normale. Voici un example, le rectangle jaune est un élément relatif positionne par rapport un élément absolu (le rectangle bleu).</p>
-		
+					<p class="blkColor">Rotate vous permet de pivoter un élément dans le sens horaire (ou anti horaire) selon un degré donné. L’exemple qui suit pivote l’élément div de 50 degré sur l'axe X. Il est aussi possible de paramétrer l'axe Y ou bien les deux.</p>
 
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
 
-					<div class="contentexm4">
-						<div class="relatif">
-							<div class="elemabsolu"><div class="yorelatif"></div></div>
-						</div>
-					</div>
+					<div class="rotationoriginal">Original</div>
+					<div class="rotation">Rotation 50°</div>
 
 				</figure>
 
@@ -346,19 +380,10 @@ h1 {
 					<div class="medium-8 medium-centered columns">
 						<h3 class="whColor">html</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<!--pour le html, remplacer "<" par &lt;; et ">" &gt;. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
-&lt;html&gt;
-	...
-	&lt;body&gt;
-		&lt;div class="content"&gt;
-			&lt;div class="rect-bleu"&gt;
-				&lt;div class="rect-jaune"&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
+&lt;div class="rotationoriginal">Original&lt;/div&gt;
+&lt;div class="Rotation 20°"&gt;Rotation 20°&lt;/div&gt;
 						</code>
 					</div>
 
@@ -367,28 +392,14 @@ h1 {
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-.content {
-	width: 100%;
-	height: 300px;
+.rotation {
+	background-color: #5A9596;
+	width: 250px;
+	height: 100px;
+	-ms-transform: rotateX(50deg); /* IE 9 */
+	-webkit-transform: rotateX(50deg); /* Safari */
+	transform: rotateX(50deg);
 }
-
-.rect-bleu {
-	width:300px;
-	height:200px;
-	background-color: #79a9fd;
-	position: absolute;
-	margin-top: 40px;
-	margin-left: 330px;
-}
-
-.rect-jaune{
-	width:100px;
-	height:100px;
-	background-color: #fff186;
-	position: relative;
-	margin: 10px 0 0 20px;
-}
-
 
 						</code>
 					</div>
@@ -401,7 +412,7 @@ h1 {
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">5. La propriété z-index</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">5. Matrice alias Matrix</h2>
 
 				</article>
 
@@ -409,17 +420,15 @@ h1 {
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">La propriété z-index permet de placer un élément devant ou derrière les autres, elle ne marche pas avec le positionnement static.</p>
+					<p class="blkColor">Matrix vous permet de combiner tous les transformations 2D en une. Les six paramètres enregistrés vous permette d’agrandir, pivoter, incliner, déplacer les éléments.</p>
+
 				</article>
 
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
 
-					<div class="contentexm5">
-						<img class="ex1" src="img/ex1.png" alt="example" />
-						<div class="rectindex1"><h1>3</h1></div>
-						<div class="rectindex2"><h1>1</h1></div>
-					</div>
+					<div class="matrixoriginal">Original</div>
+					<div class="matrix">Transformé</div>
 
 				</figure>
 
@@ -428,20 +437,10 @@ h1 {
 					<div class="medium-8 medium-centered columns">
 						<h3 class="whColor">html</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<!--pour le html, remplacer "<" par &lt;; et ">" &gt;. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
-&lt;html&gt;
-	...
-	&lt;body&gt;
-		&lt;div class="content"&gt;
-			&lt;img src="img/example.png" /&gt;
-			&lt;div class="rect-rose"&gt;
-			&lt;/div&gt;
-			&lt;div class="rect-jaune"&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
+&lt;div class="matrixoriginal">Original&lt;/div&gt;
+&lt;div class="matrix"&gt;Transformé&lt;/div&gt;
 						</code>
 					</div>
 
@@ -450,36 +449,19 @@ h1 {
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-img {
-	width: 300px;
-	height: auto;
-	margin: 68px 0 0 25%;
-	position: relative;
-	z-index: 2;
+.matrix{
+	background-color: #5A9596;
+	width: 250px;
+	height: 100px;
+	-ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
+	-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
+	transform: matrix(1, -0.3, 2, 1, 0, 5);
 }
-
-.rect-rose {
-	background-color: rgba(255,0,0,0.34);
-	width:200px;
-	height:200px;
-	position: relative;
-	margin: -150px 0 0 150px;
-	z-index:1;
-}
-
-.rect-jaune {
-	background-color: #f6ff7d;
-	width:200px;
-	height:200px;
-	position: relative;
-	margin: -290px 0 0 500px;
-	z-index:3;
-}
-
 
 						</code>
 					</div>
 				</pre>
+
 			</section>
 
 			<section id="ttPrt6" class="whBG smallAir">
@@ -487,7 +469,7 @@ img {
 				<article class="txtRow">
 					
 					<!--EDITEZ LE SOUS-TITRE-->
-					<h2 class="blkColor sectionTitle ttPrtTitle">6. la propriété float</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">6. Pour aller plus loin avec peu de 3D</h2>
 
 				</article>
 
@@ -495,18 +477,15 @@ img {
 
 					<!--EDITEZ LE TEXTE-->
 					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Il se trouve que cette propriété est aujourd’hui utilisée par la majorité des sites web pour faire la letterine de paragraphe ou faire la mise en page.</p>
-					<p class="blkColor">D’aboard nous l’avons utilisée pour faire flotter une letterine au début de la paragraphe. Utilisez F pour la letterine, puis changez le style css en utilisant span{}.  On peut également utiliser une image flotte autour du texte.</p>
+					<p class="blkColor">En paramétrant un axe supplémentaire Z vous definissez un espace en 3D. Toutes les fonctions précédentes peuvent avoir une troisième valeur. L'exemple ci-dessous s'applique à la rotation sur Z.</p>
+
 				</article>
-				
+
 				<!--EDITEZ VOTRE EXEMPLE-->
 				<figure class="insertExHere expl row">
 
-					<div class="contentexm6">
-						<div class="para-content">
-							<p class="para1"><span class="lettring">F</span>loat left, The element floats to the left. Let the first letter "F" of a paragraph float to the left and style the letter.</p>
-						</div>
-					</div>
+					<div class="rotationoriginal">Original</div>
+					<div class="rotation3D">Rotation sur Z</div>
 
 				</figure>
 
@@ -515,18 +494,10 @@ img {
 					<div class="medium-8 medium-centered columns">
 						<h3 class="whColor">html</h3>
 
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
+						<!--pour le html, remplacer "<" par &lt;; et ">" &gt;. Sinon il s'exécute pour du html pur-->
 						<code class="xml">
-&lt;html&gt;
-	...
-	&lt;body&gt;
-		&lt;div class="content"&gt;
-			&lt;p&gt;				&lt;span&gt;F&lt;/span&gt;loat left, The element floats to the left. Let the first letter "F" of a paragraph float to the left and style the letter.
-			&lt;/p&gt;
-			
-		&lt;/div&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
+&lt;div class="rotationoriginal">Original&lt;/div&gt;
+&lt;div class="rotation3D"&gt;Rotation sur Z&lt;/div&gt;
 						</code>
 					</div>
 
@@ -535,112 +506,14 @@ img {
 
 						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
 						<code class="css">
-p {
-	font-family: sans-serif;
-	font-size: 16px;	
+.rotation3D{
+	background-color: #5A9596;
+	width: 250px;
+	height: 100px;
+	-webkit-transform: rotateZ(90deg); /* Safari */
+	transform: rotateZ(90deg);
 }
 
-span {
-	float: left;
-	width: 0.7em;
-	font-size: 55px;
-	font-family: courier;
-	line-height: 90%;
-	color: #ce5a5a;
-}
-
-
-						</code>
-					</div>
-				</pre>
-				
-				<article class="txtRow">
-
-					<!--EDITEZ LE TEXTE-->
-					<!--Pour fsmallAire un saut de ligne, utilisez la balise <p> plutôt que <br>-->
-					<p class="blkColor">Utilisez le float pour faire la barre menu de votre site.</p>
-					
-				</article>
-				
-				<!--EDITEZ VOTRE EXEMPLE-->
-				<figure class="insertExHere expl row">
-					<div class="contentexm6">
-						<ul class="float-right">
-	  						<li class="left">Hello world!</li>
-	  						<li class="menu-right"><a href="#">contact</a></li>
-	  						<li class="menu-right"><a href="#">works</a></li>
-	  						<li class="menu-right"><a href="#">home</a></li>
-  						</ul>
-				</figure>
-
-				<!--EDITEZ VOTRE CODE SOURCE-->
-				<pre class="snippet row largeRow">
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">html</h3>
-
-						<!--pour le html, remplacer "<" par &lt; et ">" &gt. Sinon il s'exécute pour du html pur-->
-						<code class="xml">
-&lt;html&gt;
-	...
-	&lt;body&gt;
-		&lt;ul&gt;
-		
-			&lt;li class="hello"&gt;
-			&lt;/li&gt;
-			&lt;li class="menu"&gt;
-			&lt;/li&gt;
-			&lt;li class="menu"&gt;
-			&lt;/li&gt;
-			&lt;li class="menu"&gt;
-			&lt;/li&gt;
-			
-		&lt;/ul&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-						</code>
-					</div>
-
-					<div class="medium-8 medium-centered columns">
-						<h3 class="whColor">css</h3>
-
-						<!--pour le css, indentez bien et fixez le code source au bord, pour éviter de rajouter des TAB à l'affichage-->
-						<code class="css">
-ul {
-	padding:0;
-	width:80%;
-	height:100px;
-	margin-left:90px;
-	list-style: none;
-}
-
-.menu {
-	float:right;
-}
-
-.menu li {
-	display: inline;
-	padding:10px;
-	margin-top: 55px;
-}
-
-.hello {
-	float: left;
-	font-size: 20px;
-}
-
-.menu a{
-	text-decoration:none;
-	font-size: 20px;
-	background-color: #e2ff76;
-	color:black;
-	padding:5px 15px 5px 15px;
-}
-
-.menu a:hover{
-	text-decoration:none;
-	color:#e2ff76;
-	background-color: black;
-}
 						</code>
 					</div>
 				</pre>
@@ -662,7 +535,7 @@ ul {
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">21+</span>
+						<span class="whColor level2 version">4+</span>
 					</div>
 
 					<div class="browser">
@@ -672,7 +545,7 @@ ul {
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">4+</span>
+						<span class="whColor level2 version">3.1+</span>
 					</div>
 
 					<div class="browser">
@@ -682,7 +555,7 @@ ul {
 						</div>
 						<p class="whColor level4">Fonctionne sur</p>
 						<!--Editez la ou les versions-->
-						<span class="whColor level2 version">9+</span>
+						<span class="whColor level2 version">10.5+</span>
 					</div>
 
 					<div class="browser">
@@ -717,10 +590,15 @@ ul {
 
 				<!--EDITEZ VOS LIENS-->
 				<ul class="row largeRow links">
+					<li><span class="blkColor level4 upCase">w3schools - </span><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" class="txtLink blkTxt" alt="lien vers w3school">http://www.w3schools.com</a></li>
 
-					<li><span class="blkColor level4 upCase">w3c - </span><a href="http://www.w3.org/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://www.w3.org</a></li>
+					<li><span class="blkColor level4 upCase">David deSandro - </span><a href="http://desandro.github.io/3dtransforms/" class="txtLink blkTxt" alt="lien vers le site du w3c, media queries">http://desandro.github.io</a></li>
 
-					<li><span class="blkColor level4 upCase">CSS-Tricks - </span><a href="http://css-tricks.html" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://css-tricks.html</a></li>
+					<li><span class="blkColor level4 upCase">Microsoft - </span><a href="http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_3d-transforms.htm" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://ie.microsoft.com</a></li>
+
+					<li><span class="blkColor level4 upCase">CSS Tricks - </span><a href="https://css-tricks.com/almanac/properties/t/transform/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">https://css-tricks.com</a></li>
+
+					<li><span class="blkColor level4 upCase">matrix construction set- </span><a href="http://www.useragentman.com/matrix/" class="txtLink blkTxt" alt="lien vers mediaqueri.es">http://www.useragentman.com</a></li>
 
 				</ul>
 				
@@ -737,33 +615,29 @@ ul {
 					<div class="medium-4 columns">
 
 						<!--EDITEZ VOTRE PHOTO-->
-						<img src="../img/team/dan.jpg" alt="photo auteur" />
+						<img src="../img/team/thibaud.jpg" alt="photo auteur" />
 
 					</div>
 
 					<div class="medium-8 columns end details">
 
 						<!--EDITEZ VOTRE ID-->
-						<h2 class="whColor upCase">dan gu</h2>
-						<p class="level4 blkColor marginU marginD">Salut, je suis un digital designer, intéressé par le UI / UX design et le design interactive. J’aime rencontrer des gens, de travailler avec et de partager notre expérience.</p>
+						<h2 class="whColor upCase">Thibaud Sabathier</h2>
+						<p class="level4 blkColor marginU marginD">Thibaud Sabathier est un étudiant en design graphique à l’ECV. Son travail s’axe sur le digital, l’identité et le print. Influencé par le style international son travail met en avant l’information de manière rigoureuse et esthétique. De temps à autre au détour d’un voyage il joue avec la photographie comme en témoigne ses blogs.</p>
 
 						<!--EDITEZ VOS LIENS-->
 						<div class="iconWrapper centerOrigin flex equalRep large-6">
 
 							<!--Editez en supprimant les liens que vous ne voulez pas et remplissant ceux qui vous correspondent. Mettez vos liens dans les href=""-->
-							<a href="http://superdan.fr" alt="lien vers le portfolio">
+							<a href="http://hibaud-sabathier.com" alt="lien vers le portfolio">
 								<i class="iconSC whColor urlIcn animation"></i>
 							</a>
 
-							<a href="https://fr.linkedin.com/pub/dan-gu/81/206/30b" alt="lien vers linkedin">
+							<a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile" alt="lien vers linkedin">
 								<i class="iconSC whColor lnkinIcn animation"></i>
 							</a>
 
-							<a href="http://www.viadeo.com/fr/profile/dan.gu" alt="lien vers viadeo">
-								<i class="iconSC whColor vdoIcn animation"></i>
-							</a>
-
-							<a href="https://twitter.com/heyladan" alt="lien vers twitter">
+							<a href="https://twitter.com/SabathierT" alt="lien vers twitter">
 								<i class="iconSC whColor twtrIcn animation"></i>
 							</a>
 
@@ -794,7 +668,7 @@ ul {
 						<!--EDITEZ VALUE AVEC VOTRE THEME-->
 						<label for="object" class="blkColor upCase level3">
 							thème *
-							<input id="object" type="text" name="object" value="Positionning & float" />
+							<input id="object" type="text" name="object" value="Transformation" />
 						</label>
 
 					</div>

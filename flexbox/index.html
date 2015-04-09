@@ -32,7 +32,7 @@
 		<script src="../js/plugins/jquery.asset.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			imready = function() {
-				masonryRatio();
+				//masonryRatio();
 			}
 
 			masonryRatio = function() {
@@ -103,14 +103,14 @@
 					<h1 class="blkColor ttTitle">l'atelier flexbox</h1>
 
 					<div class="ttIntro row">
-						<p class="blkColor level4">Flexbox est un modèle de boîte flexible qui s’affranchit totalement des valeurs fixes. Très utile dans un contexte de page Web adaptive (mobile et moniteur).</p>
+						<p class="blkColor level4">Flexbox est un modèle de boîte flexible qui s’affranchit totalement des valeurs fixes. Très utile dans un contexte de page Web adaptive (mobile & moniteur).</p>
 
 						<ol class="contents row">
 							<div class="medium-6 columns">
 
 								<li><a href="#ttPrt1" class="txtLink whTxt">syntaxe</a></li>
 								<li><a href="#ttPrt2" class="txtLink whTxt">Flexbox construit des listes</a></li>
-								<li><a href="#ttPrt3" class="txtLink whTxt">Flexbox imbrique votre barre de navigation</a></li>
+								<li><a href="#ttPrt3" class="txtLink whTxt">Flexbox imbrique votre navigation</a></li>
 
 							</div>
 
@@ -154,7 +154,7 @@
 
 				<article class="txtRow">
 
-					<p class="blkColor level3">Flexbox n'est pas nouveau, mais n'est pas encore un standard. Le fruit est meilleur quand il est cueillit à maturité, et pour les standards, c'est pareil. Je vous invite à suivre ces petits ateliers pour ceux qui veulent expérimenter ou bien changer leur manière de construire une page Web. Juré, c'est accessible aux newbies. Bon jeu.</p>
+					<p class="blkColor level3">Flexbox n'est pas nouveau, mais n'est pas encore un standard. Le fruit est meilleur quand il est cueilli à maturité, et pour les standards, c'est pareil. Je vous invite à suivre ces petits ateliers pour ceux qui veulent expérimenter ou bien changer leur manière de construire une page Web. Juré, c'est accessible aux newbies. Bon jeu.</p>
 
 				</article>
 
@@ -170,7 +170,7 @@
 
 				<article class="txtRow">
 
-					<p class="blkColor">Avant toute chose, voici la syntaxe si particulière de Flexbox. Elle est dense, mais elle va changer la donne quant à la construction d’une mise en page.<br>
+					<p class="blkColor">Avant toute chose, voici la syntaxe si particulière de flexbox. Elle est dense, mais elle va changer la donne quant à la construction d’une mise en page.<br>
 					On appellera <strong>flex container</strong>, l’élément du HTML renfermant les boîtes.<br>
 					On appellera <strong>flex items</strong>, les éléments flexibles ou boîtes flexibles.</p>
 
@@ -351,7 +351,7 @@ order: (valeur)
 
 				<article class="txtRow">
 
-					<p class="blkColor">Flexbox construit des systèmes de lignes et de colonnes. Prenons l'exemple de cette liste de course très banale, gérable en quelques lignes de CSS. Dans un premier temps, il faut donner un comportement flexible au conteneur: le flex container (cf <a href="#ttPrt1" class="txtLink blkTxt" alt="lien vers syntaxe">syntaxe</a>).</p>
+					<p class="blkColor">Flexbox construit des systèmes de lignes et de colonnes. Prenons l'exemple de cette liste de courses très banale, gérable en quelques lignes de CSS. Dans un premier temps, il faut donner un comportement flexible au conteneur: <strong>le flex container</strong> (cf <a href="#ttPrt1" class="txtLink blkTxt" alt="lien vers syntaxe">syntaxe</a>).</p>
 					<p class="blkColor">Le conteneur est fixé. Maintenant c'est au tour des boîtes à l’intérieur de se comporter comme élément flexible: les <strong>flex items</strong>. On veut une liste sur une colonne, et pour cela, il faut que l'axe principal parte du haut vers le bas. Les flex items prendront automatiquement la largeur du flex container grâce à la propriété <code class="smallSnippet blkColor">flex-basis</code> et <code class="smallSnippet blkColor">flex-shrink.</code></p>
 
 				</article>
@@ -362,7 +362,7 @@ order: (valeur)
 
 				<article class="txtRow">
 
-					<h2 class="blkColor sectionTitle ttPrtTitle">3. flexbox imbrique votre barre de navigation.</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">3. flexbox imbrique votre navigation.</h2>
 
 				</article>
 
@@ -409,7 +409,7 @@ order: (valeur)
 
 	/* les flex items reviendront à la ligne automatiquement */
 	flex-wrap: wrap;
-	/* l’origine des flex items sera à l’extrémité droite qu’à gauche */
+	/* l’origine des flex items sera à l’extrémité droite plutôt qu'à gauche */
 	justify-content: flex-end;
 
 	/* reset de l’élément ul */
@@ -444,11 +444,11 @@ order: (valeur)
 
 				<article class="txtRow">
 					
-					<h2 class="blkColor sectionTitle ttPrtTitle">4. flexbox et Masonry font bon ménage</h2>
+					<h2 class="blkColor sectionTitle ttPrtTitle">4. flexbox et masonry font bon ménage</h2>
 
 				</article>
 
-				<figure class="insertExHere expl row">
+				<figure class="insertExHere expl row masonryGrid">
 					
 					<ul class="flex flexListWrap gridDemo">
 						<li id="ref1" class="mediumC">
@@ -590,9 +590,9 @@ order: (valeur)
 
 				<article class="txtRow">
 
-					<p class="blkColor">Le niveau monte. Quand un jour on a besoin de créer une mise en page de grille dynamique, on fait appel généralement au principal plugin qui gère ça: <a href="http://masonry.desandro.com/" class="txtLink blkTxt" alt="lien vers le plugin JS Masonry">Masonry</a>. Le hic: Masonry est un plugin utilisant la librairie JQuery. Ce qui veut dire qu'il y a du Javascript. Le but c'est de montrer que cette grille peut se faire sans une seule once de JS.</p>
+					<p class="blkColor">Le niveau monte. Quand un jour on a besoin de créer une mise en page de grille dynamique, on fait appel généralement au principal plugin qui gère ça: <a href="http://masonry.desandro.com/" class="txtLink blkTxt" alt="lien vers le plugin JS Masonry">Masonry</a>. Le hic : Masonry est un plugin utilisant la librairie JQuery. Ce qui veut dire qu'il y a du Javascript. Le but est de montrer que cette grille peut se faire sans une seule once de JS.</p>
 					<p class="blkColor">Pour cela, commençons par donner un comportement au flex container, de manière à ce que les flex items forment une liste verticale.</p>
-					<p class="blkColor">À ce stade, les flex items prennent 100% de la taille du flex container. L'objectif est de faire remonter en haut quelques flex items. Il est alors essentiel de donner une valeur absolue à la propriété height, donnée au flex container.</p>
+					<p class="blkColor">À ce stade, les flex items prennent 100% de la taille du flex container. L'objectif est de faire remonter en haut quelques flex items. Il est alors essentiel de donner une valeur absolue à la propriété <code class="smallSnippet blkColor">height</code>, donnée au flex container.</p>
 					<p class="blkColor">Il y a un souci... Les flex items débordent du flex container. Dans ce cas-là, on procède alors à ce que fait Masonry: des largeurs différentes, pour former une mosaïque. On peut appliquer n'importe quelle taille, mais dans cette exemple, il y en a seulement 2. La propriété <code class="smallSnippet blkColor">width</code> s'applique aux flex items.</p>
 					<p class="blkColor">Cette manière de construire des grilles n'a pas vocation à remplacer Masonry, ce plugin gère mieux la mosaïque, pour un rendu propre. Flexbox en donne un avant-goût et permet de construire des grilles modulables rien qu'avec du CSS et un peu d'huile de coude, une bonne solution pour les néophytes.</p>
 					<p class="blkColor">La dernière étape vous attend en bas, c'est un peu le c-c-c-c-combo des capacités de Flexbox.</p>
@@ -678,12 +678,10 @@ order: (valeur)
 	&lt;…&gt;
 	&lt;li class="flexItems sysCol6"&gt;
 		&lt;div class="wrapper"&gt;
-			&lt;h3&gt;Je suis le der.&lt;/h3&gt;
-			&lt;p&gt;J’ai plus grand-chose à dire, à part merci :)&lt;/p&gt;
+			&lt;h3&gt;Pareil ce 9e billet.&lt;/h3&gt;
+			&lt;p&gt;Pareil chez le voisin.&lt;/p&gt;
 		&lt;/div&gt;
 	&lt;/li&gt;
-
-
 
 &lt;/ul&gt;
 &lt;…&gt;
@@ -699,7 +697,7 @@ order: (valeur)
 	/* déclarer le comportement au flex container */
 	display: flex;
 
-	/* modifier la direction de l’axede gauche à droite */
+	/* modifier la direction de l’axe de gauche à droite */
 	flex-direction: row;
 
 	/* les flex items reviendront à la ligne automatiquement */
@@ -783,7 +781,7 @@ width : 100% ;
 
 					<p class="blkColor">Le plus dur arrive, mais en réalité ce n'est pas si compliqué. Il s'agit dans un premier temps de dire au flex container de construire une liste en colonne, où les éléments peuvent revenir à la ligne.</p>
 					<p class="blkColor">Ensuite, pour faire varier la taille des boîtes, il suffit de constituer un système de grille avec différentes valeurs de flex basis.</p>
-					<p class="blkColor">En appliquant ces différentes tailles aux flex items, ceux-ci auront une taille différente, afin de créer un rythme. Pour le responsive, il vaudrait mieux avant toute chose, consulter le tutoriel d’Élodie sur le <a href="../rwd" class="txtLink blkTxt" alt="lien vers le tutoriel d'élodie">responsive web design</a>. Il faudrait dire au CSS via <code class="smallSnippet blkColor">@media screen</code> qu'au point de rupture, flex basis prendra une valeur de 100%, par rapport au flex container.</p>
+					<p class="blkColor">En appliquant ces différentes tailles aux flex items, ceux-ci auront une taille différente, afin de créer un rythme. Pour le responsive il vaudrait mieux, avant toute chose, consulter le tutoriel d’Elodie sur le <a href="../rwd" class="txtLink blkTxt" alt="lien vers le tutoriel d'élodie">responsive web design</a>. Il faudrait dire au CSS via <code class="smallSnippet blkColor">@media screen</code> qu'au point de rupture (breakpoint), flex basis prendra une valeur de 100%, par rapport au flex container.</p>
 					<p class="blkColor">En redimensionnant, vous apercevrez que les boîtes vont se redimensionner et s'étirer, tout en conservant une harmonie dans le flex container.</p>
 
 				</article>
@@ -931,7 +929,7 @@ width : 100% ;
 
 					</div>
 
-					<div class="medium-6 columns">
+					<div class="medium-6 columns end">
 
 						<label for="message" class="blkColor upCase level3">
 							message *
